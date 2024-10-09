@@ -1,0 +1,584 @@
+<?xml version="1.0" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="trans" name="Z" parent="" length="100" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="0" a="1.4013e-45" />
+            <limits min="190.4" max="800" />
+        </axis>
+        <axis>
+            <param type="part" name="-Z-" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.172549" g="0.486275" b="0.72549" a="1" />
+            <part name="-Z-" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Spindle" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="0" b="1" a="1" />
+            <part name="Spindle" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="SK50" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.639216" g="0.752941" b="0" a="1" />
+            <part name="SK50" margin="0" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="1" g="0" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="trans" name="Y" parent="" length="100" />
+            <vector x="0" y="-1" z="0" />
+            <color r="0" g="0" b="0" a="1.4013e-45" />
+            <limits min="-330" max="330.01" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="Y" length="100" />
+            <vector x="-1" y="0" z="0" />
+            <color r="0" g="0" b="0" a="1.4013e-45" />
+            <limits min="-508" max="508.01" />
+        </axis>
+        <axis>
+            <param type="stock" name="stock" parent="X" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="-X-" parent="X" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="0.627451" b="0.752941" a="1" />
+            <part name="-X-" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="-Y-" parent="Y" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+            <part name="-Y-" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Base" parent="" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.588235" g="0.588235" b="0.588235" a="1" />
+            <part name="Base" margin="0" />
+        </axis>
+        <axis>
+            <param type="rotary" name="Rev" parent="" length="250" />
+            <vector x="1" y="0" z="0" />
+            <basepoint x="-1250" y="246.408" z="1458.05" />
+            <color r="0" g="0.501961" b="0" a="1" />
+            <limits min="-360" max="360" />
+        </axis>
+        <axis>
+            <param type="part" name="Rev_1" parent="Rev" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+            <part name="Rev-2" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0001pos" parent="Rev" length="50" coordsys="Yes" />
+            <vector x="0" y="0" z="-1" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-816.123" y="246.408" z="956.3" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0001tool" parent="0001pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0002pos" parent="Rev" length="50" coordsys="Yes" />
+            <vector x="0" y="-0.20791" z="-0.978148" />
+            <vectorY x="0" y="0.978148" z="-0.20791" />
+            <basepoint x="-816.123" y="142.088" z="967.264" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0002tool" parent="0002pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0003pos" parent="Rev" length="50" coordsys="Yes" />
+            <vector x="0" y="-0.424926" z="-0.905228" />
+            <vectorY x="0" y="0.913568" z="-0.406686" />
+            <basepoint x="-816.123" y="42.328" z="999.679" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0003tool" parent="0003pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0004pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.587803" z="-0.809004" />
+            <vectorY x="0" y="0.809004" z="-0.587803" />
+            <basepoint x="-816.123" y="-48.513" z="1052.13" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0004tool" parent="0004pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0005pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.74314" z="-0.669136" />
+            <vectorY x="0" y="0.74314" z="-0.669136" />
+            <basepoint x="-816.123" y="-126.465" z="1122.31" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0005tool" parent="0005pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0006pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.866019" z="-0.500011" />
+            <vectorY x="0" y="0.500011" z="-0.866019" />
+            <basepoint x="-816.123" y="-188.12" z="1207.17" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0006tool" parent="0006pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0007pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.951066" z="-0.308989" />
+            <vectorY x="0" y="0.308989" z="-0.951066" />
+            <basepoint x="-816.123" y="-230.785" z="1303" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="00077tool" parent="0007pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0008pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.994341" z="-0.106235" />
+            <vectorY x="0" y="0.106235" z="-0.994341" />
+            <basepoint x="-816.123" y="-252.593" z="1405.6" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0008tool" parent="0008pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0009pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.991741" z="0.128255" />
+            <vectorY x="0" y="-0.0842938" z="-0.996441" />
+            <basepoint x="-816.123" y="-252.593" z="1510.49" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0009tool" parent="0009pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0010pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.951066" z="0.308989" />
+            <vectorY x="0" y="-0.308989" z="-0.951066" />
+            <basepoint x="-816.123" y="-230.785" z="1613.1" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0010tool" parent="0010pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0011pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.866019" z="0.500011" />
+            <vectorY x="0" y="-0.500011" z="-0.866019" />
+            <basepoint x="-816.123" y="-188.12" z="1708.92" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0011tool" parent="0011pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0012pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.74314" z="0.669136" />
+            <vectorY x="0" y="-0.669136" z="-0.74314" />
+            <basepoint x="-816.123" y="-126.465" z="1793.79" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0012tool" parent="0012pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0013pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.587803" z="0.809004" />
+            <vectorY x="0" y="-0.809004" z="-0.587803" />
+            <basepoint x="-816.123" y="-48.513" z="1863.97" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0013tool" parent="0013pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0014pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.406723" z="0.913552" />
+            <vectorY x="0" y="-0.913568" z="-0.406686" />
+            <basepoint x="-816.123" y="42.3281" z="1916.42" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0014tool" parent="0014pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0015pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="-0.20791" z="0.978148" />
+            <vectorY x="0" y="-0.978148" z="-0.20791" />
+            <basepoint x="-816.123" y="142.089" z="1948.84" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0015tool" parent="0015pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0016pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="-816.123" y="246.408" z="1959.8" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0016tool" parent="0016pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0017pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.20791" z="0.978148" />
+            <vectorY x="0" y="-0.978148" z="0.20791" />
+            <basepoint x="-816.123" y="350.728" z="1959.8" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0017tool" parent="0017pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0018pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.406686" z="0.913568" />
+            <vectorY x="0" y="-0.913568" z="0.406686" />
+            <basepoint x="-816.123" y="450.488" z="1916.42" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0018tool" parent="0018pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0019pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.587803" z="0.809004" />
+            <vectorY x="0" y="-0.809004" z="0.587803" />
+            <basepoint x="-816.123" y="541.329" z="1863.97" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0019tool" parent="0019pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0020pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.74314" z="0.669136" />
+            <vectorY x="0" y="-0.669136" z="0.74314" />
+            <basepoint x="-816.123" y="619.281" z="1793.79" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0020tool" parent="0020pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0021pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.866019" z="0.500011" />
+            <vectorY x="0" y="-0.500011" z="0.866019" />
+            <basepoint x="-816.123" y="680.936" z="1708.92" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0021tool" parent="0021pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0022pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.951066" z="0.308989" />
+            <vectorY x="0" y="-0.308989" z="0.951066" />
+            <basepoint x="-816.123" y="723.601" z="1613.1" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0022tool" parent="0022pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0023pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.991735" z="0.128305" />
+            <vectorY x="0" y="-0.0843034" z="0.99644" />
+            <basepoint x="-816.123" y="745.41" z="1510.49" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0023tool" parent="0023pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0024pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.994344" z="-0.106205" />
+            <vectorY x="0" y="0.106205" z="0.994344" />
+            <basepoint x="-816.123" y="745.41" z="1405.6" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0024tool" parent="0024pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0025pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.951066" z="-0.308989" />
+            <vectorY x="0" y="0.308989" z="0.951066" />
+            <basepoint x="-816.123" y="723.601" z="1303" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0025tool" parent="0025pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0026pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.866019" z="-0.500011" />
+            <vectorY x="0" y="0.500011" z="0.866019" />
+            <basepoint x="-816.123" y="680.936" z="1207.17" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0026tool" parent="0026pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0027pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.74314" z="-0.669136" />
+            <vectorY x="0" y="0.74314" z="0.669136" />
+            <basepoint x="-816.123" y="619.281" z="1122.31" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0027tool" parent="0027pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0028pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.587803" z="-0.809004" />
+            <vectorY x="0" y="0.809004" z="0.587803" />
+            <basepoint x="-816.123" y="541.329" z="1052.13" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0028tool" parent="0028pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0029pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.424915" z="-0.905233" />
+            <vectorY x="0" y="0.913568" z="0.406686" />
+            <basepoint x="-816.123" y="450.488" z="999.679" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0029tool" parent="0029pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="0030pos" parent="Rev" length="50" coordsys="Yes"  />
+            <vector x="0" y="0.20791" z="-0.978148" />
+            <vectorY x="0" y="0.978148" z="0.20791" />
+            <basepoint x="-816.123" y="350.728" z="967.264" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0030tool" parent="0030pos" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="2.31112e-33" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="rotary" name="Pocket" parent="" length="1000" />
+            <vector x="0" y="1" z="0" />
+            <basepoint x="-640.986" y="246.408" z="956.378" />
+            <color r="1" g="0" b="0" a="1" />
+            <limits min="-90" max="0" />
+        </axis>
+        <axis>
+            <param type="part" name="PosCS1" parent="Pocket" length="50" coordsys="Yes"  />
+            <vector x="0" y="0" z="-1" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-816.123" y="246.408" z="956.3" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="part" name="PosTC1" parent="PosCS1" length="50"  />
+            <vector x="0" y="0" z="-1" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="part" name="P1" parent="Pocket" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.752941" g="1" b="0" a="1" />
+            <part name="P1" margin="0" />
+        </axis>
+        <axis>
+            <param type="rotary" name="Lapa" parent="" length="250"  />
+            <vector x="0" y="0" z="1" />
+            <basepoint x="-320.137" y="123.204" z="1600" />
+            <color r="1" g="1" b="0" a="1" />
+            <limits min="-360" max="360" />
+        </axis>
+        <axis>
+            <param type="trans" name="Lapav" parent="Lapa" length="100" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="1" b="0" a="1" />
+            <limits min="-190.1" max="0.1" />
+        </axis>
+        <axis>
+            <param type="part" name="Lapa_1" parent="Lapav" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="0.4" b="0.2" a="1" />
+            <part name="Lapa" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="LapaCS1" parent="Lapav" length="100" coordsys="Yes"  />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-341.137" y="466.204" z="781.25" />
+            <color r="0" g="0" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="part" name="LapaCS2" parent="Lapav" length="100" coordsys="Yes"  />
+            <vector x="-1" y="0" z="0" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="-299.137" y="-220" z="781.25" />
+            <color r="0" g="0" b="1" a="1" />
+        </axis>
+    </axes>
+</MachineTool>

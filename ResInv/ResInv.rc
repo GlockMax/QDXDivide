@@ -1,0 +1,1388 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "..\common\ResInv.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "..\\common\\ResInv.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_REP_REP_EDITOR DIALOGEX 0, 0, 361, 300
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Редактор отчётов"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Выход",IDOK,12,270,60,14
+    LISTBOX         ID_LIST_REPDLG_REPS,7,18,84,222,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Отчёты",IDC_STATIC,22,7,43,10
+    EDITTEXT        IDC_EDIT_CNDITIOn,103,57,144,12,ES_AUTOHSCROLL
+    CTEXT           "Условие отбора",IDC_STATIC,163,45,85,10
+    GROUPBOX        "Условие",IDC_STATIC,95,33,259,114,BS_CENTER
+    CTEXT           "Параметры",IDC_STATIC,277,42,74,10
+    LISTBOX         IDC_LIST_UNIT_PARAM,277,57,72,84,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<=",IDC_BUTTON_ADD,253,57,18,12
+    GROUPBOX        "Операции",IDC_STATIC,103,75,60,63
+    PUSHBUTTON      "*",IDC_BUTTON_MULT,133,87,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "/",IDC_BUTTON_DEV,145,87,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "+",IDC_BUTTON_PLUS,109,87,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "-",IDC_BUTTON_MIN,121,87,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "<",IDC_BUTTON_LESS,109,99,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      ">",IDC_BUTTON_MORE,121,99,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "|",IDC_BUTTON_OR,133,112,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "!",IDC_BUTTON_NOT,145,99,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "=",IDC_BUTTON_EQV,133,99,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "[",IDC_BUTTON_BRACKETL,109,112,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Проверить",IDC_BUTTON3,223,75,48,18
+    EDITTEXT        IDC_EDIT_NAME,138,18,77,12,ES_AUTOHSCROLL
+    CTEXT           "Название",IDC_STATIC,97,19,35,10
+    EDITTEXT        IDC_EDIT_DESCRIPTION,96,162,258,66,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    CTEXT           "Описание",IDC_STATIC,204,150,35,10
+    LISTBOX         IDC_LIST_REP_FILDS,171,240,69,54,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Поля таблицы",IDC_STATIC,174,228,54,10
+    LISTBOX         IDC_LIST_UNIT_FILDS,285,240,69,54,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Возможные поля",IDC_STATIC,288,228,66,10
+    PUSHBUTTON      "<<",IDC_BUTTON_ADD_FILD,243,252,36,12,BS_CENTER
+    PUSHBUTTON      ">>",IDC_BUTTON_REMOVE_FILD,243,270,36,12,BS_CENTER
+    PUSHBUTTON      "Новый",IDC_BUTTON_ADD_REP,6,246,36,18
+    PUSHBUTTON      "Удалить",IDC_BUTTON_REMOVE_REP,54,246,36,18
+    PUSHBUTTON      "",IDC_BUTTON_UP,150,240,15,18,BS_ICON
+    PUSHBUTTON      "v",IDC_BUTTON_DOWN,150,276,15,18,BS_ICON
+    PUSHBUTTON      "Сохранить",IDC_BUTTON_SAVE,96,246,48,18
+    PUSHBUTTON      "]",IDC_BUTTON_BRACKETR,121,112,12,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "&&",IDC_BUTTON_AND,145,112,12,12,BS_CENTER | BS_VCENTER
+END
+
+IDD_REP_ACTIVEREP DIALOGEX 0, 0, 211, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Отчёты"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,156,108,50,14
+    LISTBOX         IDC_LIST_PASSIVE,6,20,79,83,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_ACTIVE,125,20,79,83,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Неактивные",IDC_STATIC,6,6,78,12
+    CTEXT           "Активные",IDC_STATIC,126,6,78,12
+    PUSHBUTTON      "=>",IDC_BUTTON_ADD,90,48,30,12
+    PUSHBUTTON      "<=",IDC_BUTTON_REMOVE,90,66,30,12
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 187, 211
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+    EDITTEXT        IDC_EDIT1,79,7,40,14,ES_AUTOHSCROLL
+    CONTROL         "DebugMode",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,30,86,12
+    CONTROL         "Smooth",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,44,41,10
+    CONTROL         "Draw Faces",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,58,64,10
+    CONTROL         "Multi thread",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,73,67,10
+    EDITTEXT        IDC_EDIT2,33,102,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,33,121,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,33,140,40,14,ES_AUTOHSCROLL
+    CTEXT           "Количество ячек по max габариту",IDC_STATIC,80,101,67,17
+    LTEXT           "Максимальная длина ребра треугольника",IDC_STATIC,80,120,100,17
+    LTEXT           "Точность дихотомии",IDC_STATIC,80,143,76,12
+    CONTROL         "Use SlicedTree",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,86,67,10
+    EDITTEXT        IDC_DXNUMBER,19,7,40,14,ES_AUTOHSCROLL
+    CONTROL         "Surfel visualizer",IDC_CHECK_SURFEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,168,67,10
+    CONTROL         "Marching cubes",IDC_CHECK16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,111,45,69,10
+    CONTROL         "Async",IDC_CHECK17,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,111,63,69,10
+END
+
+IDD_DIALOG_REDPORTVIEW DIALOGEX 0, 0, 291, 292
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Просмотр отчётов"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Выход",IDOK,234,271,50,14
+    CONTROL         "",IDC_TAB_TABLE,"SysTabControl32",0x0,7,7,277,261
+    CONTROL         "",IDC_LIST_REPORT,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,18,24,258,240,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Сохранить",IDC_BUTTON_SAVE,175,271,54,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_REP_REP_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 354
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 293
+    END
+
+    IDD_REP_ACTIVEREP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+
+    IDD_DIALOG_REDPORTVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 284
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 285
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TB_UNDOPOS_H        ICON                    "Res\\UNDOPOS_H.ico"
+
+IDI_TB_REDOPOS_H        ICON                    "Res\\REDOPOS_H.ico"
+
+IDI_TB_REDOPOS          ICON                    "Res\\REDOPOS.ico"
+
+IDI_TB_UNDOPOS          ICON                    "Res\\UNDOPOS.ico"
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VIEW DIALOGEX 0, 0, 54, 53
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_LANGUAGE DIALOGEX 0, 0, 186, 80
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Language"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,74,59,50,14
+    COMBOBOX        IDC_COMBO_LANG,7,31,86,30,CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select language for\n the NCManager interface",IDC_STATIC_LANG,7,7,86,18
+END
+
+IDD_ABOUTBOX_QUICK DIALOGEX 0, 0, 213, 54
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About QuickCam Simulator"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "QuickCam Simulator Version 3.5",IDC_STATIC,39,10,105,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999-2007",IDC_STATIC,39,35,119,8
+    DEFPUSHBUTTON   "OK",IDOK,156,7,50,14,WS_GROUP
+    LTEXT           "http://www.quickcadcam.com",IDC_HYPERLINK,39,20,119,8
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 231, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " "
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,174,7,50,14,WS_GROUP
+    PUSHBUTTON      "http://www.ncmanager.com",IDC_HYPERLINK,35,17,101,13
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "NCManager x64 Version 5.3 05052022",IDC_STATIC,23,7,150,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999-2022",IDC_STATIC,36,32,119,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 47
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 46
+    END
+
+    IDD_LANGUAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 73
+    END
+
+    IDD_ABOUTBOX_QUICK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\1.ico"
+
+IDR_NPROGRAMVIEW_TMPL   ICON                    "res\\3.ico"
+
+IDI_UPDATETEXT_H        ICON                    "Res\\UPDATETEXT_H.ico"
+
+IDI_UPDATETEXT          ICON                    "Res\\UPDATETEXT.ico"
+
+IDI_UNIT                ICON                    "Res\\Unit.ico"
+
+IDI_UNDOTEXT_H          ICON                    "Res\\UNDOTEXT_H.ico"
+
+IDI_UNDOTEXT            ICON                    "Res\\UNDOTEXT.ico"
+
+IDI_TOOLON              ICON                    "Res\\M6-On.ico"
+
+IDI_TOOLOFF             ICON                    "Res\\M6-Off.ico"
+
+IDI_TB_ZROT_H           ICON                    "Res\\ZROT_H.ico"
+
+IDI_TB_ZROT             ICON                    "Res\\ZROT.ico"
+
+IDI_TB_ZOOMD_H          ICON                    "Res\\ZOOMD_H.ico"
+
+IDI_TB_ZOOMD            ICON                    "Res\\ZOOMD.ico"
+
+IDI_TB_ZOOM_Z           ICON                    "Res\\ZOOM_Z.ico"
+
+IDI_TB_ZOOM_Y           ICON                    "Res\\ZOOM_Y.ico"
+
+IDI_TB_ZOOM_X           ICON                    "Res\\ZOOM_X.ico"
+
+IDI_TB_ZOOM_H           ICON                    "Res\\ZOOM_H.ico"
+
+IDI_TB_ZOOM             ICON                    "Res\\ZOOM.ico"
+
+IDI_TB_ZALL_H           ICON                    "Res\\ZALL_H.ico"
+
+IDI_TB_ZALL             ICON                    "Res\\ZALL.ico"
+
+IDI_TB_WIRE_H           ICON                    "Res\\WIRE_H.ico"
+
+IDI_TB_WIRE             ICON                    "Res\\WIRE.ico"
+
+IDI_TB_VIEW4            ICON                    "Res\\VIEW4.ico"
+
+IDI_TB_VIEW3            ICON                    "Res\\VIEW3.ico"
+
+IDI_TB_VIEW2            ICON                    "Res\\VIEW2.ico"
+
+IDI_TB_VIEW1            ICON                    "Res\\VIEW1.ico"
+
+IDI_TB_VIEW_ZY          ICON                    "Res\\VIEW_ZY.ico"
+
+IDI_TB_VIEW_ZX          ICON                    "Res\\VIEW_ZX.ico"
+
+IDI_TB_VIEW_XZ          ICON                    "Res\\VIEW_XZ.ico"
+
+IDI_TB_VIEW_XYRight     ICON                    "Res\\VIEW_XYRight.ico"
+
+IDI_TB_VIEW_XYLeft      ICON                    "Res\\VIEW_XYLeft.ico"
+
+IDI_TB_VIEW_T4          ICON                    "Res\\VIEW_T4.ico"
+
+IDI_TB_VIEW_T3          ICON                    "Res\\VIEW_T3.ico"
+
+IDI_TB_VIEW_T2          ICON                    "Res\\VIEW_T2.ico"
+
+IDI_TB_VIEW_T1          ICON                    "Res\\VIEW_T1.ico"
+
+IDI_TB_VIEW_SAVE        ICON                    "Res\\VIEW_SAVE.ico"
+
+IDI_TB_VIEW_RU          ICON                    "Res\\VIEW_RU.ico"
+
+IDI_TB_VIEW_RESET       ICON                    "Res\\VIEW_RESET.ico"
+
+IDI_TB_VIEW_REDRAW      ICON                    "Res\\VIEW_REDRAW.ico"
+
+IDI_TB_VIEW_RD          ICON                    "Res\\VIEW_RD.ico"
+
+IDI_TB_VIEW_R           ICON                    "Res\\VIEW_R.ico"
+
+IDI_TB_VIEW_LU          ICON                    "Res\\VIEW_LU.ico"
+
+IDI_TB_VIEW_LD          ICON                    "Res\\VIEW_LD.ico"
+
+IDI_TB_VIEW_L           ICON                    "Res\\VIEW_L.ico"
+
+IDI_TB_VIEW_F           ICON                    "Res\\VIEW_F.ico"
+
+IDI_TB_VIEW_B           ICON                    "Res\\VIEW_B.ico"
+
+IDI_TB_TURNSECT         ICON                    "Res\\TurnSect.ico"
+
+IDI_TB_STOP_H           ICON                    "Res\\STOP_H.ico"
+
+IDI_TB_STOP             ICON                    "Res\\STOP.ico"
+
+IDI_TB_SMOTHNESSMODE_H  ICON                    "Res\\SMOTHNESSMODEF_H.ico"
+
+IDI_TB_SMOTHNESSMODE    ICON                    "Res\\SMOTHNESSMODEF.ico"
+
+IDI_TB_SMOTH_H          ICON                    "Res\\SMOTH_H.ico"
+
+IDI_TB_SMOTH            ICON                    "Res\\SMOTH.ico"
+
+IDI_TB_SAVE             ICON                    "Res\\SAVE.ico"
+
+IDI_TB_RUN_H            ICON                    "Res\\RUN_H.ico"
+
+IDI_TB_RUN              ICON                    "Res\\RUN.ico"
+
+IDI_TB_RESULT_H         ICON                    "Res\\RESULT_H.ico"
+
+IDI_TB_RESULT           ICON                    "Res\\RESULT.ico"
+
+IDI_TB_RESET_H          ICON                    "Res\\RESET_H.ico"
+
+IDI_TB_RESET            ICON                    "Res\\RESET.ico"
+
+IDI_TB_QUICK_H          ICON                    "Res\\QUICK_H.ico"
+
+IDI_TB_QUICK            ICON                    "Res\\QUICK.ico"
+
+IDI_TB_PAUSE_H          ICON                    "Res\\PAUSE_H.ico"
+
+IDI_TB_PAUSE            ICON                    "Res\\PAUSE.ico"
+
+IDI_TB_PAN_H            ICON                    "Res\\PAN_H.ico"
+
+IDI_TB_PAN              ICON                    "Res\\PAN.ico"
+
+IDI_TB_OPEN             ICON                    "Res\\OPEN.ico"
+
+IDI_TB_NEW              ICON                    "res\\NEW.ico"
+
+IDI_TB_N_H              ICON                    "Res\\N_H.ico"
+
+IDI_TB_N                ICON                    "Res\\N.ico"
+
+IDI_TB_MT               ICON                    "Res\\MillTurn.ico"
+
+IDI_TB_LVIEW_H          ICON                    "Res\\LVIEW_H.ico"
+
+IDI_TB_LVIEW            ICON                    "Res\\LVIEW.ico"
+
+IDI_TB_INIT_H           ICON                    "Res\\INIT_H.ico"
+
+IDI_TB_INIT             ICON                    "Res\\INIT.ico"
+
+IDI_TB_HERE_H           ICON                    "Res\\HERE_H.ico"
+
+IDI_TB_HERE             ICON                    "Res\\HERE.ico"
+
+IDI_TB_FF_H             ICON                    "Res\\FF_H.ico"
+
+IDI_TB_FF               ICON                    "Res\\FF.ico"
+
+IDI_TB_FB_H             ICON                    "Res\\FB_H.ico"
+
+IDI_TB_FB               ICON                    "Res\\FB.ico"
+
+IDI_TB_DROT_H           ICON                    "Res\\DROT_H.ico"
+
+IDI_TB_DROT             ICON                    "Res\\DROT.ico"
+
+IDI_TB_DONTCUTMODE_H    ICON                    "Res\\DONTCUTMODE_H.ico"
+
+IDI_TB_DONTCUTMODE      ICON                    "Res\\DONTCUTMODE.ico"
+
+IDI_TB_CUTMODE_H        ICON                    "Res\\CUTMODE_H.ico"
+
+IDI_TB_CUTMODE          ICON                    "Res\\CUTMODE.ico"
+
+IDI_TB_BACK_N_H         ICON                    "Res\\BACK_N_H.ico"
+
+IDI_TB_BACK_N           ICON                    "Res\\BACK_N.ico"
+
+IDI_STOCK               ICON                    "res\\ico00002.ico"
+
+IDI_SPEEDON             ICON                    "Res\\M3M4-On.ico"
+
+IDI_SPEEDOFF            ICON                    "Res\\M3M4-Off.ico"
+
+IDI_SECTION_H           ICON                    "Res\\section_H.ico"
+
+IDI_SECTION             ICON                    "Res\\section.ico"
+
+IDI_RIGHT_PANEL         ICON                    "Res\\RIGHT_PANEL.ico"
+
+IDI_REPORT              ICON                    "res\\ico00001.ico"
+
+IDI_RENUMBER_H          ICON                    "Res\\RENUMBER_H.ico"
+
+IDI_RENUMBER            ICON                    "Res\\RENUMBER.ico"
+
+IDI_REGS                ICON                    "Res\\Regs.ico"
+
+IDI_REDOTEXT_H          ICON                    "Res\\REDOTEXT_H.ico"
+
+IDI_REDOTEXT            ICON                    "Res\\REDOTEXT.ico"
+
+IDI_RAPIDON             ICON                    "Res\\XX-On.ico"
+
+IDI_RAPIDOFF            ICON                    "Res\\XX-Off.ico"
+
+IDI_PROC                ICON                    "res\\unit2.ico"
+
+IDI_PREVBM_H            ICON                    "Res\\PREVBM_H.ico"
+
+IDI_PREVBM              ICON                    "Res\\PREVBM.ico"
+
+IDI_PPON                ICON                    "Res\\PP-On.ico"
+
+IDI_PPOFF               ICON                    "Res\\PP-Off.ico"
+
+IDI_PAINTER_H           ICON                    "Res\\painter_h.ico"
+
+IDI_PAINTER             ICON                    "res\\painter.ico"
+
+IDI_NOTES               ICON                    "Res\\notes.ico"
+
+IDI_NEXTBM_H            ICON                    "Res\\NEXTBM_H.ico"
+
+IDI_NEXTBM              ICON                    "Res\\NEXTBM.ico"
+
+IDI_NB_H                ICON                    "Res\\NB_H.ico"
+
+IDI_NB                  ICON                    "Res\\NB.ico"
+
+IDI_MTTREE              ICON                    "res\\mtprop1.ico"
+
+IDI_MTPROP              ICON                    "res\\unit1.ico"
+
+IDI_MEASURE_H           ICON                    "Res\\size_H.ico"
+
+IDI_MEASURE             ICON                    "Res\\size.ico"
+
+IDI_MACH                ICON                    "res\\ico00003.ico"
+
+IDI_M8OFF               ICON                    "Res\\M8-Off.ico"
+
+IDI_LINENUM             ICON                    "res\\LINENUM.ico"
+
+IDI_LEFT_PANEL          ICON                    "Res\\LEFT_PANEL.ico"
+
+IDI_LEFT                ICON                    "res\\icon7.ico"
+
+IDI_ICON1               ICON                    "Res\\ID_OK.ico"
+
+IDI_GEOM                ICON                    "res\\icon6.ico"
+
+IDI_G81ONN              ICON                    "Res\\G81-On.ico"
+
+IDI_G81OFF              ICON                    "Res\\G81-Off.ico"
+
+IDI_G43ON               ICON                    "Res\\G43-On.ico"
+
+IDI_G43OFF              ICON                    "Res\\G43-Off.ico"
+
+IDI_G41ON               ICON                    "Res\\G41-On.ico"
+
+IDI_G41OFF              ICON                    "Res\\G41-Off.ico"
+
+IDI_FIND_TEXT_H         ICON                    "Res\\findtext_h.ico"
+
+IDI_FIND_TEXT           ICON                    "Res\\findtext.ico"
+
+IDI_COOLON              ICON                    "Res\\M8-On.ico"
+
+IDI_CLEARBM_H           ICON                    "Res\\CLEARBM_H.ico"
+
+IDI_CLEARBM             ICON                    "Res\\CLEARBM.ico"
+
+IDI_BP4                 ICON                    "Res\\BP4.ico"
+
+IDI_BP3                 ICON                    "Res\\BP3.ico"
+
+IDI_BP2                 ICON                    "Res\\BP2.ico"
+
+IDI_BP1                 ICON                    "Res\\BP1.ico"
+
+IDI_BP_ALL              ICON                    "Res\\BP_ALL.ico"
+
+IDI_BP_ADD              ICON                    "Res\\BP_ADD.ico"
+
+IDI_ADDBM_H             ICON                    "Res\\ADDBM_H.ico"
+
+IDI_ADDBM               ICON                    "Res\\ADDBM.ico"
+
+IDI_TB_SEPARATOR        ICON                    "Res\\icon2.ico"
+
+IDI_ICON_ARROWUP        ICON                    "res\\ico00004.ico"
+
+IDI_ICON_ARROWDOWN      ICON                    "res\\icon_arr.ico"
+
+IDI_TB_FASTCUTMODE      ICON                    "Res\\FASTCUTMODE.ico"
+
+IDI_TB_FASTCUTMODE_H    ICON                    "Res\\FASTCUTMODE_H.ico"
+
+IDI_TB_CUTMODE5X_H      ICON                    "Res\\CUTMODE-5X_H.ico"
+
+IDI_TB_CUTMODE5X        ICON                    "Res\\CUTMODE-5X.ico"
+
+IDI_INSP_TIME           ICON                    "Res\\time.ico"
+
+IDI_INSP_COLLISION      ICON                    "Res\\collisions.ico"
+
+IDI_VIEW_ANGLEROT       ICON                    "Res\\ANGLEROT.ico"
+
+IDI_VIEW_CENTRROT       ICON                    "Res\\CENTRROT.ico"
+
+IDI_INSP_COLLISION_H    ICON                    "Res\\collisions_H.ico"
+
+IDI_SIZES               ICON                    "Res\\Sizes.ico"
+
+IDI_SIZES_H             ICON                    "Res\\Sizes_H.ico"
+
+IDI_TB_NVIEW_H          ICON                    "Res\\NVIEW_H.ico"
+
+IDI_TB_NVIEW            ICON                    "Res\\NVIEW.ico"
+
+IDI_TB_VIEW5            ICON                    "Res\\VIEW5.ico"
+
+IDI_BP5                 ICON                    "res\\bp5.ico"
+
+IDI_TB_ROTATECENTERONOFF ICON                    "Res\\RotatePointOnOff.ico"
+
+IDI_CM_PROPERTIES       ICON                    "Res\\CM_PROPERTIES.ico"
+
+IDI_CM_LIST             ICON                    "Res\\CM_LIST.ico"
+
+IDI_CM_UNIT_START       ICON                    "Res\\CM_UNIT_START.ico"
+
+IDI_CM_LOAD             ICON                    "Res\\CM_LOAD.ico"
+
+IDI_CM_VISIBLE_ON       ICON                    "Res\\CM_VISIBLE_ON.ico"
+
+IDI_CM_VISIBLE_OFF      ICON                    "Res\\CM_VISIBLE_OFF.ico"
+
+IDI_CM_VISTOOL_OFF      ICON                    "Res\\CM_VISTOOL_OFF.ico"
+
+IDI_CM_VISTOOL_ON       ICON                    "Res\\CM_VISTOOL_ON.ico"
+
+IDI_MACH_EDIT           ICON                    "Res\\MACH_EDIT.ico"
+
+IDI_CM_WF               ICON                    "Res\\CM_WF.ico"
+
+IDI_CM_CYL              ICON                    "Res\\CM_CYL.ico"
+
+IDI_CM_BOX              ICON                    "Res\\CM_BOX.ico"
+
+IDI_CM_CONT_EX          ICON                    "Res\\CM_CONT_EX.ico"
+
+IDI_FTP_ON              ICON                    "Res\\CM_FTP_ON.ico"
+
+IDI_FTP_OFF             ICON                    "Res\\CM_FTP_OFF.ico"
+
+IDI_CM_PASTE            ICON                    "Res\\CM_PASTE.ico"
+
+IDI_CM_COPY             ICON                    "Res\\CM_COPY.ico"
+
+IDI_STEMP_OFF           ICON                    "Res\\CM_STEMP_OFF.ico"
+
+IDI_STEMP_ON            ICON                    "Res\\CM_STEMP_ON.ico"
+
+IDI_CM_VISIBLE_TOGGLE   ICON                    "Res\\CM_VISIBLE_TOGGLE.ico"
+
+IDI_CM_REPLACE          ICON                    "Res\\CM_REPLACE.ico"
+
+IDI_CM_UPDATE           ICON                    "Res\\CM_UPDATE.ico"
+
+IDI_CM_IMPORT_STC       ICON                    "Res\\CM_IMPORT_STC.ico"
+
+IDI_CM_IMPORT_APT       ICON                    "Res\\CM_IMPORT_APT.ico"
+
+IDI_CM_IMPORT_DXF       ICON                    "Res\\CM_IMPORT_DXF.ico"
+
+IDI_CM_CUT              ICON                    "Res\\CM_CUT.ico"
+
+IDI_CM_DELETE           ICON                    "Res\\CM_DELETE.ico"
+
+IDI_CM_POS              ICON                    "Res\\CM_POS.ico"
+
+IDI_LOAD_EDIT           ICON                    "Res\\CM_LOAD_EDIT.ico"
+
+IDI_CONT_EX_EDIT        ICON                    "Res\\CM_CONT_EX_EDIT.ico"
+
+IDI_CYL_EDIT            ICON                    "Res\\CM_CYL_EDIT.ico"
+
+IDI_BOX_EDIT            ICON                    "Res\\CM_BOX_EDIT.ico"
+
+IDI_CM_RING             ICON                    "Res\\CM_RING.ico"
+
+IDI_CM_RING_EDIT        ICON                    "Res\\CM_RING_EDIT.ico"
+
+IDI_CM_DISASSAMBLE      ICON                    "Res\\CM_DISASSAMBLE.ico"
+
+IDI_CM_SENDTOPART       ICON                    "Res\\CM_SENDPART.ico"
+
+IDI_CM_SENDTOSTOCK      ICON                    "Res\\CM_SENDSTOCK.ico"
+
+IDI_TB_VIEW_CHANHGETYPE ICON                    "res\\tb_view6.ico"
+
+IDI_COLLONOFF           ICON                    "Res\\COLLONOFF.ico"
+
+IDI_DISTANCE_H          ICON                    "Res\\Distance_H.ico"
+
+IDI_DISTANCE            ICON                    "Res\\Distance.ico"
+
+IDI_COLLISIONS_G0       ICON                    "Res\\collisionsG0.ico"
+
+IDI_COLLISIONS_STOP     ICON                    "Res\\collisionsStop.ico"
+
+IDI_COLLISIONS_PARAMETERS ICON                    "Res\\collisionsParameters.ico"
+
+IDI_COMPARE             ICON                    "Res\\compare.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_BCUR_Z              CURSOR                  "res\\bcur_y1.cur"
+
+IDC_BCUR_Y              CURSOR                  "res\\bcur_x1.cur"
+
+IDC_BCUR_X              CURSOR                  "res\\bcur_a1.cur"
+
+IDC_BCUR_W              CURSOR                  "res\\bcur_y2.cur"
+
+IDC_BCUR_S              CURSOR                  "res\\bcur_y3.cur"
+
+IDC_BCUR_P              CURSOR                  "res\\bcur_y4.cur"
+
+IDC_BCUR_A              CURSOR                  "res\\bcur_.cur"
+
+IDC_CUR_SEL8            CURSOR                  "res\\cur_sel8.cur"
+
+IDC_CUR_SEL7            CURSOR                  "res\\cur_sel7.cur"
+
+IDC_CUR_SEL6            CURSOR                  "res\\cur_sel6.cur"
+
+IDC_CUR_SEL5            CURSOR                  "res\\cur_sel5.cur"
+
+IDC_CUR_SEL4            CURSOR                  "res\\3dwarro.cur"
+
+IDC_CUR_SEL32           CURSOR                  "res\\cur00022.cur"
+
+IDC_CUR_SEL31           CURSOR                  "res\\cur00021.cur"
+
+IDC_CUR_SEL30           CURSOR                  "res\\cur_sel3.cur"
+
+IDC_CUR_SEL3            CURSOR                  "res\\cur00001.cur"
+
+IDC_CUR_SEL29           CURSOR                  "res\\cur00020.cur"
+
+IDC_CUR_SEL24           CURSOR                  "res\\cur00015.cur"
+
+IDC_CUR_SEL23           CURSOR                  "res\\cur_sel2.cur"
+
+IDC_CUR_SEL22           CURSOR                  "res\\cur00013.cur"
+
+IDC_CUR_SEL21           CURSOR                  "res\\cur00012.cur"
+
+IDC_CUR_SEL2            CURSOR                  "res\\cur00002.cur"
+
+IDC_CUR_SEL16           CURSOR                  "res\\cur_sel1.cur"
+
+IDC_CUR_SEL15           CURSOR                  "res\\cur00003.cur"
+
+IDC_CUR_SEL14           CURSOR                  "res\\cur00004.cur"
+
+IDC_CUR_SEL13           CURSOR                  "res\\cur00005.cur"
+
+IDC_CUR_SEL1            CURSOR                  "res\\cur00006.cur"
+
+IDC_CUR_POINT           CURSOR                  "res\\cur_poin.cur"
+
+IDC_CUR_MAIN            CURSOR                  "res\\NEW.CUR"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 5,0,0,1
+ PRODUCTVERSION 5,3,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040004b0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "5.0.0.1"
+            VALUE "InternalName", "ResInv.dll"
+            VALUE "LegalCopyright", "Copyright (C) 2023"
+            VALUE "OriginalFilename", "ResInv.dll"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "5.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x400, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SIZE_OUT            BITMAP                  "Res\\SIZEOUT.bmp"
+
+IDB_SIZE_IN             BITMAP                  "Res\\SIZEIN.bmp"
+
+IDR_PROPERTIES          BITMAP                  "Res\\toolbar2.bmp"
+
+IDR_MTTREE              BITMAP                  "Res\\tree_toolbar.bmp"
+
+IDB_AXIS                BITMAP                  "Res\\axistree_icons.bmp"
+
+IDB_LINE_THICK          BITMAP                  "res\\bmp00006.bmp"
+
+IDR_TOOLBAR_DBASE       BITMAP                  "res\\toolbar_db.bmp"
+
+IDB_COLL_ANIM           BITMAP                  "res\\bmp00004.bmp"
+
+IDB_COLL_FOUND          BITMAP                  "res\\bitmap3.bmp"
+
+IDB_COLL_NOTFOUND       BITMAP                  "res\\coll_fou.bmp"
+
+IDB_COLL_OFF            BITMAP                  "res\\bmp00005.bmp"
+
+IDB_COLOR_BUTTON_BMP    BITMAP                  "res\\bitmap2.bmp"
+
+IDB_STATE_VIEW_TABS     BITMAP                  "res\\state_vi.bmp"
+
+IDB_TEXT_16             BITMAP                  "res\\bmp00003.bmp"
+
+IDB_TEXT_16_H           BITMAP                  "res\\bmp00002.bmp"
+
+IDB_TEXT_24             BITMAP                  "res\\bitmap1.bmp"
+
+IDB_TEXT_24_H           BITMAP                  "res\\bmp00001.bmp"
+
+IDB_TREECOLOR           BITMAP                  "res\\treecolo.bmp"
+
+IDB_TREE_VIEW_ADDICONS  BITMAP                  "res\\tree_vie.bmp"
+
+IDR_TEXT_16             BITMAP                  "res\\text_16.bmp"
+
+IDB_BITMAP_COL          BITMAP                  "res\\bmp00007.bmp"
+
+IDB_START_PIC           BITMAP                  "res\\NCM50StartPicture.bmp"
+
+IDB_FAVORITES_OFF       BITMAP                  "Res\\FavoritesOff.bmp"
+
+IDB_FAVORITES_ON        BITMAP                  "Res\\FavoritesOn.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_PROPERTIES TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_PROP_TOOLBAR_EXPAND
+    BUTTON      ID_PROP_TOOLBAR_APPLY
+    BUTTON      ID_PROP_TOOLBAR_ADDSP
+    BUTTON      ID_SLIDER
+END
+
+IDR_MTTREE TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_TREE_TOOLBAR_EXPAND
+    BUTTON      ID_TREE_TOOLBAR_SAVE
+    BUTTON      ID_TREE_TOOLBAR_SAVEAS
+    BUTTON      ID_TREE_TOOLBAR_UNDO
+    BUTTON      ID_TREE_TOOLBAR_REDO
+    BUTTON      ID_TREE_TOOLBAR_LOAD_BRANCH
+END
+
+IDR_TOOLBAR_DBASE TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_TREEMODVIEW
+    BUTTON      ID_TOOLMODVIEW
+    SEPARATOR
+    BUTTON      IDC_PREVIEW
+    BUTTON      IDC_RULES
+    BUTTON      IDC_RULES_APLY
+    SEPARATOR
+    BUTTON      ID_TOOLS_CREATE
+    BUTTON      ID_TOOLS_EDIT
+    BUTTON      ID_TOOLS_DEL
+    SEPARATOR
+    BUTTON      ID_TOOLS_SELEDIT
+    BUTTON      IDC_DEL_TOOL
+    BUTTON      IDC_DELALL_TOOL
+END
+
+IDR_TEXT_16 TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_EDIT_UPDATE
+    BUTTON      ID_MODE_PAINTER
+    BUTTON      ID_BUTTON_LINENUM
+    BUTTON      ID_ADD_BOOKMARK
+    BUTTON      ID_NEXT_BOOKMARK
+    BUTTON      ID_PREV_BOOKMARK
+    BUTTON      ID_CLEARALL_BOOKMARK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    VK_F5,          ID_ANIMATE_PAUSE,       VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, ALT, NOINVERT
+    "X",            ID_CUTFASTONOFF5X,      VIRTKEY, SHIFT, ALT, NOINVERT
+    "C",            ID_CUTONOFF,            VIRTKEY, SHIFT, ALT, NOINVERT
+    "D",            ID_DEBUGMODE,           VIRTKEY, SHIFT, ALT, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_EDIT_UPDATE,         VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_FILE_REOPEN,         VIRTKEY, ALT, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    "E",            ID_NEW_CHANNEL,         VIRTKEY, CONTROL, ALT, NOINVERT
+    "I",            ID_OGL_CONFIG,          VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY, ALT, NOINVERT
+    "P",            ID_PARTICULAR,          VIRTKEY, ALT, NOINVERT
+    "W",            ID_SET_NEXT_CHANNEL,    VIRTKEY, CONTROL, ALT, NOINVERT
+    "R",            ID_SHOW_REPLACED,       VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_F2,          ID_STEP_BACK,           VIRTKEY, NOINVERT
+    VK_F3,          ID_STEP_FOR,            VIRTKEY, NOINVERT
+    VK_F3,          ID_STEP_HERE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F4,          ID_STEP_OVER,           VIRTKEY, NOINVERT
+    VK_F6,          ID_STEP_STOP,           VIRTKEY, NOINVERT
+    VK_F5,          ID_STOCK_INIT,          VIRTKEY, SHIFT, NOINVERT
+    "T",            ID_TB_VIEW_LA,          VIRTKEY, ALT, NOINVERT
+    "Y",            ID_TB_VIEW_NEXT,        VIRTKEY, CONTROL, ALT, NOINVERT
+    "Y",            ID_TB_VIEW_PREV,        VIRTKEY, ALT, NOINVERT
+    "A",            ID_TB_ZOOM_ALL,         VIRTKEY, ALT, NOINVERT
+    "T",            ID_TEST,                VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_F7,          ID_VIEW_TR_GEOM,        VIRTKEY, NOINVERT
+    "Q",            ID_VOLUME_TREE,         ASCII,  ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LANGUAGE DLGINIT
+BEGIN
+    IDC_COMBO_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_COMBO_LANG, 0x403, 8, 0
+0x7552, 0x7373, 0x6169, 0x006e, 
+    IDC_COMBO_LANG, 0x403, 7, 0
+0x6f4b, 0x6572, 0x6e61, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// STYLE_XML
+//
+
+AQUA_IDX_OFFICE2007_STYLE STYLE_XML               "..\\VisualManager\\aqua\\Style.xml"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+AQUA_IDB_OFFICE2007_STATUSBAR_BACK PNG                     "..\\VisualManager\\Aqua\\StatusBar\\Back.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TILT_FORMAT         "%f"
+    IDS_GOTO                "GOTO/ %f, %f, %f"
+    IDS_RAPID               "RAPID"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_1ENDPOINT           "X%-0.2f Y%-0.2f Z%-0.2f"
+    IDS_2ENDPOINT           "X%-0.2f Y%-0.2f Z%-0.2f X%-0.2f Y%-0.2f Z%-0.2f"
+    IDS_1RESULT             "L%-0.2f"
+    IDS_2RESULT             "L1=%0.2f L2=%-0.2f L3=%-0.2f"
+    IDS_OUTPUT_FORMAT       "%-0.2f"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_1ENDPOINT_INCH      "X%-0.4f Y%-0.4f Z%-0.4f"
+    IDS_2ENDPOINT_INCH      "X%-0.4f Y%-0.4f Z%-0.4f X%-0.4f Y%-0.4f Z%-0.4f"
+    IDS_1RESULT_INCH        "L%-0.4f"
+    IDS_2RESULT_INCH        "L1=%-0.4f L2=%-0.4f L3=%-0.4f"
+    IDS_OUTPUT_FORMAT_INCH  "%-0.4f"
+    IDS_DEFPARAMETERS_FILENAME "defParameters.xml"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_PROPLIST            "IDC_PROPLIST"
+    IDC_AXIS_TREE           "IDC_AXIS_TREE"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PROP_KINEMAT_VECT_X "X"
+    IDS_PROP_KINEMAT_VECT_Y "Y"
+    IDS_PROP_KINEMAT_VECT_Z "Z"
+    IDS_PROP_KINEMAT_BP_X   "X"
+    IDS_PROP_KINEMAT_BP_Y   "Y"
+    IDS_PROP_KINEMAT_BP_Z   "Z"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PROP_KINEMAT_VECTY_X "X"
+    IDS_PROP_KINEMAT_VECTY_Y "Y"
+    IDS_PROP_KINEMAT_VECTY_Z "Z"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PROP_KINEMAT_LOCALDV_X "X"
+    IDS_PROP_KINEMAT_LOCALDV_Y "Y"
+    IDS_PROP_KINEMAT_LOCALDV_Z "Z"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PROP_KINEMAT_COMP_AXISX_X "X"
+    IDS_PROP_KINEMAT_COMP_AXISX_Y "Y"
+    IDS_PROP_KINEMAT_COMP_AXISX_Z "Z"
+    IDS_PROP_KINEMAT_COMP_AXISY_X "X"
+    IDS_PROP_KINEMAT_COMP_AXISY_Y "Y"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PROP_KINEMAT_COMP_AXISY_Z "Z"
+    IDS_PROP_KINEMAT_COMP_AXISZ_X "X"
+    IDS_PROP_KINEMAT_COMP_AXISZ_Y "Y"
+    IDS_PROP_KINEMAT_COMP_AXISZ_Z "Z"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_UCS_FORMAT          "%lg"
+END
+
+STRINGTABLE
+BEGIN
+    ID_REPORTCTRL           " "
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TITLE               "$$p01355177l|]>pdE'l4$n]OA9/,!'!}&'"
+    IDS_FEDRAT              "FEDRAT/ %d %s"
+    IDS_CUTCOM              "CUTCOM/ %s, %d, %s"
+    IDS_COMLEFT             "CUTCOM/ LEFT, %d"
+    IDS_COMRIGHT            "CUTCOM/ RIGHT, %d"
+    IDS_COMOFF              "CUTCOM/ OFF"
+    IDS_SPINDLOFF           "SPINDL/ OFF"
+    IDS_SPINDL              "SPINDL/ %d %s"
+    IDS_SPINCLW             ",CCLW"
+    IDS_SPINCCW             ",CLW"
+    IDS_SPINDLON            "SPINDL/ ON"
+    IDS_LOADTL              "LOADTL/ %d"
+    IDS_REMARK              "REMARK %s"
+    IDS_CYCLRETI            "CYCLRET/ INIT"
+    IDS_CYCLE               "CYCLE/ %s, %f, %s, %d, %f, %s, %f"
+    IDS_CYCLEOFF            "CYCLE/ OFF"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CYCLETYPE           "DRILL/ FACE/TAP/BORE/REAM/DEEP/THRU/CSINK"
+    IDS_COOLANTOFF          "COOLNT/ OFF"
+    IDS_COOLANT             "COOLNT/ %s"
+    IDS_COOLANTTYPE         "ON/FLOOD/MIST"
+    IDS_CIRCLE              "CIRCLE/ %f, %f, %f, %f, %f, %f, %f"
+    IDS_INDIC_REL_XYZ       "xxxxxxxxx, yyyyyyyyy, zzzzzzzzz"
+    IDS_TEMPSTOCKS_FOLDER   "TemporaryStocks\\"
+    IDS_TEMPSTOCKS_NAMEFORMAT "Stock_%d.mfr"
+    IDS_NO_STL_FILE         "NO_STL_FILE"
+    IDS_PROCEXE_FOLDER      "ProcExe\\"
+    IDS_DIST_XYZ_MM         "D%-0.3f X%-0.3f Y%-0.3f Z%-0.3f"
+    IDS_DIST_XYZ_INCH       "D%-0.4f X%-0.4f Y%-0.4f Z%-0.4f"
+    IDS_BXFORMAT2           "X = %-8.3f (DIAM = %8.3f)"
+    IDS_BXFORMAT2_INCH      "X = %-8.4f (DIAM = %8.4f)"
+    IDS_BXYFORMAT           "XY = %8.3f"
+    IDS_BXYFORMAT_INCH      "XY = %8.4f"
+END
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COMMONTITLE         "NCManager"
+    IDS_REPORT_DEF          "report.dfn"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STATE_VALUE_XY      "XY\nFunctionCode\nXYPlane"
+    IDS_STATE_VALUE_XZ      "XZ\nFunctionCode\nZXPlane"
+    IDS_STATE_VALUE_YZ      "YZ\nFunctionCode\nYZPlane"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STATE_VALUE_UP      "+\nFunctionCode\nLengthComp"
+    IDS_STATE_VALUE_DOWN    "-\nFunctionCode\nLengthCompOn"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NCMINFO_DESC        "NCMInfo Class"
+    IDS_BXFORMAT            "X = %-8.3f"
+    IDS_BYFORMAT            "Y = %-8.3f"
+    IDS_BZFORMAT            "Z = %-8.3f"
+    IDS_CRFORMAT            "R = %-8.3f"
+    IDS_ANGFORMAT           "Alfa = %-8.3f"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_VIRT_TOOL_NUM_FORMAT "%04u"
+    IDS_SECT_COORDDEF       "// Section Coord Definition"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LANG_CHANGE         "Close and restart program in order to changes take effect."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MT_MAINFILE         "main.xml"
+    IDS_BSP_EXT             "mfr"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_M_RD_FORMAT         "R = %-8.3f  D = %-8.3f"
+    IDS_VXFORMAT            "X = %-8.3f  Ax = %-8.3f"
+    IDS_VYFORMAT            "Y = %-8.3f  Ay = %-8.3f"
+    IDS_VZFORMAT            "Z = %-8.3f  Az = %-8.3f"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STATE_VALUE_CT_CH   "."
+    IDS_STATE_VALUE_CT_RN   "."
+    IDS_ST_F_MM             "%6.2lf, %6.2lf, %6.2lf"
+    IDS_ST_F_IN             "%6.4lf, %6.4lf, %6.4lf"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ST1_F_MM            "%6.2lf, %6.2lf, %6.2lf (%6.2lf)"
+    IDS_ST1_F_IN            "%6.4lf, %6.4lf, %6.4lf (%6.4lf)"
+    IDS_BXFORMAT_INCH       "X = %-8.4f"
+    IDS_BYFORMAT_INCH       "Y = %-8.4f"
+    IDS_BZFORMAT_INCH       "Z = %-8.4f"
+    IDS_M_RD_FORMAT_INCH    "R = %-8.4f  D = %-8.4f"
+    IDS_CRFORMAT_INCH       "R = %-8.4f"
+    IDS_VYFORMAT_INCH       "Y = %-8.4f  Ay = %-8.3f"
+    IDS_VZFORMAT_INCH       "Z = %-8.4f  Az = %-8.3f"
+    IDS_VXFORMAT_INCH       "X = %-8.4f  Ax = %-8.3f"
+    IDS_DOUBLE_PAR          "%-8.4f"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ABCXFORMAT          "As = %-8.3f  Ae = %-8.3f"
+    IDS_ABCYFORMAT          "Bs = %-8.3f  Be = %-8.3f"
+    IDS_ABCZFORMAT          "Cs = %-8.3f  Ce = %-8.3f"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_CUSTOMIZE       " "
+    IDS_CH_PART_WSECT       "Sections"
+END
+
+STRINGTABLE
+BEGIN
+    ID_LISTCTRL             " "
+    ID_GEOMCTRL             " "
+    ID_MEASURECTRL          " "
+    ID_REGSCTRL             " "
+    ID_STOCKWND             " "
+    ID_MACHWND              " "
+    IDC_STEP_NUM            " "
+    ID_PAUSE_NUM            " "
+END
+
+STRINGTABLE
+BEGIN
+    IDC_ANIM_SLD            " "
+    ID_WSECTWND             " "
+    IDC_ANIMF_SLD           " "
+    IDS_INDIC_COLL          "."
+    ID_STOCKWND_MAIN        " "
+END
+
+STRINGTABLE
+BEGIN
+    ID_MACHWND_MAIN         " "
+    IDS_SETTINGS_EXT        ".dfn"
+    IDS_STATE_VALUE_SPLINEA "rrr"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COLORS_FORMAT       "%s %f %f %f %f"
+    IDS_SECT_GEN            "// Section General"
+    IDS_SECT_FUNCDEF        "// Section Function Definition"
+    IDS_SECT_WORDREP        "// Section Word Replacement"
+    IDS_SECT_END            "// end section"
+    IDS_SECT_WORDDEF        "// Section Word Definition"
+    IDS_SECT_MFUNCDEF       "// Section Misc Function Definition"
+    IDS_SECT_OTHERS         "// Section Others"
+    IDS_SECT_CYCLEDEF       "// Section Cycle Definition"
+    IDS_INDIC_XYZ           "xxxxxxxx, yyyyyyyy, zzzzzzzz"
+    IDS_DEFAULT_DEF         "ISO.SM3"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEFAULT_DEF2        "HEBER.sm2"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEFIN_FILENAME      "Defaults.xml"
+    IDS_STATE_NOTE_Electr   "mA"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_PSLIDER             "Dummy"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "NCManager"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SECT_REGS_MAP       "// Section Registers Map"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BXZFORMAT           "XZ = %8.3f"
+    IDS_BXZFORMAT_INCH      "XZ = %8.4f"
+    IDS_MACRO_MCN           ".mcn"
+    IDS_QUICKTITLE          "QuickCam Simulator"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1251)
+#include "afxres.rc"     // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

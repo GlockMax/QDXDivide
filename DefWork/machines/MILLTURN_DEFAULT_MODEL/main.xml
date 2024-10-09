@@ -1,0 +1,134 @@
+<?xml version='1.0' ?>
+<MachineTool>
+	<axes>
+		<axis>
+			<param type="trans" name="X" parent="Z"/>
+			<vector x="0.5" y="0.8660254" z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="modelX" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="-400."/>
+			<part name = "Machine-MT-x1" />
+			<part name = "Machine-MT-x2" />
+			<color r="1." g="0.6" b="0.6" a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Y" parent="X"/>
+			<vector x="-0.8660254" y="0.5" z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="modelY" parent="Y"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="-400."/>
+			<part name = "Machine-MT-y1" />
+			<part name = "Machine-MT-y2" />
+			<color r="0.6" g="1." b="0.6" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="stock" parent="stock_Z"/>
+			<vector x="0.5" y="0.8660254" z="0."/>
+			<vectorY x="-0.8660254" y="0.5" z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_X" parent="C"/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Y" parent="stock_X"/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Z" parent="stock_Y"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Z" parent=""/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="modelZ" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="-400."/>
+			<part name = "Machine-MT-z1" />
+			<part name = "Machine-MT-z2" />
+			<color r="0.6" g="0.6" b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="rotary" name="C" parent="B"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="rotary" name="B" parent="A"/>
+			<vector x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="rotary" name="A" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool:1" parent="tool_length"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool" parent="tool_length"/>
+			<vector x="0." y="0." z="1."/>
+			<vectorY x="0.8660254" y="-0.5" z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="tool_length" parent="Y" length="-160.0"/>
+			<vector x="0.5" y="0.8660254" z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="base" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Machine-MT-b1" />
+			<part name = "Machine-MT-b2" />
+			<part name = "Machine-MT-b3" />
+			<part name = "Machine-MT-b4" />
+			<color r="0.6" g="0.6" b="0.6" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="spindle" parent="C"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Machine-MT-spndl" />
+			<color r="0.6" g="0.6" b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Turret" parent="Y"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="-400."/>
+			<part name = "Machine-MT-tur1" />
+			<color r="0.6" g="1." b="0." a="1."/>
+		</axis>
+	</axes>
+</MachineTool>

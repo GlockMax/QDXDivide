@@ -1,0 +1,26 @@
+Номера строк в ресурсах
+
+IDB_ -  IDI_ - для диалогов - 100-1000
+
+iDS_ - строки общие - 
+IDS_ - строки разноязычные - 100-2500
+
+
+
+
+BSP_Model	2401-2499
+Collision
+Compare		3000-3099
+DXFExport	1-99
+Editor		4000-4099
+Machine		2500-2999 5000-5999
+NCM		100-599
+NCMb		700-799
+NCMLOC		1011-2400
+NCTool		600-699
+SciLexer
+server		800-899
+Surface
+TinyXML
+Unit
+UnitS		900-1010

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Properties of CNC-Programs</TITLE>
+<link rel=StyleSheet href=../tutorial.css></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1>Properties of CNC-Programs</h1>
+<p>CNC-Programs properties are managed in Properties pane.</p>
+<p><img src="../images/PropertyPrograms.gif"></p>
+<p>To change property, click the desired property value in the right column, then select new value from list or enter value from keyboard. Modified parameter will be highlighted bold. There's a hint for currently selected property at the bottom of the pane.</p>
+<p><strong>Visibility</strong> - controls visibility for CNC-Programs toolpaths.  &quot;No&quot; - all toolpaths are invisible, &quot;Yes&quot; each CNC-Program toolpath visibility is controlled by its own visibility parameter.</p>
+<p><strong>Toolpath</strong> - controls the type of toolpaths to be displayed in graphical windows. Three options available: &quot;<strong>Ignore cutter compensation</strong>&quot;, &quot;<strong>By cutter compensation</strong>&quot;, &quot;<strong>Both</strong>&quot;. During machining process, tools center moves along toolpath with cutter compensation. Compensation value for each tool is set in SNS-Control&gt;Start state...&gt;Compens.</p>
+<table width="70%" border="1">
+  <!--DWLayoutTable-->
+  <tr> 
+    <td width="70%" valign="top"> <p><strong>Ignore cutter compensation</strong> - only programmed toolpath without tool compensation is displayed (yellow toolpath on the picture)</p>
+      <p>&nbsp;</p></td>
+    <td  valign="top"> <p><img src="../images/PropertyPrograms2.gif" alt="" width="152" height="172" border="0" align="absmiddle"></p></td>
+  </tr>
+  <tr> 
+    <td  valign="top"> <p><strong>By cutter compensation </strong> - toolpath with diameter compensation or turning compensation is displayed (blue toolpath on the picture).</p>
+    </td>
+    <td  valign="top"> <p><img src="../images/PropertyPrograms3.gif" alt="" width="152" height="172" border="0" align="absmiddle"></p></td>
+  </tr>
+    <tr> 
+    <td width="70%" valign="top"> <p><strong>Both</strong>- display both programmed and compensated toolpaths. Color of toolpath with compensation is an inverted color of programmed toolpath. (on the picture  - yellow toolpath without compensation, blue - with compensation).</p>
+      </td>
+    <td  valign="top"> <p><img src="../images/PropertyPrograms4.gif" alt="" width="152" height="172" border="0" align="absmiddle"></p></td>
+  </tr>
+
+</table>
+<h6>&nbsp;</h6>
+<p><strong>To show </strong> - controls the mode of drawing toolpaths. Three options available: &quot;Full toolpath&quot;, &quot;Worked-out toolpath&quot;, &quot;Fragment&quot;.</p>
+<table width="70%" border="1">
+  <!--DWLayoutTable-->
+  <tr> 
+    <td width="70%" valign="top"> <p><strong>Full toolpath </strong> - all toolpaths of all cnc-programs in project are displayed.</p>
+      <p>&nbsp;</p></td>
+    <td  valign="top"> <p><img src="../images/PropertyPrograms2.gif" alt="" width="152" height="172" border="0" align="absmiddle"></p></td>
+  </tr>
+  <tr> 
+    <td  valign="top"> <p><strong>Worked-out toolpath</strong> - only the part from the start to current cnc-program line (excluding current line) is displayed. This mode makes the effect of wireframe simulation, i.e. step-by-step toolpath drawing according to cnc-program execution.</p>
+      <p>&nbsp;</p>
+    </td>
+    <td  valign="top"> <p><img src="../images/PropertyPrograms3.gif" alt="" width="152" height="172" border="0" align="absmiddle"></p></td>
+  </tr>
+    <tr> 
+    <td width="70%" valign="top"> <p><strong>Fragment </strong> - only the part of toolpath corresponding to &quot;Fragment start&quot; and &quot;Fragment end&quot; parameters is displayed.</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      </td>
+    <td  valign="top"> <p><img src="../images/PropertyPrograms4.gif" alt="" width="152" height="172" border="0" align="absmiddle"></p></td>
+  </tr>
+
+</table>
+<p>&nbsp;</p>
+<p><strong>Paint</strong> - controls the way the toolpath is colored in graphical windows. Six options available: &quot;<strong>By default </strong>&quot;, &quot;<strong>Interpolation type </strong>&quot;, &quot;<strong>Diameter compensation</strong>&quot;, 
+  &quot;<strong>Length compensation</strong>&quot;, &quot;<strong>Cycle type</strong>&quot;, 
+  &quot;<strong>Cooling type</strong>&quot;.</p>
+<table width="70%" border="1">
+  <tr>
+    <td width="70%" valign="top">
+<p><strong>By default </strong></p></td>
+    <td><img src="../images/PropertyPrograms4.gif" alt="" width="152" height="172" border="0" align="absmiddle"></td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p><strong>Interpolation type </strong></p></td>
+    <td><img src="../images/PropertyPrograms4.gif" alt="" width="152" height="172" border="0" align="absmiddle"></td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p><strong>Diameter compensation</strong></p></td>
+    <td><img src="../images/PropertyPrograms4.gif" alt="" width="152" height="172" border="0" align="absmiddle"></td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p><strong>Length compensation</strong></p></td>
+    <td><img src="../images/PropertyPrograms4.gif" alt="" width="152" height="172" border="0" align="absmiddle"></td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p><strong>Cycle type</strong></p></td>
+    <td><img src="../images/PropertyPrograms4.gif" alt="" width="152" height="172" border="0" align="absmiddle"></td>
+  </tr>
+  <tr>
+    <td valign="top">
+<p><strong>Cooling type</strong></p></td>
+    <td><img src="../images/PropertyPrograms4.gif" alt="" width="152" height="172" border="0" align="absmiddle"></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><strong>Fragment start </strong> - controls the number of cnc-program lines visible before current line.</p>
+<p><strong>Fragment end </strong> - controls the number of cnc-program lines visible after current line.</p>
+<p><strong>Length</strong> - displays the summary length of all toolpaths millimeters.</p>
+<p><strong>Number of lines </strong> - displays the number of lines in all cnc-programs of the project.</p>
+<p><strong>Time</strong> - displays the summary time of execution of all cnc-programs of the project.</p>
+</BODY>
+</HTML>

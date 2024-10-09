@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Milling tool creation</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1><A NAME="HIDD_TOOLSCON_CREATE" id="HIDD_TOOLSCON_CREATE"></A>Milling tool creation</h1>
+<p>This command is used to set tool type, form and dimensions. There are two types of tools: milling tools and lathe tools. Milling tools can be set only in milling or mill-turn projects.</p>
+<p>Lets state some definitions.</p>
+<p>There are three types of elements, which form each tool. Standard tool, disk-shaped tool and holder. Any tool can be described as a set of any quantity of these elements. All the elements, which form a tool, are listed in tool tree in an offset descending order. On the following picture you can see tool number 1 named &quot;Tool&quot;, which consists of three elements (10mm diameter drilling tool, 20mm diameter end-milling tool, and a holder).</p>
+<p><img src="../images/toolAssTree.gif" width="390" height="207"></p>
+<p>In the simplest case tool consists of one element. On the following picture you can see tool number 2 named  D90H100 (90 mm diameter and 100 mm high).</p>
+<p><img src="../images/toolAssTree1.gif" width="439" height="203"></p>
+<p><strong>Example</strong>. To create a drilling tool define one element by calling  <a href="HIDC_ADD_TOOL.htm">Add standard tool</a>. If you need the tool to have a holder, add one more element by calling Add Holder to Tool. As a result you'll have a tool, consisting of two elements, <strong>complex</strong> instrument.</p>
+<p> Let's go through the milling tool creating procedure. After pushing <strong>Create...</strong> the following menu window appears: </p>
+<p><img src="../images/ToolCreate.gif" width="403" height="318"></p>
+<h6>Tool Parameters </h6>
+<h6>Name</h6>
+<p>Name of the tool is formed automatically if not specified by user.</p>
+<h6>Cutter ID </h6>
+<p>Tool number. Tool is referenced from CNC-program by this number.</p>
+<h6>Axis</h6>
+<p>Tool axis number. This is a special concept, made to make it possible to create a tool with any angle to the spindle. Axis position and number are set in the machine description file.</p>
+<h6>Turret</h6>
+<p>Tool bank number.</p>
+<h6>Marker</h6>
+<p>Defines the size of tool marker. When a tool is hidden or a tool size and shape are not defined, tool's current position is marked by this marker. Default marker size os set in  <strong>Settings&gt;Parameters&gt;Graphics&gt;Tool Marker</strong>.</p>
+<h6>Z Shift</h6>
+<p>Defines tool's shift along the spindle axis.</p>
+<h6><a href="HIDC_ADD_TOOL.htm">Add standard Tool</a></h6>
+<p>Create end-milling cutters or drilling tools. </p>
+<h6><a href="HIDC_ADD_DISKTOOL.htm">Add disk-shaped Tool</a></h6>
+<p>Create a special-type tools. Follow the notes od dialogs.</p>
+<h6><a href="HIDC_ADD_MENDREL.htm">Add Holder to Tool</a></h6>
+<p>Create a holder to the current tool.</p>
+<h6>Tool elements</h6>
+<p>Any tool can be represented as a set of end-milling, disk-shaped tools and holders, i.e. complex tool. This list contains the names of tool's elements in Z shift descending order.</p>
+<h1>Complex tools examples</h1>
+<p><strong>End-milling cutter with holder</strong>:</p>
+<p><img src="../images/ToolAssamble.gif"></p>
+<p>After adding an element, Z shift rises to the value of previous tool element length. I.e. each following element is attached to the end of previous element. You can set the offset manually. </p>
+<p><strong>Centering tool with holder:</strong></p>
+<p><img src="../images/ToolAssCentr.gif"></p>
+<p><strong>Disk-shaped tool with holder</strong><strong>:</strong></p>
+<p><img src="file:///C|/VCprojects/NCM31_HLP/images/ToolAssBall.gif"></p>
+<p><strong>Chamfer milling cutter with holder:</strong></p>
+<p><img src="../images/ToolAssChamf.gif"></p>
+<p>When any tool element is defined, the following commands become active:</p>
+<h6>Edit</h6>
+<p>Edit tool element parameters.</p>
+<h6>Delete</h6>
+<p>Delete tool element from tool.</p>
+<p>&nbsp;</p>
+</BODY>
+</HTML>

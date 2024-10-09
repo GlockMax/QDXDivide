@@ -1,0 +1,30 @@
+// NCycle.cpp: implementation of the NCycle class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "NCycle.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+NCycle::NCycle()
+{
+}
+
+/*NCycle::~NCycle()
+{
+
+}
+*/
+
+bool NCycle::IsCycle()
+{
+	return true;
+}

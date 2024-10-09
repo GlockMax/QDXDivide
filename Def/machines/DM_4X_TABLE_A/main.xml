@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="part" name="base" parent="" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="0" b="1" a="1" />
+            <collisioncheck axisname="tool" mychildren="No" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="trans" name="Y" parent="" length="100" />
+            <vector x="0" y="-1" z="0" />
+            <color r="0" g="1" b="0" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="Y" length="100" />
+            <vector x="-1" y="0" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Table-X" parent="X" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-380" y="0" z="-210" />
+            <color r="0.752941" g="0.752941" b="0.752941" a="1" />
+            <part name="Table_Hardinger" margin="0" />
+        </axis>
+        <axis>
+            <param type="rotary" name="A" parent="X" length="100" />
+            <vector x="-1" y="0" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+            <limits min="0" max="0" />
+            <collisioncheck axisname="Z" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="part" name="Rotate" parent="A" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-380" y="0" z="-210" />
+            <color r="1" g="1" b="1" a="1" />
+            <part name="Rotate_Hardinger" margin="0" />
+        </axis>
+        <axis>
+            <param type="stock" name="stock" parent="A" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="part" name="BaseRotate" parent="X" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-380" y="0" z="-210" />
+            <color r="0.752941" g="0.862745" b="0.752941" a="1" />
+            <part name="RotateBase_Hardinger" margin="0" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="" length="100" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="1" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="part" name="spindle" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.65098" g="0.792157" b="0.941176" a="1" />
+            <part name="Spindle_Hardinger" margin="0" />
+        </axis>
+    </axes>
+</MachineTool>

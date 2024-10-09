@@ -1,0 +1,188 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "..\common\BMP.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "..\\common\\BMP.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOL_TURNOUTR       BITMAP                  "..\\ResCommon\\res\\bmp00030.bmp"
+IDB_TOOL_TURNOUTL       BITMAP                  "..\\ResCommon\\res\\bmp00029.bmp"
+IDB_TOOL_TURNINR        BITMAP                  "..\\ResCommon\\res\\bmp00028.bmp"
+IDB_TOOL_TURNINL        BITMAP                  "..\\ResCommon\\res\\tool_tur.bmp"
+IDB_TOOL_TURNB_PICS     BITMAP                  "..\\ResCommon\\res\\tool_pic.bmp"
+IDB_TOOL_TURN_ORIENT    BITMAP                  "..\\ResCommon\\res\\TOOL_TURN_ORIENT.bmp"
+IDB_TOOL_TURN_OFFSET    BITMAP                  "..\\ResCommon\\res\\bitmap4.bmp"
+IDB_TOOL_TURN_FRONT     BITMAP                  "..\\ResCommon\\res\\TOOL_TURN_FRONT.bmp"
+IDB_TOOL_TRIGON         BITMAP                  "..\\ResCommon\\Res\\TRIGON.bmp"
+IDB_TOOL_TRIANGLE       BITMAP                  "..\\ResCommon\\Res\\TRIANGLE.bmp"
+IDB_TOOL_THREAD4        BITMAP                  "..\\ResCommon\\res\\bmp00031.bmp"
+IDB_TOOL_THREAD3        BITMAP                  "..\\ResCommon\\res\\bmp00002.bmp"
+IDB_TOOL_THREAD2        BITMAP                  "..\\ResCommon\\res\\tool_thr.bmp"
+IDB_TOOL_THREAD         BITMAP                  "..\\ResCommon\\res\\bmp00026.bmp"
+IDB_TOOL_SQUARE         BITMAP                  "..\\ResCommon\\Res\\SQUARE.bmp"
+IDB_TOOL_RND            BITMAP                  "..\\ResCommon\\Res\\RND.bmp"
+IDB_TOOL_RECT           BITMAP                  "..\\ResCommon\\Res\\RECT.bmp"
+IDB_TOOL_PICS           BITMAP                  "..\\ResCommon\\res\\bmp00003.bmp"
+IDB_TOOL_PENT           BITMAP                  "..\\ResCommon\\Res\\PENT.bmp"
+IDB_TOOL_PARAL85        BITMAP                  "..\\ResCommon\\Res\\PARAL85.bmp"
+IDB_TOOL_PARAL82        BITMAP                  "..\\ResCommon\\res\\PARAL82.bmp"
+IDB_TOOL_PARAL55        BITMAP                  "..\\ResCommon\\res\\PARAL55.bmp"
+IDB_TOOL_OCT            BITMAP                  "..\\ResCommon\\res\\OCT.bmp"
+IDB_TOOL_HEX            BITMAP                  "..\\ResCommon\\res\\HEX.bmp"
+IDB_TOOL_DRAW9          BITMAP                  "..\\ResCommon\\res\\bmp00013.bmp"
+IDB_TOOL_DRAW8          BITMAP                  "..\\ResCommon\\res\\bmp00012.bmp"
+IDB_TOOL_DRAW7          BITMAP                  "..\\ResCommon\\res\\bmp00011.bmp"
+IDB_TOOL_DRAW6          BITMAP                  "..\\ResCommon\\res\\bmp00010.bmp"
+IDB_TOOL_DRAW5          BITMAP                  "..\\ResCommon\\res\\bmp00009.bmp"
+IDB_TOOL_DRAW4          BITMAP                  "..\\ResCommon\\res\\bmp00008.bmp"
+IDB_TOOL_DRAW3          BITMAP                  "..\\ResCommon\\res\\bmp00007.bmp"
+IDB_TOOL_DRAW25         BITMAP                  "..\\ResCommon\\res\\bmp00033.bmp"
+IDB_TOOL_DRAW24         BITMAP                  "..\\ResCommon\\res\\bmp00025.bmp"
+IDB_TOOL_DRAW23         BITMAP                  "..\\ResCommon\\res\\bmp00024.bmp"
+IDB_TOOL_DRAW22         BITMAP                  "..\\ResCommon\\res\\bmp00023.bmp"
+IDB_TOOL_DRAW21         BITMAP                  "..\\ResCommon\\res\\bmp00022.bmp"
+IDB_TOOL_DRAW20         BITMAP                  "..\\ResCommon\\res\\bmp00004.bmp"
+IDB_TOOL_DRAW2          BITMAP                  "..\\ResCommon\\res\\bmp00006.bmp"
+IDB_TOOL_DRAW19         BITMAP                  "..\\ResCommon\\res\\bmp00032.bmp"
+IDB_TOOL_DRAW17         BITMAP                  "..\\ResCommon\\res\\tool_dra.bmp"
+IDB_TOOL_DRAW16         BITMAP                  "..\\ResCommon\\res\\bmp00020.bmp"
+IDB_TOOL_DRAW15         BITMAP                  "..\\ResCommon\\res\\bmp00019.bmp"
+IDB_TOOL_DRAW14         BITMAP                  "..\\ResCommon\\res\\bmp00018.bmp"
+IDB_TOOL_DRAW13         BITMAP                  "..\\ResCommon\\res\\bmp00017.bmp"
+IDB_TOOL_DRAW12         BITMAP                  "..\\ResCommon\\res\\bmp00016.bmp"
+IDB_TOOL_DRAW11         BITMAP                  "..\\ResCommon\\res\\bmp00015.bmp"
+IDB_TOOL_DRAW10         BITMAP                  "..\\ResCommon\\res\\bmp00014.bmp"
+IDB_TOOL_DRAW1          BITMAP                  "..\\ResCommon\\res\\bmp00005.bmp"
+IDB_TOOL_DISK_PICS      BITMAP                  "..\\ResCommon\\res\\tool_dis.bmp"
+IDB_TOOL_DIAMOND86      BITMAP                  "..\\ResCommon\\res\\DIAMOND86.bmp"
+IDB_TOOL_DIAMOND80      BITMAP                  "..\\ResCommon\\res\\DIAMOND80.bmp"
+IDB_TOOL_DIAMOND75      BITMAP                  "..\\ResCommon\\res\\DIAMOND75.bmp"
+IDB_TOOL_DIAMOND55      BITMAP                  "..\\ResCommon\\res\\DIAMOND55.bmp"
+IDB_TOOL_DIAMOND50      BITMAP                  "..\\ResCommon\\res\\DIAMOND50.bmp"
+IDB_TOOL_DIAMOND35      BITMAP                  "..\\ResCommon\\res\\DIAMOND35.bmp"
+IDB_INSERT_CORNER2      BITMAP                  "..\\ResCommon\\res\\insert_c.bmp"
+IDB_INSERT_CORNER1      BITMAP                  "..\\ResCommon\\res\\bmp00027.bmp"
+IDB_IMAGELIST2          BITMAP                  "..\\ResCommon\\res\\FAddimg.bmp"
+IDB_IMAGELIST1          BITMAP                  "..\\ResCommon\\res\\Fimg.bmp"
+IDB_IMAGELIST           BITMAP                  "..\\ResCommon\\res\\Timg.bmp"
+IDB_DISP_ON             BITMAP                  "..\\ResCommon\\res\\bitmap2.bmp"
+IDB_DISP_OFF            BITMAP                  "..\\ResCommon\\res\\bitmap1.bmp"
+IDB_CHECKNO32           BITMAP                  "..\\ResCommon\\res\\checkno32.bmp"
+IDB_CHECK32             BITMAP                  "..\\ResCommon\\res\\check32.bmp"
+IDB_TOOL_DRAW26         BITMAP                  "..\\ResCommon\\res\\bmp00034.bmp"
+IDB_STOCK_TURN_GCOD     BITMAP                  "..\\ResCommon\\res\\STOCK_TURN_GCOD.bmp"
+IDB_APPEAR_PICTURE      BITMAP                  "..\\ResCommon\\res\\AppearPicture.bmp"
+IDB_BOX_LARGE           BITMAP                  "..\\ResCommon\\res\\box_large.bmp"
+IDB_BOX_SMALL           BITMAP                  "..\\ResCommon\\res\\box_small.bmp"
+IDB_CYL_LARGE           BITMAP                  "..\\ResCommon\\res\\cyl_large.bmp"
+IDB_CYL_SMALL           BITMAP                  "..\\ResCommon\\res\\cyl_small.bmp"
+IDB_STOCK_SEC           BITMAP                  "..\\ResCommon\\res\\stock_sec.bmp"
+IDB_STOCK_MILL_GCOD     BITMAP                  "..\\ResCommon\\res\\stock_tu.bmp"
+IDB_STOCK_TURN          BITMAP                  "..\\ResCommon\\res\\stock_turn.bmp"
+IDB_STOCK_TURN_CYL      BITMAP                  "..\\ResCommon\\res\\STOCK_TURN_CYL.bmp"
+IDB_TNP                 BITMAP                  "..\\ResCommon\\res\\COMPNUMB.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_BM                  ICON                    "..\\ResCommon\\Res\\BP4D.ico"
+IDI_BP1D                ICON                    "..\\ResCommon\\Res\\BP1d.ico"
+IDI_M1                  ICON                    "..\\ResCommon\\Res\\BP2d.ico"
+IDI_BPD                 ICON                    "..\\ResCommon\\Res\\BPd.ico"
+IDI_BP3D                ICON                    "..\\ResCommon\\Res\\BP3d.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

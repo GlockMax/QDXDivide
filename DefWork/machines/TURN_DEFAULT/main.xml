@@ -1,0 +1,29 @@
+<?xml version='1.0' ?>
+<MachineTool>
+	<axes>
+		<axis>
+			<param type="trans" name="X" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="stock" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Z" parent=""/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool" parent="X"/>
+			<vector x="0." y="0." z="1."/>
+			<vectorY x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+	</axes>
+</MachineTool>

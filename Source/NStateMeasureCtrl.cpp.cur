@@ -1,0 +1,208 @@
+// NStateMeasureCtrl.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "NCM.h"
+#include "resource.h"
+#include "math.h"
+#include "NStateMeasureCtrl.h"
+#include ".\nstatemeasurectrl.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+//////////////////////////////////////////////////////////////////////////
+// NStateMeasureCtrl
+
+IMPLEMENT_DYNAMIC(NStateMeasureCtrl, CTreeCtrl)
+NStateMeasureCtrl::NStateMeasureCtrl()
+{
+	pMeasure = NULL;
+}
+
+NStateMeasureCtrl::~NStateMeasureCtrl()
+{
+}
+
+BEGIN_MESSAGE_MAP(NStateMeasureCtrl, CTreeCtrl)
+	//{{AFX_MSG_MAP(NStateGeomCtrl)
+	ON_WM_CREATE()
+	//}}AFX_MSG_MAP	
+END_MESSAGE_MAP()
+
+//////////////////////////////////////////////////////////////////////////
+// NStateMeasureCtrl message handlers
+
+int NStateMeasureCtrl::OnCreate(LPCREATESTRUCT lpCreateStruct) 
+{
+	if (CTreeCtrl::OnCreate(lpCreateStruct) == -1)
+		return -1;
+	CreateOtr();
+	Update();
+	return 0;
+}
+
+void NStateMeasureCtrl::CreateOtr(void)
+{
+	DeleteAllItems();
+	CString tmp;
+	HTREEITEM Item;
+	
+	tmp.LoadString(IDS_M_SURFTYPE);
+	Item = InsertItem(tmp);
+	SetItemState(Item,TVIS_BOLD,TVIS_BOLD);
+	SurfTypeItem = InsertItem("",Item);
+	Expand(Item,TVE_EXPAND);
+
+	tmp.LoadString(IDS_M_CENTER_START);
+	Item = InsertItem(tmp);
+	SetItemState(Item,TVIS_BOLD,TVIS_BOLD);
+	BXItem = InsertItem("",Item);
+	BYItem = InsertItem("",Item);
+	BZItem = InsertItem("",Item);
+	Expand(Item,TVE_EXPAND);
+
+	tmp.LoadString(IDS_M_NORMAL_DIRECTION);
+	Item = InsertItem(tmp);
+	SetItemState(Item,TVIS_BOLD,TVIS_BOLD);
+	NXItem = InsertItem("",Item);
+	NYItem = InsertItem("",Item);
+	NZItem = InsertItem("",Item);
+	Expand(Item,TVE_EXPAND);
+
+	tmp.LoadString(IDS_M_ANGLES);
+	Item = InsertItem(tmp);
+	SetItemState(Item,TVIS_BOLD,TVIS_BOLD);
+	Angle = InsertItem("",Item);
+	Expand(Item,TVE_EXPAND);
+
+	tmp.LoadString(IDS_M_RADIUS);
+	Item = InsertItem(tmp);
+	SetItemState(Item,TVIS_BOLD,TVIS_BOLD);
+	RItem = InsertItem("",Item);
+	R1Item = InsertItem("",Item);
+	Expand(Item,TVE_EXPAND);
+
+	tmp.LoadString(IDS_M_AXI_N_CYL);
+	Item = InsertItem(tmp);
+	SetItemState(Item,TVIS_BOLD,TVIS_BOLD);
+	ANXItem = InsertItem("",Item);
+	ANYItem = InsertItem("",Item);
+	ANZItem = InsertItem("",Item);
+	Expand(Item,TVE_EXPAND);
+}
+
+void NStateMeasureCtrl::Update(void)
+{
+	double x,y,z,r;
+	double ax,ay,az;
+	ax=ay=az=x = y = z = r = 0.;
+	CString FormatStr(""),EmptyStr;
+	EmptyStr.LoadString(IDS_V_EMPTY);
+	if(pMeasure == NULL)
+		return;
+	
+	if(!pMeasure->IsActivate())
+	{
+		SetItemText(SurfTypeItem,EmptyStr);		
+		FormatStr.Format(IDS_BXFORMAT,x);		SetItemText(BXItem,FormatStr);
+		FormatStr.Format(IDS_BYFORMAT,y);		SetItemText(BYItem,FormatStr);			
+		FormatStr.Format(IDS_BZFORMAT,z);		SetItemText(BZItem,FormatStr);			
+		
+		FormatStr.Format(IDS_VXFORMAT,x,ax);		SetItemText(NXItem,FormatStr);			
+		FormatStr.Format(IDS_VYFORMAT,y,ay);		SetItemText(NYItem,FormatStr);			
+		FormatStr.Format(IDS_VZFORMAT,z,az);		SetItemText(NZItem,FormatStr);
+		
+		FormatStr.Format(IDS_VXFORMAT,x,ax);		SetItemText(ANXItem,FormatStr);			
+		FormatStr.Format(IDS_VYFORMAT,y,ay);		SetItemText(ANYItem,FormatStr);			
+		FormatStr.Format(IDS_VZFORMAT,z,az);		SetItemText(ANZItem,FormatStr);
+
+		FormatStr.Format(IDS_ANGFORMAT,y);		SetItemText(Angle,FormatStr);
+		FormatStr.Format(IDS_M_RD_FORMAT,r);	SetItemText(RItem,FormatStr);
+												SetItemText(R1Item,EmptyStr);
+		return;
+	}
+	else
+	{
+		SetItemText(SurfTypeItem,pMeasure->GetSufrInfo().Type);
+		
+		x = pMeasure->GetSufrInfo().BeginPoint.GetX();
+		y = pMeasure->GetSufrInfo().BeginPoint.GetY();
+		z = pMeasure->GetSufrInfo().BeginPoint.GetZ();
+		FormatStr.Format(IDS_BXFORMAT,x);			SetItemText(BXItem,FormatStr);
+		FormatStr.Format(IDS_BYFORMAT,y);			SetItemText(BYItem,FormatStr);
+		FormatStr.Format(IDS_BZFORMAT,z);			SetItemText(BZItem,FormatStr);
+
+		x = pMeasure->GetSufrInfo().Normal.GetX();
+		y = pMeasure->GetSufrInfo().Normal.GetY();
+		z = pMeasure->GetSufrInfo().Normal.GetZ();
+		ax = fabs(pMeasure->GetSufrInfo().Normal.Angle(BPoint(1.,0.,0.,0.)));
+		ay = fabs(pMeasure->GetSufrInfo().Normal.Angle(BPoint(0.,1.,0.,0.)));
+		az = fabs(pMeasure->GetSufrInfo().Normal.Angle(BPoint(0.,0.,1.,0.)));
+		FormatStr.Format(IDS_VXFORMAT,x,ax);			SetItemText(NXItem,FormatStr);
+		FormatStr.Format(IDS_VYFORMAT,y,ay);			SetItemText(NYItem,FormatStr);
+		FormatStr.Format(IDS_VZFORMAT,z,az);			SetItemText(NZItem,FormatStr);
+
+		FormatStr.Format(IDS_ANGFORMAT,pMeasure->GetSufrInfo().Angle);
+			SetItemText(Angle,FormatStr);
+
+		double R = pMeasure->GetSufrInfo().ExtR;
+		FormatStr.Format(IDS_M_RD_FORMAT,fabs(R),2*fabs(R));			
+		SetItemText(RItem,FormatStr);
+					
+		double R1 = pMeasure->GetSufrInfo().IntR;
+		if (R1 != 0.)
+			FormatStr.Format(IDS_M_RD_FORMAT,fabs(R1),2*fabs(R1));		
+		else FormatStr.Format(" ");
+		SetItemText(R1Item,FormatStr);
+	
+		x = pMeasure->GetSufrInfo().Axis.GetX();
+		y = pMeasure->GetSufrInfo().Axis.GetY();
+		z = pMeasure->GetSufrInfo().Axis.GetZ();
+		ax = fabs(pMeasure->GetSufrInfo().Axis.Angle(BPoint(1.,0.,0.,0.)));
+		ay = fabs(pMeasure->GetSufrInfo().Axis.Angle(BPoint(0.,1.,0.,0.)));
+		az = fabs(pMeasure->GetSufrInfo().Axis.Angle(BPoint(0.,0.,1.,0.)));
+		FormatStr.Format(IDS_VXFORMAT,x,ax);			SetItemText(ANXItem,FormatStr);			
+		FormatStr.Format(IDS_VYFORMAT,y,ay);			SetItemText(ANYItem,FormatStr);			
+		FormatStr.Format(IDS_VZFORMAT,z,az);			SetItemText(ANZItem,FormatStr);
+		return;
+	}
+
+	
+}
+void NStateMeasureCtrl::SetMeasure(QMeasure * pM)
+{
+	pMeasure = pM;
+}
+
+void NStateMeasureCtrl::PreSubclassWindow()
+{
+	// TODO: Add your specialized code here and/or call the base class
+	NColor *pCol;
+	if(((CNCMApp *)AfxGetApp())->Colors.Lookup("ТекстПанелиКонтроля",pCol))
+	{
+		SetTextColor(pCol->GetRGB());
+		SetInsertMarkColor(pCol->GetRGB());
+	}
+	CFont m_Font;
+	NFont *pFont;
+	if(((CNCMApp *)AfxGetApp())->Fonts.Lookup("ТекстПанелиКонтроля",pFont))
+	{
+		m_Font.DeleteObject();
+		if(m_Font.CreatePointFont(pFont->FontSize * 10, pFont->FontName))
+		{
+			SetFont(&m_Font);
+		}
+	}
+
+	SetBkColor(GetSysColor(COLOR_3DFACE));	
+	CreateOtr();
+	Update();
+
+	CTreeCtrl::PreSubclassWindow();
+}
+
+

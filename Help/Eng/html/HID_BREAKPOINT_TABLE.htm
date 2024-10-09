@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+	<HEAD>
+		<TITLE>Breakpoints</TITLE>
+		<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+		<link rel="StyleSheet" href="../tutorial.css">
+	</HEAD>
+	<BODY BGCOLOR="#ffffff" TEXT="#000000">
+		<h1>
+			Breakpoints</h1>
+		<FONT face="Arial" color="black" size="3">
+			<SPAN style="FONT-SIZE: 12pt">
+<P>In the Main Menu: <STRONG>Work &gt;&nbsp;Breakpoints</STRONG></P>
+<P>Quick activating:&nbsp;<IMG height="26" src="HID_BREAKPOINT_TABLE.files/image001.gif" width="26" v:shapes="_x0000_i1025">&nbsp;icon.</P>
+<P>This command will show you the Breakpoints dialog box</P>
+		
+<p> <img width="323" height="408" src="HID_BREAKPOINT_TABLE.files/image007.gif" v:shapes="_x0000_i1031"> 
+</p>
+		<P>You can adjust <STRONG>Breakpoints </STRONG>by turning on or off the check boxes 
+			next to the <STRONG>Breakpoint</STRONG> name. Turning on the <STRONG>Use Additional 
+				Breakpoints </STRONG>button will let you stop the simulation process in the 
+			positions defined by the <STRONG>Additional Breakpoints</STRONG>. To quickly 
+			turn on or off all the <STRONG>Additional Breakpoints</STRONG>&nbsp;use this 
+			icon - <IMG height="26" src="HID_BREAKPOINT_TABLE.files/image006.gif" width="26" align="absMiddle"
+				v:shapes="_x0000_i1032">&nbsp;in the <STRONG>Breakpoints </STRONG>toolbar.</P>
+		<p>For example, on the <STRONG>Breakpoints</STRONG> dialog box&nbsp;picture above 
+			the simulation process will be stopped in such places:</p>
+		<ul>
+			<li>
+				<p>if the feed value will be changed;</p>
+			<li>
+				<p>if there is only Z-axis move&nbsp;(generally in the penetration or machine tool 
+					pulling-out lines);</p>
+			<li>
+				<p><span style='mso-spacerun:yes'>&nbsp;lines where the diameter compensation was turned 
+  on.</span></p>
+			</li>
+		</ul>
+		<h1>What&nbsp;is the&nbsp;Breakpoint?</h1>
+		<p>The simulation process always starts from the current machine tool 
+			position&nbsp;in the project CNC program text. We need Breakpoints to have an 
+			opportunity to set end points for the simulation or to find key positions of 
+			the program that we work with. Thus if some of the <STRONG>Breakpoints</STRONG> 
+			are turned on and we run <STRONG>To Breakpoint</STRONG> execution then the 
+			simulation process will be executed from current position to the first enabled <STRONG>
+				Breakpoint</STRONG>. This position will become the new current position of 
+			the machine tool. The same result will be when running <IMG height="26" src="HID_BREAKPOINT_TABLE.files/image003.gif" width="26" align="absMiddle"
+				v:shapes="_x0000_i1028">&nbsp;(<STRONG>Forward</STRONG>) and <IMG height="26" src="HID_BREAKPOINT_TABLE.files/image004.gif" width="26" align="absMiddle"
+				v:shapes="_x0000_i1027">&nbsp;(<STRONG>Backward</STRONG>) commands. The 
+			machine tool will be moved to the new position with no simulation.&nbsp;This 
+			new position will also become current machine tool position in the CNC 
+			project's program.</p>
+		<P>Breakpoints are divided into two groups. Main and Additional. The only difference 
+			between them is that you can find&nbsp;<STRONG>Main Breakpoints</STRONG> in the <STRONG>
+				Breakpoints</STRONG> toolbar also to control the process more quickly:</P>
+		<P>
+			<img width="199" height="58" src="HID_BREAKPOINT_TABLE.files/image005.gif" v:shapes="_x0000_i1029">
+		</P>
+		<P>Here you can find four <STRONG>Breakpoints</STRONG>. They will stop the 
+			simulation process in the beginning or in the end of every CNC program, after 
+			the Breakpoint line, after machine tool changing line, or in the bookmarked 
+			line.&nbsp;</P>
+		<P>Control of the Additional Breakpoints status can be held by pushing <IMG height="26" src="HID_BREAKPOINT_TABLE.files/image006.gif" width="26" v:shapes="_x0000_i1030">&nbsp;(<STRONG>Additional 
+				Breakpoints</STRONG>)&nbsp;button. If you want to adjust the list of 
+			Additional Breakpoints then push <IMG height="26" src="HID_BREAKPOINT_TABLE.files/image001.gif" width="26" align="absMiddle"
+				v:shapes="_x0000_i1025">&nbsp;<STRONG>Breakpoints</STRONG> button.</P>
+	</BODY>
+</HTML>

@@ -1,0 +1,272 @@
+//
+//
+
+// Section General
+Name		ISO
+Type		ISO/EIA
+Model		
+Manufacturer	Demo
+Operation		Milling
+NumAxes		3
+Update		14.11.18
+// end section
+
+// Section Word Replacement
+Replace		"G91G28Z0."	"G53Z0"
+Replace		"G91G28Z0"	"G53Z0"
+Replace		"G73"	"G83"
+Replace		"G41"		"G41G35"
+Replace		"G42"		"G42G35"
+Replace		"G40"		"G40G36"
+Replace		"THEN"		"G4000"
+// end section
+
+// Section Word Definition
+UCSNum			P
+VariablePrefix	x
+VariableEnd	g
+DrillRef		R
+LineNumber		N
+PlaceToolAxes		L
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B		 
+SpindleRotationAxis	C	 
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode		F
+SpeedCode		S
+ToolCode		T
+DwellTime		P
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleRadius		R
+DiaCompOffset		D
+LengthCompOffset		H
+RapidClearanceLevel		
+FixtureOffsetCode		E
+InitialDepth		P
+PeckIncrementDepth		Q
+DrillRepeatCycles		L
+DiaCompHorizVec		P
+DiaCompVerticalVec		Q
+ThreadParm		
+ProgramNumber		P
+ProgramStartEnd		O
+CommentStart		(
+CommentEnd		)
+EndOfBlock		$
+EndOfLine		\
+BlockSkip		;
+BlockDebug		/
+ProgramBeginEnd		%
+ProgramCopyStart		P
+ProgramCopyEnd		Q
+SecondaryWCS		P
+Register		#	
+RepeatNumber	L
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+Dwell		4	0	N
+ExactStop		9	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+ReturnToRef		28	0	N
+ReturnToRef2		30	0	N
+ProbeFor		31	0	N
+ProbeBack		31.1	0	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthCompOn		43	8	N
+LengthComp		44	8	N
+LengthOffsetIncr		45	0	N
+LengthOffsetDecr		46	0	N
+LengthOffsetIncr2X		47	0	N
+LengthOffsetDecr2X		48	0	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachineCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+WorkCoordSys7		110	14	N
+WorkCoordSys8		111	14	N
+WorkCoordSys9		112	14	N
+WorkCoordSys10		113	14	N
+WorkCoordSys11		114	14	N
+WorkCoordSys12		115	14	N
+WorkCoordSys13		116	14	N
+WorkCoordSys14		117	14	N
+WorkCoordSys15		118	14	N
+WorkCoordSys16		119	14	N
+WorkCoordSys17		120	14	N
+WorkCoordSys18		121	14	N
+WorkCoordSys19		122	14	N
+WorkCoordSys20		123	14	N
+WorkCoordSys21		124	14	N
+WorkCoordSys22		125	14	N
+WorkCoordSys23		126	14	N
+WorkCoordSys24		127	14	N
+WorkCoordSys25		128	14	N
+WorkCoordSys26		129	14	N
+WorkCoordSysPar		154	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+TappingCycle		63	15	N
+CuttingCycle		64	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		76	9	Y
+CancelCycle		80	9	Y
+DrillCycle		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		92	0	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+PlaceTool		600	10	N
+ParToNext		35	15	Y
+RetractComp		36	0	N
+ProgramCopy		25	0	N
+RotateCSABC		601	0	N
+MoveRotateCS	602	0	N
+MoveRotateCSRel	603	0	N
+MoveRotateCSCancel	604	0	N
+Dummy0	4000	0	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop		1
+SpindleCW		3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+Orient		19
+EndProgram		30
+SubroutineCall		98
+SubroutineEnd		99
+VariablesDecl	120
+DefinesDecl		130
+StoreToolParams	8100
+ProbeExpTouch	78
+ProbeExpNoTouch	79
+// end section
+
+// Section Others
+UseStdFuncNames		Yes
+WCSParStartInd	27
+WCSParMaxNum	50
+ExprGCode			Yes
+ExprMCode			Yes
+DecimalConversion		0
+LinearDecimalConversion		0
+RotaryDecimalConversion		0
+FeedDecimalConversion		0
+SpeedDecimalConversion		0
+ReverseSign		
+ReverseTurret	No
+ContinuedCircleStatement	No
+XInDiameter		No
+CircleInQuadrants	No
+3DDiaCompensation	Yes
+CircularDirection		D0 D1
+CircleCenterType		IJ
+CircleCenterMode		Incremental
+UVCenterType		IJ
+UVCenterMode		Incremental
+AlwaysIncremental		No
+MaxArcRadius		999
+RotaryAxisUnwind		No
+ToolIndex		Absolute
+ExtraCharForRapid		
+ToolChangeWithM06		Yes
+G28WithM06		No
+AddToolSetLength		No
+ToolPreSelect		No
+ToolOffsetInToolNumber	No
+AdditionalCommentChars		
+StartwToolNum1	No
+MaxFeedRate		0
+SetSecondaryWCSIndicator		20
+SetPrimaryWCSIndicator		2
+DrillAxisMode	Programmable
+MultiAxisSequence	AllSimultaneous
+IgnoreUnknownM	Yes
+IgnoreUnknownCh	Yes
+IgnoreUnknownG	Yes
+MinArcDist		2
+CheckGeom	No
+StartProgram		Ignore
+MainInitStr		G0Z200.T1M6
+LoadSubPrograms
+MachineCS		0,0,200.
+FileProtection	Yes
+FileExtension *.ISO
+CompToIntersect         Yes
+CompWithArcs            No
+PartialCompCancel	No
+CycleNeedsGeom		No
+CycleNeedsParam		Yes
+TableRotationType	ShortestDistance
+CyclicA		Yes
+CyclicB		Yes
+CyclicC		Yes
+OpenBracketChar		(
+CloseBracketChar	)
+VarRegExp	\b(%s)\b;;x\1g
+VarTestExp	(SIN)|(COS)|[cos]
+ApplyReplacements	No
+//œ¿–¿Ã≈“–€ ƒÀﬂ –¿—◊≈“¿ ¬–≈Ã≈Õ»
+DwellTimeDiscr		1
+ToolChangeTime		0
+SpindleReverseTime	1000
+SyncroTime		1.1
+FastFeedRate		15000
+MaxFeedRate		15000
+// end section
+
+// Section Cycle Definition
+// end section
+
+// Section Registers Map
+UCSRegisters	1 6 5221 20
+UCSRegisters	7 26 7001 20
+UCSRegisters	27 77 14001 20
+ProbeX	5061
+ProbeY	5062
+ProbeZ	5063
+// end section

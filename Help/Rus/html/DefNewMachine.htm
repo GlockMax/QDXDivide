@@ -1,0 +1,671 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1251">
+	<TITLE>Редактор станков</TITLE>
+	<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Редактор станков</H1>
+<P>Предназначен для определения станка с ЧПУ. 
+</P>
+<P>Файлы с описанием кинематики конкретного станка, по-умолчанию,
+находятся в каталоге ..\def\machines\&quot;Название станка&quot;. Имя
+каталога &quot;Название станка&quot; будет отображаться в общем
+списке станков, при загрузке станка в NCManager.</P>
+<P>Внутри каталога &quot;Название станка&quot; находятся файлы с
+моделями рабочих органов станка в формате STL и файл в формате XML, с
+фиксированным именем &quot;main.xml&quot;, где  и  определена
+кинематика. 
+</P>
+<H1>&quot;main.xml&quot; <SPAN LANG="ru-RU">файл</SPAN></H1>
+<P>Внутри этого файла нужно описать название и типы осей станка, их
+взаимодействие и при необходимости привязать к осям объемные модели в
+формате STL. 
+</P>
+<P>Редактор станков <SPAN LANG="ru-RU">автоматизирует описание
+кинематики станка и </SPAN>гарантирует корректное заполнения файла
+&quot;main.xml&quot; данными, которые необходимы <SPAN LANG="en-US">NCManager
+</SPAN><SPAN LANG="ru-RU">для правильной имитации работы станка.</SPAN></P>
+<H1>Открыть редактор.</H1>
+<P><SPAN LANG="ru-RU">Клик правой кнопкой мыши на слове</SPAN> <B>Станок</B>
+и выбрать пункт <B>Редактировать</B> из выпавшего контекстного меню.</P>
+<H1>Внешний вид редактора:</H1>
+<P>Имеется две панели. Панель Дерево станка и панель Свойства оси.
+Панели могут быть размещены с помощью курсора мыши, в любом месте
+экрана. Панели могут автоматически скрываться, показываться.</P>
+<TABLE WIDTH=100% BORDER=2 CELLPADDING=5 CELLSPACING=0 RULES=COLS>
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Панель Дерево станка</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Предназначена для определения
+				осей станка, их взаимодействия, подключения к осям моделей узлов
+				станка. Информация показывается в виде дерева. Каждый элемент
+				дерева, это имя оси станка с определенными свойствами. Свойства
+				задаются в панели свойств станка. Каждый тип оси отмечен
+				соответствующей иконкой слева от имени оси в дереве.</FONT></FONT></P>
+				<P><BR>
+			</TD>
+			<TD WIDTH=50%>
+				<P><img src="../images/MToolTree.gif" width="300" height="266"><BR>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN=2 WIDTH=100% HEIGHT=27 VALIGN=TOP BGCOLOR="#c0c0c0">
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Команды вынесенные в
+				инструментальную панель</B></FONT></FONT></TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50% HEIGHT=38>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Развернуть/Свернуть </B></FONT></FONT>
+				</P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Свернуть или развернуть дерево
+				станка.</FONT></FONT></TD>
+			<TD WIDTH=50%>
+				<P align="center"><BR>
+          <img src="../images/MToolExpand.gif" width="33" height="32"> 
+      </TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Сохранить</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Сохранить все изменения в
+				станок с текущим именем.</FONT></FONT></TD>
+			<TD WIDTH=50%>
+				<P align="center"><BR>
+          <img src="../images/MtoolSave.gif" width="30" height="29"> </TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Сохранить как &hellip;</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Сохранить все изменения в
+				станок с новым именем. Новый станок будет текущим. В каталоге
+				станков будет создана новая папка с этим именем.</FONT></FONT></TD>
+			<TD WIDTH=50%>
+				<P align="center"><img src="../images/MtoolSaveAs.gif" width="30" height="30"><BR>
+      </TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Отменить</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Отменить сделанные изменения.</FONT></FONT></TD>
+			<TD WIDTH=50%>
+				<P align="center"><img src="../images/MToolUndo.gif" width="24" height="30"><BR>
+      </TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Вернуть</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Вернуть отмену сделанных
+				изменений.</FONT></FONT></TD>
+			<TD WIDTH=50%>
+				<P align="center"><img src="../images/MToolRedo.gif" width="25" height="28"><BR>
+      </TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Закрыть</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Закончить редактирование
+				станка и выйти из редактора станков.</FONT></FONT></TD>
+			<TD WIDTH=50%>
+				<P align="center"><BR>
+          <img src="../images/MToolClose.gif" width="25" height="28"> </TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=100% VALIGN=TOP BGCOLOR="#c0c0c0">
+				<P><B>Контекстное меню панели Дерево станка</B></TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P><FONT FACE="Arial"><FONT SIZE=3>При клике правой кнопки мыши
+				внутри панели, вызывается контекстное меню.</FONT></FONT></TD>
+			<TD WIDTH=50%>
+				<P align="center"><BR>
+          <img src="../images/MToolContexMenu.gif" width="220" height="196" align="middle"> 
+      </TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Показать свойства</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Если скрыто то будет показана
+				панель свойств оси.</FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Вырезать, Вставить, Удалить
+				(</B>или клавиша <SPAN LANG="en-US"><B>Delete</B></SPAN><B>)</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Операции с элементами в дереве
+				станка. Команды аналогичны таким же командам в обычном текстовом
+				редакторе. </FONT></FONT>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Добавить -<SPAN LANG="en-US">&gt;</SPAN></B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Добавить в станок типовые оси.</FONT></FONT></P>
+				<P><BR>
+			</TD>
+			<TD WIDTH=50%>
+				<P align="center"><BR>
+          <img src="../images/MToolAxisGen.gif" width="210" height="241"> </TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Ось </B><SPAN LANG="en-US"><B>X</B></SPAN>
+				</FONT></FONT>
+				</P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Добавить в станок линейную ось
+				<SPAN LANG="en-US">X. </SPAN>После добавления, в панели свойств
+				оси будут стоять значения, обычно, характерные для оси <SPAN LANG="en-US">X
+				</SPAN>станка.</FONT></FONT></P>
+				<P LANG="en-US"><FONT FACE="Arial"><FONT SIZE=3><B>Ось Y</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><SPAN LANG="en-US">Добавить в
+				станок </SPAN>линейную <SPAN LANG="en-US">ось Y. После
+				добавления, в панели свойств оси будут стоять значения, обычно,
+				характерные для оси Y станка.</SPAN></FONT></FONT></P>
+				<P LANG="en-US"><FONT FACE="Arial"><FONT SIZE=3><B>Ось Z</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><SPAN LANG="en-US">Добавить в
+				станок </SPAN>линейную <SPAN LANG="en-US">ось Z. После
+				добавления, в панели свойств оси будут стоять значения, обычно,
+				характерные для оси Z станка.</SPAN></FONT></FONT></P>
+				<P LANG="en-US"><FONT FACE="Arial"><FONT SIZE=3><B>Ось A</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><SPAN LANG="en-US">Добавить в
+				станок </SPAN>поворотную <SPAN LANG="en-US">ось A. После
+				добавления, в панели свойств оси будут стоять значения, обычно,
+				характерные для оси A станка.</SPAN></FONT></FONT></P>
+				<P LANG="en-US"><FONT FACE="Arial"><FONT SIZE=3><B>Ось B</B></FONT></FONT></P>
+				<P LANG="en-US"><FONT FACE="Arial"><FONT SIZE=3>Добавить в станок
+				поворотную ось B. После добавления, в панели свойств оси будут
+				стоять значения, обычно, характерные для оси B станка.</FONT></FONT></P>
+				<P LANG="en-US"><FONT FACE="Arial"><FONT SIZE=3><B>Ось C</B></FONT></FONT></P>
+				<P LANG="en-US"><FONT FACE="Arial"><FONT SIZE=3>Добавить в станок
+				поворотную ось C. После добавления, в панели свойств оси будут
+				стоять значения, обычно, характерные для оси C станка.</FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Инструмент</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Добавить в станок ось
+				описывающую ориентацию активного инструмента в станке. Инструмент
+				активен, когда выполнена команда смены инструмента в управляющей
+				программе.</FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Заготовка</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Добавить в станок ось,
+				описывающую положение заготовки в станке.</FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Контроль столкновений</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Добавить в станок ось,
+				описывающую какие модели узлов станка не должны сталкиваться в
+				процессе работы станка. </FONT></FONT>
+				</P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Виртуальный инструмент</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Добавить в станок ось,
+				описывающую виртуальный инструмент. Виртуальный инструмент,
+				предназначен для описания положения обычного инструмента в тот
+				момент, когда он не участвует в резании. Например, для
+				определения положение в револьверной головке.</FONT></FONT></TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Добавить модели</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3>Добавить к оси одну или
+				несколько 3-х мерных моделей узла станка. Эти модели должны быть
+				в формате <SPAN LANG="en-US">STL </SPAN>и находится в папке
+				станка. </FONT></FONT>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Добавить линейную ось</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><SPAN LANG="en-US">Добавить в
+				станок </SPAN>линейную <SPAN LANG="en-US">ось </SPAN>с
+				произвольным направлением движения.<SPAN LANG="en-US"> </SPAN></FONT></FONT>
+			</TD>
+		</TR>
+	</TBODY>
+	<TBODY>
+		<TR>
+			<TD COLSPAN=2 WIDTH=100% VALIGN=TOP>
+				<P><FONT FACE="Arial"><FONT SIZE=3><B>Добавить поворотную ось</B></FONT></FONT></P>
+				<P><FONT FACE="Arial"><FONT SIZE=3><SPAN LANG="en-US">Добавить в
+				станок п</SPAN>оворотную <SPAN LANG="en-US">ось </SPAN>с
+				произвольным направлением вращения<SPAN LANG="en-US">. </SPAN></FONT></FONT>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<P><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0 RULES=COLS>
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50%>
+			<DL>
+				<DT><FONT FACE="Arial"><FONT SIZE=3><B>Панель свойства оси</B></FONT></FONT></DT><DD>
+				<BR>
+				</DD><DT>
+				<FONT FACE="Arial"><FONT SIZE=3>В панели свойств оси задаются
+				значения для оси выбранной в дереве станка. </FONT></FONT>
+				</DT><DT>
+				<BR>
+				</DT><DT>
+				<FONT FACE="Arial"><FONT SIZE=3>В зависимости от своего типа
+				(линейная, поворотная, заготовка, &hellip;) ось имеете разные
+				свойства.</FONT></FONT></DT><DT>
+				<BR>
+				</DT><DT>
+				<FONT FACE="Arial"><FONT SIZE=3>Панель организована в виде таблиц
+				с заголовками, подсказывающими назначение свойства и двумя
+				столбцами. В левом столбце указано имя свойства, а в  правом, его
+				значение. Для задания значений, нужно редактировать правую
+				колонку.</FONT></FONT></DT><DT>
+				<BR>
+				</DT><DT>
+				<FONT FACE="Arial"><FONT SIZE=3>Внизу панели находится окно, где
+				пишется подсказка для свойства, указанного курсором мыши.</FONT></FONT></DT><DT>
+				<BR>
+				</DT><DT>
+				<FONT FACE="Arial"><FONT SIZE=3>Для того, чтобы новые значения
+				вступили в силу, нужно выполнить команду <B>Применить</B>.</FONT></FONT></DT></DL>
+		</TD>
+		<TD WIDTH=50%>
+			<P align="center"><BR>
+        <img src="../images/MToolAxisProp.gif" width="320" height="436"> </TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50%>
+			<P><FONT FACE="Arial"><FONT SIZE=3><B>Развернуть/Свернуть </B></FONT></FONT>
+			</P>
+			<P><FONT FACE="Arial"><FONT SIZE=3>Свернуть или развернуть
+			свойства оси.</FONT></FONT></TD>
+		<TD WIDTH=50%>
+			<P align="center"><img src="../images/MToolExpand.gif" width="33" height="32"><BR>
+    </TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50%>
+			<DL>
+				<DT><FONT FACE="Arial"><FONT SIZE=3><B>Применить</B></FONT></FONT></DT><DD>
+				<BR>
+				</DD><DT>
+				<FONT FACE="Arial"><FONT SIZE=3>Применить изменения сделанные в
+				панели свойств оси. </FONT></FONT>
+				</DT></DL>
+		</TD>
+		<TD WIDTH=50%>
+			<P align="center"><img src="../images/MToolAply.gif" width="30" height="29"><BR>
+    </TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=50%>
+			<DL>
+				<DT><FONT FACE="Arial"><FONT SIZE=3><B>Движок</B> </FONT></FONT>
+				</DT><DD>
+				<BR>
+				</DD><DT>
+				<FONT FACE="Arial"><FONT SIZE=3>Если у линейной или поворотной
+				оси заданы значения для контроля пределов перемещений станка, то
+				с помощью этого движка можно динамически управлять положением
+				узлов станка этих осей. </FONT></FONT>
+				</DT></DL>
+		</TD>
+		<TD WIDTH=50%>
+			<P align="center"><img src="../images/MToolSlider.gif" width="234" height="96"><BR>
+    </TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=5 CELLSPACING=0 RULES=COLS>
+  <!--DWLayoutTable-->
+  <COL WIDTH=128*>
+  <COL WIDTH=128*>
+  <TBODY>
+    <TR> 
+      <TD COLSPAN=2 WIDTH=100% VALIGN=TOP BGCOLOR="#c0c0c0"> <P>Свойства <B>линейной</B> 
+          оси</TD>
+    </TR>
+  </TBODY>
+  <TBODY>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"><FONT SIZE=3>Имя</FONT></FONT></P> 
+        <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3><B>Имя оси</B></FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Для осей которые могут участвовать 
+            в резании (типовые оси <SPAN LANG="en-US">X, Y, Z, A, B, C</SPAN>) 
+            это имя фиксировано.</FONT></FONT></DT>
+        </DL>
+        <DL>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Для произвольной оси, имя может 
+            быть любым. Чтобы управлять движением произвольной оси из УП, ее имя 
+            должно затем быть описано в стойке ЧПУ (файлы <SPAN LANG="en-US">sm*</SPAN>).</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>// Section Others </FONT></FONT> 
+          </DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>AddCoord00Axis &laquo;Имя оси 00&raquo;</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>AddCoord01Axis &laquo;Имя оси 01&raquo;</FONT></FONT></DT>
+          <DT> ...</DT>
+          <DT> <BR>
+          </DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>В разделе Section Word Definition, 
+            имени оси ставится в соответствие символ, который управляет осью из 
+            УП.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>// Section Word Definition</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>AddCoord00 <SPAN LANG="en-US">W</SPAN></FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>AddCoord01 <SPAN LANG="en-US">V</SPAN></FONT></FONT></DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolNameMove.jpg" width="341" height="46"> </TD>
+    </TR>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"><FONT SIZE=3>Кинематические свойства</FONT></FONT></P>
+        <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3>Вектор</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><SPAN LANG="en-US">XYZ </SPAN><SPAN LANG="ru-RU">компоненты 
+            е</SPAN>диничного вектора описывающего положительное направление движения 
+            оси. </FONT></FONT> </DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><img src="../images/MToolVectMove.jpg" width="335" height="103"><BR>
+      </TD>
+    </TR>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3>Ограничение перемещений</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Значения для контроля выхода за 
+            габариты оси при движении. </FONT></FONT> </DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Минимальное значение - минимальное 
+            значение перемещений</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Максимальное значение - максимальное 
+            значение перемещений</FONT></FONT></DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolLimMove.jpg" width="336" height="63"> </TD>
+    </TR>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3>Значок системы координат</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Показывает направление вдоль которого 
+            перемещается ось.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Цвет</strong> - задать 
+            цвет значка оси</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Видимость</strong> - включить 
+            или выключить видимость значка.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Размер</strong> - задать 
+            размер значка в мм.</FONT></FONT></DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolCK.jpg" width="337" height="84"> </TD>
+    </TR>
+    <TR> 
+      <TD COLSPAN=2 WIDTH=100% VALIGN=TOP BGCOLOR="#c0c0c0"> <P>Свойства поворотной 
+          оси</TD>
+    </TR>
+  </TBODY>
+  <TBODY>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"><FONT SIZE=3>Имя</FONT></FONT></P>
+        <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3>Имя оси</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Для осей которые могут участвовать 
+            в резании (типовые оси <SPAN LANG="en-US">X, Y, Z, A, B, C</SPAN>) 
+            это имя фиксировано.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Для произвольной оси, имя может 
+            быть любым. Чтобы управлять движением этой оси из УП, это имя должно 
+            затем быть описано в стойке ЧПУ (файлы <SPAN LANG="en-US">sm*</SPAN>).</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>// Section Others </FONT></FONT> 
+          </DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>AddCoord00Axis &laquo;Имя оси 00&raquo;</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>AddCoord01Axis &laquo;Имя оси 01&raquo;</FONT></FONT></DT>
+          <DT>&nbsp; </DT>
+          <DT> <BR>
+          </DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>В разделе Section Word Definition, 
+            имени оси ставится в соответствие символ, который управляет осью из 
+            УП.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>// Section Word Definition</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>AddCoord00 <SPAN LANG="en-US">W</SPAN></FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>AddCoord01 <SPAN LANG="en-US">V</SPAN></FONT></FONT></DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolNameMove.jpg" width="341" height="46"> </TD>
+    </TR>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"><FONT SIZE=3>Кинематические свойства</FONT></FONT></P> 
+        <P><FONT FACE="Arial"><FONT SIZE=3><strong>Вектор</strong> </FONT></FONT> 
+        </P>
+        <P><FONT FACE="Arial"><FONT SIZE=3><SPAN LANG="en-US">XYZ </SPAN><SPAN LANG="ru-RU">компоненты 
+          е</SPAN>диничного вектора описывающего положительное направление оси 
+          вокруг которой будет вращение. </FONT></FONT> </P>
+        <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3><B>Базовая точка</B></FONT></FONT></DT>
+          <DT LANG="en-US"> <FONT FACE="Arial"><FONT SIZE=3>XYZ <SPAN LANG="ru-RU">координаты 
+            точки через которую проходит ось вращения</SPAN></FONT></FONT></DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolVectRot.jpg" width="336" height="181"> </TD>
+    </TR>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"><FONT SIZE=3>Ограничение перемещений</FONT></FONT></P>
+        <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3>Значения для контроля выхода за 
+            габариты оси при вращении. </FONT></FONT> </DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Минимальное значение</strong> 
+            - минимальный угол вращения</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Максимальное значение</strong> 
+            - максимальный угол вращения</FONT></FONT></DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolLimMove.jpg" width="336" height="63"> </TD>
+    </TR>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3>Значок системы координат</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Показывает направление вокруг которого 
+            происходит вращение и базовую точку оси.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Цвет</strong> - задать 
+            цвет значка оси</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Видимость</strong> - включить 
+            или выключить видимость значка.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Размер</strong> - задать 
+            размер значка в мм.</FONT></FONT></DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolCK.jpg" width="337" height="84"> </TD>
+    </TR>
+    <TR> 
+      <TD COLSPAN=2 WIDTH=100% VALIGN=TOP BGCOLOR="#c0c0c0"> <P>Свойства оси инструмента</TD>
+    </TR>
+  </TBODY>
+  <TBODY>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"><FONT SIZE=3>Имя</FONT></FONT></P>
+        <P><FONT FACE="Arial"><FONT SIZE=3>Имя оси</FONT></FONT></P>
+        <P><FONT FACE="Arial"><FONT SIZE=3>Генерируется автоматически из слова 
+          <SPAN LANG="en-US">tool </SPAN><SPAN LANG="ru-RU">и цифр номера </SPAN><SPAN LANG="en-US">turret 
+          </SPAN><SPAN LANG="ru-RU">и оси разделенных символом &laquo;:&raquo;.</SPAN></FONT></FONT></P>
+        <P><FONT FACE="Arial"><FONT SIZE=3>Номер <SPAN LANG="en-US">turret</SPAN></FONT></FONT></P>
+        <P><FONT FACE="Arial"><FONT SIZE=3>Номер инструментального магазина. &laquo;0&raquo;, 
+          если он один.</FONT></FONT></P>
+        <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3>Номер оси</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>В случае, если инструменты с одни 
+            и тем же номером позиции в станке имеют разное расположение (например 
+            ось вращения фрезы вдоль оси Х или перпендикулярно оси Х в токарном 
+            станке с приводным инструментом), то для каждого возможного расположения 
+            инструмента, нужно создать свою ось инструмента. По этому Номеру оси, 
+            инструмент с требуемым направлением оси вращения, будет выбираться 
+            из УП (номер ставится в диалоге определения инструмента). </FONT></FONT> 
+          </DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolNameToolst.jpg" width="314" height="84"> </TD>
+    </TR>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"><FONT SIZE=3>Кинематические свойства</FONT></FONT></P> 
+        <P><FONT FACE="Arial"><FONT SIZE=3><strong>Вектор</strong></FONT></FONT><font size="3" face="Arial"> 
+          - Направление оси X инструмента относительно СК цеха.</font></P>
+        <P><FONT FACE="Arial"><FONT SIZE=3><strong>Базовая точка - </strong>XYZ 
+          <SPAN LANG="ru-RU">координаты точки начала оси инструмента.</SPAN></FONT></FONT></P>
+        <P><FONT FACE="Arial"><FONT SIZE=3><strong>Вектор <SPAN LANG="en-US">Y</SPAN></strong><SPAN LANG="en-US"> 
+          - Направление оси Y инструмента относительно СК цеха.</SPAN></FONT></FONT></P>
+        <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3><strong>Компенсация инструмента</strong> 
+            </FONT></FONT> </DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><SPAN LANG="en-US">XYZ </SPAN><SPAN LANG="ru-RU">компоненты 
+            е</SPAN>диничного вектора описывающего положительное направление вдоль 
+            которого инструмент будет смещаться для автоматической отработки коррекции 
+            на длину.</FONT></FONT></DL></TD>
+      <TD WIDTH=50%> <P align="center"><img src="../images/MToolVectToolst.jpg" width="448" height="343"><BR>
+      </TD>
+    </TR>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <DL>
+          <DT><FONT FACE="Arial"><FONT SIZE=3>Значок системы координат</FONT></FONT></DT>
+          <DT> <BR>
+          </DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3>Показывает направление и базовую 
+            точку оси.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Цвет</strong> - задать 
+            цвет значка оси</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Видимость</strong> - включить 
+            или выключить видимость значка.</FONT></FONT></DT>
+          <DT> <FONT FACE="Arial"><FONT SIZE=3><strong>Размер</strong> - задать 
+            размер значка в мм.</FONT></FONT></DT>
+        </DL></TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolCK.jpg" width="337" height="84"> </TD>
+    </TR>
+  </TBODY>
+  <TBODY>
+    <TR> 
+      <TD COLSPAN=2 WIDTH=100% VALIGN=TOP BGCOLOR="#c0c0c0"> <P><FONT FACE="Arial"><FONT SIZE=3>Свойства 
+          заготовки</FONT></FONT></TD>
+    </TR>
+  </TBODY>
+  <TBODY>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"><FONT SIZE=3>Имя оси - генерируется 
+          <FONT FACE="Arial"> автоматически из слова Stock. Это имя фиксированное.</FONT></FONT></FONT></TD>
+      <TD WIDTH=50%> <P><BR>
+      </TD>
+    </TR>
+  </TBODY>
+  <TBODY>
+    <TR VALIGN=TOP> 
+      <TD WIDTH=50%> <P><FONT FACE="Arial"></FONT></P> 
+        <P><FONT FACE="Arial"><FONT SIZE=3>Вектор - </FONT><font size="3" face="Arial">Направление 
+          оси X заготовки относительно СК цеха.</font></FONT></P> <P><FONT FACE="Arial"><FONT SIZE=3>Вектор 
+          <SPAN LANG="en-US">Y - </SPAN></FONT><font size="3" face="Arial">Направление 
+          оси Y заготовки относительно СК цеха.</font></FONT></P> <P><FONT FACE="Arial"><FONT SIZE=3>Компенсация 
+          - если включена, то это направление перемещения заготовки для автоматического 
+          расположения на станке при ее создании в проекте NCManager.</FONT></FONT></TD>
+      <TD WIDTH=50%> <P><BR>
+          <img src="../images/MToolVectStock.jpg" width="472" height="185"> </TD>
+    </TR>
+  </TBODY>
+    <TBODY>
+    <TR> 
+      <TD COLSPAN=2 WIDTH=100% VALIGN=TOP BGCOLOR="#c0c0c0"> <P><FONT FACE="Arial"><FONT SIZE=3>Свойства 
+          контроля столкновений</FONT></FONT></TD>
+    </TR>
+  </TBODY>
+
+  <TBODY>
+    <TR VALIGN=TOP> 
+	      <TD WIDTH=50%> <P>На картинке справа приведен пример задания оси для 
+          контроля столкновений. К оси tool добавлена ось контроль столкновений 
+          с заготовкой (stock). В свойствах можно задать, что именно будет контролироваться. 
+          Есть два варианта. Только указанные оси или указанные оси и все их потомки.</P> 
+        </TD>
+      <TD WIDTH=50%> <P align="center"><img src="../images/MToolCollDetect.jpg" width="336" height="145"><BR>
+      </TD>
+	</TR>
+  </TBODY>
+    <TBODY>
+    <TR VALIGN=TOP> 
+	      <TD WIDTH=50%> <P><strong>Имя оси для контроля</strong> - одна из описанных 
+          в станке оси. Такая ось называется указанная. Нужно указать курсором 
+          на этот пункт свойств и выбрать какую-нибудь ось из списка.</P>
+        <P><strong>Потомки указанной оси</strong> - если стоит Нет, то в столкновении 
+          учитывается указанная ось, в данном случае - Stock. Если стоит Да, то 
+          в столкновении учитываются все элементы в дереве станка, что выше оси 
+          Stock. В данном случае, ось C.</P>
+        <P><strong>Потомки текущей оси</strong> - если стоит Нет, то в столкновении 
+          участвует текущая (tool) ось. Если Да, то в столкновении участвуют все 
+          оси выше оси tool (X, Z).</P>
+        </TD>
+      <TD WIDTH=50%> <P><BR>
+          <img src="../images/MToolPropCollDetect.jpg" width="478" height="138"> 
+      </TD>
+	</TR>
+  </TBODY>
+    <TBODY>
+    <TR> 
+      <TD COLSPAN=2 WIDTH=100% VALIGN=TOP BGCOLOR="#c0c0c0"> <P><FONT FACE="Arial"><FONT SIZE=3>Свойства 
+          виртуального инструмента</FONT></FONT></TD>
+    </TR>
+  </TBODY>
+
+  <TBODY>
+    <TR VALIGN=TOP> 
+	      <TD WIDTH=50%> <P><strong>Имя</strong> - генерируется автоматически 
+          из номера позиции, слова tool номера turret и номера оси с символом 
+          &quot;:&quot;.</P>
+        <P>Остальные параметры такие же как у оси tool.</P> 
+        </TD>
+      <TD WIDTH=50%> <P><img src="../images/MToolVirtTool.jpg" width="473" height="244"><BR>
+      </TD>
+	</TR>
+  </TBODY>
+   <TBODY>
+    <TR> 
+      <TD COLSPAN=2 WIDTH=100% VALIGN=TOP BGCOLOR="#c0c0c0"> <P><FONT FACE="Arial"><FONT SIZE=3>Свойства 
+          3-х мерной модели </FONT></FONT></TD>
+    </TR>
+  </TBODY>
+
+  <TBODY>
+    <TR VALIGN=TOP> 
+	      <TD WIDTH=50%> <P><strong>Имя</strong> - Любое уникальное для данного 
+          станка имя. По умолчанию генерируется автоматически из имени файла STL. 
+          Если модель с таким именем уже есть в станке, то к имени файла STL припишется 
+          символ&quot;_&quot; и цифра (порядковый номер загрузки модели).</P>
+        <P><strong>Имя файла</strong> - отображается имя файла этой модели STL. 
+          Можно выбрать другой файл, указав курсором на это свойство.</P>
+        <P><strong>Кинематические свойства</strong> - служат для размещения модели 
+          в нужное место.</P>
+        <P><strong>Базовая точка</strong> - служит для смещения модели вдоль указанных 
+          осей СК цеха.</P>
+        <P><strong>Вектор</strong> и <strong>Вектор Y</strong> - служат для поворота 
+          модели в пространстве.</P>
+        <P><strong>Значок системы координат</strong> - показывает текущую СК модели.</P>
+        <P><strong>Видимость - </strong><FONT FACE="Arial"><FONT SIZE=3>включить 
+          или выключить видимость значка.</FONT></FONT></P>
+        <P><strong>Размер<FONT FACE="Arial"><FONT SIZE=3> - </FONT></FONT></strong><FONT FACE="Arial"><FONT SIZE=3>задать 
+          размер значка в мм.</FONT></FONT></P>
+        <P><strong>Дополнительно </strong>- дополнительные свойства модели.</P>
+        <P><strong>Цвет STL</strong> - задать цвет для 3-х мерной модели узла 
+          станка. </P>
+        </TD>
+      <TD WIDTH=50%> <P align="center"><BR>
+          <img src="../images/MToolNameSTL.jpg" width="471" height="451"> </TD>
+	</TR>
+  </TBODY>
+ 
+
+</TABLE>
+<P><BR>
+</P>
+</BODY>
+</HTML>

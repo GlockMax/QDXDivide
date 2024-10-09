@@ -1,0 +1,296 @@
+<?xml version="1.0" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="stock" name="stock" parent="" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="" length="100" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="1" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="X" length="100" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="trans" name="AXIS_TOOL" parent="X" length="10" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="1.4013e-44" a="0" />
+            <limits min="-500" max="500" />
+        </axis>
+        <axis>
+            <param type="part" name="ROW_1" parent="AXIS_TOOL" length="10" coordsys="Yes" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0" g="1" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0001tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0002tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="80" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0003tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="160" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0004tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="240" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0005tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="320" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0006tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="400" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0007tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="480" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0008tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="560" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0009tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="640" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0010tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="720" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0011tool" parent="ROW_1" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="800" />
+            <color r="1.16656e-23" g="0" b="7.37268e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="ROW_2" parent="AXIS_TOOL" length="10" coordsys="Yes" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-500" y="0" z="0" />
+            <color r="1" g="0" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0000tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="-80" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0012tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="0" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0013tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="80" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0014tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="160" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0015tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="240" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0016tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="320" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0017tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="400" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0018tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="480" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0019tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="560" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0020tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="640" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0021tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="720" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0022tool" parent="ROW_2" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="800" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="part" name="ROW_3" parent="AXIS_TOOL" length="10" coordsys="Yes" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="200" y="0" z="0" />
+            <color r="1" g="0" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0023tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="0" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0024tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="80" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0025tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="160" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0026tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="240" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0027tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="320" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0028tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="400" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0029tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="480" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0030tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="560" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0031tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="640" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0032tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="720" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0033tool" parent="ROW_3" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="200" y="0" z="800" />
+            <color r="0" g="0" b="7.36738e-23" a="0" />
+        </axis>
+    </axes>
+</MachineTool>

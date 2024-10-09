@@ -1,0 +1,9 @@
+#pragma once
+
+enum ToolMash
+{
+	Thick = IDS_TOOL_MASH_THICK,
+	AVERAGE = IDS_TOOL_MASH_AVERAGE,
+	RARE = IDS_TOOL_MASH_RARE,
+	UNDEF = IDS_TOOL_MASH_UNDEF
+};

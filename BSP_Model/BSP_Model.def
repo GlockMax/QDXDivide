@@ -1,0 +1,6 @@
+; BSP_Model.def : Declares the module parameters for the DLL.
+
+LIBRARY      "BSP_Model"
+
+EXPORTS
+    ; Explicit exports can go here

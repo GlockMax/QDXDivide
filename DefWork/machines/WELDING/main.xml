@@ -1,0 +1,141 @@
+<?xml version='1.0' ?>
+<MachineTool>
+	<axes>
+		<axis>
+			<param type="trans" name="Y" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="axis_Y" parent="Y"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "3D_Y1" />
+			<part name = "3D_Y2" />
+			<part name = "3D_Y3" />
+			<part name = "3D_Y4" />
+			<part name = "3D_Y5" />
+			<part name = "3D_Y6" />
+			<color r="1." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="axis_X" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "3D_X1" />
+			<part name = "3D_X2" />
+			<part name = "3D_X3" />
+			<part name = "3D_X4" />
+			<part name = "3D_X5" />
+			<part name = "3D_X6" />
+			<part name = "3D_X7" />
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="rotary" name="B" parent=""/>
+			<vector x="0." y="0." z="-1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Table_C" parent="B"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Dmg100P-Table" />
+			<color r="0.5" g="0.5" b="0.5" a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="X" parent=""/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Z" parent="Y"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="PART_XZ" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0.0"/>
+			<part name = "3D_Z1" />
+			<part name = "3D_Z2" />
+			<part name = "3D_Z3" />
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="rotary" name="A" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="204.165" y="374.544" z="289.965"/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Table_B" parent="A"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0.0"/>
+			<part name = "3D_1" />
+			<part name = "3D_2" />
+			<color r="0.5" g="0.5" b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="stock" parent="B"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool" parent="A"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="50." y="374.544" z="169."/>
+		</axis>
+		<axis>
+			<param type="part" name="base" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "3D-RAMA-NAPR-L" />
+			<color r="0." g="0.6" b="1.0" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="base1" parent="base"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "3D-RAMA-NAPR" />
+			<color r="0." g="0.6" b="1.0" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="base2" parent="base"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "3D-RAMA-S" />
+			<color r="0." g="0.6" b="1.0" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="base3" parent="base"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "3D-RAMA-UGOL" />
+			<color r="0." g="0.6" b="1.0" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="base4" parent="base"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "3D-RAMA-L" />
+			<color r="0." g="0.6" b="1.0" a="1."/>
+		</axis>
+	</axes>
+</MachineTool>

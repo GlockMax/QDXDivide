@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="Windows-1251" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="trans" name="X" parent="" length="100" />
+            <vector x="-1" y="0" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+            <limits min="-700" max="700" />
+            <specialpt name="0" value="-200" />
+        </axis>
+        <axis>
+            <param type="trans" name="Y" parent="X" length="100" />
+            <vector x="0" y="-1" z="0" />
+            <color r="0" g="0.501961" b="0" a="1" />
+            <limits min="-300" max="300" />
+            <specialpt name="0" value="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Table" parent="Y" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.65098" g="0.792157" b="0.941176" a="1" />
+            <part name="Table" margin="5" />
+        </axis>
+        <axis>
+            <param type="stock" name="stock" parent="Y" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="" length="100" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="1" a="1" />
+            <limits min="-100" max="500" />
+            <specialpt name="0" value="400" />
+            <collisioncheck axisname="X" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="part" name="Spindle" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.27451" g="1" b="0" a="1" />
+            <part name="Spindle" margin="0" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool:1" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="0" z="1" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="rotary" name="TURRET" parent="" length="100" mark="on" />
+            <vector x="0" y="0" z="-1" />
+            <basepoint x="-520" y="0" z="610" />
+            <color r="0" g="0" b="1" a="1" />
+            <limits min="-360" max="360" />
+        </axis>
+        <axis>
+            <param type="part" name="Revolver_number_tool" parent="TURRET" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.843137" g="0.843137" b="0.843137" a="1" />
+            <part name="Revolver_number_tool" margin="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0001tool" parent="TURRET" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-225" y="0" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0002tool" parent="TURRET" length="100" />
+            <vector x="0.951057" y="-0.309017" z="0" />
+            <vectorY x="0.309017" y="0.951057" z="0" />
+            <basepoint x="-239.438" y="-91.16" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0003tool" parent="TURRET" length="100" />
+            <vector x="0.809017" y="-0.587785" z="0" />
+            <vectorY x="0.587785" y="0.809017" z="0" />
+            <basepoint x="-281.34" y="-173.397" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0004tool" parent="TURRET" length="100" />
+            <vector x="0.587785" y="-0.809017" z="0" />
+            <vectorY x="0.809017" y="0.587785" z="0" />
+            <basepoint x="-346.603" y="-238.66" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0005tool" parent="TURRET" length="100" />
+            <vector x="0.309017" y="-0.951057" z="0" />
+            <vectorY x="0.951057" y="0.309017" z="0" />
+            <basepoint x="-428.84" y="-280.562" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0006tool" parent="TURRET" length="100" />
+            <vector x="1.61554e-15" y="-1" z="0" />
+            <vectorY x="1" y="1.61554e-15" z="0" />
+            <basepoint x="-520" y="-295" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0007tool" parent="TURRET" length="100" />
+            <vector x="-0.309017" y="-0.951057" z="0" />
+            <vectorY x="0.951057" y="-0.309017" z="0" />
+            <basepoint x="-611.16" y="-280.562" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0008tool" parent="TURRET" length="100" />
+            <vector x="-0.587785" y="-0.809017" z="0" />
+            <vectorY x="0.809017" y="-0.587785" z="0" />
+            <basepoint x="-693.397" y="-238.66" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0009tool" parent="TURRET" length="100" />
+            <vector x="-0.809017" y="-0.587785" z="0" />
+            <vectorY x="0.587785" y="-0.809017" z="0" />
+            <basepoint x="-758.66" y="-173.397" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0010tool" parent="TURRET" length="100" />
+            <vector x="-0.951057" y="-0.309017" z="0" />
+            <vectorY x="0.309017" y="-0.951057" z="0" />
+            <basepoint x="-800.562" y="-91.16" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0011tool" parent="TURRET" length="100" />
+            <vector x="-1" y="-3.23109e-15" z="0" />
+            <vectorY x="3.23109e-15" y="-1" z="0" />
+            <basepoint x="-815" y="-9.53171e-13" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0012tool" parent="TURRET" length="100" />
+            <vector x="-0.951057" y="0.309017" z="0" />
+            <vectorY x="-0.309017" y="-0.951057" z="0" />
+            <basepoint x="-800.562" y="91.16" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0013tool" parent="TURRET" length="100" />
+            <vector x="-0.809017" y="0.587785" z="0" />
+            <vectorY x="-0.587785" y="-0.809017" z="0" />
+            <basepoint x="-758.66" y="173.397" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0014tool" parent="TURRET" length="100" />
+            <vector x="-0.587785" y="0.809017" z="0" />
+            <vectorY x="-0.809017" y="-0.587785" z="0" />
+            <basepoint x="-693.397" y="238.66" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0015tool" parent="TURRET" length="100" />
+            <vector x="-0.309017" y="0.951057" z="0" />
+            <vectorY x="-0.951057" y="-0.309017" z="0" />
+            <basepoint x="-611.16" y="280.562" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0016tool" parent="TURRET" length="100" />
+            <vector x="-4.62459e-15" y="1" z="0" />
+            <vectorY x="-1" y="-4.62459e-15" z="0" />
+            <basepoint x="-520" y="295" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0017tool" parent="TURRET" length="100" />
+            <vector x="0.309017" y="0.951057" z="0" />
+            <vectorY x="-0.951057" y="0.309017" z="0" />
+            <basepoint x="-428.84" y="280.562" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0018tool" parent="TURRET" length="100" />
+            <vector x="0.587785" y="0.809017" z="0" />
+            <vectorY x="-0.809017" y="0.587785" z="0" />
+            <basepoint x="-346.603" y="238.66" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0019tool" parent="TURRET" length="100" />
+            <vector x="0.809017" y="0.587785" z="0" />
+            <vectorY x="-0.587785" y="0.809017" z="0" />
+            <basepoint x="-281.34" y="173.397" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0020tool" parent="TURRET" length="100" />
+            <vector x="0.951057" y="0.309017" z="0" />
+            <vectorY x="-0.309017" y="0.951057" z="0" />
+            <basepoint x="-239.438" y="91.16" z="610" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+    </axes>
+</MachineTool>

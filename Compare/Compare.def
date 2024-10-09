@@ -1,0 +1,6 @@
+; Compare.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Compare"
+
+EXPORTS
+    ; Explicit exports can go here

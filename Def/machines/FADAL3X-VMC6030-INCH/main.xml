@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="part" name="base" parent="" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="1.000000" a="1.000000" />
+            <part name="base" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="Y" parent="" length="100.000000" />
+            <vector x="0.000000" y="-1.000000" z="0.000000" />
+            <color r="0.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="Y" length="100.000000" />
+            <vector x="-1.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="1.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Table_X" parent="X" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <part name="Table_X" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="stock_X" parent="X" length="100.000000" />
+            <vector x="-1.000000" y="0.000000" z="0.000000" />
+            <color r="0.000000" g="0.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="stock_Y" parent="stock_X" length="100.000000" />
+            <vector x="0.000000" y="-1.000000" z="0.000000" />
+            <color r="0.000000" g="0.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="stock_Z" parent="stock_Y" length="100.000000" />
+            <vector x="0.000000" y="0.000000" z="1.000000" />
+            <color r="0.000000" g="0.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="stock" name="stock" parent="stock_Z" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Table_Y" parent="Y" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <part name="Table_Y" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Table_Y_Add" parent="Y" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="1.000000" a="1.000000" />
+            <part name="Table_Y_Add" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="" length="100.000000" />
+            <vector x="0.000000" y="0.000000" z="1.000000" />
+            <color r="0.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Spindle_Z" parent="Z" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <part name="Spindle_Z" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="Z" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.000000" g="0.000000" b="0.000000" a="1.000000" />
+        </axis>
+    </axes>
+</MachineTool>

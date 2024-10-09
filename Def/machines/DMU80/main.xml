@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="part" name="base" parent="" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.000000" g="0.600000" b="1.000000" a="1.000000" />
+            <part name="dmu80_BASE" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="Y" parent="" length="100.000000" />
+            <vector x="0.000000" y="-1.000000" z="0.000000" />
+            <color r="1.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="axis_Y" parent="Y" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <part name="dmu80_Y_AXIS" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="rotary" name="A" parent="Y" length="100.000000" />
+            <vector x="-1.000000" y="0.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Table_A" parent="A" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <part name="dmu80_A" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="rotary" name="C" parent="A" length="100.000000" />
+            <vector x="0.000000" y="0.000000" z="-1.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Table_C" parent="C" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+            <part name="dmu80_C_AXIS" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="stock" name="stock" parent="C" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+            <collisioncheck axisname="Y" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="X" length="100.000000" />
+            <vector x="0.000000" y="0.000000" z="1.000000" />
+            <color r="0.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="PART_XZ" parent="Z" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="100.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <part name="dmu80_XZ" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="rotary" name="B" parent="Z" length="100.000000" />
+            <vector x="0.000000" y="0.707107" z="0.707107" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <limits min="-180.000000" max="180.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Table_B" parent="B" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="100.000000" />
+            <color r="0.500000" g="0.500000" b="1.000000" a="1.000000" />
+            <part name="dmu80_HEAD" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="B" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <localdisplvec x="0.000000" y="0.000000" z="100.000000" />
+            <color r="0.500000" g="0.500000" b="0.000000" a="0.000000" />
+        </axis>
+    </axes>
+</MachineTool>

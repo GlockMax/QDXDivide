@@ -1,0 +1,1068 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\NCEditor2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""afxribbon.rc""              // MFC ribbon and control bar resources\r\n"
+    "#endif\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TREE_CMENU MENU 
+BEGIN
+    POPUP "menu"
+    BEGIN
+        MENUITEM "Добавить замену ...",         ID_ADD_WREPL
+        MENUITEM "Удалить замену",              ID_DEL_WREPL
+    END
+END
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Файл"
+    BEGIN
+        MENUITEM "&Новый\tCtrl+N",              ID_FILE_NEW
+        MENUITEM "&Открыть ...\tCtrl+O",        ID_FILE_OPEN
+        MENUITEM "&Сохранить\tCtrl+S",          ID_FILE_SAVE
+        MENUITEM "Сохранить &как...",           ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "Выход",                       ID_APP_EXIT
+    END
+    POPUP "&Редактировать"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "undo",                        ID_EDIT_UNDO1
+        MENUITEM "redo",                        ID_EDIT_REDO1
+    END
+    POPUP "&Вид"
+    BEGIN
+        POPUP "&Панели"
+        BEGIN
+            MENUITEM "<placeholder>",               ID_VIEW_TOOLBAR
+        END
+        MENUITEM "&Строка состояния",           ID_VIEW_STATUS_BAR
+        POPUP "&Стиль интерфейса ..."
+        BEGIN
+            MENUITEM "Windows &2000",               ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio.NET 200&5",     ID_VIEW_APPLOOK_VS_2005
+            POPUP "Office 200&7"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+    END
+    POPUP "&Помощь"
+    BEGIN
+        MENUITEM "&О программе ...",            ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ADD_WREPL DIALOGEX 0, 0, 159, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Добавить замену"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,106,74,50,14
+    DEFPUSHBUTTON   "OK",IDOK,47,74,50,14
+    EDITTEXT        IDC_EDIT3,3,14,153,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,3,51,153,12,ES_AUTOHSCROLL
+    CONTROL         "Заменить строку из УП (без пробелов):",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,3,3,153,8
+    CONTROL         "На новую строку (без пробелов):",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,3,39,153,8
+END
+
+IDD_SELECT_XML DIALOGEX 0, 0, 163, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Загрузить файл-прототип"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,53,78,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,110,78,50,14
+    LISTBOX         IDC_XML_NAME,3,3,157,69,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ADD_WREPL, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 156
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_SELECT_XML, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 160
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 92
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATUS_PANE1        "Pane 1"
+    IDS_STATUS_PANE2        "Pane 2"
+    IDS_TOOLBAR_STANDARD    "Standard"
+    IDS_TOOLBAR_CUSTOMIZE   "Customize..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "NCEditor2\n\nNCEditor2\n\n\nNCEditor2.Document\nNCEditor2.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FILE_VIEW           "Помощь"
+    IDS_CLASS_VIEW          "Дерево параметров"
+    IDS_OUTPUT_WND          "Output"
+    IDS_PROPERTIES_WND      "Свойства"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SETUP_FAULT         "NCManager некорректно установлен"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BUILD_TAB           "Build"
+    IDS_DEBUG_TAB           "Debug"
+    IDS_FIND_TAB            "Find"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EXPLORER            "Explorer"
+    IDS_EDIT_MENU           "Edit"
+    IDS_ERROR_XML_PROTO     "Ошибка загрузки файла-прототипа"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BOOL_YES            "Да"
+    IDS_BOOL_NO             "Нет"
+    IDS_EMPTY               "Пустое значение"
+    IDS_ERROR_FILE          "Ошибка файла"
+    IDS_ERROR_XML           "Ошибка загрузки Xml файла: "
+    IDS_WORD_REPLACEMENT    "Word Replacement"
+    IDS_ERROR_MOVE_WREPL    "Ошибка при перемещении элемента Word Replacement"
+    IDS_UNKNOWN_DEFINITION  "Неизвестное определение"
+    IDS_WREPL_ELEMENT_HELP  "Текст, отображаемый в помощи для всех элементов Word REplacement"
+    IDS_WREPL_ELEMENT_PICTURE " "
+    IDS_ERROR_GROUP_DOESNTEXIST "Такая группа параметров не существует"
+    IDS_ERROR_UNKNOWN_TYPE  "Ошибка: неизвестный тип "
+    IDS_ERROR_XML_NAME_ELEMENT 
+                            "Ошибка в xml файле: не найден обязательный элемент Name"
+    IDS_ERROR_XML_ENUM_WITHOUT_VARIANTS 
+                            "Ошибка в xml файле: у элемента enum не определены варианты"
+    IDS_ERROR_XML_ENUM_WRONG_VARIANTS 
+                            "Ошибка в xml файле: у определения enum неправильно определены варианты"
+    IDS_ERROR_XML_GROUP_NAME 
+                            "Ошибка в xml файле: неверно определен параметр name у group"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_XML_UNKNOWN_ELEMENT "Ошибка в xml файле: неизвестный раздел "
+    IDS_ERROR_PARSER_BACKSLASH_EXPECTED "Ошибка парсера: ожидается """""
+    IDS_ERROR_PARSER_LESS_2STRINGS "Ошибка парсера: в файле меньше 2х строк"
+    IDS_ERROR_PARSER_NO_BEGIN_SIGNATURE 
+                            "Ошибка парсера: не обнаружена сигнатура начала файла"
+    IDS_ERROR_PARSER_UNEXPECTED_END 
+                            "Ошибка парсера: неожиданное завершение текста"
+    IDS_ERROR_PARSER_BLANK_LINE_EXPECTED 
+                            "Ошибка парсера: ожидается пустая строка"
+    IDS_ERROR_PARSER_DEFINITION 
+                            "Ошибка парсера: ошибка при считвании определения"
+    IDS_ERROR_PARSER_WREPL  "Ошибка парсера: ошибка при считывании WRepl"
+    IDS_ERROR_PARSER_SECTION_ADD 
+                            "Ошибка парсера: ошибка добавления секции к стойке"
+    IDS_ERROR_PARSER_SECTION_NAME_EXPECTED 
+                            "Ошибка парсера: ожидается имя секции"
+    IDS_MESSAGE_DOESNT_DEFINED "Не определено в файле-прототипе"
+    IDS_ERROR_PICTURE_LOADING "Ошибка чтения рисунка"
+    IDS_GROUP               "Группа"
+    IDS_SECTION_NAME        "Название секции"
+    IDS_DEFINITION_LIST     "Список определений"
+    IDS_REPLACE             "Замена"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SOURCE_STRING       "source string"
+    IDS_DESTINATION_STRING  "destination string"
+    IDS_GROUP_NAME          "Имя группы"
+    IDS_DEFINITION_WORD     "Слово-определение"
+    IDS_DEFAULT             "Значение по-умолчанию"
+    IDS_PRESENCE            "присутствует в описании стойки"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TYPEW_BOOL          "Да/нет"
+    IDS_TYPEW_INT           "int"
+    IDS_TYPEW_DOUBLE        "double"
+    IDS_TYPEW_STRING        "string"
+    IDS_TYPEW_EENUM         "enum+edit"
+    IDS_TYPEW_SENUM         "strict enum"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WREPL_ADD_EMPTY     "Строки не могут быть пустыми"
+    IDS_WREPL_ADD_EXISTS    "Такой элемент Word Replacement уже существует"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DEFAULT_PICTURE     "default.jpg"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROP_TOOLBAR_TOOLTIP0 "Развернуть список"
+    IDS_PROP_TOOLBAR_TOOLTIP1 "Расположить по алфавиту"
+    IDS_PROP_TOOLBAR_TOOLTIP2 "Тултип2"
+    IDS_PROP_TOOLBAR_TOOLTIP3 "Тултип3"
+    IDS_PROP_TOOLBAR_TOOLTIP4 "Тултип4"
+    IDS_TREE_TOOLBAR_TOOLTIP0 "Свернуть или развернуть список параметров"
+    IDS_TREE_TOOLBAR_TOOLTIP1 
+                            "Показать только включенные в описание стойки параметры"
+    IDS_TREE_TOOLBAR_TOOLTIP2 "Показать параметры в алфавитном порядке"
+    IDS_TREE_TOOLBAR_TOOLTIP3 "Группировать параметры"
+    IDS_TREE_TOOLBAR_TOOLTIP4 "Загрузить файл-прототип"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_UNDO1           "Отменить последнее действие\nОтменить"
+    ID_EDIT_REDO1           "Вернуть выполнение последнего отмененного действия\nВернуть"
+    ID_ADD_WREPL            "Определить замену в разделе Word Replacement"
+    ID_DEL_WREPL            "Удалить текущую строку из раздела Word Replacement"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "NCMControl"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Создать новый файл описания стойки ЧПУ\nНовая стойка ЧПУ"
+    ID_FILE_OPEN            "Открыть файл стойки ЧПУ\nОткрыть файл стойки ЧПУ"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Сохранить этот файл описания стойки ЧПУ\nСохранить файл стойки ЧПУ"
+    ID_FILE_SAVE_AS         "Сохранить файл стойки ЧПУ под новым именем\nСохранить файл стойки ЧПУ под новым именем"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Print the active document using current options\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Показать информацию о версии программы\nВерсия программы"
+    ID_APP_EXIT             "Выйти из редактора стоек ЧПУ\nВыйти из редактораt"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Показать или скрыть строку состояния\nСкрыть/Показать строку состоянияr"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_THEME_MENU MENU 
+BEGIN
+    MENUITEM "Office 2007 (&Blue Style)",   ID_VIEW_APPLOOK_OFF_2007_BLUE
+    MENUITEM "Office 2007 (B&lack Style)",  ID_VIEW_APPLOOK_OFF_2007_BLACK
+    MENUITEM "Office 2007 (&Silver Style)", ID_VIEW_APPLOOK_OFF_2007_SILVER
+    MENUITEM "Office 2007 (&Aqua Style)",   ID_VIEW_APPLOOK_OFF_2007_AQUA
+END
+
+IDR_POPUP_EXPLORER MENU 
+BEGIN
+    POPUP "Explorer"
+    BEGIN
+        MENUITEM "&Open",                       ID_OPEN
+        MENUITEM "Open &With....",              ID_OPEN_WITH
+        MENUITEM SEPARATOR
+        MENUITEM "&Compile",                    ID_DUMMY_COMPILE
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Remove",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties...",              ID_PROPERTIES
+    END
+END
+
+IDR_POPUP_EDIT MENU 
+BEGIN
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+    END
+END
+
+IDR_OUTPUT_POPUP MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Clear",                      ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide",                       ID_VIEW_OUTPUTWND
+    END
+END
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open ...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As ...",                ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "undo",                        ID_EDIT_UNDO1
+        MENUITEM "redo",                        ID_EDIT_REDO1
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Panes"
+        BEGIN
+            MENUITEM "<placeholder>",               ID_VIEW_TOOLBAR
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "NCMControl &Look ..."
+        BEGIN
+            MENUITEM "Windows &2000",               ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio.NET 200&5",     ID_VIEW_APPLOOK_VS_2005
+            POPUP "Office 200&7"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About NCMContral ...",       ID_APP_ABOUT
+    END
+END
+
+IDR_TREE_CMENU MENU 
+BEGIN
+    POPUP "menu"
+    BEGIN
+        MENUITEM "Add Replacement ...",         ID_ADD_WREPL
+        MENUITEM "Remove Replacement",          ID_DEL_WREPL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NCEditor2"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "NCMcontrol, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_ADD_WREPL DIALOGEX 0, 0, 159, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "???????? ??????"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,106,74,50,14
+    DEFPUSHBUTTON   "OK",IDOK,47,74,50,14
+    EDITTEXT        IDC_EDIT3,3,14,153,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,3,51,153,12,ES_AUTOHSCROLL
+    CONTROL         "Replace a line from NC code (without blanks):",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,3,3,153,8
+    CONTROL         "New line (without blanks):",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,3,39,153,8
+END
+
+IDD_SELECT_XML DIALOGEX 0, 0, 163, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Load a file-prototype"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,53,78,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,110,78,50,14
+    LISTBOX         IDC_XML_NAME,3,3,157,69,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_ADD_WREPL, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 156
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_SELECT_XML, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 160
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 92
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NCEditor2.ico"
+IDR_NCEditor2TYPE       ICON                    "res\\NCEditor2Doc.ico"
+IDI_FILE_VIEW           ICON                    "res\\file_view.ico"
+IDI_FILE_VIEW_HC        ICON                    "res\\file_view_hc.ico"
+IDI_CLASS_VIEW          ICON                    "res\\class_view.ico"
+IDI_CLASS_VIEW_HC       ICON                    "res\\class_view_hc.ico"
+IDI_OUTPUT_WND          ICON                    "res\\output_wnd.ico"
+IDI_OUTPUT_WND_HC       ICON                    "res\\output_wnd_hc.ico"
+IDI_PROPERTIES_WND      ICON                    "res\\properties_wnd.ico"
+IDI_PROPERTIES_WND_HC   ICON                    "res\\properties_wnd_hc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+IDR_SORT                BITMAP                  "res\\sort.bmp"
+IDB_SORT_24             BITMAP                  "res\\sort_hc.bmp"
+IDB_FILE_VIEW           BITMAP                  "res\\fileview.bmp"
+IDB_FILE_VIEW_24        BITMAP                  "res\\fileview_hc.bmp"
+IDB_CLASS_VIEW          BITMAP                  "res\\classview.bmp"
+IDB_CLASS_VIEW_24       BITMAP                  "res\\classview_hc.bmp"
+IDB_EXPLORER_24         BITMAP                  "res\\explorer_hc.bmp"
+IDB_MENU_IMAGES_24      BITMAP                  "res\\menuimages_hc.bmp"
+IDR_PROPERTIES          BITMAP                  "res\\properties.bmp"
+IDB_PROPERTIES_HC       BITMAP                  "res\\properties_hc.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO1
+    BUTTON      ID_EDIT_REDO1
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+END
+
+IDR_MAINFRAME_256 TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_SORT TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_TREE_TB_EXPAND
+    SEPARATOR
+    BUTTON      ID_TREE_TB_PRES
+    BUTTON      ID_TREE_TB_ABC
+    BUTTON      ID_TREE_TB_GROUP
+    SEPARATOR
+    BUTTON      ID_NEW_FOLDER
+END
+
+IDR_PROPERTIES TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_EXPAND_ALL
+    BUTTON      ID_SORTPROPERTIES
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "NCMControl.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "NCMControl.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "NCEditor2\n\nNCEditor2\n\n\nNCEditor2.Document\nNCEditor2.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "NCMControl"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "To create a new file of the description of CNC-Control\nNew CNC-Control"
+    ID_FILE_OPEN            "To open a file of CNC-Control\nTo open a file of CNC-Control"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "To save this file of the description of CNC-Control\nSave CNC-Control file"
+    ID_FILE_SAVE_AS         "To save a file of CNC-Control under a new name\nTo save a file of CNC-Control under a new name"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Print the active document using current options\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "To show the information on the program version\nprogram version"
+    ID_APP_EXIT             "To exit the editor of CNC-Control\nClose NCMControl"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Hide/Show a status line\nHide/Show a status line"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATUS_PANE1        "Pane 1"
+    IDS_STATUS_PANE2        "Pane 2"
+    IDS_TOOLBAR_STANDARD    "Standard"
+    IDS_TOOLBAR_CUSTOMIZE   "Customize..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FILE_VIEW           "Help"
+    IDS_CLASS_VIEW          "Tree of parameters"
+    IDS_OUTPUT_WND          "Output"
+    IDS_PROPERTIES_WND      "Property"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EXPLORER            "Explorer"
+    IDS_EDIT_MENU           "Edit"
+    IDS_ERROR_XML_PROTO     "Error of loading of a file-prototype"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BUILD_TAB           "Build"
+    IDS_DEBUG_TAB           "Debug"
+    IDS_FIND_TAB            "Find"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TYPEW_BOOL          "Yes/No"
+    IDS_TYPEW_INT           "int"
+    IDS_TYPEW_DOUBLE        "double"
+    IDS_TYPEW_STRING        "string"
+    IDS_TYPEW_EENUM         "enum+edit"
+    IDS_TYPEW_SENUM         "strict enum"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WREPL_ADD_EMPTY     "Lines cannot be empty"
+    IDS_WREPL_ADD_EXISTS    "Such element Word Replacement already exists"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SETUP_FAULT         "Wrong setup the NCManager"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DEFAULT_PICTURE     "default.jpg"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_UNDO1           "Undo last operation\nUndo"
+    ID_EDIT_REDO1           "Redo last undo operation\nRedo"
+    ID_ADD_WREPL            "To define replacement in section Word Replacement"
+    ID_DEL_WREPL            "To remove a current line from section Word Replacement"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BOOL_YES            "Yes"
+    IDS_BOOL_NO             "No"
+    IDS_EMPTY               "Empty value"
+    IDS_ERROR_FILE          "File error"
+    IDS_ERROR_XML           "Error of loading Xml of a file:"
+    IDS_WORD_REPLACEMENT    "Word Replacement"
+    IDS_ERROR_MOVE_WREPL    "Error at moving of element Word Replacement"
+    IDS_UNKNOWN_DEFINITION  "Unknown definition"
+    IDS_WREPL_ELEMENT_HELP  "?????, ???????????? ? ?????? ??? ???? ????????? Word REplacement"
+    IDS_WREPL_ELEMENT_PICTURE " "
+    IDS_ERROR_GROUP_DOESNTEXIST "????? ?????? ?????????? ?? ??????????"
+    IDS_ERROR_UNKNOWN_TYPE  "??????: ??????????? ??? "
+    IDS_ERROR_XML_NAME_ELEMENT 
+                            "?????? ? xml ?????: ?? ?????? ???????????? ??????? Name"
+    IDS_ERROR_XML_ENUM_WITHOUT_VARIANTS 
+                            "?????? ? xml ?????: ? ???????? enum ?? ?????????? ????????"
+    IDS_ERROR_XML_ENUM_WRONG_VARIANTS 
+                            "?????? ? xml ?????: ? ??????????? enum ??????????? ?????????? ????????"
+    IDS_ERROR_XML_GROUP_NAME 
+                            "?????? ? xml ?????: ??????? ????????? ???????? name ? group"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_XML_UNKNOWN_ELEMENT "?????? ? xml ?????: ??????????? ?????? "
+    IDS_ERROR_PARSER_BACKSLASH_EXPECTED "?????? ???????: ????????? """""
+    IDS_ERROR_PARSER_LESS_2STRINGS "?????? ???????: ? ????? ?????? 2? ?????"
+    IDS_ERROR_PARSER_NO_BEGIN_SIGNATURE 
+                            "?????? ???????: ?? ?????????? ????????? ?????? ?????"
+    IDS_ERROR_PARSER_UNEXPECTED_END 
+                            "?????? ???????: ??????????? ?????????? ??????"
+    IDS_ERROR_PARSER_BLANK_LINE_EXPECTED 
+                            "?????? ???????: ????????? ?????? ??????"
+    IDS_ERROR_PARSER_DEFINITION 
+                            "?????? ???????: ?????? ??? ????????? ???????????"
+    IDS_ERROR_PARSER_WREPL  "?????? ???????: ?????? ??? ?????????? WRepl"
+    IDS_ERROR_PARSER_SECTION_ADD 
+                            "?????? ???????: ?????? ?????????? ?????? ? ??????"
+    IDS_ERROR_PARSER_SECTION_NAME_EXPECTED 
+                            "?????? ???????: ????????? ??? ??????"
+    IDS_MESSAGE_DOESNT_DEFINED "It is not defined in a file-prototype"
+    IDS_ERROR_PICTURE_LOADING "Error of reading of drawing"
+    IDS_GROUP               "Group"
+    IDS_SECTION_NAME        "Section name"
+    IDS_DEFINITION_LIST     "The list of definitions"
+    IDS_REPLACE             "replacement"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SOURCE_STRING       "source string"
+    IDS_DESTINATION_STRING  "destination string"
+    IDS_GROUP_NAME          "Group name"
+    IDS_DEFINITION_WORD     "Word-definition"
+    IDS_DEFAULT             "Value on default"
+    IDS_PRESENCE            "Is present at the CNC-Contral description"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROP_TOOLBAR_TOOLTIP0 "to open the list"
+    IDS_PROP_TOOLBAR_TOOLTIP1 "Alphabetical"
+    IDS_PROP_TOOLBAR_TOOLTIP2 "??????2"
+    IDS_PROP_TOOLBAR_TOOLTIP3 "??????3"
+    IDS_PROP_TOOLBAR_TOOLTIP4 "??????4"
+    IDS_TREE_TOOLBAR_TOOLTIP0 "Show/Hide all children of parameters list"
+    IDS_TREE_TOOLBAR_TOOLTIP1 
+                            "To show only the CNC-Control included in the description parametres"
+    IDS_TREE_TOOLBAR_TOOLTIP2 "To show parametres in alphabetic order"
+    IDS_TREE_TOOLBAR_TOOLTIP3 "To group parametres"
+    IDS_TREE_TOOLBAR_TOOLTIP4 "To load a file-prototype"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_PROPERTY_RESOURCES
+
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\NCEditor2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#if !defined(_AFXDLL)
+#include "afxribbon.rc"              // MFC ribbon and control bar resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,192 @@
+//
+//
+
+// Section General
+Name		
+Type		
+Model		
+Manufacturer			
+Operation		Cutting
+NumAxes		2
+// end section
+
+// Section Word Replacement
+Replace		"_#IFFIRST_N_U"	"M98P"
+// end section
+
+// Section Word Definition
+LineNumber		N
+HorizontalAxis		Y
+VerticalAxis		X
+SpindleAxis		Z
+HorizontalRotationAxis		 
+VerticalRotationAxis		 
+SpindleRotationAxis		 
+GlobalDwell		V	 
+DwellTime		F	 
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode		F
+SpeedCode		S
+ToolCode		T
+CircleHorzCenter		J
+CircleVerticalCenter		I
+CircleDepthCenter		K
+CircleRadius		A
+DiaCompOffset		D
+LengthCompOffset		H
+RapidClearanceLevel		R
+FixtureOffsetCode		
+InitialDepth		P
+PeckIncrementDepth		Q
+DrillRepeatCycles		L
+DiaCompHorizVec		P
+DiaCompVerticalVec		Q
+ProgramNumber		P
+ProgramStartEnd		U
+CommentStart		(
+CommentEnd		)
+EndOfBlock		$
+EndOfLine		\
+BlockSkip		/
+ProgramBeginEnd		%
+Delimiter		 
+WCSSet		L
+CircleCuttingRadius1		
+CircleCuttingRadius2		
+ArcIncrement		Q
+ProgramCopyStart		P
+ProgramCopyEnd		Q
+SecondaryWCS		P
+Register		R
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+Dwell		4	0	N
+ExactStop		9	0	N
+DataSetting		92	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		70	6	N
+MetricUnit		71	6	N
+ReturnToRef		28	0	N
+ReturnToRef2		30	0	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthCompOn		43	8	N
+LengthComp		44	8	N
+LengthOffsetIncr		45	0	N
+LengthOffsetDecr		46	0	N
+LengthOffsetIncr2X		47	0	N
+LengthOffsetDecr2X		48	0	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+MirrorRotate7		60	14	N
+ExactStop2		61	15	N
+TappingCycle		63	15	N
+CuttingCycle		64	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		76	9	Y
+CancelCycle		80	9	Y
+DrillCycle		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+ZeroPreset		52	1	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop		1
+ProgramEnd		30
+SpindleCCW		4
+SpindleStop		3
+ToolChange		6
+Orient		19
+EndProgram		2
+SubroutineCall		98
+SubroutineEnd		12
+Dummy1		21
+Dummy2		20
+Dummy3		15
+Dummy4		8
+Dummy5		9
+Dummy6		16
+Dummy7		16
+// end section
+
+// Section Others
+StartProgram	Ignore
+DecimalConversion		0
+LinearDecimalConversion		0
+RotaryDecimalConversion		0
+FeedDecimalConversion		0
+SpeedDecimalConversion		0
+ReverseSign		
+ReverseTurret	No
+ContinuedCircleStatement	No
+XInDiameter		No
+CircleInQuadrants	No
+3DDiaCompensation	Yes
+CircularDirection		D0 D1
+CircleCenterType		IJ
+CircleCenterMode		Incremental
+UVCenterType		IJ
+UVCenterMode		Incremental
+AlwaysIncremental		No
+MaxArcRadius		999
+RotaryAxisUnwind		No
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute
+ExtraCharForRapid		
+ToolChangeWithM06		Yes
+G28WithM06		No
+AddToolSetLength		No
+ToolPreSelect		No
+ToolOffsetInToolNumber	No
+AdditionalCommentChars		
+DataSetChar		L
+TableRotationType	ShortestRoute
+StartwToolNum1	No
+MaxFeedRate		0
+SetSecondaryWCSIndicator		20
+SetPrimaryWCSIndicator		2
+DrillAxisMode	Programmable
+MultiAxisSequence	AllSimultaneous
+MinArcDist		1
+DwellTimeDiscr		1000
+FileExtension		*.ZCN
+PutFirst		G90,G91
+// end section
+
+// Section Cycle Definition
+// end section

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Stock properties</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1>Stock properties</h1>
+<p>Stock properties are managed in Properties pane. Properties vary depending on the type of project - mill, lathe, mill-turn.</p>
+<table width="85%" border="1">
+  <tr>
+    <td width="50%" valign="top">
+<p>Mill project properties </p></td>
+    <td valign="top">
+<p>Lathe and mill-turn projects properties </p></td>
+  </tr>
+  <tr>
+    <td align="center">
+<p><img src="../images/PropertyStock.gif"></p></td>
+    <td align="center">
+<p><img src="../images/PropertyStockMT.gif"></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>To change the desired property, click on the corresponding value in the right column, then select the value from list or enter the value from keyboard. Modified parameter will be highlighted bold. On the bottom of the panels you will see the hint for selected property.</p>
+<p><strong>Visibility</strong> - controls the visibility of selected program. &quot;Yes&quot; - the stock is visible, &quot;No&quot; - the stock is hidden.</p>
+<table width="70%" border="1">
+  <tr>
+    <td width="70%" valign="top">
+<p><strong>Quick stock visibility toggle:</strong></p>
+      <p>click on the lamp icon in object panel for stock object <br>
+      </p></td>
+    <td align="center"><img src="../images/QuickA23.gif" width="134" height="67"></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><strong>Edges</strong> - controls edges visibility for stock.  &quot;No&quot; for invisible edges, &quot;Yes&quot; for visible. </p>
+<p><strong>Edges colour</strong> - controls stock edges color.</p>
+<p><strong>Edge thickness </strong> - controls edges thickness. Floating point value from 1.0 to 10.0.</p>
+<p><strong>Angle of smoothing </strong> - manages the angle of smoothing. If an angle between faces is less than this value, the angle would be smoothed. Minimal value is 0. Also this parameter affects the definition of edges.</p>
+<p><strong>Value of transparency </strong> - controls the degree of transparency for &quot;transparency&quot; mode.</p>
+<p><strong>Colour</strong> - controls stock initial color.</p>
+<p><strong>Paint</strong> - controls the way the stock is displayed during machining. 
+  &quot;Polychromy&quot; - surface color corresponds the color of tool, which formed this surface; &quot;Homochromatism&quot; - the stock is displayed with single defined color.</p>
+<p><strong>Rendering</strong> - controls the way the stock is displayed. Three modes available: &quot;Shade&quot;, &quot;Mirror&quot;, &quot;Transparency&quot;.</p>
+<p><strong>Wireframe</strong> - controls display mode for currently selected model. &quot;No&quot; - model is displayed solid with selected color, &quot;Yes&quot; - model is displayed as wireframe with selected color.</p>
+<p><strong>Stock type</strong> - displays the stock type (mill, turn...).</p>
+<p>&nbsp;</p>
+<table width="70%" border="1">
+  <tr>
+    <td width="60%" valign="top">
+<p>In lathe and mill-turn projects there are stock properties, controlling the notch by two angles.</p></td>
+    <td align="center">
+<p><img src="../images/StockG3SH.gif" width="247" height="296"></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>
+  <strong>Corner initial</strong> - an angle of notch start in degrees. This angle is laid off from X axis. Positive direction is counterclockwise looking from positive direction of Z axis.</p>
+<p><strong>Corner increment</strong> - increment for initial corner in degrees. This angle is laid off initial angle. Positive direction is counterclockwise looking from positive direction of Z axis. For the stock during simulation to be without notch, the increment should be 360 degrees.</p>
+</BODY>
+</HTML>

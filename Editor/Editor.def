@@ -1,0 +1,6 @@
+; Editor.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Editor"
+
+EXPORTS
+    ; Explicit exports can go here

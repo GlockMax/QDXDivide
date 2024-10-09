@@ -1,0 +1,253 @@
+// 
+// 
+
+// Section General
+Name		NCM_BaltSys_Mill.sm3
+Type		BaltSys
+Model		
+Manufacturer	
+Operation		Milling
+NumAxes		3
+Version		1.03 
+Create		05.07.2023
+Update		19.09.2024
+Forbidden	scravtqefijklm
+Allowed	bdghnopuwxyz
+Format	1
+CheckSyntax	Yes
+// end section
+
+// Section Word Replacement
+Replace		"_#IFFIRST_G33_K"	"F"
+Replace		"SSL="		"G500S"
+Replace		"M42M3"		"M3"
+Replace		"M4M41"		"M4"
+Replace		"M4M42"		"M4"
+Replace		"M12"		"M6"
+Replace		"M10"		"M6"
+Replace		"(DPI,X,Y)"	"G17"
+Replace		"(DPI,X,W)"	"G18"
+Replace		"M45M3"		"M3"
+//Считаем коррекцию как радиус инструмента + дополнительный припуск
+RegExp		"(G41|G42)"		"M8100\1G3500D=[E8101/2+yUOVg]"
+Replace		"G40"		"G40G3600"
+Replace		"(DLY,"		"G4P"
+Replace		"(DIS,"		";(DIS,"
+Replace		"(INP,"		";(INP,"
+Replace		"(UIO,"		"G92"
+Replace		"USB"		"E8999"
+Replace		"(ERP)"		"M200"
+Replace		"(RPT,"		"K"
+Replace		"M13"		"M03M08"
+Replace		"M14"		"M04M08"
+RegExp		";FREZAD(\d+\.?\d*)"	"G222d\1h25"
+RegExp		";SVERLOD(\d+\.?\d*)"	"G222L1d\1h25g120"
+RegExp		"\(UOT,0,W(\+*\-*\=*\d*\.*\d*)\)"	"E5223=\1"
+RegExp		"\(UOT,0,Y(\+*\-*\=*\d*\.*\d*)\)"	"E5222=\1"
+RegExp		"\(UOT,0,Y(\+*\-*\=*\d*\.*\d*),W(\+*\-*\=*\d*\.*\d*)\)"	"E5222=\1E5223=\2"
+RegExp		"TMR="	"G4X"
+RegExp		"SIN\((.+)\)"	"s[\1]"
+RegExp		"COS\((.+)\)"	"c[\1]"
+RegExp		"TAN\((.+)\)"	"t[\1]"
+RegExp		"ARS\((.+)\)"	"j[\1]"
+RegExp		"ARC\((.+)\)"	"k[\1]"
+RegExp		"ART\((.+)\)"	"v[\1]"
+RegExp		"SQR\((.+)\)"	"q[\1]"
+RegExp		"ABS\((.+)\)"	"a[\1]"
+RegExp		"INT\((.+)\)"	"i[\1]"
+RegExp		"MOD\((.+),(.+)\)"	"\1$\2"
+RegExp		"\(URT,([E\+\-0-9\.]+)\)"	"G68I0J0K1R\1"
+//дополнительный припуск пишем в регистр 9201
+RegExp		"UOV="	"yUOVg"
+//Не определенный G-код	
+RegExp		"(G29)"	";\1"
+// end section
+
+// Section Word Definition
+VariablePrefix	y
+VariableEnd	g
+CrToolType		L
+CrMillDiameter 	d
+CrMillHeight	h
+CrMillAngle		g
+CrMillLength	n
+CrMillRadius	R
+CrToolCode	Q
+CrShankD 	D
+CrShankH 	H
+CrHolderD 	E
+CrHolderH 	F
+PeckIncrementDepth	I
+LabelLast		"""
+LabelFirst		"""
+LineNumber		N
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B		 
+SpindleRotationAxis	C	 
+FunctionCode		G
+MiscFunctionCode	M
+FeedCode		F
+SpeedCode		S
+ToolCode		T
+DwellTime		P
+CircleHorzCenter	I
+CircleVerticalCenter	J
+CircleDepthCenter	K
+CircleRadius		R
+DiaCompOffset		d
+DiaCompOffsetVal		D
+LengthCompOffset	H
+ProgramNumber		P
+ProgramStartEnd		O
+CommentStart		(
+CommentEnd		)
+BlockSkip		;
+BlockDebug		/
+Register	E
+ProgramBeginEnd		%
+ProgramCopyStart	P
+ProgramCopyEnd		Q
+RepeatNumber		K
+Dummy0	W
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+Dwell		4	0	N
+ExactStop		8	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+CompCancelNext	40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthCompOn		43	8	N
+LengthComp		44	8	N
+LengthOffsetIncr		45	0	N
+LengthOffsetDecr		46	0	N
+LengthOffsetIncr2X		47	0	N
+LengthOffsetDecr2X		48	0	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+TappingCycle		63	15	N
+CuttingCycle		64	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		76	9	Y
+CancelCycle		80	9	Y
+DrillCyclePlane		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y	Y	PeckIncrementDepth
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	Y
+BackBoreCycle		87	9	Y
+BoreDwellCycle		88	9	Y
+ReamDwellCycle		89	9	Y
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		92	0	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+ProgramCopy		700	0	N
+ParToNext			3500	100	N
+RetractComp		3600	100	N
+FixCutSpeed		96.1	2	N
+UnFixCutSpeed		97.1	2	Y
+SetMaxSpeed		500	0	N
+SimThreadCycleT		33	0	Y
+MachineCoordSys		79	0	N
+MoveRotateCS		68	1	N	N	CircleDepthCenter
+MoveRotateCSCancel	69	1	N
+CreateMillingTool	222	0	Y
+Dummy27			27	1	N
+Dummy28			28	1	N
+Dummy29			29	1	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop		1
+SpindleCWTurn		3
+SpindleCCWTurn		4
+SpindleStop		5
+ToolChange		66
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+Orient		19
+EndProgram		30
+SubroutineCall		98
+SubroutineEnd		99
+GoTo		97
+FileCall	197
+ThreadCut	12
+AutoCycleEnd		200
+StoreToolParams		8100
+Dummy1		23
+Dummy3		27
+Dummy2		60
+// end section
+
+// Section Others
+UseStdFuncNames	No
+CycleNeedsGeom		Yes
+CycleNeedsParam		Yes
+CompType		Arc
+PartialCompCancel		Yes
+CircleCenterType		IJ
+CircleCenterMode		AsCoord
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute		
+ToolChangeWithM06	Yes
+ToolOffsetInToolNumber	Com
+ToolPreSelect		No
+IgnoreUnknownM		Yes
+IgnoreUnknownCh		Yes
+IgnoreUnknownG		Yes
+MinArcDist		2
+CheckGeom		Yes
+StartProgram		Ignore
+FileExtension *.*
+CyclicB			Yes
+MainInitStr		G17G54G94G99G0X-200.Y0Z150.
+EmptyGZero		Yes
+EmptyZero		Yes
+DwellTimeDiscr		1000
+ToolChangeTime		5
+FastFeedRate		15000
+MaxFeedRate		5000
+InterChangeCancelCycle	Yes
+BaltSysStyle		Yes
+LabelType		BaltSys
+MachineCS		600,300,400
+TableRotationType	PositiveCCW
+CyclicA		Yes
+// end section
+
+// Section Cycle Definition
+// end section

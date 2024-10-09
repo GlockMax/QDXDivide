@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|x64">
+      <Configuration>Template</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8039087-D498-46DB-B388-CF5BD115233C}</ProjectGuid>
+    <RootNamespace>ResRus</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\$(Configuration)\local\Rus\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\$(Configuration)\local\Rus\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\$(Configuration)\local\Rus\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\$(Configuration)\local\Rus\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">local\Rus\Resources</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Template|x64'">local\Rus\Resources</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">..\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Template|x64'">..\$(Configuration)\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Resources</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Resources</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Resources</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\ResRus.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\lib\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>.\..\lib\$(Configuration)\$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\ResRus.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\lib\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>.\..\lib\$(Configuration)\$(OutDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\ResRus.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\lib\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>.\..\lib\$(Configuration)\$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0419</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\ResRus.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\lib\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>.\..\lib\$(Configuration)\$(OutDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+    </ClCompile>
+    <ClCompile Include="ResRus.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ResCommon\Res\AplyButton.bmp" />
+    <None Include="..\ResCommon\Res\AppearPicture.bmp" />
+    <None Include="..\ResCommon\Res\AutoFixCentr.bmp" />
+    <None Include="..\ResCommon\Res\AutoFixCentrOff.bmp" />
+    <None Include="..\ResCommon\Res\AutoFixEnd.bmp" />
+    <None Include="..\ResCommon\Res\AutoFixEndOff.bmp" />
+    <None Include="..\ResCommon\Res\AutoFixMid.bmp" />
+    <None Include="..\ResCommon\Res\AutoFixMidOff.bmp" />
+    <None Include="..\ResCommon\Res\AutoFixOnCurv.bmp" />
+    <None Include="..\ResCommon\Res\AutoFixOnCurvOff.bmp" />
+    <None Include="..\ResCommon\Res\bitmap1.bmp" />
+    <None Include="..\ResCommon\Res\bitmap2.bmp" />
+    <None Include="..\ResCommon\Res\bitmap4.bmp" />
+    <None Include="..\ResCommon\Res\bmp00002.bmp" />
+    <None Include="..\ResCommon\Res\bmp00003.bmp" />
+    <None Include="..\ResCommon\Res\bmp00004.bmp" />
+    <None Include="..\ResCommon\Res\bmp00005.bmp" />
+    <None Include="..\ResCommon\Res\bmp00006.bmp" />
+    <None Include="..\ResCommon\Res\bmp00007.bmp" />
+    <None Include="..\ResCommon\Res\bmp00008.bmp" />
+    <None Include="..\ResCommon\Res\bmp00009.bmp" />
+    <None Include="..\ResCommon\Res\bmp00010.bmp" />
+    <None Include="..\ResCommon\Res\bmp00011.bmp" />
+    <None Include="..\ResCommon\Res\bmp00012.bmp" />
+    <None Include="..\ResCommon\Res\bmp00013.bmp" />
+    <None Include="..\ResCommon\Res\bmp00014.bmp" />
+    <None Include="..\ResCommon\Res\bmp00015.bmp" />
+    <None Include="..\ResCommon\Res\bmp00016.bmp" />
+    <None Include="..\ResCommon\Res\bmp00017.bmp" />
+    <None Include="..\ResCommon\Res\bmp00018.bmp" />
+    <None Include="..\ResCommon\Res\bmp00019.bmp" />
+    <None Include="..\ResCommon\Res\bmp00020.bmp" />
+    <None Include="..\ResCommon\Res\bmp00021.bmp" />
+    <None Include="..\ResCommon\Res\bmp00022.bmp" />
+    <None Include="..\ResCommon\Res\bmp00023.bmp" />
+    <None Include="..\ResCommon\Res\bmp00024.bmp" />
+    <None Include="..\ResCommon\Res\bmp00025.bmp" />
+    <None Include="..\ResCommon\Res\bmp00026.bmp" />
+    <None Include="..\ResCommon\Res\bmp00027.bmp" />
+    <None Include="..\ResCommon\Res\bmp00028.bmp" />
+    <None Include="..\ResCommon\Res\bmp00029.bmp" />
+    <None Include="..\ResCommon\Res\bmp00030.bmp" />
+    <None Include="..\ResCommon\Res\bmp00031.bmp" />
+    <None Include="..\ResCommon\Res\bmp00032.bmp" />
+    <None Include="..\ResCommon\Res\bmp00033.bmp" />
+    <None Include="..\ResCommon\Res\bmp00034.bmp" />
+    <None Include="..\ResCommon\Res\box_small.bmp" />
+    <None Include="..\ResCommon\Res\BP1d.ico" />
+    <None Include="..\ResCommon\Res\BP2d.ico" />
+    <None Include="..\ResCommon\Res\BP3d.ico" />
+    <None Include="..\ResCommon\Res\BP4D.ico" />
+    <None Include="..\ResCommon\Res\BPd.ico" />
+    <None Include="..\ResCommon\Res\check32.bmp" />
+    <None Include="..\ResCommon\Res\checkno32.bmp" />
+    <None Include="..\ResCommon\Res\COMPNUMB.bmp" />
+    <None Include="..\ResCommon\Res\Create2PtLineOff.bmp" />
+    <None Include="..\ResCommon\Res\Create2PtLineOn.bmp" />
+    <None Include="..\ResCommon\Res\Create3PtArcOff.bmp" />
+    <None Include="..\ResCommon\Res\Create3PtArcOn.bmp" />
+    <None Include="..\ResCommon\Res\Create3PtPlaneOff.bmp" />
+    <None Include="..\ResCommon\Res\Create3PtPlaneOn.bmp" />
+    <None Include="..\ResCommon\Res\CreateAutoArcOff.bmp" />
+    <None Include="..\ResCommon\Res\CreateAutoArcOn.bmp" />
+    <None Include="..\ResCommon\Res\CreateAutoLineOff.bmp" />
+    <None Include="..\ResCommon\Res\CreateAutoLineOn.bmp" />
+    <None Include="..\ResCommon\Res\CreateAutoPlaneOff.bmp" />
+    <None Include="..\ResCommon\Res\CreateAutoPlaneOn.bmp" />
+    <None Include="..\ResCommon\Res\CreateAutoPtOff.bmp" />
+    <None Include="..\ResCommon\Res\CreateAutoPtOn.bmp" />
+    <None Include="..\ResCommon\Res\CreateIntersectLineOff.bmp" />
+    <None Include="..\ResCommon\Res\CreateIntersectLineOn.bmp" />
+    <None Include="..\ResCommon\Res\CreateIntersectPtOff.bmp" />
+    <None Include="..\ResCommon\Res\CreateIntersectPtOn.bmp" />
+    <None Include="..\ResCommon\Res\cyl_small.bmp" />
+    <None Include="..\ResCommon\Res\DIAMOND35.bmp" />
+    <None Include="..\ResCommon\Res\DIAMOND50.bmp" />
+    <None Include="..\ResCommon\Res\DIAMOND55.bmp" />
+    <None Include="..\ResCommon\Res\DIAMOND75.bmp" />
+    <None Include="..\ResCommon\Res\DIAMOND80.bmp" />
+    <None Include="..\ResCommon\Res\DIAMOND86.bmp" />
+    <None Include="..\ResCommon\Res\FAddimg.bmp" />
+    <None Include="..\ResCommon\Res\FiltrModel.bmp" />
+    <None Include="..\ResCommon\Res\FiltrModeOffl.bmp" />
+    <None Include="..\ResCommon\Res\FiltrObj.bmp" />
+    <None Include="..\ResCommon\Res\FiltrObjOff.bmp" />
+    <None Include="..\ResCommon\Res\FiltrSceleton.bmp" />
+    <None Include="..\ResCommon\Res\FiltrSceletonOff.bmp" />
+    <None Include="..\ResCommon\Res\FiltrTrajectory.bmp" />
+    <None Include="..\ResCommon\Res\FiltrTrajectoryOff.bmp" />
+    <None Include="..\ResCommon\Res\Fimg.bmp" />
+    <None Include="..\ResCommon\Res\HEX.bmp" />
+    <None Include="..\ResCommon\Res\insert_c.bmp" />
+    <None Include="..\ResCommon\Res\OCT.bmp" />
+    <None Include="..\ResCommon\Res\PARAL55.bmp" />
+    <None Include="..\ResCommon\Res\PARAL82.bmp" />
+    <None Include="..\ResCommon\Res\PARAL85.bmp" />
+    <None Include="..\ResCommon\Res\PENT.bmp" />
+    <None Include="..\ResCommon\Res\RECT.bmp" />
+    <None Include="..\ResCommon\Res\RND.bmp" />
+    <None Include="..\ResCommon\Res\SizeAngleOff.bmp" />
+    <None Include="..\ResCommon\Res\SizeAngleOn.bmp" />
+    <None Include="..\ResCommon\Res\SizeDOff.bmp" />
+    <None Include="..\ResCommon\Res\SizeDOn.bmp" />
+    <None Include="..\ResCommon\Res\SizeLengthOff.bmp" />
+    <None Include="..\ResCommon\Res\SizeLengthOn.bmp" />
+    <None Include="..\ResCommon\Res\SizeROff.bmp" />
+    <None Include="..\ResCommon\Res\SizeROn.bmp" />
+    <None Include="..\ResCommon\Res\SizeSelectOFF.bmp" />
+    <None Include="..\ResCommon\Res\SizeSelectOn.bmp" />
+    <None Include="..\ResCommon\Res\SQUARE.bmp" />
+    <None Include="..\ResCommon\Res\stock_sec.bmp" />
+    <None Include="..\ResCommon\Res\stock_tu.bmp" />
+    <None Include="..\ResCommon\Res\stock_turn.bmp" />
+    <None Include="..\ResCommon\Res\STOCK_TURN_CYL.bmp" />
+    <None Include="..\ResCommon\Res\STOCK_TURN_GCOD.bmp" />
+    <None Include="..\ResCommon\Res\Timg.bmp" />
+    <None Include="..\ResCommon\Res\tool_dis.bmp" />
+    <None Include="..\ResCommon\Res\tool_dra.bmp" />
+    <None Include="..\ResCommon\Res\tool_pic.bmp" />
+    <None Include="..\ResCommon\Res\tool_thr.bmp" />
+    <None Include="..\ResCommon\Res\tool_tur.bmp" />
+    <None Include="..\ResCommon\Res\TOOL_TURN_FRONT.bmp" />
+    <None Include="..\ResCommon\Res\TOOL_TURN_ORIENT.bmp" />
+    <None Include="..\ResCommon\Res\TRIANGLE.bmp" />
+    <None Include="..\ResCommon\Res\TRIGON.bmp" />
+    <None Include="..\ResCommon\Res\TurnSTLHolder.bmp" />
+    <None Include="ResRus.def" />
+    <None Include="res\mfcribbon-idr_ribbon.mfcribbon-ms" />
+    <None Include="res\mfcribbon-idr_ribbon_mill.mfcribbon-ms" />
+    <None Include="res\ResRus.rc2" />
+    <None Include="res\explore.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="res\ribbon1.mfcribbon-ms" />
+    <None Include="res\ribbon_idr_ribbon_weld.mfcribbon-ms" />
+    <None Include="res\ribbon_millturn.mfcribbon-ms" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\Common\ResLocal.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo // Generated Help Map file.  Used by NCM.HHP. &gt; "hlp\HTMLDefines.h"
+echo. &gt; "hlp\HTMLDefines.h"
+echo // Commands (ID_* and IDM_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Prompts (IDP_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDP_,HIDP_,0x30000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Resources (IDR_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDR_,HIDR_,0x20000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Dialogs (IDD_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDD_,HIDD_,0x20000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Frame Controls (IDW_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">echo // Generated Help Map file.  Used by NCM.HHP. &gt; "hlp\HTMLDefines.h"
+echo. &gt; "hlp\HTMLDefines.h"
+echo // Commands (ID_* and IDM_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Prompts (IDP_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDP_,HIDP_,0x30000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Resources (IDR_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDR_,HIDR_,0x20000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Dialogs (IDD_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDD_,HIDD_,0x20000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Frame Controls (IDW_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "..\Common\%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">hlp\HTMLDefines.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">hlp\HTMLDefines.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ResRus.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\ResCommon\Res\bmp00035.bmp" />
+    <Image Include="..\ResCommon\Res\bmp00036.bmp" />
+    <Image Include="..\rescommon\res\BP5D.ico" />
+    <Image Include="..\ResCommon\Res\Editor.bmp" />
+    <Image Include="..\ResCommon\Res\EditorLarge.bmp" />
+    <Image Include="..\ResCommon\Res\filelarge.bmp" />
+    <Image Include="..\ResCommon\Res\filesmall.bmp" />
+    <Image Include="..\ResCommon\Res\green.bmp" />
+    <Image Include="..\ResCommon\Res\ncm.bmp" />
+    <Image Include="..\ResCommon\Res\ProjectLarge.bmp" />
+    <Image Include="..\ResCommon\Res\ProjectSmall.bmp" />
+    <Image Include="..\ResCommon\Res\red.bmp" />
+    <Image Include="..\ResCommon\Res\Work16.bmp" />
+    <Image Include="..\ResCommon\Res\Work24.bmp" />
+    <Image Include="..\ResCommon\Res\WorkLarge.bmp" />
+    <Image Include="..\ResCommon\Res\yellow.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ResRus.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

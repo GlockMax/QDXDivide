@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Feedrate tool motion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="../tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1><a name="HID_SMOTHNESS_MODE_F" id="HID_SMOTHNESS_MODE_F"></a>Feedrate tool motion</h1>
+<p>Main menu : <strong>Work &gt; Tool motion mode &gt; Feedrate</strong></p>
+<p>Shortcut: icon <img width=28 height=28 src="../images/FMode.gif" v:shapes="_x0000_i1025"> 
+  .</p>
+<p>In this tool motion mode the tool moves smoothly along the toolpath. Tool speed corresponds to the feed rate specified in CNC-program. Movement speed can be increased or decreased by a track bar.</p>
+<p>If you're in a cutting mode, this way of tool motion allows to control stock cutting inside each CNC-program line.</p>
+<p><font size=3 color=black face=Arial><span style='font-size:12.0pt'> <img
+src="HID_SMOTHNESS_MODE.files/image002.gif" v:shapes="_x0000_i1026"></span></font></p>
+<p>In this case you can immediately stop the simulation by pressing <a href="HID_ANIMATE_PAUSE.htm">pause 
+  <img src="../images/Pause.gif" width="26" height="26" hspace="5" align="baseline"></a>. 
+  When pause is pressed, it is possible to move simulation process forward or backward by a number of steps set up in the input field. So the simulation process may be moved forward with material removal, or backward with adding material.</p>
+<p><img src="HID_SMOTHNESS_MODE.files/image003.gif" v:shapes="_x0000_i1027"></p>
+<p><strong>There are lsimulations in pause mode!</strong></p>
+<ul>
+  <li> 
+    <p>You can move only 30 lines forward or backward from the line you pushed pause.</p>
+  </li>
+  <li> 
+    <p>After changing the speed of simulation, actual speed will change only after the line where it was changed will be simulated.</p>
+  </li>
+  <li> 
+    <p>You can't use <a href="hid_view_section.htm">Section</a> or <a href="HID_MEASURE.htm">Measurement</a></p>
+  </li>
+</ul>
+<p>When you exit the pause mode, simulation will continue from the line where pause was pressed.</p>
+
+
+</body>
+</html>

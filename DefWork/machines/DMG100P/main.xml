@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="part" name="base" parent="" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.000000" g="0.600000" b="1.000000" a="1.000000" />
+            <part name="Dmg100P-Base" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="Y" parent="" length="100.000000" />
+            <vector x="0.000000" y="-1.000000" z="0.000000" />
+            <color r="1.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <limits min="-200.000000" max="200.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="axis_Y" parent="Y" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <part name="Dmg100P-Y" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="rotary" name="C" parent="Y" length="100.000000" />
+            <vector x="0.000000" y="0.000000" z="-1.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Table_C" parent="C" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+            <part name="Dmg100P-Table" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="stock_X" parent="C" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <color r="0.000000" g="0.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="stock_Y" parent="stock_X" length="100.000000" />
+            <vector x="0.000000" y="1.000000" z="0.000000" />
+            <color r="0.000000" g="0.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="stock_Z" parent="stock_Y" length="100.000000" />
+            <vector x="0.000000" y="0.000000" z="1.000000" />
+            <color r="0.000000" g="0.000000" b="0.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="stock" name="stock" parent="stock_Z" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="PART_X" parent="X" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <part name="Dmg100P-X" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="X" length="100.000000" />
+            <vector x="0.000000" y="0.000000" z="1.000000" />
+            <color r="0.000000" g="0.000000" b="1.000000" a="1.000000" />
+            <limits min="0.000000" max="0.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="PART_XZ" parent="Z" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <part name="Dmg100P-Z" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="rotary" name="B" parent="Z" length="100.000000" />
+            <vector x="0.000000" y="0.707000" z="0.707000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="1.000000" g="1.000000" b="0.000000" a="1.000000" />
+            <limits min="-100.000000" max="100.000000" />
+        </axis>
+        <axis>
+            <param type="part" name="Table_B" parent="B" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.500000" g="0.500000" b="1.000000" a="1.000000" />
+            <part name="Dmg100P-Head" margin="0.000000" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="B" length="100.000000" />
+            <vector x="1.000000" y="0.000000" z="0.000000" />
+            <vectorY x="0.000000" y="1.000000" z="0.000000" />
+            <basepoint x="0.000000" y="0.000000" z="0.000000" />
+            <color r="0.000000" g="0.000000" b="0.000000" a="1.000000" />
+        </axis>
+    </axes>
+</MachineTool>

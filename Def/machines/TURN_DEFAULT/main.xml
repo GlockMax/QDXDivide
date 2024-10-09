@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="Windows-1251" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="stock" name="stock" parent="" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+            <collisioncheck axisname="Z" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="" length="100" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="1" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="X" length="100" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool:1" parent="X" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="0" g="0" b="0" a="0" />
+        </axis>
+    </axes>
+</MachineTool>

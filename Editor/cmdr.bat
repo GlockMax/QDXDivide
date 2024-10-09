@@ -1,0 +1,1 @@
+copy .\scintilla162\scintilla\bin\scilexer.dll ..\release\scilexer.dll

@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: NCM - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "G:\DOCUME~1\e\LOCALS~1\Temp\RSP2E.bat" with contents
+[
+@echo off
+start /wait hcw /C /E /M "hlp\NCM.hpj"
+if errorlevel 1 goto :Error
+if not exist "hlp\NCM.hlp" goto :Error
+copy "hlp\NCM.hlp" .\..\release
+goto :done
+:Error
+echo hlp\NCM.hpj(1) : error:
+type "hlp\NCM.log"
+:done
+]
+Creating command line "G:\DOCUME~1\e\LOCALS~1\Temp\RSP2E.bat"
+<h3>Output Window</h3>
+Making help file...
+Скопировано файлов:         1.
+
+
+
+<h3>Results</h3>
+NCM.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

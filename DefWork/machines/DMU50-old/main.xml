@@ -1,0 +1,124 @@
+  <?xml version="1.0" ?> 
+<MachineTool>
+	<axes>
+		<axis>
+			<param type="part" name="base" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "DMU_50_Base" />
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="X" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Y" parent="X"/>
+			<vector x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Z" parent="Y"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="axis_X" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "DMU_50_X" />
+			<color r="1." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="axis_Y" parent="Y"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "DMU_50_Y" />
+			<color r="1." g="0.6" b="0.2" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="spindle" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="-5.2855" y="-77.8722" z="-139.966"/>
+			<part name = "DMU_50_Spindle" />
+			<color r="0.5" g="0.5" b="0.5" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="axis_Z" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="-5.2855" y="-77.8722" z="-139.966"/>
+			<part name = "DMU_50_Z" />
+			<color r="0.8" g="0.2" b="0.2" a="1."/>
+		</axis>
+		<axis>
+			<param type="rotary" name="C" parent="B"/>
+			<vector x="0." y="0." z="-1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Table_C" parent="C"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "DMU_50_Table_C" />
+			<color r="0." g="0.5" b="0.5" a="1."/>
+		</axis>
+		<axis>
+			<param type="rotary" name="B" parent=""/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Table_B" parent="B"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "DMU_50_Table_B" />
+			<color r="0." g="0.8" b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_X" parent="C"/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Y" parent="stock_X"/>
+			<vector x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Z" parent="stock_Y"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="stock" parent="stock_Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool" parent="tool_length"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="tool_length" parent="Z"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+	</axes>
+</MachineTool>

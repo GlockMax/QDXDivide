@@ -1,0 +1,275 @@
+<?xml version='1.0' ?>
+<MachineTool>
+	<axes>
+		<axis>
+			<param type="trans" name="X" parent="Y"/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Y" parent="Z"/>
+			<vector x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="stock" parent="stock_Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Z" parent="ToolDZ"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool:2" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="0." z="-1."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool:3" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool:1" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool" parent="X"/>
+			<vector x="0." y="0." z="1."/>
+			<vectorY x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool:4" parent="X"/>
+			<vector x="0." y="0." z="-1."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+    <axis>
+      <param type="trans" name="StockDZ" parent="C"/>
+      <vector x="0." y="0." z="-1."/>
+      <basepoint x="0." y="0." z="0."/>
+      <color r="1." g="1." b="0." a="1."/>
+    </axis>
+    <axis>
+      <param type="trans" name="ToolDZ" parent=""/>
+      <vector x="0." y="0." z="-1."/>
+      <basepoint x="0." y="0." z="0."/>
+      <color r="1." g="1." b="0." a="1."/>
+    </axis>
+    <axis>
+			<param type="trans" name="ContrSp" parent="C"/>
+			<vector x="0." y="0." z="-1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="TwistSpindleChuck" parent="TwistSpindle"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="570."/>
+			<part name = "Contrchuck" />
+			<color r="0.7" g="0.2" b="0.7" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="TwistSpindle" parent="ContrSp"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="570."/>
+			<part name = "ContrTurr" />
+      <color r="1." g="0.7" b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Chuck1" parent="Ch1"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Chuck1" />
+			<color r="0.5" g="0.5" b="0.5" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Chuck2" parent="Ch2"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Chuck2" />
+			<color r="0.5" g="0.5" b="0.5" a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Chuck3" parent="Ch3"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Chuck3" />
+			<color r="0.5" g="0.5" b="0.5" a="1."/>
+		</axis>
+    <axis>
+      <param type="part" name="MainSpindle" parent="C"/>
+      <vector x="1." y="0." z="0."/>
+      <vectorY x="0." y="1." z="0."/>
+      <basepoint x="0." y="0." z="0."/>
+      <part name = "MainSpndl" />
+      <color r="0." g="1." b="0." a="1."/>
+    </axis>
+    <axis>
+      <param type="part" name="Turret" parent="TurretRot"/>
+      <vector x="1." y="0." z="0."/>
+      <vectorY x="0." y="1." z="0."/>
+      <basepoint x="240." y="0." z="86."/>
+      <part name = "Turret" />
+      <color r="0.8" g="0.8" b="0.8" a="1."/>
+    </axis>
+		  <axis>
+			<param type="rotary" name="TurretRot" parent="turX"/>
+			<vector x="0." y="0." z="1."/>
+	    		<basepoint x="240." y="0." z="86."/>
+    			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		    <axis>
+			      <param type="trans" name="turX" parent="turZ"/>
+			      <vector x="1." y="0." z="0."/>
+  			    <basepoint x="0." y="0." z="0."/>
+			      <color r="0." g="1." b="0." a="1."/>
+		    </axis>
+		    <axis>
+			      <param type="trans" name="turZ" parent="turY"/>
+			      <vector x="0." y="0." z="1."/>
+  			    <basepoint x="0." y="0." z="0."/>
+			      <color r="0." g="1." b="0." a="1."/>
+		    </axis>
+		    <axis>
+			      <param type="trans" name="turY" parent="X"/>
+			      <vector x="0." y="1." z="0."/>
+  			    <basepoint x="0." y="0." z="0."/>
+			      <color r="0." g="1." b="0." a="1."/>
+		    </axis>
+
+
+
+    <axis>
+			<param type="trans" name="stock_Y" parent="StockDZ"/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Z" parent="stock_Y"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Ch1" parent="C"/>
+			<vector x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Ch2" parent="C"/>
+			<vector x="-0.8660285" y="-0.5" z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Ch3" parent="C"/>
+			<vector x="0.8660285" y="-0.5" z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+    
+    
+    
+		<axis>
+			<param type="rotary" name="C" parent=""/>
+			<vector x="0." y="0." z="-1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+    <axis>
+      <param type="part" name="0001tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="0." y="-1." z="0."/>
+      <basepoint x="0." y="0." z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0002tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="-0.5" y="-0.866" z="0."/>
+      <basepoint x="32.1539" y="120." z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0003tool" parent="TurretRot" mark="on"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="-0.866" y="-0.5" z="0."/>
+      <basepoint x="120." y="207.846" z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0004tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="-1." y="0." z="0."/>
+      <basepoint x="240." y="240." z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0005tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="-0.866" y="0.5" z="0."/>
+      <basepoint x="360." y="207.846" z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0006tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="-0.5" y="0.866" z="0."/>
+      <basepoint x="447.846" y="120." z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0007tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="0." y="1." z="0."/>
+      <basepoint x="480." y="0." z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0008tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="0.5" y="0.866" z="0."/>
+      <basepoint x="447.84" y="-120." z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0009tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="0.866" y="0.5" z="0."/>
+      <basepoint x="360." y="-207.846" z="0."/>
+      <collisioncheck axisname = "C" axischildren = "Yes"/>
+    </axis>
+    <axis>
+      <param type="part" name="0010tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="1." y="0." z="0."/>
+      <basepoint x="240." y="-240." z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0011tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="0.866" y="-0.5" z="0."/>
+      <basepoint x="120." y="-207.846" z="0."/>
+    </axis>
+    <axis>
+      <param type="part" name="0012tool" parent="TurretRot"/>
+      <vector x="0." y="0." z="1."/>
+      <vectorY x="0.5" y="-0.866" z="0."/>
+      <basepoint x="32.1539" y="-120." z="0."/>
+    </axis>
+
+    <axis>
+      <param type="part" name="0006tool:3" parent="TurretRot"/>
+      <vector x="1." y="0." z="0."/>
+      <vectorY x="0." y="-1." z="0."/>
+      <basepoint x="447.846" y="120." z="0."/>
+    </axis>
+
+  </axes>
+</MachineTool>

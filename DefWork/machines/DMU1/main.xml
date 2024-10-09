@@ -1,0 +1,101 @@
+<?xml version='1.0' ?>
+<MachineTool>
+	<axes>
+		<axis>
+			<param type="part" name="base" parent=""/>
+			<vector x=1. y=0. z=0./>
+			<vectorY x=0. y=1. z=0./>
+			<basepoint x=0. y=0. z=0./>
+			<part name = "dmu80_BASE" />
+			<color r=0. g=0.6 b=1.0 a=1./>
+		</axis>
+		<axis>
+			<param type="trans" name="Y" parent=""/>
+			<vector x=0. y=-1. z=0./>
+			<basepoint x=0. y=0. z=0./>
+			<color r=1. g=0. b=1. a=1./>
+		</axis>
+		<axis>
+			<param type="part" name="axis_Y" parent="Y"/>
+			<vector x=1. y=0. z=0./>
+			<vectorY x=0. y=1. z=0./>
+			<basepoint x=0. y=0. z=0./>
+			<part name = "dmu80_Y_AXIS" />
+			<color r=1. g=0. b=1. a=1./>
+		</axis>
+		<axis>
+			<param type="rotary" name="A" parent="Y"/>
+			<vector x=-1. y=0. z=0./>
+			<basepoint x=0. y=0. z=0./>
+			<color r=1. g=1. b=0. a=1./>
+		</axis>
+		<axis>
+			<param type="part" name="Table_A" parent="A"/>
+			<vector x=1. y=0. z=0./>
+			<vectorY x=0. y=1. z=0./>
+			<basepoint x=0. y=0. z=0./>
+			<part name = "dmu80_A" />
+			<color r=1. g=1. b=0. a=1./>
+		</axis>
+		<axis>
+			<param type="rotary" name="C" parent="A"/>
+			<vector x=0. y=0. z=-1./>
+			<basepoint x=0. y=0. z=0./>
+			<color r=1. g=1. b=0. a=1./>
+		</axis>
+		<axis>
+			<param type="part" name="Table_C" parent="C"/>
+			<vector x=1. y=0. z=0./>
+			<vectorY x=0. y=1. z=0./>
+			<basepoint x=0. y=0. z=0./>
+			<part name = "dmu80_C_AXIS" />
+			<color r=0.5 g=0.5 b=0.5 a=1./>
+		</axis>
+		<axis>
+			<param type="trans" name="X" parent=""/>
+			<vector x=1. y=0. z=0./>
+			<basepoint x=0. y=0. z=0./>
+			<color r=1. g=0. b=1. a=1./>
+		</axis>
+		<axis>
+			<param type="trans" name="Z" parent="X"/>
+			<vector x=0. y=0. z=1./>
+			<basepoint x=0. y=0. z=0./>
+			<color r=0. g=0. b=1. a=1./>
+		</axis>
+		<axis>
+			<param type="part" name="PART_XZ" parent="Z"/>
+			<vector x=1. y=0. z=0./>
+			<vectorY x=0. y=1. z=0./>
+			<basepoint x=0. y=0. z=174./>
+			<part name = "dmu80_XZ" />
+			<color r=1. g=1. b=0. a=1./>
+		</axis>
+		<axis>
+			<param type="rotary" name="B" parent="Z"/>
+			<vector x=0. y=1. z=1./>
+			<basepoint x=0. y=0. z=0./>
+			<color r=1. g=1. b=0. a=1./>
+		</axis>
+		<axis>
+			<param type="part" name="Table_B" parent="B"/>
+			<vector x=1. y=0. z=0./>
+			<vectorY x=0. y=1. z=0./>
+			<basepoint x=0. y=0. z=174./>
+			<part name = "dmu80_HEAD" />
+			<color r=0.5 g=0.5 b=1. a=1./>
+		</axis>
+		<axis>
+			<param type="part" name="stock" parent="C"/>
+			<vector x=1. y=0. z=0./>
+			<vectorY x=0. y=1. z=0./>
+			<basepoint x=0. y=0. z=0./>
+		</axis>
+		<axis>
+			<param type="part" name="tool" parent="B"/>
+			<vector x=1. y=0. z=0./>
+			<vectorY x=0. y=1. z=0./>
+			<basepoint x=0. y=0. z=0./>
+		</axis>
+	</axes>
+</MachineTool>

@@ -1,0 +1,344 @@
+<?xml version="1.0" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="trans" name="Mag" parent="" length="100" />
+            <vector x="1" y="0" z="0" />
+            <color r="0.360784" g="0.360784" b="0.486275" a="1" />
+            <limits min="0" max="236" />
+        </axis>
+        <axis>
+            <param type="rotary" name="Rev" parent="Mag" length="100" />
+            <vector x="0" y="0" z="1" />
+            <basepoint x="-519.915" y="0" z="-167.319" />
+            <color r="1" g="1" b="0" a="1" />
+            <limits min="-361" max="361" />
+        </axis>
+        <axis>
+            <param type="part" name="Revolver" parent="Rev" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="0.4" b="0.2" a="1" />
+            <part name="Revolver_number_tool" margin="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0001tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-227.652" y="0" z="450.23" />
+            <color r="2.11965e-40" g="0" b="4.2039e-45" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0002tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-241.957" y="-90.314" z="450.23" />
+            <color r="0.6" g="0.6" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0003tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-283.47" y="-171.788" z="450.23" />
+            <color r="0.8" g="1" b="0.8" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0004tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-348.128" y="-236.446" z="450.23" />
+            <color r="0.537255" g="0.858824" b="0.827451" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0005tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-429.601" y="-277.959" z="450.23" />
+            <color r="2.11965e-40" g="0" b="4.2039e-45" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0006tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-519.916" y="-292.263" z="450.23" />
+            <color r="1" g="0.4" b="0.2" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0007tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-610.23" y="-277.959" z="450.23" />
+            <color r="0.407843" g="0.478431" b="0.603922" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0008tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-691.704" y="-236.446" z="450.23" />
+            <color r="2.11965e-40" g="0" b="4.2039e-45" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0009tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-756.362" y="-171.788" z="450.23" />
+            <color r="2.11965e-40" g="0" b="4.2039e-45" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0010tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-797.875" y="-90.314" z="450.23" />
+            <color r="2.11965e-40" g="0" b="4.2039e-45" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0011tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-812.179" y="0" z="450.23" />
+            <color r="1" g="0.4" b="0.2" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0012tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-797.875" y="90.314" z="450.23" />
+            <color r="2.11965e-40" g="0" b="4.2039e-45" a="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0013tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-756.362" y="171.788" z="450.23" />
+            <color r="1" g="0.4" b="0.2" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0014tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-691.704" y="236.446" z="450.23" />
+            <color r="1" g="0.4" b="0.2" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0015tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-610.23" y="277.959" z="450.23" />
+            <color r="0.8" g="1" b="0.8" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0016tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-519.916" y="292.263" z="450.23" />
+            <color r="0.407843" g="0.478431" b="0.603922" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0017tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-429.601" y="277.959" z="450.23" />
+            <color r="0.6" g="0.6" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0018tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-348.128" y="236.446" z="450.23" />
+            <color r="0.2" g="0.6" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0019tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-283.47" y="171.788" z="450.23" />
+            <color r="1" g="0.4" b="0.2" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0020tool" parent="Rev" length="20" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="-241.957" y="90.314" z="450.23" />
+            <color r="0.6" g="0.6" b="1" a="1" />
+        </axis>
+        <axis>
+            <param type="rotary" name="Dver" parent="Mag" expression="{Mag}/6.02" length="100" />
+            <vector x="0" y="0" z="1" />
+            <basepoint x="-519.915" y="0" z="-167.319" />
+            <color r="1" g="0.984314" b="0.941176" a="1" />
+            <limits min="-100" max="100" />
+        </axis>
+        <axis>
+            <param type="part" name="Dver_Mag" parent="Dver" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.2" g="0.6" b="1" a="1" />
+            <part name="Dver_Mag" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Dvig_MAG" parent="Mag" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.6" g="0.8" b="0.2" a="1" />
+            <part name="Dvig_MAG" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Magazin" parent="Mag" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.537255" g="0.858824" b="0.827451" a="1" />
+            <part name="Magazin" margin="0" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="" length="100" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="0" a="1.4013e-45" />
+            <limits min="79.021" max="717" />
+        </axis>
+        <axis>
+            <param type="part" name="OZ" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.8" g="0.831373" b="0.945098" a="1" />
+            <part name="OZ" margin="0" />
+            <collisioncheck axisname="OX" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="Korpus_4_axis" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="-A-" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="stock" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="part" name="Spindle" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.619608" g="0.694118" b="0.67451" a="1" />
+            <part name="Spindle" margin="0" />
+            <collisioncheck axisname="OX" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="Korpus_4_axis" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="-A-" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="stock" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="part" name="SK40" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0" g="1" b="1" a="1" />
+            <part name="Null_SK40" margin="0" />
+            <collisioncheck axisname="OX" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="Korpus_4_axis" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="-A-" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="stock" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="part" name="Coolant" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.929412" g="0.890196" b="0.815686" a="1" />
+            <part name="CA" margin="0" />
+            <collisioncheck axisname="OX" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="Korpus_4_axis" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="-A-" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="stock" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="Z" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="0" g="0" b="0" a="0" />
+            <collisioncheck axisname="OX" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="Korpus_4_axis" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="-A-" mychildren="No" axischildren="No" />
+            <collisioncheck axisname="stock" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="trans" name="Y" parent="" length="100" />
+            <vector x="0" y="-1" z="0" />
+            <color r="0" g="0" b="0" a="1.4013e-45" />
+            <limits min="-254" max="254.001" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="Y" length="100" />
+            <vector x="-1" y="0" z="0" />
+            <color r="0" g="0" b="0" a="1.4013e-45" />
+            <limits min="-508" max="508.001" />
+        </axis>
+        <axis>
+            <param type="part" name="OX" parent="X" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.690196" g="0.788235" b="0.690196" a="1" />
+            <part name="OX" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Korpus_4_axis" parent="X" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.733333" g="0.627451" b="0.698039" a="1" />
+            <part name="Korpus_4_axis" margin="0" />
+        </axis>
+        <axis>
+            <param type="rotary" name="A" parent="X" length="100" />
+            <vector x="1" y="0" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0" g="1" b="0" a="1" />
+            <limits min="-5000" max="5000" />
+        </axis>
+        <axis>
+            <param type="part" name="-A-" parent="A" length="250" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.92549" g="0.878431" b="0.819608" a="1" />
+            <part name="-A-" margin="0" />
+        </axis>
+        <axis>
+            <param type="stock" name="stock" parent="A" length="250" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="part" name="OY" parent="Y" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.941176" g="0.85098" b="0.803922" a="1" />
+            <part name="OY" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Base" parent="" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.4" g="0.4" b="0.580392" a="1" />
+            <part name="Base" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Base_USI" parent="" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.431373" g="0.635294" b="0.666667" a="1" />
+            <part name="Base_USI" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Napr_USI" parent="" length="100" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="0" b="1" a="1" />
+            <part name="Napr_USI" margin="0" />
+        </axis>
+    </axes>
+</MachineTool>

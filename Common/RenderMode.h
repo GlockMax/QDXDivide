@@ -1,0 +1,10 @@
+#pragma once
+#include "ResLocal.h"
+enum RenderMode
+{
+	RM_UNDEF = IDS_RM_UNDEF,
+	RM_SHADE = IDS_RM_SHADE,
+	RM_GLITTER = IDS_RM_GLITTER,
+	RM_WFRAME = IDS_RM_WFRAME,
+	RM_TRANSLUCENT = IDS_RM_TRANSLUCENT
+};

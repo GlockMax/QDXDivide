@@ -1,0 +1,109 @@
+<?xml version='1.0' ?>
+<MachineTool>
+	<axes>
+		<axis>
+			<param type="trans" name="X" parent="Y"/>
+			<vector x="-1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="px" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Table_Hardinger" />
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="py" parent="Y"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="base" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Y" parent=""/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Z" parent=""/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="spindle" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Spindle_Hardinger"/>
+			<part name = "Holder_Hardinger" />
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Y" parent="C"/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Z" parent="stock_Y"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="stock" parent="stock_Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="rotary" name="A" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="B" parent="A"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="C" parent="B"/>
+			<vector x="1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="fix" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Fix120body" />
+			<color r="0.7" g="0.7" b="0.7" a="1.0"/>
+		</axis>		<axis>
+			<param type="part" name="fix" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Fix120move" />
+			<color r="0.4" g="0.7" b="0.4" a="1.0"/>
+		</axis>
+	</axes>
+</MachineTool>

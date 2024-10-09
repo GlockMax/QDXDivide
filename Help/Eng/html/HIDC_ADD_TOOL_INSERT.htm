@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Creating insert</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><font face="Arial"><A NAME="IDC_ADD_TOOL_INSERT" id="IDC_ADD_TOOL_INSERT"></A>Creating insert</FONT></H1>
+<body>
+<h6>Add insert</h6>
+<p> This command allows you to set type, dimensions and position of an insert. </p>
+<p><img src="../images/CreateInsert.gif"></p>
+<h6>Common insert parameters: </h6>
+<p><strong>Name</strong> – tool name. </p>
+<p><strong>Offset X (DX) Offset Z (DX)</strong></p>
+<p><img src="../images/InsertSHXZ.gif"></p>
+<p><img src="../images/InsertSHXZ1.gif"></p>
+<p>Offset parameters are used to set the setup point for the insert. By default it is the center of insert rounding. If the actual point differs from default, you can set this point by this two offsets. </p>
+<p><strong>+DX, +DZ, -DX, -DZ</strong> - fill in the offset amount and sign. Offset amount is equal to insert rounding radius.</p>
+<p><strong>0</strong> - zeroing offset.</p>
+<p><strong><a href="TurnComp.htm">Nose-R compensation</a></strong> - fill in the compensators for nose-radius compensation.</p>
+<p><strong>C</strong>– insert rear angle.</p>
+<p><strong>H</strong> – insert thickness.</p>
+<p><img src="../images/InsertCH.gif"></p>
+<p>D – insert orientation angle.</p>
+<p><img src="../images/InsertD.gif"></p>
+<p>This parameters allows setting the tool for inside of outside turning.</p>
+<p>Insert's cutting edges are always highlighted by the color of tools working plane. 
+</p>
+<h6>Arbitrary insert parameters:</h6>
+<p><img src="../images/Insert1.gif"></p>
+<p><strong>A</strong> – main angle </p>
+<p><strong>T</strong> – auxiliary angle</p>
+<p><strong>L1</strong> –main cutting edge length</p>
+<p><strong>L2</strong> – auxiliary cutting edge length</p>
+<p><strong>R</strong> – rounding radius between cutting edges. Such inserts have two cutting edges and default programming point is at the center of rounding R. </p>
+<h6>Round insert parameters:</h6>
+<p><img src="../images/Insert2.gif"></p>
+<p><strong>R</strong> – insert radius.</p>
+<p>Insert cutting edge is highlighted, and default programming point is in the center of insert.</p>
+<p><strong>Cutoff insert parameters</strong></p>
+<p><img src="../images/Insert3.gif"></p>
+<p><strong>T</strong> – insert width </p>
+<p><strong>L</strong> – insert length</p>
+<p><strong>R1</strong> – left corner rounding radius</p>
+<p><strong>R2</strong> – right corner rounding radius</p>
+<p><strong>A</strong> - middle cutting edge angle. </p>
+<p><strong>Nose number</strong> - define working insert corner.</p>
+<p>Such inserts have three cutting edges and default programming point matches the point of intersection of left and middle cutting edges.</p>
+<p><strong>ISO standard insert parameters:</strong></p>
+<p><img src="../images/Insert5.gif"></p>
+<p><strong>Insert form </strong> – insert form code (square, rectangle, diamond, etc.). Select the code from list.</p>
+<p><img src="../images/InsertISO.gif"></p>
+<p><strong>L1</strong> – cutting edge length or rounding radius for round insert.</p>
+<p><strong>L2</strong> – second cutting edge length, for irregular polygon insert shapes.</p>
+<p><strong>R</strong> – rounding radius between cutting edges. You may select the value from the list or fill in you value.</p>
+<p><strong>Nose number</strong> - define working insert corner.</p>
+<p>Such inserts have two cutting edges, except round inserts. Rectangular and parallelogram inserts have three cutting edges. Default programming point for all inserts matches the center of rounding radius R.</p>
+<p><strong>Thread-cutting insert parameters</strong></p>
+<p><img src="../images/Insert4.gif"></p>
+<p><strong>A</strong> – thread angle</p>
+<p><strong>T</strong> – insert width</p>
+<p><strong>L</strong> – insert length</p>
+<p><strong>R</strong> – rounding radius between cutting edges. </p>
+<p><strong>K</strong> – distance between the edge and left corner of the insert. </p>
+<p>Such inserts have two cutting edges, and default programming point matches the center of rounding radius R. </p>
+</body>
+</html>

@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResInv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResInv.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Res\1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\3.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\3dwarro.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ADDBM.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ADDBM_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\axistree_icons.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\BACK_N.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\BACK_N_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bcur_.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bcur_a1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bcur_x1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bcur_y1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bcur_y2.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bcur_y3.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bcur_y4.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bitmap3.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00003.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00004.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00005.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00006.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00007.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00008.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00009.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00010.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bmp00011.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\BP1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\BP2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\BP3.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\BP4.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\BP_ADD.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\BP_ALL.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\CLEARBM.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\CLEARBM_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\coll_ani.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\coll_fou.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\coll_not.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\coll_off.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\color_bu.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00001.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00002.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00003.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00004.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00005.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00006.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00012.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00013.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00015.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00020.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00021.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur00022.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur_poin.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur_sel1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur_sel2.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur_sel3.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur_sel5.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur_sel6.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur_sel7.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\cur_sel8.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\CUTMODE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\CUTMODE_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\DONTCUTMODE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\DONTCUTMODE_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\DROT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\DROT_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\EXECUTE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\EXECUTE_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\F-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\F-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\FB.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\FB_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\FF.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\FF_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\findtext.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\findtext_h.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\G41-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\G41-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\G43-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\G43-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\G81-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\G81-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\HERE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\HERE_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ico00001.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ico00002.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ico00003.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ico00004.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\NCTool\Res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\icon2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\icon6.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\icon7.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\icon_arr.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ID_OK.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\NCTool\Res\idc_canc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\idc_canc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\INIT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\INIT_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\LEFT_PANEL.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\LINENUM.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\LVIEW.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\LVIEW_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\M3M4-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\M3M4-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\M6-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\M6-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\M8-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\M8-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\MillTurn.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\mtprop1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\N.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\N_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\NB.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\NB_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\NEW.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\NEW.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\NEXTBM.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\NEXTBM_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\notes.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\OPEN.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\painter.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\painter_h.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\PAN.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\PAN_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\PAUSE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\PAUSE_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\PP-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\PP-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\PREVBM.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\PREVBM_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\QUICK.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\QUICK_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\REDOTEXT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\REDOTEXT_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\Regs.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RENUMBER.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RENUMBER_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RESET.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RESET_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ResInv.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RESULT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RESULT_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RIGHT_PANEL.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RUN.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\RUN_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\SAVE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\section.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\section_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\size.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\size_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\SIZEIN.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\SIZEOUT.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\SMOTH.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\SMOTH_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\SMOTHNESSMODEF.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\SMOTHNESSMODEF_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\state_vi.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\STOP.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\STOP_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\text_16.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\text_16_.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\text_17.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\text_24_.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\text_25.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\toolbar2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\toolbar_db.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\NCTool\Res\toolbar_db.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\NCTool\Res\toolbar_rul.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\toolbar_rul.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\tree_toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\tree_vie.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\treecolo.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\treeicons.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\TurnSect.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\UNDOTEXT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\UNDOTEXT_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\Unit.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\unit1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\unit2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\UPDATETEXT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\UPDATETEXT_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW3.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW4.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_B.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_F.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_L.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_LD.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_LU.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_R.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_RD.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_REDRAW.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_RESET.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_RU.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_SAVE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_T1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_T2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_T3.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_T4.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_XYLeft.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_XYRight.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_XZ.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_ZX.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\VIEW_ZY.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\WIRE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\WIRE_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\XX-Off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\XX-On.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZALL.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZALL_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZOOM.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZOOM_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZOOM_X.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZOOM_Y.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZOOM_Z.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZOOMD.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZOOMD_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZROT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ZROT_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\explore.htm" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\ico00005.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\FASTCUTMODE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\FASTCUTMODE_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\CUTMODE-5X_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\CUTMODE-5X.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\time.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\collisions.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\ANGLEROT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\CENTRROT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\collisions_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\Sizes.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\Sizes_H.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+    <None Include="res\style_xm.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\ResInv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ResInv.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\NVIEW_H.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\NVIEW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\VIEW5.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bp5.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\RotatePointOnOff.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_PROPERTIES.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_LIST.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_UNIT_START.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_LOAD.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_VISIBLE_ON.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_VISIBLE_OFF.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_VISTOOL_OFF.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_VISTOOL_ON.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\MACH_EDIT.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_WF.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_CYL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_BOX.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_CONT_EX.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_FTP_ON.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_FTP_OFF.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_PASTE.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_COPY.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_STEMP_OFF.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_STEMP_ON.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_VISIBLE_TOGGLE.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_REPLACE.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_UPDATE.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_IMPORT_STC.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_IMPORT_APT.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_IMPORT_DXF.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_CUT.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_DELETE.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_POS.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_LOAD_EDIT.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_CONT_EX_EDIT.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_CYL_EDIT.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_BOX_EDIT.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\VisualManager\Aqua\StatusBar\Back.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_RING.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_RING_EDIT.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_DISASSAMBLE.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_SENDPART.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\CM_SENDSTOCK.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\NCM50StartPicture.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon11.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\tb_view6.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\COLLONOFF.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon13.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\STICK_VERTICAL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\UNDOPOS_H.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\REDOPOS_H.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\REDOPOS.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\UNDOPOS.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\Distance_H.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\Distance.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\collisionsG0.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\collisionsStop.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\collisionsParameters.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\compare.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\FavoritesOff.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Res\FavoritesOn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\VisualManager\aqua\Style.xml" />
+  </ItemGroup>
+</Project>

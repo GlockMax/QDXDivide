@@ -1,0 +1,23 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {40f3183a-7102-4c59-a713-950939662d93} = s 'IconHandler class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{bfe9f6ac-4c41-4533-96b2-8c25c994bebe}'
+			Version = s '1.0'
+		}
+	}
+   NoRemove NCManager
+    {
+        NoRemove DefaultIcon = s '%%1'
+        NoRemove ShellEx
+        {
+            ForceRemove IconHandler = s '{40f3183a-7102-4c59-a713-950939662d93}'
+        }
+    }
+}

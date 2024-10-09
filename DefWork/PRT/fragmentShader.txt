@@ -1,0 +1,21 @@
+varying vec3 Normal;
+varying vec4 FrontColor;
+void main()
+{
+	vec3 lightDir, normal;
+	vec4 diffuse, ambient, specular;
+	float NdotL , NdotHV;
+
+	lightDir = normalize(gl_LightSource[0].position.xyz);	
+	normal = normalize(Normal);
+	NdotL = max(dot(normal, lightDir), 0.0);
+	NdotHV = max(dot(normal, normalize(gl_LightSource[0].halfVector.xyz)), 0.0);   
+	specular = gl_LightSource[0].specular * pow(NdotHV, gl_FrontMaterial.shininess * 2);
+	 
+	ambient = gl_FrontMaterial.ambient * gl_LightSource[0].ambient;
+
+	diffuse = NdotL * FrontColor * gl_LightSource[0].diffuse;
+
+	gl_FragColor = ambient + diffuse + specular;
+	gl_FragColor[3] = 1.;
+}

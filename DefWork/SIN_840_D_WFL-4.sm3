@@ -1,0 +1,386 @@
+// 
+// 
+
+// Section General
+Name		Sinumeric840D
+Type		
+Model		
+Manufacturer	
+Operation	Milling
+NumAxes		3
+// end section
+
+// Section Word Replacement
+Replace	"TLCOSOF"	";TLCOSOF"
+Replace	"TLCOSON"	";TLCOSON"
+Replace	"HOME"	"X200.Y400.Z300.A0B0C0"
+Replace	"MSG"	";MSG"
+Replase	"CGPAR"	";CGPAR"
+Replace	"PRCALIB"	";PRCALIB"
+Replace	"PROBE"	";PROBE"
+Replace	"PRTEST"	";PRTEST"
+Replace	"PRCALC"	";PRCALC"
+Replace	"PRDATA"	";PRDATA"
+Replace	"MC_P["	";MC_P["
+Replase	"MCTPROT"	";MCTPROT"
+Replace	"RND"	"G9999r"
+Replace	"CHR"	"G9998r"
+Replace	"TLCORR"	";TLCORR"
+Replace	"TLCH4H("P01",-90)"	"T401M6"
+Replace	"TLCH4H("P02",-90)"	"T402M6"
+Replace	"TLCH4H("COVER",-90)"	"T403M6"
+Replace	"MCY1UNCL"	"M1003"
+Replace	"MCY1CL"	"M1002"
+Replace	"MCB1UNCL"	"M1009"
+Replace	"MCB1CL"	"M1008"
+Replace	"$AA_IM[Z1]"	"10"
+Replace	"MC_BASE[0]"	"0"
+Replace	"MC_BASE[1]"	"0"
+Replace	"MC_BASE[2]"	"0"
+Replace	"MC_BASE[3]"	"0"
+Replace	"MC_BASE[4]"	"0"
+Replace	"$P_TOOLR"	"0"
+//Def global 
+Replace	"GD[0]"	"R100"
+Replace	"GD[1]"	"R101"
+Replace	"GD[2]"	"R102"
+Replace	"GD[3]"	"R103"
+Replace	"GD[4]"	"R104"
+Replace	"GD[5]"	"R105"
+Replace	"GD[6]"	"R106"
+Replace	"GD[7]"	"R107"
+Replace	"GD[8]"	"R108"
+Replace	"GD[9]"	"R109"
+Replace	"GD[10]"	"R110"
+Replace	"GD[11]"	"R111"
+Replace	"GD[12]"	"R112"
+Replace	"GD[13]"	"R113"
+Replace	"GD[14]"	"R114"
+Replace	"GD[15]"	"R115"
+Replace	"GD[16]"	"R116"
+Replace	"GD[17]"	"R117"
+Replace	"GD[18]"	"R118"
+Replace	"GD[19]"	"R119"
+Replace	"GD[20]"	"R120"
+Replace	"GD[21]"	"R121"
+Replace	"GD[22]"	"R122"
+Replace	"GD[23]"	"R123"
+Replace	"GD[24]"	"R124"
+Replace	"GD[25]"	"R125"
+Replace	"GD[26]"	"R126"
+Replace	"GD[27]"	"R127"
+Replace	"GD[28]"	"R128"
+Replace	"GD[29]"	"R129"
+Replace	"GD[30]"	"R130"
+Replace	"GD[31]"	"R131"
+Replace	"GD[32]"	"R132"
+Replace	"GD[33]"	"R133"
+Replace	"GD[34]"	"R134"
+Replace	"GD[35]"	"R135"
+Replace	"GD[36]"	"R136"
+Replace	"GD[37]"	"R137"
+Replace	"GD[38]"	"R138"
+Replace	"GD[39]"	"R139"
+Replace	"GD[40]"	"R140"
+//Def macro
+Replace	"REPEAT"	";N8888"
+Replace	"GOTOB"	"M1096P"
+Replace	"GOTOF"	"M1097P"
+Replace	"ENDIF"	"N9999"
+Replace	"UNTIL"	"IN"
+Replace	"TRUNC"	"FIX"
+Replace	"=="	"EQ"
+Replace	"<>"	"NE"
+Replace	"<="	"LE"
+Replace	"ANF:"	"N999901"
+Replace	"ANF"	"999901"
+Replace	"BERECHNE:"	"N999902"
+Replace	"BERECHNE"	"999902"
+//Def tool change start
+Replace	"TLCH1("T01_1",0,0)"	"T101M6"
+Replace	"TLCH1("T33",0,0)"	"T33M6"
+Replace	"TLCH1("T6",0,180)"	"T66M6"
+Replace	"TLCH1("T6",0,0)"	"T6M6"
+Replace	"TLCH1("T01",0,0)"	"T1M6"
+Replace	"TLCH1("T01",-90,180)"	"T1M6"
+Replace	"TLCH1("T01",-90,0)"	"T1M6"
+Replace	"TLCH1("T01",0,180)"	"T1M6"
+Replace	"TLCH1("T01",35,0)"	"T1M6"
+Replace	"TLCH1("T02",-90,0)"	"T2M6"
+Replace	"TLCH1("T02",0,0)"	"T2M6"
+Replace	"TLCH1("T03",0,0)"	"T3M6"
+Replace	"TLCH1("T03",0,180)"	"T3M6"
+Replace	"TLCH1("T04",0,180)"	"T4M6"
+Replace	"TLCH1("T04",-45,180)"	"T4M6"
+Replace	"TLCH1("T05",-90,0)"	"T5M6"
+Replace	"TLCH1("T06",0,0)"	"T6M6"
+Replace	"TLCH1("T07",-90,0)"	"T7M6"
+Replace	"TLCH1("T08",0,0)"	"T8M6"
+Replace	"TLCH1("T08",0,180)"	"T8M6"
+Replace	"TLCH1("T09",0,0)"	"T9M6"
+Replace	"TLCH1("T10",0,0)"	"T10M6"
+Replace	"TLCH1("T11",0,0)"	"T11M6"
+Replace	"TLCH1("T14",0,0)"	"T14M6"
+Replace	"TLCH1("T15",0,0)"	"T15M6"
+Replace	"TLCH1("T35",0,0)"	"T35M6"
+Replace	"TLCH1("M01",-90,0)"	"T501M6"
+Replace	"TLCH1("M02",-90,0)"	"T502M6"
+Replace	"TLCH1("M03",-90,0)"	"T503M6"
+Replace	"TLCH1("T06",0,180)"	"T506M6"
+Replace	"TLCH1"		"TLCH1"
+//Def other
+Replace		"TLPREP1"	"/TLPREP1"
+Replace		"MCTAILST"	"/MCTAILST"
+Replace		"MCZSHIFT"	"/MCZSHIFT"
+Replace		"MCTURNS1"	"G18G51X0.5"
+Replace		"MCMILLS1"	"G17G50"
+Replace		"LIMS="			"G5000S"
+Replace		"LOAD_ZERO"	";"
+Replace		"MCALL"	"G80"
+Replace		"_#IFFIRST_N_L"	"M98P"
+Replace		"%_N_L"	"L"
+Replace		"_SPF"	""
+Replace		"G4X"	"G4Q"
+Replace		"G04X"	"G4Q"
+Replace		"M53"	"G0X-200Y200Z400B180"
+Replace		"M54"	"G0X-200Y200Z400B0"
+Replace		"CYCLE800"	";"
+Replace		"TRAFOOF"	";"
+Replace		"PROBE_ZERO"		"/PROBE_ZERO"
+Replace		"TCH"			"/TCH"
+Replace		"ZEIT_AN"		"/ZEIT_AN"
+Replace		"STOPRE"		"/STOPRE"
+Replace		"AX[AAB]=0"		";"
+Replace		"GEOAX"			";"
+Replace		"DIAMON"		";"
+Replace		"DIAMOF"		";"
+Replace		"CR="			"R"
+Replace		"X1="			"X"
+Replace		"Y1="			"Y"
+Replace		"Z1="			"Z"
+Replace		"C1="			"C"
+Replace		"M1="			"M"
+Replace		"S1="			"S"
+Replace		"WKZW"			""
+Replace		"PROC"			"L"
+Replace		"CFTCP"			""
+Replace	"("	"["
+Replace	")"	"]"
+// end section
+
+// Section Word Definition
+RoundSize		r
+ChamferSize		r
+LineNumber		N
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B	 
+SpindleRotationAxis	C	 
+Horizontal2Axis		U
+Vertical2Axis		V
+Spindle2Axis		W
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode		F
+SpeedCode		S
+ToolCode		T
+DwellTime		Q
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleRadius		R	
+DiaCompOffset		D
+LengthCompOffset		D
+RapidClearanceLevel		
+FixtureOffsetCode		
+InitialDepth		
+PeckIncrementDepth		Q
+DrillRepeatCycles		
+DiaCompHorizVec		
+DiaCompVerticalVec		Q
+ThreadParm		
+ProgramNumber		P
+ProgramStartEnd		L
+CommentStart		(
+CommentEnd		)
+EndOfBlock		$
+EndOfLine		\
+BlockSkip		;
+BlockDebug		/
+ProgramBeginEnd		%
+Delimiter		 
+WCSSet		
+CircleCuttingRadius1		
+CircleCuttingRadius2		
+ArcIncrement		Q
+ProgramCopyStart		
+ProgramCopyEnd		Q
+SecondaryWCS		
+WCSAssign		
+RepeatNumber	
+Register	R
+Dummy0		E
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+SpiralCW		12	1	Y
+SpiralCCW		13	1	Y
+Dwell		4	0	N
+ExactStop		9	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+ReturnToRef		31	0	N
+ReturnToRef2		32	0	N
+ReturnToRef3		28	0	N
+ReturnToRef4		27	0	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthOffsetIncr		43	0	N
+LengthOffsetDecr		44	0	N
+EnableExtraArc		45	7	N
+LengthOffsetDecr2X		46	8	N
+LengthOffsetIncr2XITN		47	8	N
+LengthOffsetDecr2XITN		48	8	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+SimThreadCycleT		33	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		98	9	Y
+CancelCycle		80	9	Y
+DrillCycle		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		92	3	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+ReturnToZero		29	99	N
+Dummy0			64	55	Y
+SetMaxSpeed		5000	0	N
+FixCutSpeed		96	2	N
+UnFixCutSpeed		97	2	Y
+MoveRotateCS		5078	9	Y
+MoveRotateCSCancel	5079	9	Y
+Chamfer		9998	9	Y
+Round		9999	9	Y
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop	1
+ProgramEnd		2
+SpindleCW		3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood	8
+CoolantOff		9
+Orient		19
+EndProgram		30
+SubroutineCall	98
+SubroutineEnd	17
+FixY		1002
+UnFixY		1003
+FixB		1008
+UnFixB		1009
+GoTo		1096
+GoToNext		1097
+GoToProg		1098
+Dummy0		53
+Dummy1		54
+ThreadCut	12
+// end section
+
+// Section Others
+IfNotStrAdd		M1097P9999
+LinearIConversion		2.
+DecimalConversion		0
+LinearDecimalConversion		0
+LinearXConversion		0
+LinearYConversion		0
+LinearZConversion		0
+RotaryDecimalConversion		0
+FeedDecimalConversion		0
+SpeedDecimalConversion		0
+ReverseSign		
+ReverseTurret	No
+ContinuedCircleStatement	No
+XInDiameter		No
+CircleInQuadrants	No
+3DDiaCompensation	Yes
+CircularDirection		D0 D1
+CircleCenterType		IJR
+CircleCenterMode		Incremental
+UVCenterType		IJ
+UVCenterMode		Incremental
+AlwaysIncremental		No
+MaxArcRadius		999
+RotaryAxisUnwind		No
+TableRotationType	PositiveCCW
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute
+ExtraCharForRapid		
+ToolChangeWithM06		Yes
+G28WithM06		No
+AddToolSetLength		Yes
+ToolPreSelect		No
+ToolOffsetInToolNumber	No
+AdditionalCommentChars		
+DataSetChar		L
+TableRotationType	ShortestRoute
+StartwToolNum1	Yes
+MaxFeedRate		0
+SetSecondaryWCSIndicator		-1
+SetPrimaryWCSIndicator		-1
+DrillAxisMode	Programmable
+MultiAxisSequence	AllSimultaneous
+DwellTimeDiscr	100
+CycleNeedsGeom	No
+CompToIntersect		No
+CompWithArcs		Yes
+MinArcDist		2
+CheckGeom		Yes
+IgnoreUnknownM		Yes
+IgnoreUnknownCh		Yes
+IgnoreUnknownG		Yes
+MainInitStr		G0X300Y0Z50G5000S1000
+StartProgram		Ignore
+FileExtension	*.SPF + *.MPF
+UseStdFuncNames	Yes
+// end section
+
+// Section Cycle Definition
+// end section

@@ -1,0 +1,215 @@
+// 
+// 
+
+// Section General
+Name		CN5D
+Type		Мультиауктор-3
+Model		
+Manufacturer	
+Operation	Milling
+NumAxes		3
+// end section
+
+// Section Word Replacement
+Replace		"LF"	""
+Replace		"G04X"	"G04H"
+Replace		"_#IFFIRST_N_L"	"M98P"
+Replace		"G11"	""
+Replace		":"	"N"
+Replace		"R"	"Z"
+// end section
+
+// Section Word Definition
+LineNumber		N
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B	 
+SpindleRotationAxis	C	 
+Horizontal2Axis		U
+Vertical2Axis		V
+Spindle2Axis		W
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode		F
+SpeedCode		S
+ToolCode		T
+DwellTime		H
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleRadius			
+DiaCompOffset		D
+LengthCompOffset		
+RapidClearanceLevel		
+FixtureOffsetCode		
+InitialDepth		
+PeckIncrementDepth		
+DrillRepeatCycles		
+DiaCompHorizVec		P
+DiaCompVerticalVec	Q	
+ThreadParm		
+ProgramNumber		
+ProgramStartEnd		L
+CommentStart		(
+CommentEnd		)
+EndOfBlock		$
+EndOfLine		\
+BlockSkip		/
+ProgramBeginEnd		%
+Delimiter		 
+WCSSet		
+CircleCuttingRadius1		
+CircleCuttingRadius2		
+ArcIncrement		
+ProgramCopyStart		
+ProgramCopyEnd		
+SecondaryWCS		
+WCSAssign		
+RepeatNumber	
+Register	A
+Dummy0		E
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		29	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+SpiralCW		12	1	Y
+SpiralCCW		13	1	Y
+Dwell		4	0	N
+ExactStop		9	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+ReturnToRef		31	0	N
+ReturnToRef2		32	0	N
+ReturnToRef3		33	0	N
+ReturnToRef4		34	0	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+ToolCompLeftInToolNumber		43	7	N
+ToolCompRightInToolNumber		44	7	N
+LengthOffsetIncr2X		45	8	N
+LengthOffsetDecr2X		46	8	N
+LengthOffsetIncr2XITN		47	8	N
+LengthOffsetDecr2XITN		48	8	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachCoordSys		53	0	N
+WorkCoordSys1		71	14	N
+WorkCoordSys2		72	14	N
+WorkCoordSys3		73	14	N
+WorkCoordSys4		74	14	N
+WorkCoordSys5		75	14	N
+WorkCoordSys6		59	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+TappingCycle		33	15	N
+CuttingCycle		64	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		98	9	Y
+CancelCycle		80	9	Y
+DrillCycle		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		25	0	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+ReturnToZero		28	99	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop		1
+ProgramEnd		2
+SpindleCW		13
+SpindleCCW		14
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+Orient		19
+EndProgram		30
+SubroutineCall		98
+SubroutineEnd		17
+FixX		81
+UnFixX		80
+FixY		83
+UnFixY		82
+FixZ		85
+UnFixZ		84
+Dummy1		20
+GoTo		50
+// end section
+
+// Section Others
+StartProgram	IgnoreCadr1
+DecimalConversion		0
+LinearDecimalConversion		3
+LinearXConversion		0
+LinearYConversion		0
+LinearZConversion		0
+RotaryDecimalConversion		0
+FeedDecimalConversion		1
+SpeedDecimalConversion		0
+ReverseSign		
+ReverseTurret	No
+ContinuedCircleStatement	No
+XInDiameter		No
+CircleInQuadrants	No
+3DDiaCompensation	Yes
+CircularDirection		D0 D1
+CircleCenterType		IJR
+CircleCenterMode		Absolute
+UVCenterType		IJ
+UVCenterMode		Incremental
+AlwaysIncremental		No
+MaxArcRadius		999
+RotaryAxisUnwind		No
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute
+ExtraCharForRapid		
+ToolChangeWithM06		Yes
+G28WithM06		No
+AddToolSetLength		Yes
+ToolPreSelect		No
+ToolOffsetInToolNumber	Yes
+AdditionalCommentChars		
+DataSetChar		L
+TableRotationType	ShortestRoute
+StartwToolNum1	Yes
+MaxFeedRate		0
+SetSecondaryWCSIndicator		-1
+SetPrimaryWCSIndicator		-1
+DrillAxisMode	Programmable
+MultiAxisSequence	AllSimultaneous
+CycleNeedsGeom	No
+FileExtension	*.up
+DwellTimeDiscr	100
+// end section
+
+// Section Cycle Definition
+// end section

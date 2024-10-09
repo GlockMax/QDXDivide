@@ -1,0 +1,216 @@
+//
+//
+
+// Section General
+Name		MillPlus
+Type		ISO/EIA
+Model		
+Manufacturer		
+Operation		Milling
+NumAxes		3
+// end section
+
+// Section Word Replacement
+Replace	"G22N="		"M98P"
+Replace	"N9899"		"O9899"
+Replace	"N9906"		"O9906"
+Replace	"G39R-"		"M500LG02"
+Replace	"G39R"		"M500LG03"
+Replace	"G621"	"/G621"
+Replace	"G7A5=-90L1=1"		"G65P1"
+Replace	"G7A5=-90C5=180L1=1"	"G65P2"
+Replace	"G07"	"G65P3"
+Replace	"M6"	"M6M8100#108=[#8101/2+[#8102-a[#8102]]/2]G0/"
+Replace	"Z91="	"W"
+Replace	"N1="	"P"
+Replace	"N2="	"Q"
+Replace	"G74Y-1L1"	"G59G0Y600G54"
+Replace	"G74Z-1L1"	"G59G0Z600G54"
+Replace	"G74X400"	"G59G0X600G54"
+Replace	"G79"		"G2000M99"
+Replace	"G782"		"@81G1000"
+Replace	"G783"		"@81G1000"
+Replace	"G786"		"@81G1000"
+Replace	"G81"		"@81G1000"
+Replace	"G83"		"@81G1000"
+Replace	"G86"		"@81G1000"
+Replace	"G84"		"@81G1000"
+Replace	"G41"	"&G41D[#108+#9201]"
+Replace	"G42"	"&G42D[#108+#9201]"
+Replace	"G43"	"G5000G41D[#108+#9201]"
+Replace	"G44"	"G5000G42D[#108+#9201]"
+Replase	"G40"	"&G6000G40"
+Replace	"G61"	"G1"
+Replace	"G62"	"G1G40"
+Replace	"A5="	"A"
+Replace	"B5="	"B"
+Replace	"C5="	"C"
+Replace	"C1=0.1"	""
+Replace	"G93"	"G93"
+Replace	"E"	"#"
+Replace	"pi"	"3.14159265"
+Replace	":"	"/"
+Replace	"cos"	"COS"
+Replace	"sin"	"SIN"
+Replace	"(N"	"/N"
+Replace	"(X"	"/N"
+Replace	"(Y"	"/N"
+Replace	"(x"	"/N"
+Replace	"(y"	"/N"
+Replace	"(Z"	"/N"
+Replace	"(P"	"/N"
+Replace	"(M"	"/N"
+Replace	"(T"	"/N"
+Replace	"(A"	"/N"
+Replace	"(B"	"/N"
+Replace	"(J"	"/N"
+Replace	"(C"	"/N"
+Replace	"(4"	"/N"
+Replace	"(*"	"/*"
+Replace	"("	"["
+Replace	")"	"]"
+// end section
+
+// Section Word Definition
+RepeatNumber		J
+DrillMPI			I
+DrillMPJ			J
+DrillMPK			K
+DrillRelX			X
+DrillRelR			Y
+DrillRelZ			Z
+DrillRelW			B
+LineNumber		N
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+SpindleAxisInc		W
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B		 
+SpindleRotationAxis	C	 
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode		F
+SpeedCode		S
+ToolCode			T
+DwellTime		P
+CircleHorzCenter		I
+CircleVerticalCenter	J
+CircleDepthCenter	K
+CircleRadius		R
+DiaCompOffsetVal		D
+DiaCompOffset		$
+LengthCompOffset		H
+ProgramNumber		P
+ProgramStartEnd		O
+CommentStart		(
+CommentEnd		)
+BlockSkip		;
+BlockDebug		\
+Register			#
+ProgramBeginEnd		%
+ProgramCopyStart		P
+ProgramCopyEnd		Q
+DefineCycle		@
+NoMove			&
+ProgramCopyChar		w
+// end section
+
+// Section Function Definition
+Rapid			0	1	Y
+Linear			1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+Dwell			4	0	N
+XYPlane			17	2	N
+ZXPlane			18	2	N
+YZPlane			19	2	N
+InchUnit			70	6	N
+MetricUnit		71	6	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthOffsetIncr		44	0	N
+LengthOffsetDecr		43	0	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPresetRel		92	0	N
+ZeroPreset		93	0	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane	98	10	N
+ReturnToRefPlane		99	10	N
+ParToNext		5000	15	Y
+RetractComp		6000	0	N
+ProgramCopyMP		14	0	N
+DrillCycle_MP81		81	9	N
+DrillCycle_HM		203	9	N
+PredefinedCycle		2000	1	N
+MillRectCenterCycle	222	1	N
+MillRectCornerInCycle	87	1	N
+HHDepLCT		62	1	N
+HHApprLCT		61	1	N
+MoveRotateCS		5078	9	Y
+MoveRotateCSCancel	5079	9	Y
+CallMacro		65	0	N
+DefMPParams		1000	0	N
+// end section
+
+// Section Misc Function Definition
+Stop			0
+OptionalStop		1
+ProgramEnd		2
+SpindleCW		3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+EndProgram		30
+NonModalCycleCall	99
+SubroutineCall		98
+SubroutineEnd		199
+StoreToolParams		8100
+GoTo			1000
+HhToolCallDef		500
+// end section
+
+// Section Others
+RotaryDecimalConversion	0
+CycleNeedsGeom		No
+CycleNeedsParam		Yes
+CompType		Arc
+PartialCompCancel		No
+CircleCenterType	IJ
+CircleCenterMode		Incremental
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute		
+ToolChangeWithM06	Yes
+ToolOffsetInToolNumber	Yes
+ToolPreSelect		No
+IgnoreUnknownM		Yes
+IgnoreUnknownCh		Yes
+IgnoreUnknownG		Yes
+MinArcDist		2
+CheckGeom		Yes
+StartProgram		Ignore
+MainInitStr		G0G54X100.Y200.Z600.B0.C0 M03
+InterChangeCancelCycle	Yes
+UseStdFuncNames	Yes
+SpiralG2G3		Yes
+ModalArc			No
+FileExtension *.pm
+// end section
+
+// Section Cycle Definition
+// end section

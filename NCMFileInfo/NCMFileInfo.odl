@@ -1,0 +1,42 @@
+// NCMFileInfo.odl : type library source for NCMFileInfo.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (NCMFileInfo.tlb).
+
+[ uuid(679A9CC8-C2D0-11D5-B0AC-0050BF4A8273), version(1.0) ]
+library NCMFileInfo
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CNCMFileInfoDoc
+	
+	[ uuid(679A9CC9-C2D0-11D5-B0AC-0050BF4A8273) ]
+	dispinterface INCMFileInfo
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CNCMFileInfoDlgAutoProxy)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CNCMFileInfoDlgAutoProxy)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CNCMFileInfoDoc
+	
+	[ uuid(679A9CC7-C2D0-11D5-B0AC-0050BF4A8273) ]
+	coclass NCMFileInfo
+	{
+		[default] dispinterface INCMFileInfo;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

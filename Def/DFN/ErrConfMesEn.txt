@@ -1,0 +1,15 @@
+1	Section %s. The concept of %s is reused
+2	Section %s. Can't read line.
+3	Section %s. Parameter name not found.
+4 	String found: %s. Should be: %s.
+5	Error in MainInitStr. Perhaps in the "NCMAll" project there is a subroutine call from the "sm3" file. Re-read CNC-Control file.
+6 	The function has an incorrect modality attribute.
+7	Unable to open the file %s.
+8	Section %s. Keyword not found.
+9	Section %s. Keyword %s. Empty value.
+10	// Section Word Replacement. There is no RegExp2 after RegExp1
+11	// Section General. Format < 2
+15	Section %s. Illegal character used: %s.
+16	// Section Word Replacement. After RegExp1/2 there are less than 2 characters, or the first character is not ", or the last character is not "
+17	Section %s. The %s function is being reused.
+18	Section %s. The feature number %s is being reused.

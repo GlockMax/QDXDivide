@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Команда Панорама (Сдвиг) (Меню Вид)</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1>Команда &laquo;Центр поворота&raquo;</h1>
+<p><img src="../images/RotateCenter.jpg" width="132" height="239"></p>
+<p>При динамических поворотах центр поворота может быть  плавающим, т.е. находиться в точке, куда указал курсор мыши или быть постоянным,  т.е. заданным относительно заготовки.</p>
+<p>Команда главного меню &laquo;Центр поворота&raquo;, вызывает диалог, где  можно задать координаты центра вращения относительно &laquo;0&raquo; заготовки, задать  размер и цвет значка центра поворота и включить или выключить постоянный центр  поворота.</p>
+<p><strong>Значок центра</strong> &ndash; значок  отображается на экране в виде шарика. Значок виден при любых поворотах и когда  вызван диалог &laquo;Центр поворота&raquo; </p>
+<ul>
+  <li><strong>Размер</strong> &ndash; радиус шарика в пикселах</li>
+  <li><strong>Цвет</strong> &ndash; цвет шарика</li>
+</ul>
+<p>Положение центра &ndash; положение центра поворота относительно  &laquo;0&raquo; заготовки</p>
+<ul>
+  <li><strong>X центра</strong> &ndash; смещение вдоль  оси &laquo;X&raquo; заготовки</li>
+  <li><strong>Y центра</strong>&ndash; смещение вдоль  оси &laquo;Y&raquo; заготовки</li>
+  <li><strong>Z центра</strong>&ndash; смещение вдоль  оси &laquo;Z&raquo; заготовки</li>
+</ul>
+<p><strong>Постоянный центр</strong> &ndash; если флаг включен, то центр поворота постоянный, если выключен, то он зависит  от того куда указал курсор мыши при повороте.</p>
+<p>В файле &laquo;defaults.xml&raquo; задается, включен или  выключен постоянный центр.</p>
+<p>&lt;View&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;RotCenter FIXED = &quot;Yes&quot; /&gt;<br>
+&nbsp;&lt;/View&gt;</p>
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Tool properties</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1>Tool properties</h1>
+<p>Some properties of selected tool in Object pane are managed from Properties pane.</p>
+<p><img src="../images/PropertyTool.gif"></p>
+<p>To change property, click the desired property value in the right column, then select new value from list or enter value from keyboard. Modified parameter will be highlighted bold. There's a hint for currently selected property at the bottom of the pane.</p>
+<p><strong>Toolpath</strong> - controls toolpath visibility (in all cnc-programs) for currently selected tool.  
+  &quot;No&quot; for invisible, &quot;Yes&quot; for visible.</p>
+<table width="70%" border="1">
+  <tr>
+    <td width="70%" valign="top">
+<p><strong>Quick toolpath visibility toggle:</strong></p>
+      <p>click on the lamp icon in object panel for corresponding tool.<br>
+      </p></td>
+    <td align="center"><img src="../images/ToolQuickHide.gif"></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><strong>Wireframe</strong> - controls display mode for currently selected tool and its holder. &quot;No&quot; - tool is displayed solid with selected color, &quot;Yes&quot; - tool is displayed as wireframe with selected color. Wireframe step is set in Settings &gt; Parameters &gt; Graphics &quot;Tool Mesh&quot;, and it can be saved in settings file (*.dfn) using Settings &gt; Save settings...</p>
+<p><strong>Cut length</strong> - controls tool's cutting surface display color.</p>
+<table width="70%" border="1">
+  <tr>
+    <td width="70%" valign="top">
+<p><strong>Quick cutting surface color selection :</strong></p>
+      <p>click on the colored square in object panel for corresponding tool .<br>
+      </p></td>
+    <td align="center"><img src="../images/ToolColor.gif"></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><strong>Clear length</strong> - controls tool's non-cutting surface display color.</p>
+<p>There are two colors a tool have - cutting surface color and non-cutting surface color. If Stock multi-color mode is on, then the surface of stock formed by a tool would have the corresponding color of cutting surface of this tool.</p>
+<p>Example for milling tool.</p>
+<p><img src="../images/ToolWorkColor.gif" width="804" height="566"></p>
+<p>For lathe tools the cutting surface color is applied to the cutting edge of a turning plate. If Stock multi-color mode is on, then the surface of stock formed by a plate would have the corresponding color of cutting edge of this plate. If the turning plate was cutting the stock with non-cutting surface, then the surface of stock formed by a plate would have the corresponding color of non-cutting surface of this plate.</p>
+<p>Example for lathe tool .</p>
+<p><img src="../images/ToolWorkColorT.gif" width="794" height="494"></p>
+<p><strong>Holder</strong> - controls tool's holder color.</p>
+<p><strong>Tool</strong> - set up the tool number in a tool bank. The tool is referenced by this number from CNC-program.</p>
+<p><strong>Axis</strong> - set up the axis number for the tool.  This is a special concept, made to make it possible to create a tool with any angle to the spindle. Axis position and number are set in the machine description file.</p>
+<p><strong>Turret</strong> - tool bank number. The number should be defined in machine description file.</p>
+<p><strong>Marker</strong> - Defines the size of tool marker. When a tool is hidden or a tool size and shape are not defined, tool's current position is marked by this marker. Default marker size os set in  <strong>Settings&gt;Parameters&gt;Graphics&gt;Tool Marker</strong>.</p>
+<p><strong>Time</strong> - displays the tool working time.</p>
+<p><strong>Fast motions length</strong> - displays the length of no-load running.</p>
+<p><strong>Feed motions length</strong>- displays the length of feed running.</p>
+</BODY>
+</HTML>

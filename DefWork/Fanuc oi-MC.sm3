@@ -1,0 +1,247 @@
+//
+//
+
+// Section General
+Name		Fanuc oi-MC
+Type		ISO/EIA
+Model		»–800œÃ‘4
+Manufacture		
+Operation		Milling
+NumAxes		3
+// end section
+
+// Section Word Replacement
+Replace		"M13"		"M3M9"
+Replace		"M14"		"M4M9"
+Replace		"G41"		"G41G35"
+Replace		"G42"		"G42G35"
+Replace		"G40"		"G40G36"
+Replace		"GOTO"		"M97P"
+Replace		"#["	"e["
+Replace		"ROUND"	"r"
+Replace		"M7"		"M6"
+Replace		"M5"		"G80M5"
+Replace		"WHILE"		"N9999999999IF[0="
+Replace		"DO1"		"]M66P9999999"
+Replace		"END1"		"N9999999M97P9999999999"
+Replace		"DO2"		"]M66P9999999"
+Replace		"END2"		"N9999999M97P9999999999"
+Replace		"DO3"		"]M66P9999999"
+Replace		"END3"		"N9999999M97P9999999999"
+Replace		"G28G91X0"	"G28G0G90X0Y200.Z250."
+Replace		"G28Y0Z0"	""
+Replace		"D"		"D=1*"
+Replace		"G52"		"G92"
+Replace		"O91"		":91"
+Replace		"O81"		":81"
+Replace		"THEN"		"G4000"
+Replace		"G#140"		"G54"
+Replace		"G#31"		"G00"
+Replace		"G#32"		"G90"
+Replace		"G#33"		"G54"
+// end section
+
+// Section Word Definition
+LineNumber		N
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalRotationAxis	A		 
+VerticalRotationAxis		B	 
+SpindleRotationAxis		 
+Horizontal2Axis		 U
+Vertical2Axis		 V
+Spindle2Axis		 
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode		F
+SpeedCode		S
+ToolCode			T
+DwellTime		P
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleRadius		R
+DiaCompOffset		D
+LengthCompOffset		H
+RapidClearanceLevel		
+FixtureOffsetCode		E
+InitialDepth		
+PeckIncrementDepth		Q
+RepeatNumber		L
+DiaCompHorizVec		
+DiaCompVerticalVec		Q
+ThreadParm		
+ProgramNumber		P
+ProgramStartEnd		:
+CommentStart		(
+CommentEnd		)
+EndOfBlock		$
+EndOfLine		\
+BlockDebug		/
+ProgramBeginEnd		%
+Delimiter		 
+WCSSet		
+CircleCuttingRadius1		
+CircleCuttingRadius2		
+ArcIncrement		Q
+ProgramCopyStart		P
+ProgramCopyEnd		Q
+SecondaryWCS		P
+Register		#
+Dummy		O
+Dummy1		.
+LabelFirst	"""
+LabelLast	"""
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+Dwell		4	0	N
+ExactStop		9	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+ReturnToRef		28	0	N
+ReturnToRef2		30	0	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthCompOn		43	8	N
+LengthComp		44	8	N
+LengthOffsetIncr		45	0	N
+LengthOffsetDecr		46	0	N
+LengthOffsetIncr2X		47	0	N
+LengthOffsetDecr2X		48	0	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+TappingCycle		63	15	N
+CuttingCycle		64	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		76	9	Y
+CancelCycle		80	9	Y
+DrillCycle		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		92	0	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+RectCycle		72	9	N
+ForceCycle		79	9	Y
+ParToNext		35	15	Y
+RetractComp		36	0	N
+CallMacro		65	0	N
+Dummy0			4000	0	N
+ProgramCopy		88	0	N
+MachineCoordSys		93	0	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop		1
+ProgramEnd		30
+SpindleCW		3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		
+CoolantFlood		8
+CoolantOff		9
+Orient		19
+EndProgram		30
+SubroutineCall		98
+SubroutineEnd		99
+GoTo		97
+GoToNext		66
+Dummy0		6
+DebugOn		10
+DebugOff	11
+// end section
+
+// Section Others
+DecimalConversion			0
+LinearDecimalConversion		0
+RotaryDecimalConversion		0
+FeedDecimalConversion		0
+SpeedDecimalConversion		0
+ReverseSign		
+ReverseTurret	No
+ContinuedCircleStatement	No
+XInDiameter		No
+CircleInQuadrants	No
+3DDiaCompensation	Yes
+CircularDirection		D0 D1
+CircleCenterType		IJ
+CircleCenterMode		Incremental
+UVCenterType		IJ
+UVCenterMode		Incremental
+AlwaysIncremental		No
+MaxArcRadius		999
+RotaryAxisUnwind		No
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute
+ExtraCharForRapid		
+ToolChangeWithM06		Yes
+G28WithM06		No
+AddToolSetLength		No
+ToolPreSelect		No
+ToolOffsetInToolNumber	No
+AdditionalCommentChars		
+DataSetChar		L
+TableRotationType	ShortestRoute
+StartwToolNum1	No
+MaxFeedRate		0
+SetSecondaryWCSIndicator		20
+SetPrimaryWCSIndicator		2
+DrillAxisMode	Programmable
+MultiAxisSequence	AllSimultaneous
+CompToIntersect         No
+CompWithArcs            Yes
+CycleNeedsGeom		No
+CycleNeedsParam		Yes
+PartialCompCancel	No
+CheckGeom		Yes
+MinArcDist		3
+PutFirst		"M5"
+EmptyZero		Yes
+SpiralG2G3		Yes
+FileExtension *.*
+ModalArc			No
+UseStdFuncNames	Yes
+LabelType	BaltSys
+BaltSysStyle	Yes
+MachineCS 	100,200.6,300
+// end section
+
+// Section Cycle Definition
+// end section

@@ -1,0 +1,7 @@
+digraph G {
+	Doc -> View [label = "(CEditView*)m_viewList.GetHead()"]; 
+	View -> Frame [label ="GetParentFrame()"];
+	Frame -> Doc [label="GetActiveDocument()"];
+	Frame -> View [label = "GetActiveView"];
+	View -> Doc [label = "GetDocument()"];
+}

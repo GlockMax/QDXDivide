@@ -1,0 +1,186 @@
+//
+//
+
+// Section General
+Name		Acramatic 2100
+Type		ISO/EIA
+Model		
+Manufacturer		
+Operation		Milling
+NumAxes		3
+// end section
+
+// Section Word Replacement
+Replace	",R"	"~"
+Replace	"G83"	"G81"
+Replace	"G4X"	"G4P"
+Replace	"G41"	"G5000G41D#108"
+Replace	"G42"	"G5000G42D#108"
+Replace	"G40"	"G6000G40"
+Replace	"G40X"	"G40X0.0000001+"
+Replace	"G40Y"	"G40Y0.0000001+"
+Replace	";"	"/"
+Replace	"M13"	"M3M8"
+Replace	"M14"	"M4M8"
+Replace	"(CLS,"	"M44^"
+Replace	"(ENS)"	"M45"
+Replace	"(DFS,"	"O"
+Replace ","	"L"
+Replace	"M6"	"M6M8100#108=[#8101/2+[#8102-ì[#8102]]/2]G0"
+// end section
+
+// Section Word Definition
+LineNumber		N
+MillRectU		U
+MillRectV		V
+MillCircU		U
+MillO			O
+MillCR			~
+MillR			R
+MillZ			Z
+MillQ			Q
+MillK			K
+MillP			P
+MillI			I
+MillJ			J
+MillW			W
+MillL			L
+MillJ1			J
+DrillRelR		R
+DrillRelZ		Z
+DrillRelW		W
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B		 
+SpindleRotationAxis	C	 
+FunctionCode		G
+MiscFunctionCode	M
+FeedCode		F
+SpeedCode		S
+ToolCode		T
+CircleHorzCenter	I
+CircleVerticalCenter	J
+CircleDepthCenter	K
+CircleRadius		P
+DiaCompOffsetVal	D
+LengthCompOffset	H
+ProgramNumber		^
+ProgramStartEnd		O
+CommentStart		(
+CommentEnd		)
+BlockSkip		/
+Register		#
+ProgramBeginEnd		%
+RepeatNumber		L
+// end section
+
+// Section Function Definition
+Rapid				0	1	Y
+Linear				1	1	Y
+CircularCW			2	1	Y
+CircularCCW			3	1	Y
+Dwell				4	0	N
+XYPlane				17	2	N
+ZXPlane				18	2	N
+YZPlane				19	2	N
+MillRectCenterCycle		22	1	N
+MillRectCenterInCycle		23	1	N
+MillRectCenterInClearCycle	24	1	N
+MillRectCenterOutCycle		25	1	N
+MillRectCornerCycle		22.1	1	N
+MillRectCornerInCycle		23.1	1	N
+MillRectCornerInClearCycle	24.1	1	N
+MillRectCornerOutCycle		25.1	1	N
+MillCircCycle			26	1	N
+MillCircInCycle			26.1	1	N
+MillCircInClearCycle		27	1	N
+MillCircOutCycle		27.1	1	N
+InchUnit		70	6	N
+MetricUnit		71	6	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthCompOn		43	8	N
+LengthComp		44	8	N
+LengthOffsetCancel	49	8	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+CancelCycle		80	9	Y
+DrillCycleRel		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84.1	9	Y
+RightRHTappingCycle	84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		92	0	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane	98	10	N
+ReturnToRefPlane	99	10	N
+ParToNext		5000	15	Y
+RetractComp		6000	0	N
+// end section
+
+// Section Misc Function Definition
+Stop			0
+OptionalStop		1
+ProgramEnd		2
+SpindleCW		3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+EndProgram		30
+SubroutineCall		44
+SubroutineEndCont	45
+StoreToolParams		8100
+// end section
+
+// Section Others
+CycleNeedsGeom		No
+CycleNeedsParam		Yes
+CompToIntersect		Yes
+CompWithArcs		No
+PartialCompCancel		No
+CircleCenterType	IJ
+CircleCenterMode	Absolute
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute		
+ToolChangeWithM06	Yes
+ToolOffsetInToolNumber	Yes
+ToolPreSelect		No
+IgnoreUnknownM		Yes
+IgnoreUnknownCh		Yes
+IgnoreUnknownG		Yes
+MinArcDist		2
+CheckGeom		Yes
+StartProgram		Ignore
+CycleZAbs		No
+InterChangeCancelCycle	Yes
+FAC_XY_CLR		0.5
+MainInitStr		G0Z150
+ToolChangeTime		60
+FastFeedRate		500
+FileExtension *.pgm
+SkipSubroutine		Yes
+// end section
+
+// Section Cycle Definition
+// end section

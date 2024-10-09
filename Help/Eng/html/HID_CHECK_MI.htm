@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+	<HEAD>
+		<TITLE>Extra Check</TITLE>
+		<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+		<link rel="StyleSheet" href="../tutorial.css">
+	</HEAD>
+	<BODY BGCOLOR="#ffffff" TEXT="#000000">
+		<h1>"Extra Check" Command (Work Menu)</h1>
+		<P>The extra possibility to check G-code on:</P>
+		<UL>
+			<LI>
+				<P>turning on the machine tool length compensation
+				</P>
+			<LI>
+				<P>compulsory presence of I, J, K, R in&nbsp;the circular interpolation line</P>
+			<LI>
+				<P>conformity of machine tool radius compensation number with the machine tool 
+					number
+				</P>
+			<LI>
+				<P>&nbsp;conformity of machine tool&nbsp;length compensation number with the 
+					machine tool number</P>
+			</LI>
+		</UL>
+		<p>If you don't need such a possibility - switch the check box off.</p>
+		<p><strong></strong>&nbsp;
+		</p>
+		<P><STRONG>The Extra Check is turned on.</STRONG>
+		</P>
+		<p>If the first Z-axis move will be met in the NC program after the machine tool 
+			change while the length compensation will be turned off, program will show you 
+			the Error Message and the corresponding line will be marked with the yellow 
+			cross:
+		</p>
+		
+<p><img width="466" height="222" src="HID_CHECK_MI.files/image001.gif" v:shapes="_x0000_i1025"> 
+</p>
+		<p>If there are none&nbsp;of the&nbsp;addresses (I, J, K, R) met in the line during 
+			the working circular interpolation, then the Error Message&nbsp;will be shown 
+			and the corresponding line will be marked with the yellow cross:<o:p></o:p></p>
+		
+<p><img width="466" height="179" src="HID_CHECK_MI.files/image002.gif" v:shapes="_x0000_i1026"> 
+</p>
+		<P>If the machine tool&nbsp;diameter compensation number is not equal to the 
+			machine tool number plus integer that was set in the CNC control file, then the 
+			Error Message&nbsp;will be shown and the corresponding line will be marked with 
+			the yellow cross:</P>
+		
+<p><img width="514" height="147" src="HID_CHECK_MI.files/image003.gif" v:shapes="_x0000_i1026"> 
+</p>
+		<P>If the machine tool&nbsp;length compensation number is not equal to the machine 
+			tool number plus integer that was set in the CNC control file, then the Error 
+			Message&nbsp;will be shown and the corresponding line will be marked with the 
+			yellow cross:</P>
+		
+<p><img width="515" height="181" src="HID_CHECK_MI.files/image004.gif" v:shapes="_x0000_i1026"> 
+</p>
+		<P>Every check can be adjusted in the CNC control description file. Thus it is 
+			possible to turn on one (or all) of the checks.&nbsp;</P>
+		<p>If the Extra Check command&nbsp;is turned off then no check will be realized no 
+			matter what is indicated in the CNC control description file.
+		</p>
+	</BODY>
+</HTML>

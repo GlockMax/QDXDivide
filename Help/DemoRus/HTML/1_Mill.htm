@@ -1,0 +1,808 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Быстрый старт, фрезерование</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Andale Sans UI";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+h1
+	{mso-style-link:"Заголовок 1 Знак";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:1.0pt;
+	font-weight:normal;}
+h2
+	{mso-style-link:"Заголовок 2 Знак";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Заголовок 3 Знак";
+	margin-top:1.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:.7pt;
+	font-weight:normal;}
+h4
+	{mso-style-link:"Заголовок 4 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:114%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	font-weight:bold;
+	font-style:italic;}
+h5
+	{mso-style-link:"Заголовок 5 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:114%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:black;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Заголовок 6 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:114%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Заголовок 7 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:114%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:black;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Заголовок 8 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:114%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:black;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Заголовок 9 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:114%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:black;
+	font-style:italic;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	line-height:normal;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	font-variant:small-caps;
+	color:#1F497D;
+	letter-spacing:.3pt;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Название Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:normal;
+	font-size:48.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Название Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	font-size:48.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Название Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	font-size:48.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Название Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:normal;
+	font-size:48.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Подзаголовок Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:20.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:olive;
+	text-decoration:underline;}
+strong
+	{color:#1F497D;
+	font-weight:normal;
+	font-style:italic;}
+em
+	{font-weight:bold;}
+p
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+pre
+	{mso-style-link:"Стандартный HTML Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.5pt;
+	font-family:"Courier New";
+	color:black;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Текст выноски Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	color:windowtext;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-link:"Без интервала Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:36.0pt;
+	text-indent:-14.4pt;
+	line-height:normal;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-14.4pt;
+	line-height:normal;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-14.4pt;
+	line-height:normal;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:36.0pt;
+	text-indent:-14.4pt;
+	line-height:normal;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"Цитата 2 Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:150%;
+	font-size:13.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"Выделенная цитата Знак";
+	margin-top:10.0pt;
+	margin-right:12.95pt;
+	margin-bottom:10.0pt;
+	margin-left:12.95pt;
+	text-align:center;
+	line-height:150%;
+	background:#4F81BD;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:white;}
+span.MsoSubtleEmphasis
+	{color:black;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleReference
+	{font-variant:small-caps;
+	color:black;
+	text-decoration:underline;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	color:#4F81BD;
+	letter-spacing:.25pt;
+	font-weight:normal;
+	text-decoration:underline;}
+span.MsoBookTitle
+	{font-variant:normal !important;
+	color:#1F497D;
+	text-transform:uppercase;
+	letter-spacing:.5pt;
+	font-weight:bold;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:110%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:1.0pt;
+	font-weight:bold;}
+span.1
+	{mso-style-name:"Заголовок 1 Знак";
+	mso-style-link:"Заголовок 1";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:1.0pt;}
+span.2
+	{mso-style-name:"Заголовок 2 Знак";
+	mso-style-link:"Заголовок 2";
+	font-family:"Times New Roman","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.3
+	{mso-style-name:"Заголовок 3 Знак";
+	mso-style-link:"Заголовок 3";
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:.7pt;}
+span.4
+	{mso-style-name:"Заголовок 4 Знак";
+	mso-style-link:"Заголовок 4";
+	font-family:"Times New Roman","serif";
+	color:black;
+	font-weight:bold;
+	font-style:italic;}
+span.5
+	{mso-style-name:"Заголовок 5 Знак";
+	mso-style-link:"Заголовок 5";
+	font-family:"Cambria","serif";
+	color:black;}
+span.6
+	{mso-style-name:"Заголовок 6 Знак";
+	mso-style-link:"Заголовок 6";
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+span.HTML
+	{mso-style-name:"Стандартный HTML Знак";
+	mso-style-link:"Стандартный HTML";
+	font-family:Consolas;}
+p.color-bullets, li.color-bullets, div.color-bullets
+	{mso-style-name:color-bullets;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	color:blue;}
+p.note, li.note, div.note
+	{mso-style-name:note;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-left:0cm;
+	line-height:114%;
+	background:#B9FFFF;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	color:navy;}
+p.popup, li.popup, div.popup
+	{mso-style-name:popup;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	color:maroon;}
+p.yellowback, li.yellowback, div.yellowback
+	{mso-style-name:yellowback;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-left:0cm;
+	line-height:114%;
+	background:#FFFFA2;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+p.normal1, li.normal1, div.normal1
+	{mso-style-name:normal1;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+p.preformatted, li.preformatted, div.preformatted
+	{mso-style-name:preformatted;
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:14.0pt;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.5pt;
+	font-family:"Courier New";
+	color:black;}
+p.listing, li.listing, div.listing
+	{mso-style-name:listing;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+p.address, li.address, div.address
+	{mso-style-name:address;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	line-height:114%;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	color:black;
+	font-style:italic;}
+span.expandtext
+	{mso-style-name:expandtext;
+	color:red;
+	font-weight:normal;
+	font-style:italic;}
+span.glosstext
+	{mso-style-name:glosstext;
+	color:blue;
+	font-weight:normal;
+	font-style:italic;}
+span.a
+	{mso-style-name:"Текст выноски Знак";
+	mso-style-link:"Текст выноски";
+	font-family:"Tahoma","sans-serif";}
+span.7
+	{mso-style-name:"Заголовок 7 Знак";
+	mso-style-link:"Заголовок 7";
+	font-family:"Cambria","serif";
+	color:black;
+	font-style:italic;}
+span.8
+	{mso-style-name:"Заголовок 8 Знак";
+	mso-style-link:"Заголовок 8";
+	font-family:"Cambria","serif";
+	color:black;}
+span.9
+	{mso-style-name:"Заголовок 9 Знак";
+	mso-style-link:"Заголовок 9";
+	font-family:"Cambria","serif";
+	color:black;
+	font-style:italic;}
+span.a0
+	{mso-style-name:"Название Знак";
+	mso-style-link:Название;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+span.a1
+	{mso-style-name:"Подзаголовок Знак";
+	mso-style-link:Подзаголовок;
+	font-family:"Times New Roman","serif";
+	color:#1F497D;}
+span.a2
+	{mso-style-name:"Без интервала Знак";
+	mso-style-link:"Без интервала";}
+span.20
+	{mso-style-name:"Цитата 2 Знак";
+	mso-style-link:"Цитата 2";
+	font-family:"Times New Roman","serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.a3
+	{mso-style-name:"Выделенная цитата Знак";
+	mso-style-link:"Выделенная цитата";
+	font-family:"Cambria","serif";
+	color:white;
+	background:#4F81BD;}
+p.TableContents, li.TableContents, div.TableContents
+	{mso-style-name:"Table Contents";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	text-autospace:ideograph-other;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:windowtext;}
+.MsoChpDefault
+	{font-family:"Calibri","sans-serif";}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white lang=RU link=blue vlink=olive>
+
+<div class=WordSection1>
+
+<h2>Загрузить проект и запустить симуляцию (фрезерный проект)</h2>
+
+<p class=MsoNormal>В этом упражнении научимся:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Загружать подготовленный проект <span lang=EN-US>NCManager</span>-а.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Скрывать все траектории движения инструментов в УП</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Включать или выключать режим «Резать» для реалистичной симуляции
+процесса удаления материала с заготовки</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Управлять симуляцией командами «Выполнить до ТО», «Стоп», «Пауза»
+и другими.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Переключать способы движения инструмента при симуляции: «Плавно»,
+«Результат», «Быстро», «С учетом подачи».</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Устанавливать текущее место в УП, дважды кликнув на текст УП в
+текстовом редакторе <span lang=EN-US>NCManager</span>.</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Управлять изображением в графическом окне, поворачивая, перемещая
+или сдвигая изображение заготовки, используя мышку или вызвав панель управления
+видами.</p>
+
+<p class=MsoNormal>При запуске демоверсии <span lang=EN-US>NCManager</span><span
+lang=EN-US> </span>автоматически загружает проект <strong><span lang=EN-US>Demo</span>.</strong><strong><span
+lang=EN-US>ncm</span></strong>.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=567
+height=319 id="Рисунок 8" src="1_Mill.files/image001.png"></p>
+
+<p class=MsoNormal>Проект, это файл <span lang=EN-US>NCManager</span>-а с
+расширением «<span lang=EN-US>ncm</span>», в котором содержится информация для
+проверки работы УП. Это такие объекты как файлы УП, информация об инструментах,
+заготовке, стойке ЧПУ и т.д. Файл проекта не обязательно должен содержать
+полный набор объектов. </p>
+
+<p class=MsoNormal>Демопроекты находятся в папке, куда установлен <span
+lang=EN-US>NCManager</span>, <strong>..\</strong><strong><span lang=EN-US>Demo</span>\</strong><strong><span
+lang=EN-US>Millimeter</span>\</strong>. Загрузить любой проект можно командой <strong>Файл
+- Открыть ... </strong>из главного меню. </p>
+
+<p class=MsoNormal style='page-break-after:avoid'>Откройте проект AcromatikDemo.ncm</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=567
+height=319 id="Рисунок 9" src="1_Mill.files/image002.png"></p>
+
+<p class=MsoNormal>Опишем и выполним основные действия для запуска плавной
+симуляции обработки в NCManager.</p>
+
+<p class=MsoNormal>Погасите траекторию движения инструмента, для этого кликните
+по иконке с лампочкой у слова «Программы». Обратите внимание, что иконка изменилась.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=155
+height=61 id="Рисунок 1" src="1_Mill.files/image003.png"></p>
+
+<p class=MsoNormal>Траектории всех программ и инструментов в проекте будут
+погашены. В графическом окне отображается только текущий инструмент и каркас
+заготовки</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=567
+height=319 id="Рисунок 13" src="1_Mill.files/image004.png"></p>
+
+<p class=MsoNormal>Включите режим «Резать», для этого разверните выпадающий
+список с режимами резания в панели инструментов и кликните на слове «Резать».</p>
+
+<p align=center style='text-align:center'><img width=227 height=149
+id="Рисунок 10" src="1_Mill.files/image005.jpg"></p>
+
+<p class=MsoNormal>После того как список свернется, иконка в списке будет
+выглядеть так:</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=63
+height=33 id="Рисунок 6" src="1_Mill.files/image006.png"></p>
+
+<p class=MsoNormal>В графическом окне после включения режима «Резать» заготовка
+станет закрашенной.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=567
+height=319 id="Рисунок 14" src="1_Mill.files/image007.png"></p>
+
+<p class=MsoNormal>Включите способ движения инструмента «Плавный», для этого
+кликните <span style='color:black'>иконку в панели инструментов</span>.</p>
+
+<p align=center style='text-align:center'><img width=27 height=27 id="Рисунок 7"
+src="1_Mill.files/image008.png"></p>
+
+<p class=MsoNormal>Начните симуляцию резания, для этого кликните иконку
+«Выполнить до ТО», в панели инструментов. </p>
+
+<p align=center style='text-align:center'><img width=27 height=27
+id="Рисунок 28" src="1_Mill.files/image009.png"></p>
+
+<p class=MsoNormal>Во время симуляции можете управлять скоростью движения
+инструмента с помощью движка в панели инструментов. Левое положение, медленно,
+правое положение, быстрее</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=227
+height=85 id="Рисунок 11" src="1_Mill.files/image010.png"></p>
+
+<p class=MsoNormal>В графическом окне мышкой можно управлять изображением как
+вовремя симуляции, так и после нее:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:blue'>Нажатая левая кнопка – повороты</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:blue'>Нажатая средняя кнопки – перемещения</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:blue'>Прокрутка колесика - увеличение или
+уменьшение</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:blue'>Клик правой кнопкой в графическом оке -
+вызов панели управления видами</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=191
+height=112 id="Рисунок 27" src="1_Mill.files/image011.jpg"></p>
+
+<p class=MsoNormal>Чтобы мгновенно приостановить симуляцию, кликните иконку
+«Пауза» или на клавиатуре нажмите клавишу «<span lang=EN-US>F</span>5». </p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=40
+height=41 id="Рисунок 15" src="1_Mill.files/image012.png"></p>
+
+<p class=MsoNormal>Как только Вы включили паузу, симуляция мгновенно
+остановится. В текстовом редакторе зеленым маркером помечен кадр, который
+выполняется.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=569
+height=325 id="Рисунок 16" src="1_Mill.files/image013.png"></p>
+
+<p class=MsoNormal>После включения паузы и только в этом случае, Вы можете
+выполнять симуляцию на указанное число кадров как вперед, так и назад,  с
+помощью иконок из панели инструментов. </p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=153
+height=48 id="Рисунок 17" src="1_Mill.files/image014.png"></p>
+
+<p class=MsoNormal>Чтобы выйти из «Паузы», кликните ее иконку или нажмите клавишу
+«<span lang=EN-US>F</span>5». Симуляция продолжится.</p>
+
+<p class=MsoNormal>Чтобы остановить симуляцию, кликните иконку «Стоп» или на
+клавиатуре нажмите клавишу «<span lang=EN-US>F</span>6».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=40
+height=41 id="Рисунок 18" src="1_Mill.files/image015.png"></p>
+
+<p class=MsoNormal>Симуляция остановится мгновенно, но заготовка будет показана
+в текущем расчетном состоянии, т.е. обработано больше, чем Вы видели при
+симуляции до включения «Стоп».</p>
+
+<p class=MsoNormal>Чтобы вернуться к первоначальному состоянию симуляции
+(начальная заготовка, начало УП), кликните иконку «Сброс».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=40
+height=39 id="Рисунок 19" src="1_Mill.files/image016.png"></p>
+
+<p class=MsoNormal>Команду «Сброс» можно выполнять в любой момент. Выполните
+команду «Сброс»</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=567
+height=319 id="Рисунок 20" src="1_Mill.files/image017.png"></p>
+
+<p class=MsoNormal>Выполним симуляцию до какого-нибудь кадра. Найдите в
+текстовом окне строку «1000» и кликните два раза на ее тексте. Это место в УП
+стало текущим. Левее строки появится синий маркер, который отметил текущее
+место выполнения УП.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=266
+height=173 id="Рисунок 21" src="1_Mill.files/image018.png"></p>
+
+<p class=MsoNormal style='page-break-after:avoid'>Запустите симуляцию до
+текущего места, кликнув на иконку в панели инструментов.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=40
+height=41 id="Рисунок 22" src="1_Mill.files/image019.png"></p>
+
+<p class=MsoNormal>Симуляция начнется с начала УП, заготовка станет
+первоначальной, способ движения инструмента будет текущим, т.е.  «Плавно».
+Остановится симуляция, достигнув строки «1000» УП.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=569
+height=412 id="Рисунок 23" src="1_Mill.files/image020.png"></p>
+
+<p class=MsoNormal>Дождитесь окончания симуляции, измените способ движения на
+«Результат».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=38
+height=39 id="Рисунок 24" src="1_Mill.files/image021.png"></p>
+
+<p class=MsoNormal>Снова запустите симуляцию до текущего места. После
+непродолжительного времени на расчет, на экране появится обработанная до строки
+«1000» заготовка. Движений инструмента при этом способе движения, нет.</p>
+
+<p class=MsoNormal>Самостоятельно можете повторить симуляцию до текущего места
+для еще двух способов движения инструмента. «Быстро» и «С учетом подачи».  </p>
+
+<p class=MsoNormal>Чтобы включить способ движения инструмента «Быстро»,
+кликните <span style='color:black'>иконку в панели инструментов.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='color:black'><img width=38 height=34 id="Рисунок 25"
+src="1_Mill.files/image022.png"></span></p>
+
+<p class=MsoNormal>Чтобы включить способ движения инструмента «С учетом
+подачи», кликните <span style='color:black'>иконку в панели инструментов.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=38
+height=38 id="Рисунок 26" src="1_Mill.files/image023.png"></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+// 
+// 
+
+// Section General
+Name		NCM_SIEMENS_840D_MILLTURN.sm3
+Type		Sinumerik
+Model		
+Manufacturer
+MadeFrom	Base	
+Operation		Mill-Turn
+NumAxes		3
+Версия		0.17
+Forbidden	scravtqefijklm
+Allowed	bdghnopuwxyz
+Create	27.08.2023
+Update	19.09.2024
+CheckSyntax	Yes
+Format	2
+// end section
+
+// Section Word Replacement
+//Игнорировать
+RegExp	"(WORKPIECE|SETMS\()"	";\1"
+Replace	"L9930"	"L_9930"
+Replace	"L9931"	"L_9931"
+Replace	"NOM_DIR_S="	";"
+Replace	"TRANSMIT_ON"	"G112"
+Replace	"TRANSMIT_OFF"	"G113"
+Replace	"NOM_MMODE=2"	"G18G95G51X0.5I2"
+Replace	"NOM_MMODE=1"	"G17G94G50"
+Replace	"MCALLCYCLE81"	"G81"
+Replace	"MCALLCYCLE82"	"G82"
+Replace	"MCALLCYCLE83"	"G83"
+Replace	"MCALLCYCLE86"	"G86"
+Replace	"MCALLCYCLE840"	"G840"
+Replace	"MCALLCYCLE84"	"G84"
+Replace	"DRILL"	"G81"
+Replace	"DRTURN"	"G81"
+Replace	"%_N_"	"O""
+Replace	"_SPF"	"""
+Replace	"_MPF"	"""
+Replace	"MSG"	";"
+Replace	"RND"	"G9999b"
+Replace	"CHR"	"G9998b"
+//Def macro
+Replace	"ENDWHILE"	"ENDIFM1096L__NCM002"
+Replace	"WHILE"	"__NCM002:IF"
+Replace	"GOTOB"	"M1096L"
+Replace	"GOTOF"	"M1097L"
+Replace	"ENDIF"	"ENDIF:"
+Replace	"ELSE"	"ENDIF:M1097LENDIF"
+Replace	"ENDLOOP"	"M1096L__NCM001"
+Replace	"LOOP"	"__NCM001:"
+Replace	"TRUNC"	"FIX"
+Replace	"=="	"EQ"
+Replace	"<>"	"NE"
+Replace	"<="	"LE"
+Replace	">="	"GE"
+Replace	"MOD"	"$"
+Replace	"NOT"	"~"
+Replace	"OR"	"|"
+Replace	"AND"	"&"
+//End def macro
+Replace		"DIAMOF"	"G50"
+Replace		"DIAMON"	"G51X0.5I2"
+RegExp		"LIMS="	"G26S"
+Replace		"MCALL"	"G0G1067"
+Replace		"G4X"	"G4Q"
+Replace		"G4S"	"G4Q"
+Replace		"G4F"	"G4Q"
+Replace		"G04X"	"G4Q"
+Replace		"M30"			"M02"
+Replace		"I=AC"			"U="
+Replace		"J=AC"			"V="
+Replace		"K=AC"			"W="
+Replace		"CR="			"_="
+Replace		"M1="			"M"
+Replace		"M2="			"M"
+Replace		"C20="			"C"
+Replace		"DL="			"D=R8213+"
+Replace		"D1"			"H=(R8213)"
+Replace		"D2"			"H=(R8213+100)"
+Replace	"G41"	"G5000G41"
+Replace	"G42"	"G5000G42"
+Replace	"G40"	"G6000G40"
+Replace		"H8="			"d"
+Replace		"ROTZ"			"G5079G113G92C"
+Replace		"ROTZ"			"G5078X0Y0Z0K1_="
+Replace	"QR("	";"
+// Станочная СК
+RegExp	"SUPA"	"G153"
+RegExp	"CFC|CFTCP"	""
+//Замена на объявление переменных
+RegExp1	"DEF ?REAL|DEF ?INT|DEF"
+RegExp2	"M910"
+RegExp	"NOM_POS_B="	"B="
+RegExp	"NOM_POS_C=|NOM_POS_S=|NOM_POS_C11=""	"A="
+RegExp	"(ATT_NO=\d)(T_NO=)(\d+)"	"T\3;"
+RegExp	"(T_NO=)(\d+)"	"T\2;"
+RegExp	"O"L([0-9]+)"	"O"L_\1"
+RegExp	"G81\((\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,\,(\d*)\)"	"G99G81L=\2+\3Z\2-\4W\1"
+RegExp	"G81\((\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\d*)\)"	"G99G81L=\2+\3Z\4W\1"
+RegExp	"G81\((\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\)"	"G99G81L=\2+\3Z\4W\1"
+RegExp	"G82\((\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\)"	"G99G81L=\2+\3Z\4W\1G4Q\6*10"
+RegExp	"G83\((\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\d*)[0-9\,\.\-]+\)"	"G99G81L=\2+\3Z\5W\1"
+RegExp	"G86\((\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)[0-9\,\.\-]+\)"	"G99G81L=\2+\3Z\4W\1"
+RegExp	"G84\((\-*\d+\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d+\.*\d*)[0-9\,\.\-]+\)"	"G99G81L=\2+\3Z\4W\1"
+RegExp	"G840\((\-*\d+\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d+\.*\d*)[0-9\,\.\-]+\)"	"G99G81L=\2+\3Z\4W\1"
+RegExp	"POCKET4\((\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\d*\.*\d*)\,(\d*\.*\d*)\,(\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,"	"R301=\10R302=\2R303=\3R304=\4R305=\5R306=\6R307=\7R308=\8R309=\9L_5444"
+RegExp	"L_5444(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,\,\,\,\)"	"R310=\1R311=\2R312=\3R313=\4R314=\5R315=\6C0L_5444"
+RegExp	"REPEAT(\D\D+\d*)(\D\D+\d*)(.*)"	"G25\3u\2*\1"
+RegExp	"([XYZW])V(=[+-]?[0-9R]+)"			"G92\1\2"
+RegExp	"ATRANS(.+)"	"G92.1\1"
+RegExp	"TRANS(.+)"	"G92\1"
+RegExp	"TRANS"	"G92X0Y0Z0"
+RegExp	"EXTCALL"	"M198L"
+RegExp	"L6"	"M6"
+// end section
+
+// Section Coord Definition
+// end section
+
+// Section Word Definition
+RapidClearanceLevel2	W
+RoundSize		b
+ChamferSize		b
+LineNumber		N
+HorizontalAxis	X
+VerticalAxis	Y
+SpindleAxis		Z
+HorizontalRotationAxis	A
+VerticalRotationAxis	B
+SpindleRotationAxis	C
+FunctionCode	G
+MiscFunctionCode	M
+FeedCode		F
+FeedCodeNM		O
+SpeedCodeTurn	S
+SpeedCodeMill	E
+ToolCode		T
+DwellTime		Q
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleHorzCenterAbs		U
+CircleVerticalCenterAbs		V
+CircleDepthCenterAbs		W
+CircleRadius		_
+CircleFullTurns		Ф
+DiaCompOffset		D
+LengthCompOffset		D
+ProgramNumber		L
+ProgramStartEnd		O
+ProgramCopyStart	*
+ProgramCopyEnd		u
+BlockSkip		;
+BlockDebug		/
+ProgramBeginEnd		%	 	
+RepeatNumber	P	
+Register	R
+LabelFirst		"""
+LabelLast		"""
+CommentStart	@
+CommentEnd		@
+Traverse	d
+VariablePrefix	y
+VariableEnd	g
+HorizontalAxisInc	U
+SpindleAxisInc		W
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+SpiralCW		12	1	Y
+SpiralCCW		13	1	Y
+PolarInterp		112	21	N
+PolarInterpCancel	113	21	Y
+Dwell		4	0	N
+ExactStop		9	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+ProgramCopy		25	0	N
+ReturnToRef		31	0	N
+ReturnToRef2		32	0	N
+ReturnToRef3		28	0	N
+ReturnToRef4		27	0	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthOffsetIncr		43	0	N
+LengthOffsetDecr		44	0	N
+EnableExtraArc		45	7	N
+LengthOffsetDecr2X		46	8	N
+LengthOffsetIncr2XITN		47	8	N
+LengthOffsetDecr2XITN		48	8	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachCoordSys		53	0	N
+MachineCoordSys		153	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+SimThreadCycleT		33	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		198	9	Y
+CancelCycle		80	9	Y
+DrillCycle		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPresetRel		992	3	N
+ZeroPreset		92	3	N
+ZeroPresetSht	92.1	3	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+ReturnToZero		29	9	N
+SetMaxSpeed		26	0	N
+FixCutSpeed		96	2	N
+UnFixCutSpeed		97	2	Y
+RotateCSABC		5077	9	Y
+MoveRotateCS	5078	9	Y
+MoveRotateCSCancel	5079	9	Y
+Chamfer		9998	9	Y
+Round		9999	9	Y
+CallMacro		1065	9	Y
+ModalCallMacro	1066	9	Y
+ModalCallCancel	1067	9	Y
+ParToNext		5000	15	Y
+RetractComp	6000	0	N
+MirrorRotateOff	100	0	N
+MirrorRotate1	101	0	N
+MirrorRotate2	102	0	N
+MirrorRotate3	103	0	N
+MirrorRotate4	104	0	N
+MirrorRotate5	105	0	N
+MirrorRotate6	106	0	N
+MirrorRotate7	107	0	N
+TurnRoughCycle	71	0	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop	1
+SpindleCW		303
+SpindleCCW		304
+SpindleCWTurn	3
+SpindleCCWTurn	4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood	8
+CoolantOff		9
+Orient		19
+EndProgram		2
+FileCall	198
+SubroutineCall	98
+SubroutineEnd	17
+WhileStart		1000
+WhileEnd		1001
+GoToForward		1097
+GoToBackward	1096
+GoTo			1099
+GoToNext		1098
+GrooveOn		136
+GroveOff		137
+NonModalCycleCall	2099
+StoreToolParams		8100
+VariablesDecl	910
+// end section
+
+// Section Others
+IfNotStrAdd		M1098LENDIF
+OpenBracketChar		(
+CloseBracketChar	)
+CircleCenterType		IJR
+CircleCenterMode		Incremental
+AlwaysIncremental		No
+ToolIndex		Absolute
+VarRegExp	(\W|^)(%s);;\1y\2g
+ToolChangeWithM06		Yes
+G28WithM06		No
+AddToolSetLength		Yes
+ToolPreSelect		No
+ToolOffsetInToolNumber	Yes
+CyclicC			Yes
+TableRotationType	ShortestDistance
+StartwToolNum1	Yes
+MaxFeedRate		0
+DwellTimeDiscr	100
+CycleNeedsGeom	No
+CycleNeedsParam	Yes
+CompToIntersect		No
+CompWithArcs		Yes
+MinArcDist		2
+CheckGeom		Yes
+IgnoreUnknownM		Yes
+IgnoreUnknownCh		Yes
+IgnoreUnknownG		Yes
+MainInitStr		G0G95G153X0Y0Z0M3G26S120
+MainInitStr1	T1
+MachineCS		0,0,400
+StartProgram		Ignore
+FileExtension	*.ARC;*.MPF;*.SPF
+UseStdFuncNames	Yes
+MakeUpper		No
+SinumerikStyle	Yes
+//LabelType синумерик ломает цикл G71
+//LabelType	Sinumerik
+SpiralG2G3		Yes
+InterChangeCancelCycle	Yes
+FileProtection	Yes
+ForcedCycles	No
+PolarInterpFanucStyle	No
+FastMovPolarInt	Yes
+//ПАРАМЕТРЫ ДЛЯ РАСЧЕТА ВРЕМЕНИ
+DwellTimeDiscr		1
+ToolChangeTime		8
+SpindleReverseTime	1000
+DrillPeckDwell	1000
+SyncroTime		1.1
+MaxFeedRate		6000
+FastFeedRateX	6000
+FastFeedRateY	6000
+FastFeedRateZ	6000
+FastFeedRateA	2000
+FastFeedRateB	2000
+FastFeedRateC	2000
+AutoFixRotAxes	Yes
+AutoFixTime		0
+AutoUnfixTime	0.9
+//ДОПОЛНИТЕЛЬНЫЕ ПРОВЕРКИ
+MiCheckSpindleOff	Yes
+MiCheckZeroFeed		Yes
+// end section
+
+// Section Cycle Definition
+// end section
+
+// Section Registers Map
+// end section

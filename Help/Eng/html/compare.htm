@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Comparison function</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+<h1><a name="HID_MEASURE" id="HID_MEASURE"></a>Comparison function</h1>
+<p>Comparison function allows to figure out the difference between the stock and the part. </p>
+<p>To call the comparison function select Analysis &gt; Comparison from main menu.</p>
+<p>To use comparison function the part should be loaded and the program should be in &quot;Cut&quot; simulation mode. </p>
+
+  
+<p>When called, the comparison dialog appears. The calculation begins immediately. The progress bar at the bottom of the dialog indicates calculation progress. Calculation time strongly depends on the complexity of the part and the stock. </p>
+<p> <img width=735 height=509
+src="../images/Compare1.gif" v:shapes="_x0000_i1031"> </p>
+<p><strong>The bounds values</strong> define the borders between the deviation ranges in millimeters. The values must be in ascending order from top to bottom. This values are stored in the project file.</p>
+<p>Each range of deviation is assigned a <strong>color</strong>. For example, if some part of the stock surface lies in a range between 0.01 mm and 0.5 mm distance from the part surface it will be colored green (see the figure above). All the options for this analysis is stored in a project file. </p>
+<p><strong>Default colour</strong> - reset color settings to defaults.</p>
+<p><strong>Default bounds</strong> - reset bounds to defaults.</p>
+<p><strong>Apply</strong> - make the analysis with new colors and bounds.</p>
+<p>When the analysis is made, a new stock coloring is shown.</p>
+
+<p> <img width=385 height=488
+src="../images/Compare2.gif" v:shapes="_x0000_i1032"> </p>
+
+<p>To exit the comparison mode close the comparison dialog by pushing the close button in the upper right corner of the dialog.</p>
+</body>
+
+</html>

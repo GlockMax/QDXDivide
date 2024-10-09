@@ -1,0 +1,6 @@
+; Machine.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Machine"
+
+EXPORTS
+    ; Explicit exports can go here

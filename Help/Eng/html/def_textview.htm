@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Editor</TITLE>
+<link rel=StyleSheet href=../tutorial.css></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><A NAME="def_textview"></A>Editor</H1>
+<P>Editor is used to view and edit the CNC programs.</P>
+<P><IMG SRC="../images/textview.gif" ALT="" width="417" height="324" BORDER=0></P>
+<P>This window is in fact a simplified text editor with basic  text editing functions, some special-purpose commands allowing to manage the program faster and easier, and problem-oriented commands for managing the program. Text editor commands are called from  <a href="menu_edit.htm">Edit</a> menu.</P>
+<P>You can adjust editor's appearance.</P>
+<h6>Font </h6>
+<P>NCM supports basic MS Windows fonts (Times New Roman, Arial, etc.). To change the editor's font open Settings &gt; Parameters, Design tab. In the element menu select ProgramText, then select the font in the Font menu below.</P>
+<h6>Editor's background color; </h6>
+<P>To set editor's background color open Setting &gt; Parameters, Design tab. Select TextWindowBackground in Element menu, then click on the Color field and select desired color in appeared color dialog.</P>
+<h6>Program text color </h6>
+<P>Each symbol of the CNC program refers to one of the groups. This behavior is defined in the CNC control definition file. </P>
+<P>To change the symbol color use Settings &gt; Parameters, Design tab. Select the appropriate Element in dropdown menu, then push the Color button and select desired color from the dialog.</P>
+<P><IMG SRC="../images/TextColor.gif" ALT="" width="673" height="469" BORDER=0></P>
+<P>In the table below you can see the list of elements referring to CNC program code colors.</P>
+<TABLE width=738 cols=2>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD width=25% class="normal1"><h6>Element menu item </h6></TD>
+    <TD width=8%><p align="center">Symbol</p></TD>
+    <TD width=67%><div align="center">Description</div></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD width=25% class="normal1"><p><em><font color="#000066">LineNumber</font></em></p></TD>
+    <TD width=8%><div align="center"> 
+        <p><font color="#0000FF"><strong>N</strong></font></p>
+      </div></TD>
+    <TD width=67%><p>Program line number</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">GCods</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>G</strong></font></p></TD>
+    <TD><p>G code symbols </p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">MCods</font></em></p></TD>
+    <TD><p align="center"><strong><font color="#0000FF">M</font></strong></p></TD>
+    <TD> <p>M code symbols </p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><font color="#000066"><em>CommandNumber</em></font></p></TD>
+    <TD><p align="center"><strong><font color="#0000FF">01 41 ...</font></strong></p></TD>
+    <TD> <p>Numerals for G code and M code</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">LinearCoord</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>X Y Z</strong></font></p></TD>
+    <TD><p>Linear interpolation </p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">LinearCoord2</font></em></p></TD>
+    <TD><div align="center"> 
+        <p><font color="#0000FF"><strong>U V W</strong></font></p>
+      </div></TD>
+    <TD><p>Linear interpolation</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">CircularInterpolationCCW<br>
+    </font></em><em><font color="#000066">CircularInterpolationCW</font></em></p>
+    </TD>
+    <TD><p align="center"><font color="#0000FF"><strong>I J K</strong></font></p></TD>
+    <TD><p>Circular interpolation </p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">AngleCoord</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>A B C</strong></font></p></TD>
+    <TD><p>Angular coordinates </p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">ToolCode</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>T</strong></font></p></TD>
+    <TD><p>Tool number code. </p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">Numbers</font></em></p></TD>
+    <TD><p align="center"><strong><font color="#0000FF">3.445</font></strong></p></TD>
+    <TD><p>Numbers in code</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD rowspan="2" class="normal1"><p><em><font color="#000066">SpeedCode</font></em></p></TD>
+    <TD height="21"> <p align="center"><strong><font color="#0000FF">F S</font></strong></p></TD>
+    <TD rowspan="2"><p>Symbols for setting feed rate and spindle rotor speed</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">Comment</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong><font color="#0000FF">(text)</font></strong></font></p></TD>
+    <TD><p>Comments in code</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">UnknownSymbols</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"></font></p></TD>
+    <TD><p>Undefined symbols</p></TD>
+  </TR>
+</TABLE>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</BODY>
+</HTML>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+	<HEAD>
+		<TITLE>Contour</TITLE>
+		<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+		<link rel="StyleSheet" href="../tutorial.css">
+	</HEAD>
+	<BODY BGCOLOR="#ffffff" TEXT="#000000">
+		<h1>Contour</h1>
+		<p>Set stock&nbsp;using contour. Contour is defined in the "StC"&nbsp;extension 
+			file. Z-axis is the&nbsp;pivot pin.
+		</p>
+		<p><img src="../images/StockPr.gif" width="375" height="358"></p>
+		<h2>Find
+		</h2>
+		<P>This command is used to load the file defining stock geometry. <STRONG>Open</STRONG>
+			dialog box will be activated with the <STRONG>*.StC</STRONG> extension of the 
+			loaded files.</P>
+		<h2>Delta&nbsp;Z</h2>
+		<P>Stock moving on the Z-axis. You can change the stock position comparing to 
+			the&nbsp;coordinate system origin.</P>
+		<P>When you load the stock you will see its <STRONG>Dimensions</STRONG>.</P>
+		<p>&nbsp;</p>
+		<h6>How to create a "StC" file.</h6>
+		<P>Create new program and load it into NCManager. Set the contour in the G-code 
+			format. Observe this two rules.</P>
+		<P>1. Set contour in the XY-plane. X-axis size will be diametral, while Y-axis size 
+			will be linear.</P>
+		<P>2. Direction must be CCW if you look down&nbsp;on the contour.</P>
+		<P>Create stock file (<STRONG>Export</STRONG> &gt; <STRONG>Contour</STRONG>) from 
+			your program's context menu.</P>
+		<P><STRONG>Example 1</STRONG> - let's set the cylinder with radius 100 and length 
+			40.</P>
+		<p><img src="../images/StoskG1.gif" width="570" height="200"></p>
+		<p><STRONG>Example 2 </STRONG>- let's set the contour with blind hole and rounding.
+		</p>
+		<p><img src="../images/StockG3.gif" width="400" height="241"></p>
+		<p><img src="../images/StockG3SH.gif" width="247" height="296"></p>
+		<P>In the text editor contour file for the first example will be:</P>
+		<p><img src="../images/StockTXT.gif" width="201" height="110"></p>
+		<P>I.e. fast positioning to the contour start point and then moving CCW&nbsp;with 
+			the work movement.</P>
+		<P>You can set contour in common text editor.</P>
+	</BODY>
+</HTML>

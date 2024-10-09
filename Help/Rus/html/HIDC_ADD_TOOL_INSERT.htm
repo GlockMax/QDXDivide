@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Создать токарную пластинку</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><font face="Arial"><A NAME="IDC_ADD_TOOL_INSERT" id="IDC_ADD_TOOL_INSERT"></A>Создать 
+  токарную пластинку</FONT></H1>
+<body>
+<h6>Добавить пластину</h6>
+<p> Задать тип, размеры и расположение токарной пластины. </p>
+<h6>Произвольная пластина. </h6>
+<p>Минимально у этой пластины задается тип (наружный, внутренний, и т.д.) и два 
+  угла. Угол с осью X и угол в плане. Точка настройки кромки пластины определится 
+  автоматически (мнимая точка). У пластины две режущие кромки. Они выделена цветом 
+  <strong>Рабочей части.</strong></p>
+<p><img src="../images/InsertGeneral.gif" width="667" height="438"></p>
+<p><strong>Имя</strong> – Имя пластины. Это имя будет именем всего инструмента, 
+  если не задано имя для инструмента в целом и будет именем инструмента в дереве 
+  <strong>Инструметов</strong>.</p>
+<p><strong>Тип</strong> - Выбор пластину по способу точения. Разверните список 
+  и выберите нужный тип из:</p>
+<p><strong>Проходной правый.</strong><img src="../images/insertExRight.gif" width="132" height="132" align="absmiddle"></p>
+<p><strong>Расточной правый</strong>. <img src="../images/InsertIntRight.gif" width="134" height="134" border="0" align="absmiddle"></p>
+<p><strong>Проходной левый</strong>. .<img src="../images/InsertExtLeft.gif" width="134" height="134" align="absmiddle"></p>
+<p><strong>Расточной левый</strong>. ..<img src="../images/InsertIntLeft.gif" width="134" height="134" align="absmiddle"></p>
+<p><strong>A</strong> - Угол между главной режущей кромкой и осью X.</p>
+<p><strong>T</strong> - Угол пластины в плане.</p>
+<p><strong>L1</strong> – длина главной режущей кромки. </p>
+<p><strong>L2</strong> – длина вспомогательной режущей кромки. </p>
+<p><strong>R</strong> – радиус скругления между режущими кромками.</p>
+<p><strong>C</strong>– Задний угол пластины </p>
+<p><strong>H</strong> – Толщина пластины </p>
+<p><strong><a href="TurnComp.htm">Коррекция на кромку</a></strong> - заполнить 
+  корректоры для учета контурной коррекции на кромку.</p>
+<h6>Круглая пластина: </h6>
+<p>Минимально у этой пластины задается радиус. У пластины режущая кромка выделена 
+  цветом <strong>Рабочей части</strong> и точка программирования по умолчанию 
+  находится в центре пластине. </p>
+<p><img src="../images/Insert2.gif" width="471" height="389"></p>
+<p><strong>Имя</strong> – Имя пластины. Это имя будет именем всего инструмента, 
+  если не задано имя для инструмента в целом и будет именем инструмента в дереве 
+  <strong>Инструметов</strong>.</p>
+<p><strong>R</strong> – Радиус пластины </p>
+<p><strong><a href="InsertAngles.htm">C</a></strong><a href="InsertAngles.htm">– 
+  Задний угол пластины </a></p>
+<p><strong><a href="InsertAngles.htm">H</a></strong><a href="InsertAngles.htm"> 
+  – Толщина пластины </a></p>
+<p><strong><a href="InsertAngles.htm">D</a></strong><a href="InsertAngles.htm"> 
+  – Угол ориентации пластины.</a></p>
+<p><strong><a href="DXDZOfset.htm">Смещение X (DX) Смещение Z (DX)</a></strong> 
+  - ввести произвольную величину и знак смещения.</p>
+<p><strong>+DX, +DZ, -DX, -DZ</strong> - ввести величину и знак смещения. Величина 
+  смещения равна радиусу скургления пластины резца.</p>
+<p><strong>0</strong> - Обнулить смещение.</p>
+<p><strong><a href="TurnComp.htm">Коррекция на кромку</a></strong> - заполнить 
+  корректоры для учета контурной коррекции на кромку.</p>
+<h6><strong>Прорезная пластина</strong></h6>
+<p>У пластины три режущих кромки вуделенные цветом <strong>Рабочей части.</strong> 
+  Точка программирования совпадает с точкой пересечения левой боковой режущей 
+  кромки с средней режущей кромкой. </p>
+<p><img src="../images/Insert3.gif" width="449" height="389"></p>
+<p><strong>Имя</strong> – Имя пластины. Это имя будет именем всего инструмента, 
+  если не задано имя для инструмента в целом и будет именем инструмента в дереве 
+  <strong>Инструметов</strong>.</p>
+<p><strong>T</strong> – ширина пластины </p>
+<p><strong>L</strong> – длина пластины </p>
+<p><strong>R1</strong> – радиус на левом углу пластины </p>
+<p><strong>R2</strong> – радиус на правом углу пластины </p>
+<p><strong>A</strong> - угол наклона средней режущей кромки. </p>
+<p><strong><a href="InsertAngles.htm">C</a></strong><a href="InsertAngles.htm">– 
+  Задний угол пластины </a></p>
+<p><strong><a href="InsertAngles.htm">H</a></strong><a href="InsertAngles.htm"> 
+  – Толщина пластины </a></p>
+<p><strong><a href="InsertAngles.htm">D</a></strong><a href="InsertAngles.htm"> 
+  – Угол ориентации пластины.</a></p>
+<p><strong>Номер кромки</strong> - определить рабочую вершину пластины из двух 
+  возможных.</p>
+<p><strong><a href="TurnComp.htm">Коррекция на кромку</a></strong> - заполнить 
+  корректоры для учета контурной коррекции на кромку.</p>
+<p><strong><a href="DXDZOfset.htm">Смещение X (DX) Смещение Z (DX)</a></strong> 
+  - ввести произвольную величину и знак смещения.</p>
+<p><strong>+DX, +DZ, -DX, -DZ</strong> - ввести величину и знак смещения. Величина 
+  смещения равна радиусу скургления пластины резца.</p>
+<p><strong>0</strong> - Обнулить смещение.</p>
+<h6><strong>Пластины по стандарту ISO</strong></h6>
+<p>У такой пластины две режущие кромки. Исключения составляют круглая пластина. 
+  У пластин "Прямоугольная" и "Параллелограмм" три режущих кромки. Точка программирования 
+  у всех пластин по умолчанию совпадает с центром радиуса скругления R. Режущие 
+  кромки выделены цветом <strong>Рабочей части</strong>.</p>
+<p><img src="../images/Insert5.gif" width="540" height="389"></p>
+<p><strong>Имя</strong> – Имя пластины. Это имя будет именем всего инструмента, 
+  если не задано имя для инструмента в целом и будет именем инструмента в дереве 
+  <strong>Инструметов</strong>.</p>
+<p><strong>Форма</strong> – Код формы пластины (квадрат, прямоугольник, ромб, 
+  и т.д.). Выберите код из списка. </p>
+<p><img src="../images/InsertISO.gif" width="515" height="504"></p>
+<p><strong>L1</strong> – длина режущей кромки или радиус для круглой пластины. 
+</p>
+<p><strong>L2</strong> – длина второй режущей кромки, если форма пластины не является 
+  правильным многоугольником. </p>
+<p><strong>R</strong> – радиус скругления между режущими кромками. Можно выбрать 
+  величину из списка или задать свою.</p>
+<p><strong><a href="InsertAngles.htm">C</a></strong><a href="InsertAngles.htm">– 
+  Задний угол пластины </a></p>
+<p><strong><a href="InsertAngles.htm">H</a></strong><a href="InsertAngles.htm"> 
+  – Толщина пластины </a></p>
+<p><strong><a href="InsertAngles.htm">D</a></strong><a href="InsertAngles.htm"> 
+  – Угол ориентации пластины.</a></p>
+<p><strong>Номер кромки</strong> - определить рабочую вершину пластины из двух 
+  возможных.</p>
+<p><strong><a href="TurnComp.htm">Коррекция на кромку</a></strong> - заполнить 
+  корректоры для учета контурной коррекции на кромку.</p>
+<p><strong><a href="DXDZOfset.htm">Смещение X (DX) Смещение Z (DX)</a></strong> 
+  - ввести произвольную величину и знак смещения.</p>
+<p><strong>+DX, +DZ, -DX, -DZ</strong> - ввести величину и знак смещения. Величина 
+  смещения равна радиусу скургления пластины резца.</p>
+<p><strong>0</strong> - Обнулить смещение.</p>
+<p><strong>Параметры резьбовой пластинки</strong></p>
+<p><img src="../images/Insert4.gif" width="482" height="396"></p>
+<p><strong>Имя</strong> – Имя пластины. Это имя будет именем всего инструмента, 
+  если не задано имя для инструмента в целом и будет именем инструмента в дереве 
+  <strong>Инструметов</strong>.</p>
+<p><strong>Тип</strong> - Выбор пластину по расположению резьбы. Разверните список 
+  и выберите нужный тип из:</p>
+<p><strong>Наружный правый.</strong><img src="../images/InsertThrExtRight.gif" width="134" height="134" align="absmiddle"></p>
+<p><strong>Внутренний правый</strong>. <img src="../images/InsertThrIntRight.gif" width="134" height="134" border="0" align="absmiddle"></p>
+<p><strong>Наружный левый</strong>. .<img src="../images/insertExLeft.gif" width="134" height="134" align="absmiddle"></p>
+<p><strong>Внутренний левый</strong>. ..<img src="../images/InsertThrIntLeft.gif" width="134" height="134" align="absmiddle"></p>
+<p><strong>A</strong> – угол резьбы </p>
+<p><strong>T</strong> – ширина пластинки. </p>
+<p><strong>L</strong> – длина пластинки </p>
+<p><strong>R</strong> – радиус скругления между режущими кромками. </p>
+<p><strong>K</strong> – расстояние от вершинки пластины до ее левого края. </p>
+<p>У такой пластины две режущие кромки и точка программирования зависит от типа 
+  обработки и определяется как &quot;точка до касания&quot; с заготовкой.</p>
+</body>
+</html>

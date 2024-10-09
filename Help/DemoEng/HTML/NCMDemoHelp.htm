@@ -1,0 +1,757 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>The first steps in NCManager demo</title>
+<link href="../tutorial.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<div class=Section1> 
+  <h1>The first steps in NCManager demo</h1>
+
+  <p class=MsoNormal>Run NCManager and load <strong>Demo.ncm</strong> project 
+    file.</p>
+  <p class=MsoNormal> Main menu: <font color="#FF00FF"><strong>File</strong></font> 
+    -&gt; <font color="#FF00FF"><strong>Open …</strong></font> .</p>
+  <p class=MsoNormal> If this is the first time you run NCManager it will look 
+    like this:</p>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=638 valign=top style='width:478.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><span style='color:#000099'><img src="../PICT/NCM.jpg" alt="" width=640
+  height=441 border=0></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p>The Objects pane is designed for displaying and controlling the project main items</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=319 valign=top style='width:239.25pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=200 height=265
+  src="../PICT/ObjectsPane.gif"></p>
+  </td>
+      <td width=319 valign=top style='width:239.3pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal><strong><font color="#FF00FF">CNC-Control</font></strong> 
+          defines the information necessary for examining the work of the NC program 
+          of the machine with CNC.</p>
+        <p class=MsoNormal> <font color="#FF00FF"><strong>Machine</strong></font> 
+          defined the CNC machine tool.</p>
+        <p class=MsoNormal> <font color="#FF00FF"><strong>CNC programs</strong></font> 
+          It contains a set of programs included in the project.</p>
+        <p class=MsoNormal> <font color="#FF00FF"><strong>Tools</strong></font> 
+          It contains a set of cutting tools included in the project.</p>
+        <p class=MsoNormal> <font color="#FF00FF"><strong>Stock</strong></font> 
+          To define a workpiece of the part being processed.</p>
+        <p class=MsoNormal> <font color="#FF00FF"><strong>Parts</strong></font> 
+          contains a set of the STL models loaded into the project as parts.</p>
+        <p class=MsoNormal> <font color="#FF00FF"><strong>Fixture</strong></font> 
+          - contains a set of the STL models loaded into the project as fixture.<br>
+        </p>
+  </td>
+ </tr>
+</table>
+
+  <h2>Left click mouse button on icon of the Object Pane:</h2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=30 height=30
+  src="../PICT/IconLoad.gif"></p>
+  </td>
+      <td width=559 style='width:419.15pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>To load corresponding 
+          object</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=30 height=30
+  src="../PICT/IconNew.gif"></p>
+  </td>
+      <td width=559 valign=top style='width:419.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>To create corresponding object</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=30 height=30
+  src="../PICT/IconInfo.gif"></p>
+  </td>
+      <td width=559 valign=top style='width:419.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>To edit parameters CNC-Control</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=48 height=30
+  src="../PICT/IconToolPath.gif"></p>
+  </td>
+      <td width=559 valign=top style='width:419.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>To switches a mode of display 
+          of a trajectory (show all or a part)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=48 height=30
+  src="../PICT/IconTool.gif"></p>
+  </td>
+      <td width=559 valign=top style='width:419.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>To hide or show cutting tool</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=48 height=30
+  src="../PICT/IconVisible.gif"></p>
+  </td>
+      <td width=559 valign=top style='width:419.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>To hide or show corresponding 
+          object</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=30 height=30
+  src="../PICT/IconColor.gif"></p>
+  </td>
+      <td width=559 valign=top style='width:419.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>To define color corresponding 
+          object</p>
+  </td>
+ </tr>
+</table>
+
+  <h3>Right click mouse button on any word of the Object Pane makes active the contextual 
+    menu.</h3>
+
+<h2 style='page-break-before:always'><strong><span style='font-family:Arial'>View control</span></strong></h2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=223 valign=top style='width:167.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=140 height=90 src="../PICT/ContexMenuView.gif"></p>
+  </td>
+      <td width=415 valign=top style='width:311.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p>In order to operate with views 
+          (to have an opportunity to examine the picture), press right mouse button 
+          on a graphic window. Appeared toolbox consist of 24 buttons that will 
+          help you to operate with image size and to arrange image position on 
+          the screen.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=223 valign=top style='width:167.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=197 height=52
+  src="../PICT/ViewTB.gif"></p>
+  </td>
+      <td width=415 valign=top style='width:311.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>You can make the same actions using View tab 
+          in the Main menu. Also you can find some of the items in the View toolbar.</p>
+  </td>
+ </tr>
+</table>
+
+  <p>You can use a very comfortable way of dynamic control by pushing and holding 
+    Ctrl, Shift, and Alt buttons together with left mouse button (LMB). <strong>Ctrl+LMB</strong> 
+    initiates dynamic rotation; <strong>Shift+LMB</strong> is used for panning 
+    or to move the image; push <strong>Alt+LMB</strong> to change the scale or 
+    to change the image size.</p>
+  <p><strong>Additional</strong> view controls! <br>
+    Shortcut for Pan: Click and drag the Middle mouse button <br>
+    Dynamic Zoom Mouse with Middle Roller - Push / Pull <br>
+  </p>
+
+  <h2><strong>analyseing toolpath</strong></h2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=319 valign=top style='width:239.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=190 height=190 src="../PICT/ToolPath1.gif"></p>
+  </td>
+      <td width=319 colspan=2 valign=top style='width:239.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>While you 
+          move your mouse over the toolpath image CNC program lines and nodes 
+          will be highlighted. At the same time cursor shape is showing you the 
+          element type and the toolpath direction </p>
+        <p class=MsoNormal> <strong>Attention</strong>! Stock Window must be active.<br>
+        </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=top style='width:239.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=right style='text-align:right'><img border=0 width=50 height=50
+  src="../PICT/StockActive.gif"></p>
+  </td>
+      <td width=319 colspan=2 style='width:239.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>Stock window is active</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=top style='width:239.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=right style='text-align:right'><img border=0 width=50 height=50
+  src="../PICT/StockNonActive.gif"></p>
+  </td>
+      <td width=319 colspan=2 style='width:239.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>Stock window is inactive</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=319 valign=top style='width:239.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=202 height=360 src="../PICT/GeometryPane.gif"></p>
+  </td>
+      <td width=319 colspan=2 valign=top style='width:239.15pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>The geometrical characteristics 
+          of the highlighted element can be viewed on the <strong>Geometry pane</strong>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=463 colspan=2 valign=top style='width:347.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='text-align:center'><img border=0 width=413 height=80
+  src="../PICT/Coordinates.gif"></p>
+  </td>
+      <td width=175 valign=top style='width:131.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>The coordinates of the object 
+          pointed by the cursor, the block number and the program name are displayed 
+          at the bottom of the screen.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+      <td width=638 colspan=3 valign=top style='width:478.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>Three numbers 
+          on the right are the coordinates relativly to the CNC program &quot;0&quot; 
+          point. Next to these numbers on the left there are another three numbers 
+          showing us coordinates relatively to the cursor position (you can change 
+          this &quot;0&quot; point by simply clicking somewhere on the Graphic 
+          Window). Number in the brackets shows the distance.</p>
+  </td>
+ </tr>
+ <tr height=0>
+  <td width=319 style='border:none'></td>
+  <td width=144 style='border:none'></td>
+  <td width=175 style='border:none'></td>
+ </tr>
+</table>
+
+  <p class=MsoNormal>Left mouse button click on any toolpath part will lead to 
+    loading of the corresponding CNC program into the Text Window and to the pointing 
+    on the corresponding line.</p>
+  <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=367 valign=top style='width:275.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=232 height=438 src="../PICT/ParametersPane.gif"></p>
+  </td>
+      <td width=271 valign=top style='width:203.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p>Double click will cause program 
+          run until current line. This is how you can find out the time of program 
+          run until current line or any other parameters of the current CNC control 
+          condition which are available from <strong>Parameters pane</strong>. 
+        </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=367 valign=top style='width:275.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img src="../PICT/ParametersSetting.gif" width=385 height=295 border=0></p>
+  </td>
+      <td width=271 valign=top style='width:203.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>You can set the number of displayed 
+          parameters of the Parameters pane from main menu <font color="#FF00FF"><strong>Settings</strong></font> 
+          &gt; <strong><font color="#FF00FF">Parameters …</font></strong> &gt; 
+          <font color="#FF00FF"><strong>Control panel</strong></font> or from 
+          the contextual menu of the <strong>Parameters pane</strong>.</p>
+  </td>
+ </tr>
+</table>
+
+  <h2><strong>View CNC Program Text</strong></h2>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=355 valign=top style='width:266.5pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=188 height=81
+  src="../PICT/CNCPrograms.gif"></p>
+  </td>
+      <td width=283 valign=top style='width:212.05pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>Double click 
+          <font color="#FF00FF"> <strong>CNC-Programs</strong></font> on <font color="#FF00FF"><strong>Objects 
+          pane</strong></font> or click &quot;+&quot; on the left of CNC-Programs 
+          and you will see the list of all loaded programs.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=355 valign=top style='width:266.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=240 height=252
+  src="../PICT/TextContexMenu.gif"></p>
+  </td>
+      <td width=283 valign=top style='width:212.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>Load CNC Program text into 
+          the Text Window by double clicking the name of the program you need 
+          (<strong>demo.nc</strong>).</p>
+        <p class=MsoNormal> You can also choose the file name item (demo.nc) then 
+          push right mouse button and click <font color="#FF00FF"><strong>Text</strong></font>.</p>
+        <p class=MsoNormal> The name of the NC program which text is loaded in 
+          the textbox appears bold.<br>
+        </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=355 valign=top style='width:266.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=342 height=477
+  src="../PICT/EditorPane.gif"></p>
+  </td>
+      <td width=283 valign=top style='width:212.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>After that you can simply edit 
+          this text.</p>
+        <p class=MsoNormal> The text editing commands are in the context menu 
+          of the Editor pane. Most commands are duplicated in the Editor pane’s 
+          toolbar. </p>
+        <p class=MsoNormal> If the CNC Program text was modified and you want 
+          to save the changes - push right mouse button in the Editor pane and 
+          click Update. </p>
+  </td>
+ </tr>
+</table>
+
+  <p class=MsoNormal><b>“Update” command’s icon <img border=0 width=26
+height=26 src="NCMDemoHelp.files/image022.gif"></b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=67 valign=top style='width:50.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=31 height=31
+  src="../PICT/ApplayNot.gif"></p>
+  </td>
+      <td width=571 style='width:428.15pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>If CNC-Program text is 
+          unchanged then “Update” icon is disabled and looks like.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=67 valign=top style='width:50.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><img border=0 width=31 height=31
+  src="../PICT/Apply.gif"></b></p>
+  </td>
+      <td width=571 style='width:428.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>If CNC-Program text is changed 
+          then “Update” icon is enabled and looks like.</p>
+  </td>
+ </tr>
+</table>
+
+  <h2 style='page-break-before:always'><strong>Tools Loading</strong></h2>
+
+  <p class=MsoNormal>For CNC Program work simulation it is necessary to load tools.</p>
+  <p class=MsoNormal> Double click <font color="#FF00FF"><strong>Tools</strong></font> 
+    on <font color="#FF00FF"><strong>Objects pane</strong></font> or click &quot;+&quot; 
+    on the left of <strong>Tools</strong> and you will see the list of all loaded 
+    tools. </p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=403 valign=top style='width:302.55pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=387 height=200
+  src="../PICT/ToolHide.gif"></p>
+  </td>
+      <td width=235 valign=top style='width:176.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>Now you can 
+          show or hide any toolpath by clicking respective check box. Icon next 
+          to this check box will help you to set tool's color.</p>
+  </td>
+ </tr>
+</table>
+
+  <p class=MsoNormal>To set tool's type and size press right mouse button on the 
+    tool's name and choose Edit. Appeared dialog box will allow you to choose 
+    tool's type and set its size and position.</p>
+
+  <p class=MsoNormal><strong><i>Create a Stock</i></strong></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=417 valign=top style='width:313.05pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=369 height=286 src="../PICT/StockCreate.gif"></p>
+  </td>
+      <td width=221 valign=top style='width:165.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>To create 
+          or change a stock choose Create item in the Stock context menu and set 
+          stock's type and size.</p>
+  </td>
+ </tr>
+</table>
+
+  <h2><strong>Work Simulation</strong></h2>
+
+  <p>In order to check or to gain an understanding of a specific NC program (G-code), 
+    you can find two simulation modes in NCManager “Cut” and “Don’t cut”.</p>
+  <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=254 colspan=4 valign=top style='width:190.75pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=116 height=75 src="../PICT/Mode.gif"></p>
+  </td>
+      <td width=384 colspan=2 valign=top style='width:287.8pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal><strong><font color="#FF00FF">Cut</font></strong> 
+          - in this mode you have an opportunity to make a stock cut simulation.</p>
+        <p class=MsoNormal> <font color="#FF00FF"><strong>Don’t cut</strong></font> 
+          - toolpath view in the form of lines and arcs with no stock cut.<br>
+        </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=254 colspan=4 valign=top style='width:190.75pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=173 height=52 src="../PICT/ModeTB.gif"></p>
+  </td>
+      <td width=384 colspan=2 valign=top style='width:287.8pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>Both <strong>Cut</strong> and 
+          <strong>Don’t Cut</strong> modes my be in one of four motion modes. 
+          Motion mode can be changed by the main menu Work or by the toolbar icons.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=76 colspan=2 style='width:56.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='text-align:center'><img border=0 width=28 height=28
+  src="../PICT/SmoothF.gif"></p>
+  </td>
+      <td width=562 colspan=4 style='width:421.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal><font color="#FF00FF"><strong>Feedrate</strong></font> 
+          - When this motion mode is active the tool moves smoothly along the 
+          toolpath. The speed of the tool motion corresponds to the federate defined 
+          in the CNC program. Tool motion speed can be changed by the toolbar 
+          slider.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=76 colspan=2 style='width:56.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='text-align:center'><img border=0 width=28 height=28
+  src="../PICT/Smooth.gif"></p>
+  </td>
+      <td width=562 colspan=4 style='width:421.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal><strong><font color="#FF00FF">Smoothly</font></strong> 
+          – When this motion mode is active the tool moves smoothly along the 
+          toolpath. Tool motion speed can be changed by the toolbar slider.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=76 colspan=2 style='width:56.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='text-align:center'><img border=0 width=26 height=26
+  src="../PICT/Quick.gif"></p>
+  </td>
+      <td width=562 colspan=4 style='width:421.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal><strong><font color="#FF00FF">Quick</font></strong> 
+          - When this motion mode is active the tool position is shown by the 
+          given time interval. Tool motion speed can be changed by the toolbar 
+          slider.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=76 colspan=2 style='width:56.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='text-align:center'><img border=0 width=26 height=26
+  src="../PICT/IconResult.gif"></p>
+  </td>
+      <td width=562 colspan=4 style='width:421.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal><strong><font color="#FF00FF">Result</font></strong> 
+          - When this motion mode is active no tool motion is displayed.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=301 colspan=5 valign=top style='width:225.7pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=224 height=52 src="../PICT/NavigationTB.gif"></p>
+  </td>
+      <td width=337 valign=top style='width:252.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Tool motion control commands.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=59 style='width:44.55pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Here.gif"></p>
+  </td>
+      <td width=579 colspan=5 style='width:434.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Show the work result till the current place</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=59 style='width:44.55pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Init.gif"></p>
+  </td>
+      <td width=579 colspan=5 style='width:434.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Returns to the initial stock, current place 
+          remains the same.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=59 style='width:44.55pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Run.gif"></p>
+  </td>
+      <td width=579 colspan=5 style='width:434.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Show the machine tool moving process till the 
+          nearest breakpoint or program end.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=59 style='width:44.55pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Back.gif"></p>
+  </td>
+      <td width=579 colspan=5 style='width:434.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Move back to the previous breakpoint or program 
+          start</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=59 style='width:44.55pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Forw.gif"></p>
+  </td>
+      <td width=579 colspan=5 style='width:434.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Move forward to the nearest breakpoint or program 
+          end</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=59 style='width:44.55pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Pause.gif"></p>
+  </td>
+      <td width=579 colspan=5 style='width:434.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Pause</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=59 style='width:44.55pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Stop.gif"></p>
+  </td>
+      <td width=579 colspan=5 style='width:434.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Stops the simulation. Stop line becomes current.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=59 style='width:44.55pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Reset.gif"></p>
+  </td>
+      <td width=579 colspan=5 style='width:434.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Reset. Stops the simulation, returns the initial 
+          stock and goes to the beginning of the project.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=247 colspan=3 style='width:185.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=192 height=52 src="../PICT/TBstep.gif"></p>
+  </td>
+      <td width=391 colspan=3 style='width:293.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Tool motion control commands for given lines 
+          numbers and motion control speed slider.</p>
+  </td>
+ </tr>
+ <tr height=0>
+  <td width=59 style='border:none'></td>
+  <td width=16 style='border:none'></td>
+  <td width=171 style='border:none'></td>
+  <td width=7 style='border:none'></td>
+  <td width=47 style='border:none'></td>
+  <td width=337 style='border:none'></td>
+ </tr>
+</table>
+
+  <p>To view the stock cutting with the smooth tool motion it is necessary to:</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=62 height=34 src="../PICT/CutMode.gif"></p>
+  </td>
+      <td width=559 style='width:419.15pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt'> <p>Turn on Cut mode.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Smooth.gif"></p>
+  </td>
+      <td width=559 style='width:419.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Turn on Smoothly motion mode.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Reset.gif"></p>
+  </td>
+      <td width=559 style='width:419.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Press Reset icon to returns the initial stock 
+          and go to the beginning of the project.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=79 valign=top style='width:59.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=28 height=28 src="../PICT/Run.gif"></p>
+  </td>
+      <td width=559 style='width:419.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p>Press To breakpoint icon.</p>
+  </td>
+ </tr>
+</table>
+
+  <p style='page-break-after:avoid'>NCManager will now start simulation process 
+    of deleting stock material. To stop the simulation push Stop button. After 
+    the end of simulation you will see the following:</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=638 valign=top style='width:478.55pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p><img border=0 width=623 height=462 src="../PICT/Result.gif"></p>
+  </td>
+ </tr>
+</table>
+
+  <p class=MsoNormal>Examine the finally machined stock by changing the view and 
+    enlarging parts that you are interested in.</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=297 valign=top style='width:222.95pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=28 height=28
+  src="../PICT/Section.gif"></p>
+  </td>
+      <td width=341 colspan=2 valign=top style='width:255.6pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal><strong><font color="#FF00FF">Section</font></strong> 
+          command’s icon. You can build sections in Graphic Windows. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=297 valign=top style='width:222.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=26 height=26
+  src="../PICT/IconMeasure.gif"></p>
+  </td>
+      <td width=341 colspan=2 valign=top style='width:255.6pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal><strong><font color="#FF00FF">Measure</font></strong> 
+          command’s icon . You can taking measurement <strong>only in Stock window</strong>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=391 colspan=2 valign=top style='width:293.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><img border=0 width=465 height=364
+  src="../PICT/Measure.gif"></p>
+  </td>
+      <td width=247 valign=top style='width:185.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'> <p class=MsoNormal>Pay attention to the fact that 
+          when you are in Measure command and you are simply moving mouse cursor 
+          on the machined stock - you will see the surface type and its parameters 
+          in Measurement pane.</p>
+  </td>
+ </tr>
+ <tr height=0>
+  <td width=297 style='border:none'></td>
+  <td width=94 style='border:none'></td>
+  <td width=247 style='border:none'></td>
+ </tr>
+</table>
+
+  <p>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

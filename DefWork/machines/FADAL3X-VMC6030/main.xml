@@ -1,0 +1,104 @@
+<?xml version='1.0' ?>
+<MachineTool>
+	<axes>
+		<axis>
+			<param type="trans" name="X" parent="Y"/>
+			<vector x="-1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="1." g="1." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Table_X" parent="X"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Table_X" />
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Table_Y" parent="Y"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Table_Y" />
+			<color r="1." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Table_Y_Add" parent="Y"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Table_Y_Add" />
+			<color r="1." g="1." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="base" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "base" />
+			<color r="0." g="1." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Base_Add" parent=""/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Base_Add" />
+			<color r="1." g="1." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Y" parent=""/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="Z" parent=""/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="0." b="1." a="1."/>
+		</axis>
+		<axis>
+			<param type="part" name="Spindle_Z" parent="Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+			<part name = "Spindle_Z" />
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_X" parent="Table_X"/>
+			<vector x="-1." y="0." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Y" parent="stock_X"/>
+			<vector x="0." y="-1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="stock_Z" parent="stock_Y"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="stock" parent="stock_Z"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="part" name="tool" parent="tool_length"/>
+			<vector x="1." y="0." z="0."/>
+			<vectorY x="0." y="1." z="0."/>
+			<basepoint x="0." y="0." z="0."/>
+		</axis>
+		<axis>
+			<param type="trans" name="tool_length" parent="Z"/>
+			<vector x="0." y="0." z="1."/>
+			<basepoint x="0." y="0." z="0."/>
+			<color r="0." g="1." b="0." a="1."/>
+		</axis>
+	</axes>
+</MachineTool>

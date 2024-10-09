@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Creating milling tool</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1><A NAME="HIDD_TOOLSCON_CREATE" id="HIDD_TOOLSCON_CREATE"></A>Creating milling tool</h1>
+<p>To create a milling tool you have to set its type, form and dimensions. There are two types of tools: milling and turning. milling tool can be created only in milling project or turning-milling project.</p>
+<p>Let's set up some definitions.</p>
+<p>There are three types of elements which define the tool. Standard tool, disk-shaped tool and holder. Any particular tool could be defined by any set of threes elements. 
+  All the items in a set are sorted by shift amount and are placed in a tool tree. On the picture you can see the tool number 1 named &quot;Tool&quot;, which consists of three elements (10 mm drill bit, 20 mm end-milling cutter and a holder). </p>
+<p><img src="../images/toolAssTree.gif" width="390" height="207"></p>
+<p>The simplest tool consists of one element. On the picture you can see the tool number 2 named &quot;D90H100&quot;, 90mm diameter and 100 mm height.</p>
+<p><img src="../images/toolAssTree1.gif" width="439" height="203"></p>
+<p><strong>Example</strong>. To create a drill bit you should create one element by pressing on  <a href="HIDC_ADD_TOOL.htm">&quot;Add standard tool&quot;</a> button. If you need a drill bit to have a holder, add a holder element to this tool. As a result you should have a tool defined by two elements, let's call it  
+  <strong>complex</strong>.</p>
+<p> Let's look through milling tool creation process. When you call <strong>Create…</strong>, 
+  a dialog box appears:</p>
+<p><img src="../images/ToolCreate.gif"></p>
+<h6>Tool parameters</h6>
+<h6>Name</h6>
+<p>The name of a tool is created automatically and is displayed in a tool tree after its number. You can set tool name manually.</p>
+<h6>Cutter ID </h6>
+<p>Cutter ID is a number of tool to load it from Cnc-program.</p>
+<h6>Axis</h6>
+<p>Tool axis number. This parameter allows you to set the tool at any angle to the spindle axis. Axis orientation and number are set in a machining station description file.</p>
+<h6>Turret</h6>
+<p>Turret is a tool bank number.</p>
+<h6>Marker</h6>
+<p>Marker parameter defines the size of a tool marker.Tool marker displays the tool position when  tool is hidden or its shape is not defined. Default marker size is set in <strong>Settings&gt;Parameters&gt;Graphics&gt;Tool Marker</strong>.</p>
+<h6>Z Shift</h6>
+<p>Z Shift is a tool shift along the spindle axis.</p>
+<h6><a href="HIDC_ADD_TOOL.htm">Add standard tool</a></h6>
+<p>Add drill bits or end-milling cutters and define their parameters. </p>
+<h6><a href="HIDC_ADD_DISKTOOL.htm">Add disk-shaped tool</a></h6>
+<p>Add special-type tools and set their parameters. Follow the instructions. </p>
+<h6><a href="HIDC_ADD_MENDREL.htm">Add holder to tool</a></h6>
+<p>Define the holder for the tool.</p>
+<h6>Tool elements  </h6>
+<p>Any tool can be defined by any set of end tools, disk-shaped tools and any number of holders, i.e. be complex. This list displays names of tools which form complex tool, sorted by Z shift amount in descending order.</p>
+<h1>Complex tool examples</h1>
+<p><strong>End-milling cutter with holder</strong>: </p>
+<p><img src="../images/ToolAssamble.gif" width="797" height="500"></p>
+<p>When you set up the next element, <strong>Z shift</strong> amount automatically increases by previous element length. I.e. each following element is joined to the end of previous element end. You may set Z shift amount manually.</p>
+<p><strong>Centering with holder:</strong></p>
+<p><img src="../images/ToolAssCentr.gif" width="566" height="504"></p>
+<p><strong>Disk-shaped tool with holder:</strong></p>
+<p><img src="file:///C|/VCprojects/NCM31_HLP/images/ToolAssBall.gif" width="698" height="548"></p>
+<p><strong>Milling cutter for edging with holder:</strong></p>
+<p><img src="../images/ToolAssChamf.gif" width="675" height="502"></p>
+<p>When at lest one simple tool is set, following command become active: </p>
+<h6>Edit...</h6>
+<p>Edit tool parameters.</p>
+<h6>Delete</h6>
+<p>Delete the tool from set.</p>
+<p>&nbsp;</p>
+</BODY>
+</HTML>

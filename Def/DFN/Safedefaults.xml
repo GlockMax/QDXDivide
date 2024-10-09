@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Defaults>
+    <Demo>
+        <StartDialog Enable="No" />
+        <DemoProject Name="KorpDemo.ncm" />
+    </Demo>
+    <Editor>
+        <Colors Use="Yes" />
+        <CaretSlop Size="3" />
+        <Errors Reaction="2" Caption="Yes" />
+        <AutoUpdate Timeout="1900" Enable="No" />
+    </Editor>
+    <Fixture>
+        <LoadFromProjectFolder Enable="Yes" />
+    </Fixture>
+    <Program>
+        <LoadFromProjectFolder Enable="Yes" />
+        <Weld>
+            <Sections Step="15" Visible="No" Thick="4" />
+            <ToolPath Visible1="Yes" Thick1="2" Visible2="Yes" Thick2="2" Visible3="Yes" Thick3="2" Visible4="Yes" Thick4="2">
+                <Color1 R="0." G="0." B="1." />
+                <Color2 R="0." G="1." B="1." />
+                <Color3 R="1." G="0." B="0." />
+                <Color4 R="1." G="1." B="0." />
+            </ToolPath>
+        </Weld>
+    </Program>
+    <Stock>
+        <AutoSaveStockFile Enable="No" />
+        <LoadFromProjectFolder Enable="Yes" />
+        <Mill>
+            <DXSize DXMax="500" DXMin="1" />
+        </Mill>
+        <MillTurn>
+            <TurnStockGen Mode="ConnectedOnly" />
+        </MillTurn>
+    </Stock>
+    <Part>
+        <LoadFromProjectFolder Enable="Yes" />
+        <Sections>
+            <Radial StartAngle="0.0" EndAngle="360.0" Number="0" PartColor="No" Thick="1">
+                <Basepoint X="0.0" Y="0.0" Z="0.0" />
+                <Axisdirection X="0.0" Y="0.0" Z="1.0" />
+                <Startdirection X="1.0" Y="0.0" Z="0.0" />
+                <Color R="0.5" G="0.5" B="0.5" />
+            </Radial>
+            <Linear Start="-400.0" End="400.0" Number="0" PartColor="Yes" Thick="3">
+                <Basepoint X="0.0" Y="0.0" Z="0.0" />
+                <Axisdirection X="1.0" Y="0.0" Z="0.0" />
+                <Color R="0.5" G="0.5" B="0.5" />
+            </Linear>
+        </Sections>
+    </Part>
+    <Tools>
+        <Mill>
+            <Bore A="0">
+                <mm D="35" H="36" H2="1" L="35" W="4.6" R="0.5" />
+                <inch D="1.378" H="1.4173" H2="0.0394" L="1.378" W="0.1811" R="0.0197" />
+            </Bore>
+        </Mill>
+        <Turn>
+            <Blade>
+                <Slot A="0" C="5" Edge="1">
+                    <mm R1="0.2" R2="0.2" T="2" L="20" H="1.36" />
+                    <inch R1="0.005" R2="0.005" T="0.1" L="0.5" H="0.05" />
+                </Slot>
+                <Round C="7">
+                    <mm R="4" H="3.18" />
+                    <inch R="0.25" H="0.125" />
+                </Round>
+                <ISO InsertForm="R" C="5">
+                    <mm L1="12.0" L2="20.0" R="0.4" H="3.18" />
+                    <inch L1="0.65" L2="0.75" R="0.0156" H="0.125" />
+                </ISO>
+                <General A="5." B="80." C="5.">
+                    <mm L1="12.0" L2="8.0" R="0.5" H="4.76" />
+                    <inch L1="0.61" L2="0.433" R="0.0156" H="0.125" />
+                </General>
+            </Blade>
+        </Turn>
+    </Tools>
+    <Sliders>
+        <Smooth Min="0.01" Max="5000." Mid="50." Def="20." />
+        <SmoothF Min="0.1" Max="50." Def="1." />
+    </Sliders>
+    <Speed>
+        <Smooth>
+            <Turn>
+                <Scale Gen="0.5" Long="10." Short="5." Length="20." />
+                <Timer STEP="20." />
+            </Turn>
+            <Mill>
+                <Scale Gen="1." Long="2." Short="1." Length="90." />
+                <Timer STEP="20." />
+            </Mill>
+        </Smooth>
+    </Speed>
+    <Render>
+        <Shaders Enable="No" />
+        <Multisample Enable="No" />
+        <LineSmooth Enable="No" />
+        <GLPointCoord Enable="No" />
+        <GLRotCenter Enable="No" />
+        <Diag Enable="No" />
+        <Edges Enable="Yes" Thick="1.0">
+            <Color R="0.0" G="0.0" B="0.0" />
+        </Edges>
+    </Render>
+    <View>
+        <RotCenter Fixed="No" />
+        <Select>
+            <Color R="1." G="0.6" B="1." />
+            <Edges Thick="3.0">
+                <Color R="0.8" G="0." B="0.8" />
+            </Edges>
+            <Box Thick="2.0">
+                <Color R="1." G="1." B="1." A="1." />
+            </Box>
+        </Select>
+        <Collision>
+            <Color R="0.9" G="0." B="0." />
+        </Collision>
+    </View>
+    <Commands>
+        <UpdateProgramWithReset Enable="No" />
+        <LoadLayoutFromTheProject Enable="No" />
+    </Commands>
+    <Dimensions>
+        <Dimension>
+            <Sizes Text="10" Thickness="2" Digits="2" />
+            <ColorLines R="0" G="1" B="0" A="1" />
+            <ColorBack R="1" G="0" B="0" A="1" />
+            <ColorText R="0" G="0" B="1" A="1" />
+        </Dimension>
+        <Point>
+            <Sizes Diam="3" />
+            <Color R="1" G="1" B="0" A="1" />
+        </Point>
+        <Line>
+            <Sizes Thickness="3" Length="50" />
+            <Color R="1" G="1" B="0" A="1" />
+        </Line>
+        <Arc>
+            <Sizes Thickness="3" Angle="50" />
+            <Color R="0" G="1" B="0" a="1" A="1" />
+        </Arc>
+        <Plane>
+            <Sizes Thickness="2" Length="80" />
+            <Color R="1" G="1" B="0" A="1" />
+        </Plane>
+        <Snaps>
+            <Sizes Thickness="2" Height="10" Attraction="10" />
+            <Color R="1" G="0" B="0" A="1" />
+        </Snaps>
+        <TempStock>
+            <StockDim X="8" Y="8" Z="8" />
+            <Color R="1" G="0" B="1" A="1" />
+        </TempStock>
+    </Dimensions>
+    <MiskParams>
+        <Doubles>
+            <mm SnapMarker="10" MinRadArc="0.05" ProgNodesSize="5" TolLineApp="0.01" DevArcSpan="0.0002" Axes3Size="4" WeldBeamR="0.1" Axes2Size="4" ModToleranceWeld="0.1" ModToleranceTurn="0.005" ModTolerance="0.1" ConverterAcc="0.2" ProgToolAxesLength="30" ToolMarker="10" SelectionRegion="5" Axes1Size="4" CircleTolerance="1" ConverterAng="30" ModToleranceMillTurn="0.1" ProgToolAxesThickness="1" ContTolerance="0.001" />
+            <inch SnapMarker="10" MinRadArc="0.001180" ProgNodesSize="5" TolLineApp="0.000390" DevArcSpan="0.000008" Axes3Size="4" WeldBeamR="0.003900" Axes2Size="4" ModToleranceWeld="0.1" ModToleranceTurn="0.000200" ModTolerance="0.004" ConverterAcc="0.2" ProgToolAxesLength="1" ToolMarker="10" SelectionRegion="5" Axes1Size="4" CircleTolerance="0.1" ConverterAng="30" ModToleranceMillTurn="0.004" ProgToolAxesThickness="1" ContTolerance="0.00004" />
+        </Doubles>
+        <Ints ToolMash="8" CutHelix="0" ViewChangeTime="100" GradientBack="1" />
+    </MiskParams>
+    <MiskColors R="0" G="0" B="1" A="1">
+        <Color2130 R="1" G="0" B="0" A="1" />
+        <Color2123 R="0.980392" G="0" B="0" A="1" />
+        <Color2116 R="0" G="1" B="0" A="1" />
+        <Color2110 R="1" G="0" B="0" A="1" />
+        <Color2152 R="0.901961" G="0.901961" B="0.901961" A="1" />
+        <Color2122 R="0" G="0" B="0" A="1" />
+        <Color2111 R="0" G="1" B="0" A="1" />
+        <Color2095 R="1" G="1" B="1" A="1" />
+        <Color2092 R="1" G="1" B="1" A="1" />
+        <Color2090 R="1" G="1" B="1" A="1" />
+        <Color2137 R="0" G="0" B="1" A="0" />
+        <Color2131 R="1" G="0" B="0" A="1" />
+        <Color2126 R="0.588235" G="0.588235" B="0.980392" A="1" />
+        <Color2106 R="1" G="0" B="0" A="1" />
+        <Color2153 R="1" G="0.501961" B="1" A="1" />
+        <Color2342 R="0" G="0" B="0" A="1" />
+        <Color2140 R="0" G="0" B="1" A="1" />
+        <Color2108 R="0" G="0" B="1" A="1" />
+        <Color2096 R="0.752941" G="0.752941" B="0.752941" A="1" />
+        <Color2127 R="0" G="0" B="0" A="1" />
+        <Color2100 R="0" G="0" B="0.501961" A="1" />
+        <Color2136 R="0" G="0" B="1" A="1" />
+        <Color2128 R="0.392157" G="0" B="0" A="1" />
+        <Color2109 R="0" G="0" B="0.5" A="1" />
+        <Color2101 R="0" G="0.501961" B="1" A="1" />
+        <Color2114 R="0" G="1" B="0" A="1" />
+        <Color2113 R="1" G="0" B="0" A="1" />
+        <Color2107 R="0" G="1" B="0" A="1" />
+        <Color2343 R="0" G="0" B="1" A="1" />
+        <Color2173 R="1" G="1" B="1" A="1" />
+        <Color2172 R="0" G="0" B="0" A="1" />
+        <Color2125 R="0" G="0.588235" B="0.980392" A="1" />
+        <Color2119 R="1" G="0" B="0" A="1" />
+        <Color2097 R="1" G="1" B="1" A="1" />
+        <Color2091 R="0" G="0" B="0" A="1" />
+        <Color668 R="0" G="0" B="0.168627" A="1" />
+        <Color2149 R="1" G="0" B="0.501961" A="1" />
+        <Color2135 R="0" G="0" B="1" A="1" />
+        <Color2103 R="1" G="0.501961" B="0.25098" A="1" />
+        <Color2344 R="0" G="1" B="0" A="1" />
+        <Color2171 R="1" G="1" B="1" A="1" />
+        <Color2088 R="1" G="1" B="1" A="1" />
+        <Color2147 R="0" G="1" B="0.25098" A="1" />
+        <Color2141 R="0" G="0" B="1" A="1" />
+        <Color2132 R="0" G="1" B="0" A="1" />
+        <Color2117 R="0" G="1" B="0" A="1" />
+        <Color2105 R="0" G="1" B="1" A="1" />
+        <Color2099 R="0.5" G="0.1" B="0.5" A="1" />
+        <Color2094 R="1" G="1" B="1" A="1" />
+        <Color2144 R="0" G="0" B="1" A="1" />
+        <Color2142 R="0" G="0" B="1" A="1" />
+        <Color2138 R="0" G="0" B="1" A="1" />
+        <Color2124 R="0" G="0" B="0.980392" A="1" />
+        <Color2112 R="0" G="0" B="1" A="1" />
+        <Color2102 R="1" G="1" B="0.501961" A="1" />
+        <Color2121 R="0" G="0" B="1" A="1" />
+        <Color2120 R="0" G="1" B="0" A="1" />
+        <Color2170 R="0" G="0" B="0" A="1" />
+        <Color2133 R="0" G="0" B="1" A="1" />
+        <Color2148 R="0.752941" G="0.752941" B="0.752941" A="1" />
+        <Color2104 R="1" G="0.701961" B="0.4" A="1" />
+        <Color2098 R="0.752941" G="0.752941" B="0.752941" A="1" />
+        <Color2093 R="0" G="0" B="1" A="1" />
+        <Color2089 R="0" G="0" B="0" A="1" />
+        <Color2134 R="0" G="0" B="1" A="1" />
+        <Color2129 R="0.752941" G="0.752941" B="0.752941" A="1" />
+        <Color2118 R="0" G="0" B="1" A="1" />
+        <Color2115 R="0" G="0" B="1" A="1" />
+        <Color2146 R="0" G="0" B="0.5" A="1" />
+        <Color2351 R="0" G="0.501961" B="1" A="1" />
+        <Color2143 R="0" G="0" B="1" A="1" />
+    </MiskColors>
+    <PaneText>
+        <Font Size="9" FaceName="Arial" Height="-12" Width="0" Escapement="0" Orientation="0" Weight="400" Italic="0" Underline="0" StrikeOut="0" CharSet="204" OutPrecision="0" Quality="5" PitchAndFamily="0" />
+    </PaneText>
+    <PaneParameters>
+        <Font Size="9" FaceName="Arial" Height="-12" Width="0" Escapement="0" Orientation="0" Weight="400" Italic="0" Underline="0" StrikeOut="0" CharSet="204" OutPrecision="0" Quality="5" PitchAndFamily="0" />
+    </PaneParameters>
+    <PaneProperties>
+        <Font Size="9" FaceName="Arial" Height="-12" Width="0" Escapement="0" Orientation="0" Weight="400" Italic="0" Underline="0" StrikeOut="0" CharSet="204" OutPrecision="0" Quality="5" PitchAndFamily="0" />
+    </PaneProperties>
+    <PaneObjects>
+        <Font Size="9" FaceName="Arial" Height="-12" Width="0" Escapement="0" Orientation="0" Weight="400" Italic="0" Underline="0" StrikeOut="0" CharSet="204" OutPrecision="0" Quality="5" PitchAndFamily="0" />
+    </PaneObjects>
+    <PaneErrors>
+        <Font Size="9" FaceName="Arial" Height="-12" Width="0" Escapement="0" Orientation="0" Weight="400" Italic="0" Underline="0" StrikeOut="0" CharSet="204" OutPrecision="0" Quality="5" PitchAndFamily="0" />
+    </PaneErrors>
+</Defaults>

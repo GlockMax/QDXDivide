@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+	<HEAD>
+		<TITLE>Measures</TITLE>
+		<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+		<link rel="StyleSheet" href="../tutorial.css">
+	</HEAD>
+	<BODY BGCOLOR="#ffffff" TEXT="#000000">
+		<h1>Measure</h1>
+		<FONT face="Arial" color="black" size="3">
+			<SPAN style="FONT-SIZE: 12pt">
+<P>In the Main Menu: <STRONG>Inspect &gt;&nbsp;Measures</STRONG></P>
+<P>Quick activating:&nbsp;<IMG height="26" src="HID_MEASURE.files/image001.gif" width="26" v:shapes="_x0000_i1025">&nbsp;icon.</P>
+<P>Measuring the machined stock. This command is enable when one of the following modes is turned 
+					on - <IMG height="26" src="HID_MEASURE.files/image002.gif" width="26" v:shapes="_x0000_i1027">
+					(<A href="HID_RESULT_MODE.htm">Result</A>), <IMG height="26" src="HID_MEASURE.files/image003.gif" width="26" v:shapes="_x0000_i1028">
+					<A href="HID_SMOTHNESS_MODE.htm">(Smoothly</A>), <IMG height="26" src="HID_MEASURE.files/image004.gif" width="26" v:shapes="_x0000_i1026">
+					(<A href="HID_QUICKLY_MODE.htm">Quickly</A>), in the active Stock window only. If 
+the necessary mode is not chosen, you will see the Alert 
+message:</P></SPAN></FONT>
+		
+<p> <img width="446" height="120" src="HID_MEASURE.files/image005.gif" v:shapes="_x0000_i1029"> 
+</p>
+		<P>When you push <IMG height="26" src="HID_MEASURE.files/image001.gif" width="26" v:shapes="_x0000_i1030">&nbsp;icon, 
+			you will see the Measure dialog box:</P>
+		
+<p> <img width="197" height="250" src="HID_MEASURE.files/image006.gif" v:shapes="_x0000_i1031"> 
+</p>
+		<P>Also the Measure tab in the Control panel will turn on automatically. In this 
+			tab you can find the information of type and parameters of a <STRONG><FONT color="#000099">
+					real</FONT></STRONG> surface that you are pointing on in the Stock 
+			window. Just move mouse cursor over the machined&nbsp;stock and&nbsp;look on 
+			the information in the Control panel. There are such surface types as cylinder, 
+			plane, torus etc. For more details, see <STRONG>Control Panel</STRONG>&nbsp;&gt;
+			<STRONG>Measure tab</STRONG>.</P>
+		
+<p> <img width="188" height="371" src="HID_MEASURE.files/image007.gif" v:shapes="_x0000_i1032"> 
+</p>
+		<P>To measure the distance between any two stock walls that have metal inside them, 
+			the following mode should be turned on:</P>
+		<P><IMG height="30" src="HID_MEASURE.files/image008.gif" width="28" v:shapes="_x0000_i1033"></P>
+		<P>Then when pushing left mouse button program will measure the distance on the 
+			stock body direction. The yellow line will show you what was measured. Green 
+			ball is the start point, red - end.</P>
+		
+<p> <img width="532" height="455" src="HID_MEASURE.files/image009.gif" v:shapes="_x0000_i1034"> 
+</p>
+		<P>In the Coordinates&nbsp;textboxes of a dialog box you will see the start point 
+			coordinates.</P>
+		<P>In the Direction&nbsp;textboxes of a dialog box you will see the direction 
+			vector. As indicated on the picture above&nbsp;this is the direction along the 
+			Y-axis. The direction is counted automatically by a normal to the surface in 
+			the chosen point, if the <STRONG>Constant Direction</STRONG> is not checked.</P>
+		<P>In the Result textboxes you will see the end point coordinates and the distance. 
+			In the example above it is L13.85.</P>
+		<P>You can set the start point coordinates and the direction&nbsp;on the screen by 
+			setting the values in the corresponding textboxes. In the example below it is 
+			the point with the 40,40,-5 coordinates and with direction along the X-axis. 
+			After you push <IMG height="30" src="HID_MEASURE.files/image010.gif" width="28" v:shapes="_x0000_i1035">
+			(<STRONG>Execute</STRONG>), you will see the end point coordinates and 
+			direction.&nbsp;</P>
+		
+<p> <img width="529" height="447" src="HID_MEASURE.files/image011.gif" v:shapes="_x0000_i1036"></p>
+		<P>As in our example the point is "in the air" then in the Result textboxes you 
+			will see&nbsp;the distance between start point to the both sides of the given 
+			direction and the total distance. Also you will se the both end points 
+			coordinates.</P>
+		<P>You&nbsp; can also set the constant direction checking the <STRONG>Constant 
+				Direction</STRONG> check box in the Measure dialog box. Then if you choose 
+			on of the points, program will measure the distance and the&nbsp;end 
+			point&nbsp; coordinates using the&nbsp;constant direction.&nbsp;</P>
+		
+<h1> <img width="563" height="423" src="HID_MEASURE.files/image012.gif" v:shapes="_x0000_i1037"> 
+</h1>
+		<p>In this example direction is 1,1,0, i.e. 45 degrees.</p>
+		<P>To measure the distance between the stock edges with the "air" between them 
+			(grooves, apertures) you have to choose the mode shown below:
+		</P>
+		<p>
+			<img width="28" height="30" src="HID_MEASURE.files/image013.gif" v:shapes="_x0000_i1038">
+		</p>
+		<P>Then the&nbsp; "to the air" direction distance will be measured. You will see 
+			the&nbsp; yellow line that shows you what was measured. Green ball - start 
+			point, red ball - end point.</P>
+		
+        <p> <img width="545" height="443" src="HID_MEASURE.files/image014.gif" v:shapes="_x0000_i1039"> 
+</p>
+		<P>In each measure the <STRONG><FONT color="#000099">real</FONT></STRONG>&nbsp;machined 
+			stock dimensions are measured that are independent of the stock 
+			model&nbsp;approximation accuracy during the simulation process.
+			<o:p></o:p></P>
+	</BODY>
+</HTML>

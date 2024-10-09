@@ -1,0 +1,725 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<title>Свойства объектов</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Заголовок 1 Знак";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h2
+	{mso-style-link:"Заголовок 2 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h3
+	{mso-style-link:"Заголовок 3 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h4
+	{mso-style-link:"Заголовок 4 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-style:italic;}
+h5
+	{mso-style-link:"Заголовок 5 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Заголовок 6 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Заголовок 7 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Заголовок 8 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Заголовок 9 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Название Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Название Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Название Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Название Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Подзаголовок Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Текст выноски Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-link:"Без интервала Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"Цитата 2 Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"Выделенная цитата Знак";
+	margin-top:10.0pt;
+	margin-right:46.8pt;
+	margin-bottom:14.0pt;
+	margin-left:46.8pt;
+	line-height:115%;
+	border:none;
+	padding:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleEmphasis
+	{color:gray;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	text-decoration:underline;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	letter-spacing:.25pt;
+	font-weight:bold;
+	text-decoration:underline;}
+span.MsoBookTitle
+	{font-variant:small-caps;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.1
+	{mso-style-name:"Заголовок 1 Знак";
+	mso-style-link:"Заголовок 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.2
+	{mso-style-name:"Заголовок 2 Знак";
+	mso-style-link:"Заголовок 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.3
+	{mso-style-name:"Заголовок 3 Знак";
+	mso-style-link:"Заголовок 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.4
+	{mso-style-name:"Заголовок 4 Знак";
+	mso-style-link:"Заголовок 4";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.5
+	{mso-style-name:"Заголовок 5 Знак";
+	mso-style-link:"Заголовок 5";
+	font-family:"Cambria","serif";
+	color:#243F60;}
+span.6
+	{mso-style-name:"Заголовок 6 Знак";
+	mso-style-link:"Заголовок 6";
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-style:italic;}
+span.7
+	{mso-style-name:"Заголовок 7 Знак";
+	mso-style-link:"Заголовок 7";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.8
+	{mso-style-name:"Заголовок 8 Знак";
+	mso-style-link:"Заголовок 8";
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+span.9
+	{mso-style-name:"Заголовок 9 Знак";
+	mso-style-link:"Заголовок 9";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.a
+	{mso-style-name:"Название Знак";
+	mso-style-link:Название;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.a0
+	{mso-style-name:"Подзаголовок Знак";
+	mso-style-link:Подзаголовок;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+span.a1
+	{mso-style-name:"Без интервала Знак";
+	mso-style-link:"Без интервала";}
+span.20
+	{mso-style-name:"Цитата 2 Знак";
+	mso-style-link:"Цитата 2";
+	color:black;
+	font-style:italic;}
+span.a2
+	{mso-style-name:"Выделенная цитата Знак";
+	mso-style-link:"Выделенная цитата";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.a3
+	{mso-style-name:"Текст выноски Знак";
+	mso-style-link:"Текст выноски";
+	font-family:"Tahoma","sans-serif";}
+.MsoChpDefault
+	{font-family:"Calibri","sans-serif";}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=WordSection1>
+
+<h1>Свойства объектов в <span lang=EN-US>NCManager</span></h1>
+
+<p class=MsoNormal>Рассмотрим некоторые свойства объектов в панели «Объекты».</p>
+
+<p class=MsoNormal>Откройте проект из папки, ..\<span lang=EN-US>Demo</span>\<span
+lang=EN-US>Millimeter</span>\ <span lang=EN-US>Mill</span>_2<span lang=EN-US>X</span>\
+<span lang=EN-US>Demo</span>.<span lang=EN-US>ncm</span>, укажите курсором на
+скрытую панель «Свойства», прикрепите ее и отбуксируйте внутрь панели
+«Объекты». Укажите на заголовок панели «Редактор» и отбуксируйте ее вправо.</p>
+
+<h2>Объект «Стойка ЧПУ»</h2>
+
+<p class=MsoNormal>Кликните мышкой на слове «Стойка ЧПУ» в панели «Объекты».
+Внешний вид <span lang=EN-US>NCManager</span><span lang=EN-US> </span>должен
+стать таким:</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=623
+height=350 id="Рисунок 3" src="3_ObjetsPropert.files/image001.png"></p>
+
+<p class=MsoNormal>Измените свойство «Стойка ЧПУ», «Инструмент в начале». «<span
+lang=EN-US>X</span> в начале» = «-100». «<span lang=EN-US>Z</span> в начале» =
+250. Эти свойства влияют на положение инструмента перед запуском симуляции.</p>
+
+<p class=MsoNormal><img width=624 height=292 id="Рисунок 4"
+src="3_ObjetsPropert.files/image002.png"></p>
+
+<p class=MsoNormal>Раскройте список инструментов, чтобы видеть номера
+используемых в проекте инструментов.</p>
+
+<p class=MsoNormal> Установите стандартный вид на плоскость «<span lang=EN-US>XZ</span>»,
+для этого переместите курсор в графическое окно и нажмите правую кнопку мыши.
+Из меню выберите команду управления видом. </p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=261
+height=153 id="Рисунок 5" src="3_ObjetsPropert.files/image003.jpg"></p>
+
+<p class=MsoNormal>Видим первый инструмент сбоку. Кликните мышкой на слово
+«Стойка ЧПУ» и измените свойство «Инструмент в начале», «Инструмент», на 2.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=395
+height=152 id="Рисунок 8" src="3_ObjetsPropert.files/image004.png"></p>
+
+<p class=MsoNormal>Измените свойство «Инструмент», на 3.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=395
+height=153 id="Рисунок 9" src="3_ObjetsPropert.files/image005.png"></p>
+
+<p class=MsoNormal>Инструмент, номер которого указан в этом свойстве, будет активен,
+пока в УП не встретится код загрузки другого инструмента.</p>
+
+<p class=MsoNormal>Кроме того, меняя это свойство можно смотреть внешний вид
+инструментов в проекте.</p>
+
+<h2>Объект «Станок» и модели станка</h2>
+
+<p class=MsoNormal>Включите окно «Станок», через главное меню «Окно», «Станок».
+В окне станок отображаются модели станка, движение инструмента при симуляции
+соответствует описанной кинематики станка. Отличить окно станок от окна
+«Заготовка» можно по значку в левом нижнем углу экрана.  </p>
+
+<p class=MsoNormal>В окне «Станок» это значок СК.</p>
+
+<p class=MsoNormal><img width=76 height=54 id="Рисунок 10"
+src="3_ObjetsPropert.files/image006.png"></p>
+
+<p class=MsoNormal style='page-break-after:avoid'>В окне «Заготовка», это
+значок СК + параллелепипед.</p>
+
+<p class=MsoNormal><img width=76 height=76 id="Рисунок 11"
+src="3_ObjetsPropert.files/image007.png"></p>
+
+<p class=MsoNormal>Кликните два раза мышкой на слове «Станок». Список моделей
+станка раскроется. У этого станка всего две модели.</p>
+
+<p class=MsoNormal><img width=625 height=304 id="Рисунок 12"
+src="3_ObjetsPropert.files/image008.png"></p>
+
+<p class=MsoNormal>Измените свойство станка «Видимость». Из списка значений
+выберите «Нет». Все модели станка будут скрыты с экрана.</p>
+
+<p class=MsoNormal><img width=626 height=240 id="Рисунок 13"
+src="3_ObjetsPropert.files/image009.png"></p>
+
+<p class=MsoNormal>Переключать свойства станка «Видимость», также можно кликая
+по иконке лампочки слева от слова «Станок» в панели «Объекты». </p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=106
+height=44 id="Рисунок 15" src="3_ObjetsPropert.files/image010.png"></p>
+
+<p class=MsoNormal>Чтобы управлять видимостью отдельных моделей станка, нужно
+установить свойства «Станок», «Видимость» в значение «Смесь» и управлять
+свойством «Видимость» каждой модели станка из списка. Кликая по иконке лампочки
+слева от имени конкретной модели в списке, также можно переключать видимость
+только этой модели.</p>
+
+<p class=MsoNormal><img width=624 height=211 id="Рисунок 17"
+src="3_ObjetsPropert.files/image011.png"></p>
+
+<p class=MsoNormal>Таким образом, можно оставить видимыми часть моделей станка
+и, меняя видимость станка в целом, скрывать или делать видимыми только эту
+часть моделей. В нашем примере стол, модель «<span lang=EN-US>Table</span>»,
+скрыт. Укажите мышкой на слово «Станок» и меняйте видимость. Скрывается и
+показывается только шпиндель.</p>
+
+<h2>Объект «Программы» и отдельная «Программа»</h2>
+
+<p class=MsoNormal>Откройте другой проект из папки, ..\<span lang=EN-US>Demo</span>\<span
+lang=EN-US>Millimeter</span>\<span lang=EN-US>Mill</span>_2<span lang=EN-US>X</span>\DemoFanuc6sides.ncm</p>
+
+<p class=MsoNormal>Двойным кликом на слове «Программы», раскройте список
+программ загруженных в проект. В данном примере загружено 6-ть УП. </p>
+
+<p class=MsoNormal>Нажмите правую кнопку мыши на слове «Программа», появится
+контекстное меню. Выполните команду «Показать все». Эта команда включает
+видимость всех УП загруженных в проект.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=353
+height=229 id="Рисунок 6" src="3_ObjetsPropert.files/image012.jpg"></p>
+
+<p class=MsoNormal>Выполните команду «Скрыть все», вызвав контекстное меню
+правой кнопкой мыши. Все траектории погасли.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>Укажите на имя первой УП в
+списке загруженных и измените ее свойство, «Видимость» на «Да». На экране
+появилась траектория только этой УП. Иконка лампочки слева от имени УП, стала
+желтой – включилась. </p>
+
+<p class=MsoNormal><img width=625 height=179 id="Рисунок 7"
+src="3_ObjetsPropert.files/image013.jpg"></p>
+
+<p class=MsoNormal>Кликните в иконку лампочки слева от имени УП, «<span
+lang=EN-US>O</span>00027.<span lang=EN-US>M</span>01». Ее траектория также
+будет показана, иконка стала желтой, свойство «Видимость» этой УП стало «Да».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=625
+height=214 id="Рисунок 14" src="3_ObjetsPropert.files/image014.jpg"></p>
+
+<p class=MsoNormal>Выполните из контекстного меню «Программы», команду
+«Изменить видимость». Произошло переключение видимости. Видимые УП скрыты, а
+ранее скрытые, показаны. Команда «Изменить видимость» может быть вызвана
+иконкой лампочки слева от слова «Программы».</p>
+
+<p class=MsoNormal>Кликните в иконку лампочки слева от слова «Программы»,
+несколько раз. </p>
+
+<p class=MsoNormal><img width=624 height=190 id="Рисунок 16"
+src="3_ObjetsPropert.files/image015.jpg"></p>
+
+<p class=MsoNormal>Укажите на слово «Программы», в свойствах измените
+«Видимость» на «Нет». Все траектории погасли, но свойства видимости у каждой УП
+остались прежними (цвет иконок слева от имен УП не изменился). Верните значение
+«Смесь», траектории появились только те, у которых включена видимость.  </p>
+
+<p class=MsoNormal>Укажите на слово «Программы», в свойствах измените
+«Видимость» на «Инструмент» – видна траектория только активного инструмента и
+только в тех УП у которых видимость включена.</p>
+
+<p class=MsoNormal><img width=625 height=388 id="Рисунок 18"
+src="3_ObjetsPropert.files/image016.jpg"> Двигайте движок слайдера внизу экрана
+(нажать и удерживать левую кнопку мыши). Вы должны заметить, что когда
+становится активным другой инструмент (цвет на шкале слайдера, соответствует
+цвету инструмента в списке инструментов), меняется траектория.</p>
+
+<p class=MsoNormal><img width=623 height=405 id="Рисунок 19"
+src="3_ObjetsPropert.files/image017.jpg"></p>
+
+<h2>Объект «Инструменты»</h2>
+
+<p class=MsoNormal>Откройте другой проект из папки<span lang=EN-US>, ..\Demo\Millimeter\
+Mill_2X\RestrictorPlate.ncm.</span></p>
+
+<p class=MsoNormal>Включите окно «Заготовка». Включите видимость «Программ». Сделайте
+в графическом окне вид сверху. Раскройте список инструментов.</p>
+
+<p class=MsoNormal><img width=625 height=255 id="Рисунок 22"
+src="3_ObjetsPropert.files/image018.png"></p>
+
+<p class=MsoNormal>Иконки лампочек слева от слова «Инструменты» и каждого
+инструмента управляют видимостью траектории так же, как у программ. Лампочка у
+«Инструменты», инвертирует видимость траектории. Лампочки у каждого
+инструмента, переключают видимость траектории конкретного инструмента. </p>
+
+<p class=MsoNormal>Выключите траектории всех инструментов, кликнув в лампочку
+слева от слова «Программы».</p>
+
+<p class=MsoNormal>Включите траекторию 5-го инструмента, кликнув в иконку
+последнего инструмента в списке.<img width=626 height=426 id="Рисунок 21"
+src="3_ObjetsPropert.files/image019.png"></p>
+
+<p class=MsoNormal>Если вызвать контекстное меню «Инструменты», то можно
+скрывать или показывать траектории всех инструментов.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=335
+height=208 id="Рисунок 23" src="3_ObjetsPropert.files/image020.png"></p>
+
+<p class=MsoNormal>Потяните за движок слайдера и установите его в средину
+шкалы. На экране появится активный инструмент (синяя окружность на виде
+сверху). Активный инструмент подчеркнут зеленым уголком в списке инструментов. </p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=536
+height=304 id="Рисунок 24" src="3_ObjetsPropert.files/image021.jpg"></p>
+
+<p class=MsoNormal>Меняя свойство «Инструменты», «Видимость» или кликая по
+иконке слева от слова «Инструменты», можно скрыть изображение инструмента в
+целом. </p>
+
+<p class=MsoNormal>Кликните по иконке слева от слова «Инструменты» и увеличьте
+место, где находился центр инструмента.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=420
+height=187 id="Рисунок 27" src="3_ObjetsPropert.files/image022.jpg"></p>
+
+<p class=MsoNormal>Когда инструмент скрыт, его изображение заменяется маркером,
+шариком цвета  инструмента. Размер маркера можно ставить для каждого
+инструмента свой в свойстве «Маркер».</p>
+
+<p class=MsoNormal>Кликните на имя 5-го инструмента и поставьте 20 в свойстве
+«Маркер».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=363
+height=115 id="Рисунок 28" src="3_ObjetsPropert.files/image023.jpg"></p>
+
+<p class=MsoNormal>Установите в графическом окне какой-нибудь изометрический
+вид. Включите видимость инструментов.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=365
+height=163 id="Рисунок 29" src="3_ObjetsPropert.files/image024.jpg"></p>
+
+<p class=MsoNormal>Отдельно можно управлять видимостью всех оправок у
+инструментов. Измените свойство «Оправка», «Видимость» на «Нет».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=365
+height=181 id="Рисунок 30" src="3_ObjetsPropert.files/image025.jpg"></p>
+
+<p class=MsoNormal>Вернемся к свойствам «Программы». Установите вид сверху в
+графическом окне. Кликните на слово «Программы». Значение свойства «Траектория»
+стоит «Обе».</p>
+
+<p class=MsoNormal><img width=625 height=166 id="Рисунок 31"
+src="3_ObjetsPropert.files/image026.jpg"></p>
+
+<p class=MsoNormal>В <span lang=EN-US>NCManager</span> есть два типа
+траекторий. Запрограммированная или траектория без учета контурной коррекции и
+траектория с учетом контурной коррекции. Когда задается цвет УП, то это цвет
+траектории без коррекции. В данном случае, зеленый цвет. Цвет траектории с
+коррекцией, генерируется автоматически, как инверсия к цвету УП. </p>
+
+<p class=MsoNormal>Свойство «Траектория» управляет видимостью траекторий этих
+двух типов. В случае значения «Обе», рисуются обе эти траектории. Центр фрезы
+всегда движется по траектории с коррекцией.</p>
+
+<p class=MsoNormal>Переключайте значения свойства «Траектория».</p>
+
+<p class=MsoNormal>Переключите значение свойства «Показывать» на «Пройденная
+часть» или кликните иконку слева от слова «Программы». </p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=607
+height=208 id="Рисунок 32" src="3_ObjetsPropert.files/image027.jpg"></p>
+
+<p class=MsoNormal>В графическом окне показана траектория до текущего места.
+Если выполнять УП дальше, то траектория будет «расти».</p>
+
+<p class=MsoNormal>Подвигайте движок слайдера в разные стороны, чтобы увидеть
+изменение траектории.</p>
+
+<p class=MsoNormal>Установите значение свойства, «Фрагмент». Будет показана
+часть траектории в соответствии с числом кадров установленных в «Фрагмент
+начало» и «Фрагмент конец». Отсчет ведется от текущего места. В данном случае у
+инструмента есть <b>постоянный</b> «хвост» из 16-ти кадров.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=607
+height=214 id="Рисунок 33" src="3_ObjetsPropert.files/image028.jpg"></p>
+
+<p class=MsoNormal>Подвигайте движок слайдера в разные стороны, чтобы увидеть
+изменение траектории.</p>
+
+<p class=MsoNormal>Свойство «Раскраска». Траектория «Без коррекции» может быть
+раскрашена разными способами. По умолчанию она рисуется одним цветом. </p>
+
+<p class=MsoNormal>Кликните на слове «Программы». Включите значения свойства
+«Траектория» - «Без коррекции». Значение свойства «Показывать» - «Вся».
+Значение свойства «Раскраска» - «По типу движения».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=625
+height=221 id="Рисунок 34" src="3_ObjetsPropert.files/image029.jpg"></p>
+
+<p class=MsoNormal>Разными цветами показаны ходы <span lang=EN-US>G</span>0, <span
+lang=EN-US>G</span>01, <span lang=EN-US>G</span>02, <span lang=EN-US>G</span>03.</p>
+
+<p class=MsoNormal>В эти же цвета можно раскрасить и текст УП в панели
+«Редактор». Для этого нажмите на правую кнопку мыши в редакторе, из выпавшего
+контекстного меню выберите «Раскраска» и включите раскраску </p>
+
+<p class=MsoNormal><img width=539 height=546 id="Рисунок 35"
+src="3_ObjetsPropert.files/image030.jpg"></p>
+
+</div>
+
+</body>
+
+</html>

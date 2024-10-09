@@ -1,0 +1,28 @@
+#pragma once
+#include "BMmInch.h"
+
+#define MM_INCH BMmInch::GetMmInch()
+
+#define MIND BMmInch::GetMINDs()
+#define SCALEUS BMmInch::GetScaleUS()
+const double MINAR = 1.e-5;// In radians
+const double MINAD = MINAR * 57.;// In degrees
+const double MINATD = 1.e-1;// In degrees
+const double MAXC = 1.e6;
+#define MINS (1.e-6 * BMmInch::GetScaleUS()) // Square
+#define MINST (1.e-6 * BMmInch::GetScaleUS()) // Min square for fill array
+const UINT MCSHIFT = 15;
+#define F_D_VERT (1.e-4 * BMmInch::GetScaleUS())
+#define F_Z_HOR (1.e-4 * BMmInch::GetScaleUS())
+const double PI = 3.14159265358979;
+const unsigned int MAX_PROG_NUM = 125;
+const unsigned int STOCK_SECT_NUM = MAX_PROG_NUM + 1;
+const unsigned int PART_SECT_NUM = MAX_PROG_NUM + 2;
+
+const double EPS_DP = 1.e-12;
+#define ST_DEC (0.0005 * BMmInch::GetScaleUS())
+#define ST_INC (0.001 * BMmInch::GetScaleUS())
+#define TOOL_OFFSET (1.e-4 * BMmInch::GetScaleUS())
+#define DMIN (1.e-6 * BMmInch::GetScaleUS())
+#define MIN_ARC (1.e-3 * BMmInch::GetScaleUS())
+#define MIN_CADR_LEN (1.e-5 * BMmInch::GetScaleUS())

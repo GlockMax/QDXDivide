@@ -1,0 +1,350 @@
+// 
+//
+
+// Section General
+Name		Heidenhain_TNC_155I
+Type		Heidenhain
+Model		iTNC_530
+Manufacturer		Heidenhain
+Operation		Milling
+NumAxes		5
+// end section
+
+// Section Word Replacement
+Replace	"Q374"		"Q224"
+Replace	"Q335"		"Q223"
+Replace	"Q342="		"Q374=0;"
+Replace	"Q207="		"F"
+Replace	"CYCLDEF14.1CONTOURLABEL"	"p"
+Replace	"REP"		"l"
+Replace	"APPRLT"	"G1000"
+Replace	"APPRLN"	"G1001"
+Replace	"APPRCT"	"G1002"
+Replace	"APPRLCT"	"G1003"
+Replace	"DEPLT"		"G1004G36G40"
+Replace	"DEPLN"		"G1005G36G40"
+Replace	"DEPCT"		"G1006G36G40"
+Replace	"DEPLCT"	"G1007G36G40"
+Replace	"LEN"		"ë"
+Replace	"CCA"		"û"
+Replace	"BEGINPGM"	"O"
+Replace	"GOTOLBL"	"M97P"
+Replace	"CALLLBL"	"M46P"
+Replace	"LBL0"		"M45"
+Replace	"LBL"		"O"
+Replace	"ENDPGM"	"M45;"
+Replace	"TOOLCALL"	"M500L"
+Replace	"TOOLDEF"	"M500L"
+Replace	"BLK"		";"
+Replace	"RNDR"		"G9999r"
+Replace	"CHF"		"G9998r"
+Replace	"FMAX"		"G00"
+Replace	"CYCLDEF19.1"	"G5078"
+Replace	"CYCLDEF200"	"@203;"
+Replace	"CYCLDEF201"	"@203;"
+Replace	"CYCLDEF202"	"@203;"
+Replace	"CYCLDEF203"	"@203;"
+Replace	"CYCLDEF240"	"@240;"
+Replace	"CYCLDEF208"	"@208;"
+Replace	"CYCLDEF214"	"@214;"
+Replace	"CYCLDEF212"	"@212;"
+Replace	"CYCLDEF213"	"@213;"
+Replace	"CYCLDEF230"	"@230;"
+Replace	"CYCLDEF251"	"@251;"
+Replace	"CYCLDEF252"	"@252;"
+Replace	"CYCLDEF253"	"@253;"
+Replace	"CYCLDEF25"	"@25;"
+Replace	"CYCLDEF21"	"@203Q203=Q5Q201=Q1Q204=Q7;"
+Replace	"CYCLDEF7.1"	"G92"
+Replace	"CYCLDEF7.2"	"G92"
+Replace	"CYCLDEF7.3"	"G92"
+Replace	"CYCLDEF"	";"
+Replace	"CYCLCALLPOS"	"G2000M99D[Q108+Q9201]"
+Replace	"CYCLCALL"	"G2000M99D[Q108+Q9201];"
+Replace	"M99"		"G2000M99D[Q108+Q9201]"
+Replace	"M89"		"G2000"
+Replace	"CC"		"G31"
+Replace	"STOP"		""
+Replace	"CALLPGM"	"M44P"
+Replace	"RL"		"G35G41D[Q108+Q9201]"
+Replace	"RR"		"G35G42D[Q108+Q9201]"
+Replace	"R0"		"G36G40"
+Replace	"END"		";"
+Replace	"DR+"		"G03"
+Replace	"DR-"		"G02"
+Replace	"LP"		";"
+Replace	"CP"		";"
+Replace	"C+"		"c+"
+Replace	"C-"		"c-"
+Replace	"C"		""
+Replace	"IX"		"U"
+Replace	"IY"		"V"
+Replace	"IZ"		"W"
+Replace	"ZS"		"ZW200S"
+Replace	","		"."
+Replace	"FN0:"		""
+Replace	"FN1:"		""
+Replace	"FN2:"		""
+Replace	"FN11:"		""
+Replace	"M13"		"M3M8"
+Replace	"M14"		"M4M8"
+Replace	"Q339=+1"	"G54"
+Replace	"Q339=+2"	"G55"
+Replace	"Q339=+3"	"G56"
+Replace	"Q339=+4"	"G57"
+Replace	"~"		""
+Replace	"++"		"+"
+Replace	"-+"		"-"
+Replace	"+-"		"-"
+Replace	"--"		"+"
+Replace	"IF+"		"IF"
+Replace	"GT+"		"GT"
+Replace	"LT+"		"GT"
+Replace	"CR"		""
+// end section
+
+// Section Word Definition
+RoundSize		r
+ChamferSize		r
+MillL			L
+MccZ			Z
+MccJ			J
+MccR			R
+MccV			V
+MccQ			Q
+MccK			K
+ProgramNumberStore	p
+HhLen			ë
+HhR			R
+HhCca			û
+LineNumber		N
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B	 
+SpindleRotationAxis	c	 
+HorizontalAxisInc		U
+VerticalAxisInc		V
+SpindleAxisInc		W
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode		F
+SpeedCode		S
+ToolCode		T
+DwellTime		
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleRadius		R
+DiaCompOffsetVal		D
+LengthCompOffset		H
+RapidClearanceLevel		
+FixtureOffsetCode		E
+InitialDepth		
+PeckIncrementDepth		
+DrillRepeatCycles		
+DiaCompHorizVec		
+DiaCompVerticalVec		
+ThreadParm		
+ProgramNumber		P
+ProgramStartEnd		O
+CommentStart		;
+CommentEnd		\
+ModalCommentOn		{
+ModalCommentOff		}
+BlockSkip		/
+ProgramBeginEnd		%
+Delimiter		 
+WCSSet		
+CircleCuttingRadius1		
+CircleCuttingRadius2		
+ProgramCopyStart		
+ProgramCopyEnd		
+SecondaryWCS		
+WCSAssign		
+Register	Q
+RepeatNumber		l
+Dummy1			L
+DefineCycle		@
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+Dwell		4	0	N
+ExactStop		9	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+ReturnToRef		28	0	N
+ReturnToRef2		30	0	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthCompOn		43	8	N
+LengthComp		44	8	N
+LengthOffsetIncr		45	0	N
+LengthOffsetDecr		46	0	N
+LengthOffsetIncr2X		47	0	N
+LengthOffsetDecr2X		48	0	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+TappingCycle		63	15	N
+CuttingCycle		64	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		76	9	Y
+CancelCycle		80	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		92	0	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+ArcCenter		31	2	N
+DrillCycle_HM		203	9	N
+DrillCycle_HMC		240	9	N
+DrillCycle_HN		82	9	N
+ParToNext		35	15	Y
+RetractComp		36	0	N
+HHApprLT		1000	1	N
+HHApprLN		1001	1	N
+HHApprCT		1002	1	N
+HHApprLCT		1003	1	N
+HHDepLT			1004	1	N
+HHDepLN			1005	1	N
+HHDepCT			1006	1	N
+HHDepLCT		1007	1	N
+PredefinedCycle		2000	1	N
+MillRectCornerCycle		230	1	N
+MillRectCenterInCycle		251	1	N
+MillRectCenterInClearCycle	212	1	N
+MillRectCenterOutCycle		213	1	N
+MillCircCycle			26	1	N
+MillCircInCycle			252	1	N
+MillCircInClearCycle		208	1	N
+MillCircOutCycle		27.1	1	N
+MillContCycle			25	1	N
+MillSlotInCycle			253	9	Y
+MillHoleClearCycle		214	9	Y
+RotateCSABC			5078	9	Y
+MoveRotateCSCancel		5079	9	Y
+Chamfer				9998	9	Y
+Round				9999	9	Y
+ArcTang			200	0	N
+PolarCW			202	0	N
+PolarCCW		203	0	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop		1
+ProgramEnd		2
+SpindleCW		3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+Orient		19
+EndProgram		30
+SubroutineCall		44
+SubroutineEndCont	45
+SubroutineCallEnd	46
+GoToProg		97
+GoToNext		66
+WhileStart	51
+WhileEnd		50
+HhToolCallDef		500
+NonModalCycleCall	99
+StoreToolParams		8100
+// end section
+
+// Section Others
+IgnoreUnknownM	Yes
+IgnoreUnknownCh	Yes
+IgnoreUnknownG	Yes
+EmptyZero			Yes
+DecimalConversion		0
+LinearDecimalConversion		0
+RotaryDecimalConversion		0
+FeedDecimalConversion		0
+SpeedDecimalConversion		0
+ReverseSign		
+ReverseTurret	No
+ContinuedCircleStatement	No
+XInDiameter		No
+CircleInQuadrants	No
+3DDiaCompensation	Yes
+CircularDirection		D0 D1
+CircleCenterType		IJ
+CircleCenterMode		Absolute
+UVCenterType		IJ
+UVCenterMode		Incremental
+AlwaysIncremental		No
+MaxArcRadius		999
+RotaryAxisUnwind		No 
+ToolIndex		Absolute
+ExtraCharForRapid		
+ToolChangeWithM06		No
+G28WithM06		No
+AddToolSetLength		No
+ToolPreSelect		No
+ToolOffsetInToolNumber	Yes
+AdditionalCommentChars		
+DataSetChar		L
+TableRotationType	ShortestRoute
+StartwToolNum1	No
+MaxFeedRate		5000
+SetSecondaryWCSIndicator		20
+SetPrimaryWCSIndicator		2
+DrillAxisMode	Programmable
+MultiAxisSequence	AllSimultaneous
+StartProgram		Ignore
+MainInitStr		G0
+CycleNeedsGeom		No
+CycleNeedsParam		Yes
+-CompToIntersect		No
+-CompWithArcs		Yes
+CompType		Arc
+PartialCompCancel	No
+ModalArc		No
+ModalRapid		No
+PartialCompCancel	No
+InterChangeCancelCycle	No
+MainInitStr		G54G1Z350
+-MiCheckXYChamf		Yes
+CheckLBLRepeat		Yes
+FileExtension	*.h
+// end section
+
+// Section Cycle Definition
+// end section

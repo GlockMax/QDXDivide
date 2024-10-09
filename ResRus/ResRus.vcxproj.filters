@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResRus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResRus.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\ResRus.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\explore.htm" />
+    <None Include="..\ResCommon\Res\TRIGON.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AppearPicture.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bitmap4.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00003.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00004.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00005.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00006.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00007.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00008.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00009.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00010.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00011.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00012.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00013.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00014.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00015.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00016.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00017.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00018.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00019.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00020.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00021.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00022.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00023.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00024.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00025.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00026.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00027.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00028.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00029.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00030.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00031.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00032.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00033.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\bmp00034.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\box_small.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\BP1d.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\BP2d.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\BP3d.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\BP4D.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\BPd.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\check32.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\checkno32.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\COMPNUMB.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\cyl_small.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\DIAMOND35.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\DIAMOND50.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\DIAMOND55.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\DIAMOND75.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\DIAMOND80.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\DIAMOND86.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FAddimg.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\Fimg.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\HEX.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\insert_c.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\OCT.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\PARAL55.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\PARAL82.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\PARAL85.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\PENT.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\RECT.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\RND.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SQUARE.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\stock_sec.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\stock_tu.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\stock_turn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\STOCK_TURN_CYL.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\STOCK_TURN_GCOD.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\Timg.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\tool_dis.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\tool_dra.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\tool_pic.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\tool_thr.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\tool_tur.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\TOOL_TURN_FRONT.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\TOOL_TURN_ORIENT.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\TRIANGLE.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\TurnSTLHolder.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FiltrSceletonOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FiltrSceleton.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FiltrModeOffl.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FiltrModel.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FiltrObj.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FiltrObjOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FiltrTrajectoryOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\FiltrTrajectory.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AutoFixOnCurvOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AutoFixOnCurv.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AutoFixCentr.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AutoFixCentrOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AutoFixMidOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AutoFixMid.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AutoFixEndOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AutoFixEnd.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\AplyButton.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeDOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeDOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeROff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeROn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeLengthOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeLengthOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeAngleOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeAngleOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeSelectOFF.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\SizeSelectOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateIntersectPtOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateIntersectPtOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateAutoPtOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateAutoPtOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\Create3PtPlaneOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\Create3PtPlaneOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateAutoPlaneOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateAutoPlaneOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\Create3PtArcOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\Create3PtArcOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateAutoArcOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateAutoArcOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateIntersectLineOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateIntersectLineOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\Create2PtLineOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\Create2PtLineOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateAutoLineOff.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ResCommon\Res\CreateAutoLineOn.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mfcribbon-idr_ribbon_mill.mfcribbon-ms" />
+    <None Include="res\ribbon_idr_ribbon_weld.mfcribbon-ms" />
+    <None Include="res\mfcribbon-idr_ribbon.mfcribbon-ms" />
+    <None Include="res\ribbon1.mfcribbon-ms" />
+    <None Include="res\ribbon_millturn.mfcribbon-ms" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ResRus.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\Common\ResLocal.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\ResCommon\Res\filelarge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\filesmall.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\WorkLarge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\Work16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\Work24.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\ProjectSmall.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\ProjectLarge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\rescommon\res\BP5D.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\Editor.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\EditorLarge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\ncm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\bmp00035.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\bmp00036.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\red.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\green.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\ResCommon\Res\yellow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

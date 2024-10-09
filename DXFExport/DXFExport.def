@@ -1,0 +1,6 @@
+; DXFExport.def : Declares the module parameters for the DLL.
+
+LIBRARY      "DXFExport"
+
+EXPORTS
+    ; Explicit exports can go here

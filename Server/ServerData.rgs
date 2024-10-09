@@ -1,0 +1,23 @@
+HKCR
+{
+	NCMInfo.ServerData.1 = s 'ServerData Class'
+	{
+		CLSID = s '{8820E928-C1F1-11D5-B0AB-0050BF4A8273}'
+	}
+	NCMInfo.ServerData = s 'ServerData Class'
+	{
+		CLSID = s '{8820E928-C1F1-11D5-B0AB-0050BF4A8273}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8820E928-C1F1-11D5-B0AB-0050BF4A8273} = s 'ServerData Class'
+		{
+			ProgID = s 'NCMInfo.ServerData.1'
+			VersionIndependentProgID = s 'NCMInfo.ServerData'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

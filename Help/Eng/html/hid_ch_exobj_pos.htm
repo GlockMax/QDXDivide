@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Positioning</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="../tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Positioning </h1>
+<p> Translation, rotation and scaling of selected STL model. This commands set the new position od STL model relative to workshop coordinates system. Calling this command causes the <strong>Position</strong> dialog to appear.</p>
+<p><img src="../images/Position.gif"><br>
+</p>
+<h6>Target point</h6>
+<p>Characteristic point of bounding parallelepiped of STL model. Displayed as a coordinate system small colored glyph. Three options available  (Min, Middle, Max). Default option is for minimal values of X, Y, Z (Min X, 
+  Min Y, Min Z). Three fields to the right display corresponding coordinates of this point in workshop coordinates. These fields are active for Absolute placement, Rotate and Rescale options.</p>
+<h6>Absolute placement</h6>
+<p>Place the corresponding  model characteristic point to selected coordinates. For example,if 
+  XYZ fields (with values X -19.5, Y -195, Z -110) are set to
+  &quot;0&quot; and you push Apply, the selected model will be placed so, that selected characteristic point will have  
+  X0Y0Z0 coordinates in workshop coordinate system.</p>
+<h6>Relative translation </h6>
+<p><img src="../images/PositionRel.gif" width="293" height="295"></p>
+<p>Move model relatively to the current position. When selected, three fields are made visible to set offsets along X, Y, Z axes of workshop coordinate system. 
+  Fill in the values and push <strong>Apply</strong>. 
+  The selected model will shift by this values. For example, on previous figure the model will be shifted by 200 units along Y axis. Relative translation option is the default option.</p>
+<h6>Rotate</h6>
+<p><img src="../images/PositionRot.gif"></p>
+<p>Rotate model around XYZ axes, parallel to corresponding workshop coordinate system axes. Target point coordinates set the center of rotation. By default the center is a target point. Angles fields receive the values of rotations around corresponding axes. 
+  Rotations are made in order  XYZ. Fill in the values and push <strong>Apply</strong>. The selected model will rotate by selected valued. For example, on the figure above, the model will be rotated around X axis by 45 degrees, then by 90 degrees around Z axis, X0, 
+  Y0, Z0 is the center of rotation.</p>
+<h6>Rescale</h6>
+<p><img src="../images/PositionScale.gif"></p>
+<p>Scales model, relatively to the selected point of workshop coordinate system, by selected values along corresponding coordinate axes. 
+  Default scale center is a target point. Fill in the coordinates of center of scaling and scale values, then push Apply, so the selected model will be scaled. For example, on the picture above the model will be scaled by 2 along Z axis.</p>
+<h6>Inch - MM</h6>
+<p>Fills in the scale values to translate model from inches to millimeters. Push Inch - MM, then push Apply, so the model is scaled by  25.4 times.</p>
+<h6>MM - Inch</h6>
+<p>Fills in the scale values to translate model from millimeters to inches. Push MM - Inch, then push Apply, so the model is scaled by  0.0393700787401575 
+  times.</p>
+<h6>Undo/Redo</h6>
+<p>Undo the previous action. Action count is unlimited.</p>
+<h6> Apply </h6>
+<p> Execute action and stay in the dialog.</p>
+<h6>Close</h6>
+<p>Close the Position dialog.</p>
+</body>
+</html>

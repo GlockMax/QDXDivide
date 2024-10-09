@@ -1,0 +1,214 @@
+//
+//
+
+// Section General
+Name		ISO
+Type		ISO/EIA
+Model		
+Manufacturer		SYNTEC 900T
+Operation		TurnMill
+NumAxes		4
+// end section
+
+// Section Word Replacement
+Replace		"G72W"		"G72U"
+Replace		"G84"		"G83"
+Replace		"G85"		"G83"
+Replace		"G87"		"G83"
+Replace		"G88"		"G83"
+Replace		"G89"		"G83"
+Replace		"GOTO"		"M97P"
+Replace		",A"	"k"
+Replace 		",C"	"G3550Q"
+Replace 		",R"	"G3650Q"
+Replace		"G41"		"G41G3500"
+Replace		"G42"		"G42G3500"
+Replace		"G40"		"G40G3600"
+Replace		"G13.1"		"G113"
+Replace		"G12.1"		"G112"
+Replace		"G4X"		"G4.1P"
+Replace		"G4U"		"G4P"
+Replace		"G28U0.W0."	"G0X200.Z100."
+Replace		"G30U0.W0."	"G0X200.Z100."
+Replace		"G30U0W0"	"G0X200.Z100."
+Replace		"G0G30U0"	"G0X200."
+Replace		"G0G30U0."	"G0X200."
+Replace		"G30W0"		"G0Z100."
+Replace		"G30W0."	"G0Z100."
+Replace		"G28U0."		"G0X200."
+Replace		"G28W0."	"G0Z100."
+Replace		"S1="		"S"
+Replace		"M103"		"M3"
+Replace		"M104"		"M4"
+Replace		"$"		";$"
+Replace		"G10L2"		"G10"
+Replace		"G54"		""
+// end section
+
+// Section Word Definition
+ChamferSize	Q
+RoundSize	Q
+DraftAngle	k
+LineNumber		N
+TurnRoughDepthU1		U
+TurnRoughDepthW1		W
+TurnRoughDepthR		R
+TurnGroovDepthP		P
+TurnGroovDepthQ		Q
+TurnThreadP		P
+TurnThreadR		R
+TurnThreadQ		Q
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalAxisInc		U
+VerticalAxisInc		V
+SpindleAxisInc		W	 
+SpindleRotationAxis		C 
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode			F
+SpeedCode		S
+ToolCode			T
+DwellTime			P
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleRadius		R
+DiaCompOffset		D
+LengthCompOffset		H
+ProgramCopyStart		P	
+ProgramCopyEnd		Q
+Register			#
+RapidClearanceLevel		
+FixtureOffsetCode		
+InitialDepth		P
+PeckIncrementDepth		
+DrillRepeatCycles		L
+DiaCompHorizVec		
+DiaCompVerticalVec		
+ThreadParm		
+ProgramNumber		P
+ProgramStartEnd		O
+CommentStart		(
+CommentEnd		)
+EndOfBlock		$
+EndOfLine		\
+BlockSkip		;
+Delimiter		 
+CircleCuttingRadius1		
+CircleCuttingRadius2			
+SecondaryWCS		
+RepeatNumber	L
+ProgramBeginEnd		%
+// end section
+
+// Section Function Definition
+Rapid			0	1	Y
+Linear			1	1	N
+CircularCW		2	1	N
+CircularCCW		3	1	N
+Dwell			4.1	0	N
+PolarInterp		112	21	N
+PolarInterpCancel		113	21	Y
+XYPlane			17	16	N
+ZXPlane			18	16	Y
+YZPlane			19	16	N
+InchUnit			20	6	N
+MetricUnit		21	6	N
+ReturnToRef		28	0	N
+ReturnToRef2		30	0	N
+SimThreadCycleT		32	1	Y
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+SetMaxSpeed		50	0	N
+ZeroPreset		10	0	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+CallMacro		65	0	N
+TurnClearCycle		70	0	N
+TurnRoughCycle		71	0	N
+TurnFacingCycle		72	0	N
+TurnLoopCycle		73	0	N
+TurnGroovZCycle		74	0	N
+TurnGroovXCycle		75	0	N
+TurnThreadACycle		76	0	N
+CancelCycle		80	10	Y
+DrillCycle			83	10	N
+TurnCutCycle		90	1	N
+TurnFaceCycle		94	1	N
+FixCutSpeed		96	2	N
+UnFixCutSpeed		97	2	Y
+FeedPerMin		98	5	N
+FeedPerRev		99	5	Y
+NCMGCode*******		1000	100	Y
+ParToNext		3500	100	N
+RetractComp		3600	100	N
+DraftChamfer		3550	1	N
+DraftRound		3650	1	N
+DummyG**********		2000	200	N
+Dummy			7.1	0	N
+// end section
+
+// Section Misc Function Definition
+Stop			0
+ProgramEnd		2
+OptionalStop		1
+SpindleCW		3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+EndProgram		30
+SubroutineCall		98
+SubroutineEnd		99
+ThreadCut		12
+GoTo			97
+Dummy			43
+Dummy1			210
+Dummy2			37
+Dummy3			38
+// end section
+
+// Section Others
+DraftAngleTol		0
+IgnoreUnknownM		No
+IgnoreUnknownCh		No
+IgnoreUnknownG		No
+LinearXConversion		0.5
+LinearIConversion		0
+DecimalConversion		0
+LinearDecimalConversion	0
+RotaryDecimalConversion	1.
+FeedDecimalConversion	0
+SpeedDecimalConversion	0
+CircleCenterType		IJR
+CircleCenterMode		Incremental
+ToolPreSelect		No
+ToolChangeWithM06	No
+ToolOffsetInToolNumber	For
+ToolNumFormat		N2L2
+CycleNeedsGeom		No
+MainInitStr		G0G18G40G54G80G97G99X250.Z150.
+CheckGeom		Yes
+MinArcDist		2
+StartProgram		Ignore
+InterChangeCancelCycle	Yes
+FileExtension 		*.nc
+PartialCompCancel 	No
+CompType		Arc
+DwellTimeDiscr		1000
+FastFeedRate
+ToolChangeTime
+// end section
+
+// Section Cycle Definition
+// end section

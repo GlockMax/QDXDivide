@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Quick Start</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><A NAME="quick_start"></A>Quick Start</H1>
+
+<P>In order to check or to gain an understanding of a specific NC program (G-code), 
+  you can find two simulation modes in NCManager:</P>
+<P> 1. <strong><font color="#FF00FF">Don’t cut</font></strong> - toolpath view 
+  in the form of lines and arcs with no stock cut. You need only to define the 
+  CNC control and to start program itself.</P>
+<P> 2. <strong><font color="#FF00FF">Cut</font></strong> - in addition to toolpath 
+  view in this mode you have an opportunity to make a stock cut simulation. You 
+  also need to define tools and stock.</P>
+<P> You can define machine tool as well and as the result of it you will have 
+  the stock and tool moving view in the special Machine window depending on the 
+  machine tool kinematics. The 3x machine tool only with kinematics is loaded 
+  by default.</P>
+<h1>NCManager Project File</h1>
+<P> Project file have an .NCM extension. All information about loaded CNC Programs, 
+  tools, stock and others is kept in project file.</P>
+<P> Main menu command <strong>File</strong>:</P>
+<P> <strong><font color="#FF00FF">Save</font></strong> and <font color="#FF00FF"><strong>Save 
+  as</strong></font> commands will save new or already created project.</P>
+<P> <font color="#FF00FF"><strong>Open ...</strong></font>, command is used to 
+  open existent project in new window. </P>
+<h1>Define Types of projects</h1>
+<P> In NCManager we have three types of projects. Milling, Turning, and Milling-Turning.</P>
+<P> <font color="#FF00FF"><strong>Create</strong></font> –This function creates 
+  project of active type.</P>
+<P> <font color="#FF00FF"><strong>Create Mill</strong></font> - Mill project is 
+  developed for milling machine simulation. In this project you can load only 
+  milling tool and milling stock.</P>
+<P> <font color="#FF00FF"><strong>Create Lathe</strong></font> - Lathe project 
+  is developed for lathe machine simulation. In this project you can load only 
+  lathe tool and lathe stock.</P>
+<P> <font color="#FF00FF"><strong>Create Mill Turn</strong></font> - Mill Turn 
+  project is developed for mill turn machine simulation. However you can use it 
+  also for milling and lathe machining. In this project you can load lathe tool, 
+  milling tool, lathe stock and milling stock. </P>
+<h1>Define CNC Control Type</h1>
+<p> Find <font color="#FF00FF"><strong>CNC Control</strong></font> item on the 
+  left part of the screen. Press right mouse button. Then click <font color="#FF00FF"><strong>Load</strong></font>, 
+  and in window choose appropriate defining CNC control file. NCManager will load 
+  <strong>ISO.SM3</strong> file by default.</p>
+<h1>Define Machine Tool</h1>
+<p> Find <font color="#FF00FF"><strong>Machine</strong></font> item on the left 
+  part of the screen. Press right mouse button. Then click <font color="#FF00FF"><strong>Load</strong></font>, 
+  and in window choose appropriate machine tool. NCManager will load <strong>3X_DEFAULT</strong> 
+  machine tool by default.</p>
+<H1>CNC Program Loading</H1>
+
+<P> Find <font color="#FF00FF"><strong>CNC-Programs</strong></font> item on the 
+  left part of the screen. Then press right mouse button and click <font color="#FF00FF"><strong>Load</strong></font>. 
+  Choose file with NC program.</P>
+
+<H1>Operating with Views</H1>
+
+<P>In order to control the views (to have an opportunity to examine the picture), 
+  <strong>press right mouse button</strong> on a graphic window. Appeared toolbar 
+  consist of 24 buttons that will help you to operate with image size and to arrange 
+  image position on the screen. You can use the same actions from the <font color="#FF00FF"><strong>Main 
+  menu</strong></font> (choose <font color="#FF00FF"><strong>View</strong></font>). 
+  Elements of this menu are enabled if the graphic window is active. Therefore 
+  if you see that necessary function is disabled you just need to click on the 
+  graphic window. </P>
+<P> Comfortable way of view point dynamic controlling is accessible if you push 
+  <strong>Ctrl</strong>, <strong>Shift</strong>, or <strong>Alt</strong> button 
+  with right mouse button. <strong>Ctrl</strong> is used for dynamic rotation, 
+  <strong>Shift</strong> - for panning and <strong>Alt</strong> - for scale changing. 
+</P>
+<H1>View the CNC Program Text</H1>
+
+<P>You can view and edit the CNC program text in the following way. Double click 
+  on <font color="#FF00FF"><strong>CNC-Programs</strong></font>. You will see 
+  the list of loaded NC programs. Then double click on the required program name 
+  and the program text will be loaded into the <font color="#FF00FF"><strong>Editor 
+  Pane</strong></font>. The name of the NC program which text is loaded in the 
+  textbox appears bold. After that you can simply edit this text. </P>
+<P> In order to apply the changes click right mouse button and choose <font color="#FF00FF"><strong>Update</strong></font>.</P>
+<h1>View the Toolpath</h1>
+<P> There are two types of the main graphical window <font color="#FF00FF"><strong>Stock</strong></font> 
+  and <font color="#FF00FF"><strong>Machine</strong></font>. Sub menu Window from 
+  main menu commands switch this types. There are two additional graphical panes 
+  <font color="#FF00FF"> <strong>Stock</strong></font> and <font color="#FF00FF"><strong>Machine</strong></font>. 
+  This panes can be visible simultaneously with the main graphical window. The 
+  visibility of this panes can be switched on and off by main menu command <font color="#FF00FF"><strong>Settings</strong></font> 
+  &gt; <font color="#FF00FF"><strong>Panes</strong></font>.</P>
+<P> <font color="#FF00FF"><strong>Stock</strong></font> - in this window you can 
+  see the wireframe toolpath and the machine tool movement during the simulation 
+  process.</P>
+<P> <font color="#FF00FF"><strong>Machine</strong></font> - in this window you 
+  can see the wireframe toolpath and the movement in accordance with kinematics 
+  machine tool scheme.</P>
+<P> While you move your mouse over the toolpath image CNC program lines and nodes 
+  will be highlighted. At the same time cursor shape is showing you the element 
+  type and the toolpath direction (Stock Window must be active). </P>
+<P> Choose <font color="#FF00FF"><strong>Geometry Pane</strong></font> and you 
+  will find geometric information about specified toolpath element.</P>
+<P> Left mouse button click on any toolpath part will lead to loading of the corresponding 
+  CNC program into the <font color="#FF00FF"><strong>Editor Pane</strong></font> 
+  and to the pointing on the corresponding line. </P>
+<P> Double click will cause program run until current line. This is how you can 
+  find out the time of program run until current line or any other parameters 
+  of the current CNC control condition which are available from <font color="#FF00FF"><strong>Parameters 
+  Pane</strong></font>. </P>
+<H1>Tools Loading</H1>
+
+<P>For simulation of the NC program work it is necessary to define tools and stock. 
+  To create a tool click right mouse button on <font color="#FF00FF"><strong>Tools</strong></font> 
+  and choose <strong><font color="#FF00FF">Create</font></strong>. In the appeared 
+  dialog window you can choose tool type, size and position.</P>
+
+<H1>Stock Creating</H1>
+
+<P>To create a stock in much the same way choose <font color="#FF00FF"><strong>Create</strong></font> 
+  and then choose <font color="#FF00FF"><strong>stock type</strong></font> and 
+  size. <font color="#FF00FF"><strong>Bounding Box</strong></font> button allows 
+  you to define stock size automatically using work move dimensions in NC program 
+  taking into account given offset.</P>
+
+<H1>Work Simulation</H1>
+
+<P>Both Cut and Don’t Cut modes my be in one of four motion modes. Motion mode 
+  can be changed by the main menu Work or by the toolbar icons. Tool motion speed 
+  can be changed by the toolbar slider.</P>
+<P> <font color="#FF00FF"><strong>Smoothly</strong></font> – When this motion 
+  mode is active the tool moves smoothly along the toolpath.</P>
+<P> <font color="#FF00FF"><strong>Feedrate</strong></font> - When this motion 
+  mode is active the tool moves smoothly along the toolpath. The speed of the 
+  tool motion corresponds to the federate defined in the CNC program.</P>
+<P> <font color="#FF00FF"><strong>Quick</strong></font> - When this motion mode 
+  is active the tool position is shown by the given time interval.</P>
+<P> <font color="#FF00FF"><strong>Result</strong></font> - When this motion mode 
+  is active no tool motion is displayed.</P>
+<P> To view the stock cutting with the smooth tool motion it is necessary to:</P>
+<P> 1. Turn on <strong>Cut</strong> mode<br>
+  2. Turn on <strong>Smoothly</strong> motion mode<br>
+  3. Choose <strong>Execute</strong> &gt; <strong>To breakpoint</strong> command 
+  from main menu Work. </P>
+<H1>Taking Measurements</H1>
+<P> You are able to measure machined stock and to get an information about machined 
+  surface type and its parameters using the <font color="#FF00FF"><strong>Measures</strong></font> 
+  command. You can taking measurement only in <strong>Stock</strong> window.</P>
+
+<H1>Section</H1>
+<P> Using <font color="#FF00FF"><strong>Section</strong></font> command you can 
+  build dynamic sections with different planes. You can build sections only in 
+  <strong>Stock</strong> window.</P>
+</BODY>
+</HTML>

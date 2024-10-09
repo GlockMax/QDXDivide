@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Настройки в XML файле</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="../tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Настройки в файле define.xml </h1>
+<p> Ряд настроек по умолчанию хранятся в файле default.xml. В файле можно настроить 
+  размеры у токарных пластинок, а у ISO пластинок дополнительно задать форму. 
+  Настроить диапазон движка изменения скорости имитации в режимах Каркас, Плавно 
+  Быстро. Настроить скорость имитации для токарной и фрезерной имитации. Файл 
+  должен находиться в корневой папке NCManager.</p>
+<h6> Токарные пластинки по умолчанию. &lt;Tools&gt; &lt;Turn&gt; &lt;Blade&gt;</h6>
+<h4>Тэг &lt;Slot&gt; </h4>
+<p> Задать параметры для прорезной пластины.</p>
+<h2>&lt;Slot A = &quot;0&quot; C = &quot;5&quot; Edge = &quot;1&quot;&gt;</h2>
+<p><strong>A</strong> - Угол наклона средней режущей кромки.<br>
+  <strong>C</strong> - Задний угол.<br>
+  <strong>Edge</strong> – номер режущей кромки. «0» - левая. «1» - правая.</p>
+<p>В зависимости от типа единиц измерений можно задать размеры в миллиметрах (mm) 
+  или дюймах (inch).</p>
+<h2>&lt;mm R1 = &quot;0.2&quot; R2 = &quot;0.2&quot; T = &quot;2&quot; L = &quot;20&quot; 
+  H = &quot;1.36&quot;/&gt; <br><br>&lt;inch R1 = &quot;0.005&quot; R2 = &quot;0.005&quot; 
+  T = &quot;0.1&quot; L = &quot;0.5&quot; H = &quot;0.05&quot;/&gt;</h2>
+<p><strong>R1</strong> – радиус на левом углу пластины <br>
+  <strong>R2</strong> – радиус на правом углу пластины<br>
+  <strong>T</strong> – ширина пластины <br>
+  <strong>L</strong> – длина пластины <br>
+  <strong>H</strong> – Толщина пластины</p>
+<h4>Тэг &lt;Round&gt;</h4>
+<p>Задать параметры для круглой пластины.</p>
+<h2>&lt;Round C = &quot;7&quot;&gt;</h2>
+<p><strong>C</strong> - Задний угол.</p>
+<p>В зависимости от типа единиц измерений можно задать размеры в миллиметрах (mm) 
+  или дюймах (inch).</p>
+<h2>&lt;mm R = &quot;4&quot; H = &quot;3.18&quot;/&gt;<br><br>
+  &lt;inch R = &quot;0.25&quot; H = &quot;0.125&quot;/&gt;</h2>
+<p><strong>R</strong> - Радиус пластины<br>
+  <strong>H</strong> – Толщина пластины</p>
+<h4>Тэг &lt;ISO InsertForm&gt;</h4>
+<p>Задать параметры для пластины по стандарту ISO.</p>
+<h2>&lt;ISO InsertForm = &quot;R&quot; C = &quot;5&quot;&gt;</h2>
+<p><strong>InsertForm</strong> - Код формы пластины (квадрат, прямоугольник, ромб, 
+  и т.д.).<br>
+  <strong>C</strong> - Задний угол.</p>
+<p>В зависимости от типа единиц измерений можно задать размеры в миллиметрах (mm) 
+  или дюймах (inch).</p>
+<h2>&lt;mm L1 = &quot;12.0&quot; L2 = &quot;20.0&quot; R = &quot;0.4&quot; H = 
+  &quot;3.18&quot;/&gt;<br>
+  <br>
+  &lt;inch L1 = &quot;0.65&quot; L2 = &quot;0.75&quot; R = &quot;0.0156&quot; 
+  H = &quot;0.125&quot;/&gt;</h2>
+<p><strong>L1</strong> - Длина главной режущей кромки<br>
+  <strong>L2</strong> - Длина вспомогательной режущей кромки<br>
+  <strong>R</strong> - Радиус пластины<br>
+  <strong>H</strong> – Толщина пластины</p>
+<h4>Тэг &lt;General&gt;</h4>
+<p>Задать параметры для произвольной пластины.</p>
+<h2>&lt;General A = &quot;5.&quot; B = &quot;80.&quot; C = &quot;5.&quot;&gt;</h2>
+<p>A – Угол с осью X.<br>
+  B – Угол в плане.<br>
+  C – Задний угол.</p>
+<p>В зависимости от типа единиц измерений можно задать размеры в миллиметрах (mm) 
+  или дюймах (inch).</p>
+<h2>&lt;mm L1 = &quot;12.0&quot; L2 = &quot;8.0&quot; R = &quot;0.5&quot; H = 
+  &quot;4.76&quot;/&gt;<br>
+  <br>
+  &lt;inch L1 = &quot;0.61&quot; L2 = &quot;0.433&quot; R = &quot;0.0156&quot; 
+  H = &quot;0.125&quot;/&gt;</h2>
+<p><strong>L1</strong> - Длина главной режущей кромки<br>
+  <strong>L2</strong> - Длина вспомогательной режущей кромки<br>
+  <strong>R</strong> - Радиус пластины<br>
+  <strong>H</strong> – Толщина пластины</p>
+<h6>Настройка диапазона движка управления скоростью имитации</h6>
+<h4>Тэг &lt;Sliders&gt;</h4>
+<p>Настраивается три величины. Скорость при крайних положениях движка и положение 
+  движка по умолчанию.</p>
+<p>Режим <strong>Каркас</strong> – задержка после выполнения каждого кадра в миллисекундах.</p>
+<h2>&lt;Wire MIN = &quot;10.&quot; MAX = &quot;1000.&quot; DEF = &quot;100.&quot;/&gt;</h2>
+<p><strong>MIN</strong> – Задержка в крайнем правом положении.<br>
+  <strong>MAX</strong> – Задержка в крайнем левом положении. <br>
+  <strong>DEF</strong> – Задержка по умолчанию.</p>
+<p>Режим <strong>Плавно</strong> – скорость в миллиметрах на один такт таймера 
+  (тэг TimerSTEP). </p>
+<h2>&lt;Smooth MIN = &quot;0.5&quot; MAX = &quot;50.&quot; DEF = &quot;2.&quot;/&gt;</h2>
+<p><strong>MIN</strong> – Скорость в крайнем правом положении.<br>
+  <strong>MAX</strong> – Скорость в крайнем левом положении. <br>
+  <strong>DEF</strong> – Скорость по умолчанию.</p>
+<p>Режим <strong>Быстро</strong> – скорость в миллисекундах. Результат имитации 
+  будет показываться через заданное число миллисекунд.</p>
+<h2>&lt;Quick MIN = &quot;1.&quot; MAX = &quot;200.&quot; DEF = &quot;80.&quot;/&gt;</h2>
+<p><strong>MIN</strong> – Скорость в крайнем правом положении.<br>
+  <strong>MAX</strong> – Скорость в крайнем левом положении. <br>
+  <strong>DEF</strong> – Скорость по умолчанию.</p>
+<h6>Настройка скорости имитации</h6>
+<h4>Тэг &lt;Speed&gt;</h4>
+<p>Дополнительные настройки скорости имитации в режиме Плавно для токарной (Lathe) 
+  и фрезерной (Mill) имитации.</p>
+<h2>&lt;Scale GEN = &quot;0.5&quot; LONG = &quot;10.&quot; SHORT = &quot;3.&quot; 
+  LENGTH = &quot;49.&quot;/&gt;</h2>
+<p><strong>GEN</strong> – Коэффициент изменения скорости движения на рабочих подачах.<br>
+  <strong>LONG</strong> - Коэффициент изменения скорости движения на длинных холостых 
+  ходах.<br>
+  <strong>SHORT</strong> - Коэффициент изменения скорости движения на коротких 
+  холостых ходах.<br>
+  <strong>LENGTH</strong> – Перемещение считается длинным, если оно больше этой 
+  величины.</p>
+<h2>&lt;Timer STEP = “40”/&gt;</h2>
+<p><strong>TimerSTEP</strong> - Задается тактовая частота таймера имитации в миллисекундах.<br>
+</p>
+</body>
+</html>

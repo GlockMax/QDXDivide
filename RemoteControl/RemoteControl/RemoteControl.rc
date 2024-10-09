@@ -1,0 +1,380 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\RemoteControl.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_RDISP_OFF           BITMAP                  "res\\bitmap1.bmp"
+
+IDB_RDISP_ON            BITMAP                  "res\\disp_off.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_REMOTECONTROL_DIALOG DIALOGEX 0, 0, 290, 371
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Режим ""Ручной"""
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_CADRTEXT,10,17,215,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Выполнить",IDC_GO,230,17,50,14
+    PUSHBUTTON      "Стоп",IDC_STOP,230,62,50,14
+    PUSHBUTTON      "Сброс",IDC_RESET,230,76,50,14
+    PUSHBUTTON      "Ноль",IDC_BUTTON4,230,90,50,14
+    EDITTEXT        IDC_X,25,180,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y,93,180,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Z,153,180,40,14,ES_AUTOHSCROLL
+    CONTROL         "Check1",IDC_SELECT,"Button",BS_AUTOCHECKBOX | BS_BITMAP | BS_PUSHLIKE | WS_TABSTOP,199,180,20,12
+    PUSHBUTTON      "Выполнить",IDC_GO_ABS,230,180,50,14,BS_VCENTER
+    EDITTEXT        IDC_I,25,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_J,93,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_K,153,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XZ,25,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YZ,93,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ABS_A,25,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ABS_C,93,196,40,14,ES_AUTOHSCROLL
+    CONTROL         "Вектор",IDC_VECTOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,10,214,38,14
+    CONTROL         "Проекция ",IDC_PROJECT,"Button",BS_AUTORADIOBUTTON,55,214,45,14
+    CONTROL         "Два угла",IDC_TWOANGL,"Button",BS_AUTORADIOBUTTON,107,214,43,14,0,HIDC_TWOANGL
+    CONTROL         "Второе решение",IDC_SOLUTION,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,153,214,72,14
+    EDITTEXT        IDC_INCR_A,25,251,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INCR_C,93,251,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Выполнить",IDC_GO_INCR,230,251,50,14,BS_VCENTER
+    CONTROL         "Кратчайшее расстояние",IDC_SHORTDIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,270,99,10
+    EDITTEXT        IDC_DELTA,25,306,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Выполнить",IDC_GO_DELTA,230,306,50,14,BS_VCENTER
+    CONTROL         "AB",IDC_ROTAB,"Button",BS_AUTORADIOBUTTON | WS_GROUP,10,343,23,16
+    CONTROL         "AC",IDC_ROTAC,"Button",BS_AUTORADIOBUTTON,43,343,24,16
+    CONTROL         "BC",IDC_ROTBC,"Button",BS_AUTORADIOBUTTON,77,343,26,16
+    CONTROL         "Предпочесть поворот детали",IDC_ROTPART,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,113,343,120,16
+    EDITTEXT        IDC_KADRLIST,10,34,215,124,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "X ",IDC_STATIC,10,180,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "Y ",IDC_STATIC,79,180,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "Z ",IDC_STATIC,139,180,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "I ",IDC_NOTE_I,10,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "J ",IDC_NOTE_J,79,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "K ",IDC_NOTE_K,139,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "A ",IDC_STATIC,10,251,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "C ",IDC_STATIC,79,251,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "D ",IDC_STATIC,10,306,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    GROUPBOX        "Поставить инструмент в заданное положении",IDC_STATIC,6,166,278,66
+    GROUPBOX        "Повернуть инструмент от текущего положения",IDC_STATIC,6,235,278,50
+    GROUPBOX        "Сместить инструмент вдоль текущей оси инструмента",IDC_STATIC,6,289,278,37
+    GROUPBOX        "Выполнить кадр программы",IDC_TOP_PART,6,7,278,156
+    GROUPBOX        "Оси станка, участвующие в поворотах",IDC_STATIC,6,330,278,34
+    LTEXT           "XZ",IDC_NOTE_XZ,10,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "YZ",IDC_NOTE_YZ,79,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "A",IDC_NOTE_A,10,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "C",IDC_NOTE_C,79,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    PUSHBUTTON      "Очистить",IDC_CLEAR_PR,230,48,50,14
+    PUSHBUTTON      "Выполнить",IDC_GO_PR,230,34,50,14
+    CONTROL         "Активная СК",IDC_WCS,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,225,214,55,14
+    CONTROL         "Рассчитать углы",IDC_FROM_PICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,196,71,14
+    CONTROL         "Больше",IDC_FULL_SIZE,"Button",BS_AUTOCHECKBOX | BS_BITMAP | BS_PUSHLIKE | WS_TABSTOP,230,144,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_REMOTECONTROL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 364
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About RemoteControl..."
+    IDS_MSG_CONNECT         "Нет связи с NCManager"
+END
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_RC DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About RemoteControl"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "RemoteControl, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_REMOTECONTROL_DIALOG DIALOGEX 0, 0, 290, 371
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "NCManager Vfnual model"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_CADRTEXT,10,17,215,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Go Line",IDC_GO,230,17,50,14
+    PUSHBUTTON      "Stop",IDC_STOP,230,62,50,14
+    PUSHBUTTON      "Reset",IDC_RESET,230,76,50,14
+    PUSHBUTTON      "Set Zero",IDC_BUTTON4,230,90,50,14
+    EDITTEXT        IDC_X,25,180,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y,93,180,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Z,153,180,40,14,ES_AUTOHSCROLL
+    CONTROL         "Check1",IDC_SELECT,"Button",BS_AUTOCHECKBOX | BS_BITMAP | BS_PUSHLIKE | WS_TABSTOP,199,180,20,12
+    PUSHBUTTON      "Go Absolut",IDC_GO_ABS,230,180,50,14,BS_VCENTER
+    EDITTEXT        IDC_I,25,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_J,93,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_K,153,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XZ,25,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YZ,93,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ABS_A,25,196,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ABS_C,93,196,40,14,ES_AUTOHSCROLL
+    CONTROL         "Vector",IDC_VECTOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,10,214,38,14
+    CONTROL         "Project ",IDC_PROJECT,"Button",BS_AUTORADIOBUTTON,48,214,45,14
+    CONTROL         "Two Angles",IDC_TWOANGL,"Button",BS_AUTORADIOBUTTON,93,214,48,14,0,HIDC_TWOANGL
+    CONTROL         "Secod Solution",IDC_SOLUTION,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,153,214,68,14
+    EDITTEXT        IDC_INCR_A,25,251,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INCR_C,93,251,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Go Incriment",IDC_GO_INCR,230,251,50,14,BS_VCENTER
+    CONTROL         "Shortest distance",IDC_SHORTDIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,270,72,10
+    EDITTEXT        IDC_DELTA,25,306,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Go Shift",IDC_GO_DELTA,230,306,50,14,BS_VCENTER
+    CONTROL         "AB",IDC_ROTAB,"Button",BS_AUTORADIOBUTTON | WS_GROUP,10,343,23,16
+    CONTROL         "AC",IDC_ROTAC,"Button",BS_AUTORADIOBUTTON,43,343,24,16
+    CONTROL         "BC",IDC_ROTBC,"Button",BS_AUTORADIOBUTTON,77,343,26,16
+    CONTROL         "Prefer Detail Turn",IDC_ROTPART,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,113,343,120,16
+    EDITTEXT        IDC_KADRLIST,10,34,215,124,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "X ",IDC_STATIC,10,180,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "Y ",IDC_STATIC,79,180,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "Z ",IDC_STATIC,139,180,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "I ",IDC_NOTE_I,10,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "J ",IDC_NOTE_J,79,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "K ",IDC_NOTE_K,139,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "A ",IDC_STATIC,10,251,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "C ",IDC_STATIC,79,251,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "D ",IDC_STATIC,10,306,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    GROUPBOX        "Setup the tool in defined position",IDC_STATIC,6,166,278,66
+    GROUPBOX        "Rotate the tool from current position",IDC_STATIC,6,235,278,50
+    GROUPBOX        "Shift the tool along current tool axis",IDC_STATIC,6,289,278,37
+    GROUPBOX        "Execute the program line",IDC_TOP_PART,6,7,278,156
+    GROUPBOX        "Axises of machine tool for the rotations",IDC_STATIC,6,330,278,34
+    LTEXT           "XZ",IDC_NOTE_XZ,10,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "YZ",IDC_NOTE_YZ,79,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "A",IDC_NOTE_A,10,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    LTEXT           "C",IDC_NOTE_C,79,196,14,14,SS_CENTERIMAGE | NOT WS_GROUP
+    PUSHBUTTON      "Clear List",IDC_CLEAR_PR,230,48,50,14
+    PUSHBUTTON      "Go From List",IDC_GO_PR,230,34,50,14
+    CONTROL         "Active CS",IDC_WCS,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,224,214,55,14
+    CONTROL         "Calculate angles",IDC_FROM_PICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,196,74,14
+    CONTROL         "Open/Close",IDC_FULL_SIZE,"Button",BS_AUTOCHECKBOX | BS_BITMAP | BS_PUSHLIKE | WS_TABSTOP,230,144,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX_RC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_REMOTECONTROL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 364
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\RemoteControl.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 5,3,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041904b0"
+        BEGIN
+            VALUE "CompanyName", "Inteks"
+            VALUE "FileDescription", "Remote Control"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "RemoteCo.exe"
+            VALUE "LegalCopyright", "Copyright (C) 2023"
+            VALUE "OriginalFilename", "RemoteCo.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "5.3.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x419, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About RemoteControl..."
+    IDS_MSG_CONNECT         "Failed to connect to NCManager"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\RemoteControl.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

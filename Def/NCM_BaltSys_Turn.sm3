@@ -1,0 +1,239 @@
+// 
+// 
+
+// Section General
+Name		NCM_BaltSys_Turn.sm3
+Type		BaltSys
+Model		
+Manufacturer
+MadeFrom	Base	
+Operation		Turn
+NumAxes		4
+Версия		1.01
+Create		05.07.2023
+Update		06.10.2023
+Forbidden	scravtqefijklm
+Allowed	bdghnopuwxyz
+CheckSyntax	Yes
+Format	1
+// end section
+
+// Section Word Replacement
+Replace		"_#IFFIRST_G33_K"	"F"
+Replace		"(CTL,T)"		""
+Replace		"SSL="		"G500S"
+Replace		"TMR="		"G04X"
+Replace		"NEG"		"[-1]*"
+Replace		"(DPI,X,Y)"	"G17"
+Replace		"(DPI,Z,X)"	"G18"
+Replace		"G41"		"G41G3500"
+Replace		"G42"		"G42G3500"
+Replace		"G40"		"G40G3600"
+Replace		"(DLY,"		"G4P"
+Replace		"(DIS,"		";(DIS,"
+Replace		"(INP,"		";(INP,"
+Replace		"(UCG,"		";(UCG,"
+Replace		"(UIO,"		"G92"
+Replace		"(FIL,"		";(FIL,"
+Replace		"UEP"		";UEP"
+Replace		"USB"		"E8999"
+Replace		"(ERP)"		"M200"
+Replace		"(RPT,"		"K"
+Replace		"M16"		"M6"
+Replace		"G34"		"G33"
+RegExp	"N$"	""
+// end section
+
+// Section Word Definition
+TurnThreadR		R
+StartAngleGrooveCycle	Q
+LabelLast		"""
+LabelFirst		"""
+PeckIncrementDepth	I
+DrillRef	R
+LineNumber		N
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B		 
+SpindleRotationAxis	C	 
+FunctionCode		G
+MiscFunctionCode	M
+FeedCode		F
+SpeedCodeTurn		S
+ToolCode		T
+DwellTime		P
+CircleHorzCenter	I
+CircleVerticalCenter	J
+CircleDepthCenter	K
+CircleRadius		R
+DiaCompOffset		D
+LengthCompOffset	H
+ProgramNumber		P
+ProgramStartEnd		O
+BlockSkip		;
+BlockDebug		/
+Register		E
+ProgramBeginEnd		%
+ProgramCopyStart	P
+ProgramCopyEnd		Q
+VerticalAxisInc		V
+SpindleAxisInc		W
+ThreadParm		A
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y
+CircularCCW		3	1	Y
+Dwell		4	0	N
+ExactStop		8	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthCompOn		43	8	N
+LengthComp		44	8	N
+LengthOffsetIncr		45	0	N
+LengthOffsetDecr		46	0	N
+LengthOffsetIncr2X		47	0	N
+LengthOffsetDecr2X		48	0	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+TappingCycle		63	15	N
+CuttingCycle		64	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+FineBoring		76	9	Y
+CancelCycle		80	9	Y
+DrillCycle		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCyclePlane	83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	Y
+BackBoreCycle		87	9	Y
+BoreDwellCycle		88	9	Y
+ReamDwellCycle		89	9	Y
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		92	0	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+ProgramCopy		700	0	N
+ParToNext			3500	100	N
+RetractComp		3600	100	N
+SetMaxSpeed		500	0	N
+GrooveCycle		32	0	Y
+SimThreadCycleT		33	0	Y
+MachineCoordSys		79	0	N
+Dummy			27	1	N
+Dummy1			28	1	N
+Dummy2			29	1	N
+Dummy3			70	1	N
+Dummy4			71	1	N
+Dummy5			9	1	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop		1
+SpindleCWTurn		3
+SpindleCCWTurn		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+Orient		19
+EndProgram		30
+SubroutineCall		98
+SubroutineEnd		99
+SubroutineEndCont	44
+GoTo		97
+FileCall	197
+ThreadCut	12
+AutoCycleEnd		200
+GrooveOn		1000
+GrooveOff		1100
+TRTPositiveCCW	56
+TRTPositiveCW	55
+TRTAlwaysCCW	54
+TRTAlwaysCW	53
+TRTShortestDistance	52
+TRTLinear	51
+TRTDoNotChange	50
+RestartRotAngles	57
+Dummy1		23
+Dummy3		27
+Dummy2		60
+Dummy4		41
+Dummy5		42
+// end section
+
+// Section Others
+OpenBracketChar	(
+CloseBracketChar	)
+DraftAngleTol	0
+LinearXConversion		0.5
+LinearIConversion	0.5					
+CycleNeedsGeom		Yes
+CompType		Arc
+PartialCompCancel		Yes
+CircleCenterType		IJ
+CircleCenterMode		Absolute
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute		
+ToolChangeWithM06	Yes
+ToolOffsetInToolNumber	Com
+ToolPreSelect		No
+IgnoreUnknownM		Yes
+IgnoreUnknownCh		No
+IgnoreUnknownG		No
+MinArcDist		2
+CheckGeom		Yes
+StartProgram		Ignore
+FileExtension *.*
+CyclicB			Yes
+MainInitStr		G97G54G95G18G0G79X0Z0M5
+EmptyGZero		Yes
+EmptyZero		Yes
+DwellTimeDiscr		1000
+ToolChangeTime		5
+FastFeedRate		5000
+MaxFeedRate		2000
+InterChangeCancelCycle	Yes
+BaltSysStyle		Yes
+LabelType		BaltSys
+MachineCS		600,,400
+ExprMCode	Yes
+UseStdFuncNames	Yes
+TableRotationType	ShortestDistance
+CyclicC	Yes
+UseRegStack		Yes
+// end section
+
+// Section Cycle Definition
+// end section

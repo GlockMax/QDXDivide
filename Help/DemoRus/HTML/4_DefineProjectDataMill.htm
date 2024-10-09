@@ -1,0 +1,633 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<title>Данные для фрезерной симуляции</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Заголовок 1 Знак";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h2
+	{mso-style-link:"Заголовок 2 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h3
+	{mso-style-link:"Заголовок 3 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h4
+	{mso-style-link:"Заголовок 4 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-style:italic;}
+h5
+	{mso-style-link:"Заголовок 5 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Заголовок 6 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Заголовок 7 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Заголовок 8 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Заголовок 9 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Название Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Название Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Название Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Название Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Подзаголовок Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Текст выноски Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-link:"Без интервала Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"Цитата 2 Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"Выделенная цитата Знак";
+	margin-top:10.0pt;
+	margin-right:46.8pt;
+	margin-bottom:14.0pt;
+	margin-left:46.8pt;
+	line-height:115%;
+	border:none;
+	padding:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleEmphasis
+	{color:gray;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	text-decoration:underline;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	letter-spacing:.25pt;
+	font-weight:bold;
+	text-decoration:underline;}
+span.MsoBookTitle
+	{font-variant:small-caps;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.1
+	{mso-style-name:"Заголовок 1 Знак";
+	mso-style-link:"Заголовок 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.2
+	{mso-style-name:"Заголовок 2 Знак";
+	mso-style-link:"Заголовок 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.3
+	{mso-style-name:"Заголовок 3 Знак";
+	mso-style-link:"Заголовок 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.4
+	{mso-style-name:"Заголовок 4 Знак";
+	mso-style-link:"Заголовок 4";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.5
+	{mso-style-name:"Заголовок 5 Знак";
+	mso-style-link:"Заголовок 5";
+	font-family:"Cambria","serif";
+	color:#243F60;}
+span.6
+	{mso-style-name:"Заголовок 6 Знак";
+	mso-style-link:"Заголовок 6";
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-style:italic;}
+span.7
+	{mso-style-name:"Заголовок 7 Знак";
+	mso-style-link:"Заголовок 7";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.8
+	{mso-style-name:"Заголовок 8 Знак";
+	mso-style-link:"Заголовок 8";
+	font-family:"Cambria","serif";
+	color:#404040;}
+span.9
+	{mso-style-name:"Заголовок 9 Знак";
+	mso-style-link:"Заголовок 9";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.a
+	{mso-style-name:"Название Знак";
+	mso-style-link:Название;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.a0
+	{mso-style-name:"Подзаголовок Знак";
+	mso-style-link:Подзаголовок;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+span.a1
+	{mso-style-name:"Без интервала Знак";
+	mso-style-link:"Без интервала";}
+span.20
+	{mso-style-name:"Цитата 2 Знак";
+	mso-style-link:"Цитата 2";
+	color:black;
+	font-style:italic;}
+span.a2
+	{mso-style-name:"Выделенная цитата Знак";
+	mso-style-link:"Выделенная цитата";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.a3
+	{mso-style-name:"Текст выноски Знак";
+	mso-style-link:"Текст выноски";
+	font-family:"Tahoma","sans-serif";}
+.MsoChpDefault
+	{font-family:"Calibri","sans-serif";}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=WordSection1>
+
+<h1>Задать данные для симуляции (фрезерный проект)</h1>
+
+<p class=MsoNormal>Определим данные для симуляции фрезерной обработки.
+Научимся:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Создавать заготовку</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Определять режущий инструмент</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Задавать значения корректоров для контурной коррекции <span
+lang=EN-US>G</span>41/<span lang=EN-US>G</span>42</p>
+
+<p class=MsoNormal>Загрузите проект из папки ..\<span lang=EN-US>Demo</span>\<span
+lang=EN-US>Millimeter</span>\<span lang=EN-US>Mill_2X\</span><span lang=EN-US> </span><span
+lang=EN-US>MillTP</span>.<span lang=EN-US>ncm</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=536
+height=302 id="Рисунок 4" src="4_DefineProjectDataMill.files/image001.png"></p>
+
+<p class=MsoNormal>В проекте загружена управляющая программа «<span lang=EN-US>RestrictorPlate</span>.<span
+lang=EN-US>NC</span>», задана стойка ЧПУ «<span lang=EN-US>Sinumeric</span>840<span
+lang=EN-US>D</span>.<span lang=EN-US>sm</span>3» и станок «<span lang=EN-US>MillDefault</span>».
+Остальные данные для полной симуляции будем задавать.</p>
+
+<p class=MsoNormal>Создайте заготовку в виде плиты размером <span lang=EN-US>X</span>150,
+<span lang=EN-US>Y</span>60, <span lang=EN-US>Z</span>20. УП должна быть
+привязана к нижнему левому углу и верхней плоскости плиты. </p>
+
+<p class=MsoNormal>Укажите курсором на слово «Заготовка» в панели «Объекты» и
+нажмите правую кнопку мыши. Из выпавшего контекстного меню выберите пункт,
+«Создать\Изменить», «Плита».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=269
+height=191 id="Рисунок 5" src="4_DefineProjectDataMill.files/image002.jpg"></p>
+
+<p class=MsoNormal>В появившемся диалоге введите размеры заготовки, укажите привязку
+УП относительно заготовки и нажмите «<span lang=EN-US>OK</span>».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=274
+height=302 id="Рисунок 6" src="4_DefineProjectDataMill.files/image003.jpg"></p>
+
+<p class=MsoNormal>После нажатия на «<span lang=EN-US>OK</span>» диалог
+закроется, а на экране появится заготовка в каркасном виде.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=278
+height=215 id="Рисунок 7" src="4_DefineProjectDataMill.files/image004.jpg"></p>
+
+<p class=MsoNormal>Убедитесь, что траектория находится внутри заготовки.</p>
+
+<p class=MsoNormal>Определите размеры режущего инструмента. Как только в проект
+<span lang=EN-US>NCManager</span>-а загружается УП, в панели «Объекты»
+создается список «пустых» инструментов, вызов которых есть в УП. Нужно зайти в
+редактирование каждого из инструментов и задать его тип и размеры. Раскройте
+список инструментов двойным кликом на слове «Инструменты» или нажмите на
+крестик справа от слова «Инструменты».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=112
+height=78 id="Рисунок 8" src="4_DefineProjectDataMill.files/image005.png"></p>
+
+<p class=MsoNormal>Список инструментов, размеры которых нужно задать:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Центровка
+диаметром 4 высотой 10 угол при вершине 90 градусов</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Сверло
+диаметром 6.1 высотой 50 угол при вершине 118 градусов</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Сверло
+диаметром 5 высотой 50 угол при вершине 118 градусов</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Сверло
+диаметром 18 высотой 50 угол при вершине 118 градусов</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Фреза
+диаметром 14 высотой 50</p>
+
+<p class=MsoNormal>Укажите курсором на имя инструмента «1 <span lang=EN-US>AutoMill</span>»,
+нажмите правую кнопку мыши и выполните пункт «Изменить», из выпавшего
+контекстного меню.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=148
+height=115 id="Рисунок 9" src="4_DefineProjectDataMill.files/image006.jpg"></p>
+
+<p class=MsoNormal>Появится диалог создания инструмента. Внизу диалога список в
+который заносятся инструменты из которых состоит данный инструмент. Пока он
+пуст.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=230
+height=333 id="Рисунок 10" src="4_DefineProjectDataMill.files/image007.jpg"></p>
+
+<p class=MsoNormal>Нажмите на кнопку «Добавить простой инструмент». В
+появившемся диалоге «Инструмент», укажите на закладке его тип, - сверло и
+введите размеры, - диаметр, длину и угол. После этого, «<span lang=EN-US>OK</span>» 
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=236
+height=227 id="Рисунок 12" src="4_DefineProjectDataMill.files/image008.jpg"></p>
+
+<p class=MsoNormal>Диалог «Инструмент» закрылся. В списке составляющих появился
+только что заданный простой инструмент. Имя инструмента изменилось на «D4H10A90».
+Можете поставить свое имя для этого инструмента. Например, «Центровка».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=229
+height=333 id="Рисунок 13" src="4_DefineProjectDataMill.files/image009.jpg"></p>
+
+<p class=MsoNormal>Нажмите на «<span lang=EN-US>OK</span>». Инструмент номер 1
+создан, имя «Центровка» отображается в панели «Объекты» в списке инструментов.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=167
+height=115 id="Рисунок 14" src="4_DefineProjectDataMill.files/image010.png"></p>
+
+<p class=MsoNormal>Аналогично задайте оставшиеся инструменты. </p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Указывайте на имя инструмента в списке инструментов</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Правой кнопкой мыши вызывайте контекстное меню</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Выбирайте пункт «Изменить» из контекстного меню</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>В диалоге «Создать инструмент», нажимайте на кнопку «Создать
+простой инструмент»</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Задавайте тип и размеры инструмента в диалоге «Инструмент»</p>
+
+<p class=MsoNormal>После того, как были определены все инструменты, список
+выглядит так:</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=171
+height=115 id="Рисунок 15" src="4_DefineProjectDataMill.files/image011.png"></p>
+
+<p class=MsoNormal>Перейдите в режим резания «Резать» и выполните симуляцию.
+Результат не похож на ожидаемый. </p>
+
+<p class=MsoNormal>В УП включается контурная коррекция для фрезы диаметром 14,
+траектория движения этой фрезы рассчитана на чистовой контур, а величину
+коррекции еще не вводили.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=313
+height=229 id="Рисунок 16" src="4_DefineProjectDataMill.files/image012.png"></p>
+
+<p class=MsoNormal>Введите величину коррекцию в 5 корректор равный радиусу 5-го
+инструмента. Для этого укажите курсором на слово «Стойка ЧПУ» в панели
+«Объекты», нажмите правую кнопку мыши, чтобы вызвать контекстное меню и из него
+выполните команду «Исходное состояние».  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=192
+height=76 id="Рисунок 17" src="4_DefineProjectDataMill.files/image013.jpg"></p>
+
+<p class=MsoNormal>«Исходное состояние» также можно вызвать, нажав на иконку,
+справа от слова «Стойка ЧПУ».</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=142
+height=57 id="Рисунок 18" src="4_DefineProjectDataMill.files/image014.jpg"></p>
+
+<p class=MsoNormal>В диалоге «Исходное состояние» выберите закладку
+«Корректоры» и поставьте значение 7 мм., для корректора <span lang=EN-US>D</span>5.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=292
+height=189 id="Рисунок 20" src="4_DefineProjectDataMill.files/image015.jpg"></p>
+
+<p class=MsoNormal style='page-break-after:avoid'>Когда Вы нажали на «<span
+lang=EN-US>OK</span>», траектория изменилась, т.к. появились не нулевые
+значения в корректорах на диаметр. Появилась розовая траектория, траектория с
+учетом контурной коррекции. </p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=414
+height=189 id="Рисунок 21" src="4_DefineProjectDataMill.files/image016.png"></p>
+
+<p class=MsoNormal>В <span lang=EN-US>NCManager</span>-е можно управлять
+видимостью траекторий с коррекцией или без (запрограммированной). Можно
+включить видимость каждой по отдельности или обоих одновременно. Делается это
+через свойство «Программы», «Траектория». В данном случае стоит значение «Обе».
+Можете изменить значение.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=335
+height=227 id="Рисунок 22" src="4_DefineProjectDataMill.files/image017.png"></p>
+
+<p class=MsoNormal>Запустите симуляцию резания в режиме «Резать». Теперь все
+выглядит нормальным.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=311
+height=229 id="Рисунок 23" src="4_DefineProjectDataMill.files/image018.png"></p>
+
+</div>
+
+</body>
+
+</html>

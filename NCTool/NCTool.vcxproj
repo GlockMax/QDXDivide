@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|x64">
+      <Configuration>Template</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A4129F63-B384-4CDF-A23C-281BBC9579D5}</ProjectGuid>
+    <RootNamespace>NCTool</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+    <Import Project="..\Source\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+    <Import Project="..\Source\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+    <Import Project="..\Source\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+    <Import Project="..\Source\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="..\Source\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <Import Project="..\Source\PropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\..\temp\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\lib\debug/NCTool.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXEXT;WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;NCTOOL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_AFXDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0419</Culture>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlibwapi.lib;opengl32.lib;glu32.lib;BSP_Model.lib;NCMB.lib;TinyXML.lib;Machine.lib;OpenGLRender.lib;DXFExport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\lib\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\NCTool.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>..\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\..\lib\debug/NCTool.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXEXT;WIN64;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;NCTOOL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_AFXDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0419</Culture>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:X64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlibwapi.lib;opengl32.lib;glu32.lib;BSP_Model.lib;NCMB.lib;TinyXML.lib;Machine.lib;OpenGLRender.lib;DXFExport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\lib\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\NCTool.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>..\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AssemblyDebug>true</AssemblyDebug>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\lib\release/NCTool.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXEXT;WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;NCTOOL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <AdditionalOptions>/Qpar /Qpar-report:1</AdditionalOptions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_AFXDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0419</Culture>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlibwapi.lib;opengl32.lib;glu32.lib;BSP_Model.lib;NCMB.lib;TinyXML.lib;Machine.lib;OpenGLRender.lib;DXFExport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\lib\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\NCTool.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>..\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\..\lib\release/NCTool.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXEXT;WIN64;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;NCTOOL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <AdditionalOptions>/Qpar /Qpar-report:1</AdditionalOptions>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_AFXDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0419</Culture>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:X64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlibwapi.lib;opengl32.lib;glu32.lib;BSP_Model.lib;NCMB.lib;TinyXML.lib;Machine.lib;OpenGLRender.lib;DXFExport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\lib\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\NCTool.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>..\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <Link>
+      <AdditionalDependencies>zlibwapi.lib;opengl32.lib;glu32.lib;BSP_Model.lib;NCMB.lib;TinyXML.lib;Machine.lib;OpenGLRender.lib;DXFExport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(OutDir)\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ClCompile>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Link>
+      <AdditionalDependencies>zlibwapi.lib;opengl32.lib;glu32.lib;BSP_Model.lib;NCMB.lib;TinyXML.lib;Machine.lib;OpenGLRender.lib;DXFExport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(OutDir)\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ClCompile>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CMapStringToNStock.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Template|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CrToolContour.cpp" />
+    <ClCompile Include="GAnimateCadr.cpp" />
+    <ClCompile Include="GAnimateCadrMill.cpp" />
+    <ClCompile Include="GAnimateCadrMillDX.cpp" />
+    <ClCompile Include="GAnimateCadrRot.cpp" />
+    <ClCompile Include="GDynamicCadr.cpp" />
+    <ClCompile Include="GReRenderCadr.cpp" />
+    <ClCompile Include="mtreectl.cpp" />
+    <ClCompile Include="NCadrSpeedPar.cpp" />
+    <ClCompile Include="NCollSettingsDlg.cpp" />
+    <ClCompile Include="NCTool.cpp" />
+    <ClCompile Include="NCToolConst.cpp" />
+    <ClCompile Include="NListCtrl.cpp" />
+    <ClCompile Include="NMendrelDial.cpp" />
+    <ClCompile Include="NMovableObj.cpp" />
+    <ClCompile Include="NProgIntWalker.cpp" />
+    <ClCompile Include="NProgWalker.cpp" />
+    <ClCompile Include="NSectArrParams.cpp" />
+    <ClCompile Include="NSectionSet.cpp" />
+    <ClCompile Include="NSectionSetDyn.cpp" />
+    <ClCompile Include="NSectSliderCtrl.cpp" />
+    <ClCompile Include="NStock.cpp" />
+    <ClCompile Include="NStockBar.cpp" />
+    <ClCompile Include="NStockBox.cpp" />
+    <ClCompile Include="NStockBSP.cpp" />
+    <ClCompile Include="NStockCont.cpp" />
+    <ClCompile Include="NStockCyl.cpp" />
+    <ClCompile Include="NStockOrigR.cpp" />
+    <ClCompile Include="NStockSection.cpp" />
+    <ClCompile Include="NStockSectionDlg.cpp" />
+    <ClCompile Include="NStockStl.cpp" />
+    <ClCompile Include="NStockSTLMillTurn.cpp" />
+    <ClCompile Include="NStockSTLTurn.cpp" />
+    <ClCompile Include="NStockSweep.cpp" />
+    <ClCompile Include="NToolBRound.cpp" />
+    <ClCompile Include="NTool.cpp" />
+    <ClCompile Include="NToolCombined.cpp" />
+    <ClCompile Include="NToolCombinedMill.cpp" />
+    <ClCompile Include="NToolCombinedTurn.cpp" />
+    <ClCompile Include="NToolCombinedWeld.cpp" />
+    <ClCompile Include="NToolCommonSheet.cpp" />
+    <ClCompile Include="NToolDiskStd.cpp" />
+    <ClCompile Include="NToolMill.cpp" />
+    <ClCompile Include="NToolPalette.cpp" />
+    <ClCompile Include="NToolPRect.cpp" />
+    <ClCompile Include="NToolPunch.cpp" />
+    <ClCompile Include="NToolsConCrMillPage.cpp" />
+    <ClCompile Include="NToolsConCrPage.cpp" />
+    <ClCompile Include="NToolsConCrSheet.cpp" />
+    <ClCompile Include="NToolsConCrTurnPage.cpp" />
+    <ClCompile Include="NToolsConCrWeldPage.cpp" />
+    <ClCompile Include="NToolsCrAnglePage.cpp" />
+    <ClCompile Include="NToolsCrAnglesPage.cpp" />
+    <ClCompile Include="NToolsCrAptPage.cpp" />
+    <ClCompile Include="NToolsCrBorePage.cpp" />
+    <ClCompile Include="NToolsCrBRoundPage.cpp" />
+    <ClCompile Include="NToolsCrCommonPage.cpp" />
+    <ClCompile Include="NToolsCrDial.cpp" />
+    <ClCompile Include="NToolsCrDiskSheet.cpp" />
+    <ClCompile Include="NToolsCrFasetPage.cpp" />
+    <ClCompile Include="NToolsCrRoundPage.cpp" />
+    <ClCompile Include="NToolsCrShapedPage.cpp" />
+    <ClCompile Include="NToolsCrTBCirc.cpp" />
+    <ClCompile Include="NToolsCrTBCut.cpp" />
+    <ClCompile Include="NToolsCrTBISO.cpp" />
+    <ClCompile Include="NToolsCrTBOut.cpp" />
+    <ClCompile Include="NToolsCrTBThr.cpp" />
+    <ClCompile Include="NToolsCrTHBar.cpp" />
+    <ClCompile Include="NToolsCrTHCyl.cpp" />
+    <ClCompile Include="NToolsCrTurn.cpp" />
+    <ClCompile Include="NToolsCrTurnHoldSheet.cpp" />
+    <ClCompile Include="NToolsCrTurnHoldSTLDlg.cpp" />
+    <ClCompile Include="NToolsCrTurnSheet.cpp" />
+    <ClCompile Include="NToolsCrWeldPage.cpp" />
+    <ClCompile Include="NToolsCrWeldSheet.cpp" />
+    <ClCompile Include="NToolShaped.cpp" />
+    <ClCompile Include="NToolStd.cpp" />
+    <ClCompile Include="NToolStdCC.cpp" />
+    <ClCompile Include="NToolTurn.cpp" />
+    <ClCompile Include="NToolTurnBlade.cpp" />
+    <ClCompile Include="NToolTurnBladeCirc.cpp" />
+    <ClCompile Include="NToolTurnBladeCont.cpp" />
+    <ClCompile Include="NToolTurnBladeCut.cpp" />
+    <ClCompile Include="NToolTurnBladeISO.cpp" />
+    <ClCompile Include="NToolTurnBladeMill.cpp" />
+    <ClCompile Include="NToolTurnBladeOut.cpp" />
+    <ClCompile Include="NToolTurnBladeThr.cpp" />
+    <ClCompile Include="NToolTurnHolder.cpp" />
+    <ClCompile Include="NToolTurnHolderBar.cpp" />
+    <ClCompile Include="NToolTurnHolderCyl.cpp" />
+    <ClCompile Include="NToolTurnHolderSTL.cpp" />
+    <ClCompile Include="NToolVert.cpp" />
+    <ClCompile Include="NToolWeld.cpp" />
+    <ClCompile Include="NTurnStockSkeleton.cpp" />
+    <ClCompile Include="NWeldPart.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="CStocksCollection.cpp" />
+    <ClCompile Include="TFascia.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NCTool.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NCTool_RE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\CStocksCollection.h" />
+    <ClInclude Include="..\Common\DocElements.h" />
+    <ClInclude Include="..\common\GAnimateCadrMillDX.h" />
+    <ClInclude Include="..\common\NCadrSpeedPar.h" />
+    <ClInclude Include="..\Common\NCTOOL_API.h" />
+    <ClInclude Include="..\Common\NMendrelDial.h" />
+    <ClInclude Include="..\Common\NStockBSP.h" />
+    <ClInclude Include="..\common\NStockOrigR.h" />
+    <ClInclude Include="..\Common\NStockSTLMillTurn.h" />
+    <ClInclude Include="..\common\NStockSTLTurn.h" />
+    <ClInclude Include="..\common\NToolCommonSheet.h" />
+    <ClInclude Include="..\Common\NToolsCrBorePage.h" />
+    <ClInclude Include="..\common\NToolsCrCommonPage.h" />
+    <ClInclude Include="..\Common\NToolTurnHolderSTL.h" />
+    <ClInclude Include="..\common\NToolVert.h" />
+    <ClInclude Include="..\Common\NTurnStockSkeleton.h" />
+    <ClInclude Include="NToolsCrTurn.h" />
+    <ClInclude Include="..\Common\CMapStringToNStock.h" />
+    <ClInclude Include="ConstDef.h" />
+    <ClInclude Include="..\Common\GAnimateCadr.h" />
+    <ClInclude Include="..\Common\GAnimateCadrMill.h" />
+    <ClInclude Include="..\Common\GAnimateCadrRot.h" />
+    <ClInclude Include="..\Common\GDynamicCadr.h" />
+    <ClInclude Include="..\Common\GReRenderCadr.h" />
+    <ClInclude Include="..\Common\mtreectl.h" />
+    <ClInclude Include="..\Common\NCollSettingsDlg.h" />
+    <ClInclude Include="..\Common\NCToolConst.h" />
+    <ClInclude Include="..\Common\NFloatEdit.h" />
+    <ClInclude Include="..\Common\NListCtrl.h" />
+    <ClInclude Include="..\Common\NMovableObj.h" />
+    <ClInclude Include="..\Common\NProgIntWalker.h" />
+    <ClInclude Include="..\Common\NProgWalker.h" />
+    <ClInclude Include="..\Common\NSectArrParams.h" />
+    <ClInclude Include="..\Common\NSectionSet.h" />
+    <ClInclude Include="..\Common\NSectionSetDyn.h" />
+    <ClInclude Include="NSectSliderCtrl.h" />
+    <ClInclude Include="..\Common\NStock.h" />
+    <ClInclude Include="..\Common\NStockBar.h" />
+    <ClInclude Include="..\Common\NStockBox.h" />
+    <ClInclude Include="..\Common\NStockCont.h" />
+    <ClInclude Include="..\Common\NStockCyl.h" />
+    <ClInclude Include="..\Common\NStockSection.h" />
+    <ClInclude Include="NStockSectionDlg.h" />
+    <ClInclude Include="..\Common\NStockStl.h" />
+    <ClInclude Include="..\Common\NStockSweep.h" />
+    <ClInclude Include="..\Common\NTool.h" />
+    <ClInclude Include="..\Common\NToolBRound.h" />
+    <ClInclude Include="..\Common\NToolCombined.h" />
+    <ClInclude Include="..\Common\NToolCombinedMill.h" />
+    <ClInclude Include="..\Common\NToolCombinedTurn.h" />
+    <ClInclude Include="..\Common\NToolCombinedWeld.h" />
+    <ClInclude Include="..\Common\NToolDiskStd.h" />
+    <ClInclude Include="..\Common\NToolMill.h" />
+    <ClInclude Include="..\Common\NToolPalette.h" />
+    <ClInclude Include="..\Common\NToolPRect.h" />
+    <ClInclude Include="..\Common\NToolPunch.h" />
+    <ClInclude Include="..\Common\NToolsConCrMillPage.h" />
+    <ClInclude Include="..\Common\NToolsConCrPage.h" />
+    <ClInclude Include="..\Common\NToolsConCrSheet.h" />
+    <ClInclude Include="..\Common\NToolsConCrTurnPage.h" />
+    <ClInclude Include="..\Common\NToolsConCrWeldPage.h" />
+    <ClInclude Include="..\Common\NToolsCrAnglePage.h" />
+    <ClInclude Include="..\Common\NToolsCrAnglesPage.h" />
+    <ClInclude Include="..\Common\NToolsCrAptPage.h" />
+    <ClInclude Include="..\Common\NToolsCrBRoundPage.h" />
+    <ClInclude Include="..\Common\NToolsCrDial.h" />
+    <ClInclude Include="..\Common\NToolsCrDiskSheet.h" />
+    <ClInclude Include="..\Common\NToolsCrFasetPage.h" />
+    <ClInclude Include="..\Common\ntoolscrpunchdial.h" />
+    <ClInclude Include="..\Common\NToolsCrRoundPage.h" />
+    <ClInclude Include="..\Common\NToolsCrShapedPage.h" />
+    <ClInclude Include="NToolsCrTBCirc.h" />
+    <ClInclude Include="NToolsCrTBCut.h" />
+    <ClInclude Include="NToolsCrTBISO.h" />
+    <ClInclude Include="NToolsCrTBOut.h" />
+    <ClInclude Include="NToolsCrTBThr.h" />
+    <ClInclude Include="NToolsCrTHBar.h" />
+    <ClInclude Include="NToolsCrTHCyl.h" />
+    <ClInclude Include="..\Common\NToolsCrTurnHoldSheet.h" />
+    <ClInclude Include="..\Common\NToolsCrTurnSheet.h" />
+    <ClInclude Include="..\Common\NToolsCrWeldPage.h" />
+    <ClInclude Include="..\Common\NToolsCrWeldSheet.h" />
+    <ClInclude Include="..\Common\NToolShaped.h" />
+    <ClInclude Include="NToolsCrTurnHoldSTLDlg.h" />
+    <ClInclude Include="..\Common\NToolStd.h" />
+    <ClInclude Include="..\Common\NToolStdCC.h" />
+    <ClInclude Include="..\Common\NToolTurn.h" />
+    <ClInclude Include="..\Common\NToolTurnBlade.h" />
+    <ClInclude Include="..\Common\NToolTurnBladeCirc.h" />
+    <ClInclude Include="..\Common\NToolTurnBladeCont.h" />
+    <ClInclude Include="..\Common\NToolTurnBladeCut.h" />
+    <ClInclude Include="..\Common\NToolTurnBladeISO.h" />
+    <ClInclude Include="..\Common\NToolTurnBladeMill.h" />
+    <ClInclude Include="..\Common\NToolTurnBladeOut.h" />
+    <ClInclude Include="..\Common\NToolTurnBladeThr.h" />
+    <ClInclude Include="..\Common\NToolTurnHolder.h" />
+    <ClInclude Include="..\Common\NToolTurnHolderBar.h" />
+    <ClInclude Include="..\Common\NToolTurnHolderCyl.h" />
+    <ClInclude Include="..\Common\NToolWeld.h" />
+    <ClInclude Include="..\Common\NWeldPart.h" />
+    <ClInclude Include="resource.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">echo // Generated Help Map file.  Used by NCM.HHP. &gt; "hlp\HTMLDefines.h"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating map file for help compiler...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">hlp\HTMLDefines.h;%(Outputs)</Outputs>
+    </ClInclude>
+    <ClInclude Include="TFascia.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BSP_Model\BSP_Model.vcxproj">
+      <Project>{4933cf2e-3410-471a-8d35-e3de288c18fa}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Collision\Collision.vcxproj">
+      <Project>{cf897ed4-5392-4f45-a37e-c35165e53aca}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Mashine\Mashine.vcxproj">
+      <Project>{483493a2-5bb6-41bf-a654-90dcf2fdf0a9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\NCMb\NCMb.vcxproj">
+      <Project>{b86bfce6-92a1-4fe5-aa0f-5973c9702ed7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenGLRender\OpenGLRender.vcxproj">
+      <Project>{af40fdfd-f938-4894-96dc-8c96f9c9076b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\PropEditor\PropEditor.vcxproj">
+      <Project>{7d1a744a-2ef4-41d7-a7e8-ac8a68cc9337}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\TinyXML\TinyXML.vcxproj">
+      <Project>{3483b766-94c0-40c0-aad9-141fbe55e752}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitS\UnitS.vcxproj">
+      <Project>{7c535246-bf0d-4dc9-89a8-6e0dcae4ec2d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="NCTool_RE.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

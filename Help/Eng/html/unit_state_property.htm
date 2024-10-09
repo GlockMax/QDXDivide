@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Control logic rack properties</TITLE>
+<link rel=StyleSheet href=../tutorial.css></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1>Control logic rack properties</h1>
+<p>Some parameters from Initial state CNC-control dialog are placed in a Properties panel. These parameters correspond to initial parameters of control logic rack and affect the execution of CNC programs in NCManager.</p>
+<p><img src="../images/PropertyUnit.gif"></p>
+<p>To change these values, click in the left column of Properties panel on a desired parameter and select its value from the list or enter from keyboard. Modified parameter will be highlighted bold. Parameter description is displayed at the bottom of the panel.</p>
+<p>Initial tool number and coordinates from program execution are represented by following parameters:</p>
+<p><strong>Tool</strong> - the number of tool in a tool bank, which is going to machine. If the CNC program doesn't have a command to change the tool, the machining will be carried out with this tool. Otherwise, tools are used according to Object panel &gt;Tools.</p>
+<p><strong>Turret</strong> - the number of a tool bank, which contain the tool with number set in &quot;Tool&quot; property.</p>
+<P><strong>Start X</strong> - initial tool position by X linear coordinate. </P>
+<P><strong>Start Y</strong> - initial tool position by Y linear coordinate. </P>
+<P><strong>Start Z</strong><strong> </strong>- initial tool position by Z linear coordinate. </P>
+<P><strong>Start A</strong> - initial tool position by A angular coordinate. </P>
+<P><strong>Start B</strong> - initial tool position by B angular coordinate. </P>
+<P><strong>Start C</strong> - initial tool position by C angular coordinate. </P>
+<p>Initial values of some parameters or default logic control rack settings are set by:</p>
+<p><strong>Feed </strong>- tool advance measuring units (mm/min, 
+  mm/rev).</p>
+<p><strong>Feed value</strong> - tool advance value.</p>
+<p><strong>Chuck direction</strong> - rotation direction of main spindle 
+  (CW, CCW).</p>
+<p><strong>Chuck speed</strong> - main spindle rotation speed value.</p>
+<p><strong>Programming mode</strong> - coordinates programming mode (Absolute mode, 
+  Incremental mode).</p>
+<p><strong>Unit measure</strong> - coordinate measure units (millimeter, inch).</p>
+<p><strong>Debug</strong> - switch debug frames execution 
+  (i.e. frames beginning with “/”). To turn it on select &quot;Yes&quot;, otherwise - &quot;No&quot;.</p>
+<p><strong>File</strong> - logic control rack properties file location.</p>
+</BODY>
+</HTML>

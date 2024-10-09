@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="Windows-1251" ?>
+<MachineTool>
+    <axes>
+        <axis>
+            <param type="trans" name="stock_X" parent="" length="10" />
+            <vector x="0" y="-1" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="trans" name="stock_Y" parent="stock_X" length="10" />
+            <vector x="0" y="-1" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="trans" name="stock_Z" parent="stock_Y" length="10" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="0" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="stock" name="stock" parent="stock_Z" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+            <collisioncheck axisname="Z" mychildren="Yes" axischildren="Yes" />
+        </axis>
+        <axis>
+            <param type="trans" name="Z" parent="" length="10" />
+            <vector x="0" y="0" z="1" />
+            <color r="0" g="0" b="1" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="trans" name="X" parent="Z" length="10" />
+            <vector x="1" y="0" z="0" />
+            <color r="1" g="1" b="0" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="part" name="SupportX" parent="X" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.6" g="0.6" b="0.6" a="1" />
+            <part name="suport_poperec" margin="0" />
+        </axis>
+        <axis>
+            <param type="tool" name="tool" parent="SupportX" length="10" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <localdisplvec x="0" y="0" z="0" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="rotary" name="TurretRot" parent="X" length="10" />
+            <vector x="0" y="1" z="0" />
+            <basepoint x="0" y="50" z="137.95" />
+            <color r="0" g="0" b="1" a="1" />
+            <limits min="0" max="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Revolver" parent="TurretRot" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.3" g="0.3" b="0.3" a="1" />
+            <part name="rovol_golovka" margin="0" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0001tool" parent="TurretRot" length="100" />
+            <vector x="0" y="0" z="1" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0" g="1" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0002tool" parent="TurretRot" length="10" />
+            <vector x="-0.951056" y="0" z="0.309019" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="129.344" y="0" z="93.974" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0003tool" parent="TurretRot" length="10" />
+            <vector x="-0.587692" y="0" z="-0.809085" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="79.939" y="0" z="246.026" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0004tool" parent="TurretRot" length="10" />
+            <vector x="0.587692" y="0" z="-0.809085" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="-79.939" y="0" z="246.026" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="virttool" name="0005tool" parent="TurretRot" length="10" />
+            <vector x="0.951056" y="0" z="0.309019" />
+            <vectorY x="0" y="-1" z="0" />
+            <basepoint x="-129.344" y="0" z="93.974" />
+            <color r="0" g="0" b="0" a="1" />
+        </axis>
+        <axis>
+            <param type="part" name="SupportZ" parent="Z" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.5" g="0.5" b="0.5" a="1" />
+            <part name="suport_prodoln" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="Base" parent="" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="0.2" g="0.5" b="0.8" a="1" />
+            <part name="stanina" margin="0" />
+        </axis>
+        <axis>
+            <param type="part" name="FixtBase" parent="" length="10" />
+            <vector x="1" y="0" z="0" />
+            <vectorY x="0" y="1" z="0" />
+            <basepoint x="0" y="0" z="0" />
+            <color r="1" g="0.6" b="0.05" a="1" />
+            <part name="planshayiba" margin="0" />
+            <collisioncheck axisname="Z" mychildren="No" axischildren="Yes" />
+        </axis>
+    </axes>
+</MachineTool>

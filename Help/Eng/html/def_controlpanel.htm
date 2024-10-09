@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Information panes</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><A NAME="def_controlpanel"></A>Information panes</H1>
+<P>Information panes are  used to display various parameters of the project. </P>
+<P>Background color, text size and color settings of the information panes may be changed in <strong>Settings &gt; Parameters</strong> on a <strong>Design pane </strong>.  Select <strong>ControlPanelBackground</strong> or <strong>ControlPanelText</strong> from the <strong>Element</strong> combo box.</P>
+<P>Information panes contains four panes:</P>
+<h6>Parameters pane </h6>
+<P> Parameters pane is used to display the geometrical, technological and other parameters, changing during program execution.The parameters are displayed for the current program line. </P>
+<P> <IMG SRC="../images/PanelContr1.gif" ALT="" width="240" height="465" BORDER=0></P>
+<P>To add or remove parameters to be displayed, choose the <strong>Options…</strong> 
+  from pane 's context menu or <strong>Settings &gt; Parameters &gt; Parameters</strong> pane from main menu<strong>.</strong></P>
+<P><IMG SRC="../images/PanelContrOpt.gif" ALT="" width="493" height="418" BORDER=0></P>
+<h6>Geometry pane </h6>
+<P> Geometry pane displays geometrical parameters of toolpath element, highlighted by the mouse cursor in <strong>HIghlight mode</strong> (<strong>View &gt; Highlight</strong>). </P>
+<P>For a segment it shows the coordinates of its ends, angles between the segment and coordinate axes, and its length. </P>
+<P>For an arc the pane therewith shows the arc radius and its center coordinates. </P>
+<P>For a point the pane shows its coordinates and angles between previous and next CNC program lines.</P>
+<P><IMG SRC="../images/PanelContr2.gif" ALT="" BORDER=0></P>
+<P>&nbsp;</P>
+<h6>Measurement pane </h6>
+<P>Measurement pane displays additional information about the stock surfaces, their type and parameters. It works when the <strong>Measure dialog</strong> is active (<strong>Inspect &gt; Measurement</strong>).</P>
+<P>To view the surface parameters move the mouse cursor on the target surface, and the pane will display them. </P>
+<P><IMG SRC="../images/PanelContr3.gif" ALT="" width="625" height="587" BORDER=0> 
+</P>
+<P>For the stock (crude parts) the pane shows the coordinates of a point on the stock surface. </P>
+<P>For a plane the pane shows its normal coordinates and the coordinates of a point on the plane.</P>
+<P>For the cylinder the pane shows whether it is convex or concave, center coordinates, axis direction and cylinder radius.</P>
+<P>For torus  the pane shows whether it is convex or concave, center coordinates, axis direction and two torus radiuses. </P>
+<P>For the sphere the pane shows center coordinates and radius.</P>
+<h6>Registers pane </h6>
+<P> Registers pane displays the values of registers contained in CNC program. If the register value is zero, this register is not displayed. If the register value changed during execution of current CNC program line, this value is highlighted red. Otherwise, the value is black. </P>
+<P><IMG SRC="../images/PanelContr4.gif" ALT="" width="541" height="262" BORDER=0></P>
+</BODY>
+</HTML>

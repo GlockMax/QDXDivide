@@ -1,0 +1,6 @@
+; Surface.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Surface"
+
+EXPORTS
+    ; Explicit exports can go here

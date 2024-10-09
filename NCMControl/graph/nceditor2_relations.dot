@@ -1,0 +1,15 @@
+digraph G {
+	NCEditor2Doc -> NCEditor2View [label = "(CEditView*)m_viewList.GetHead()"]; 
+	NCEditor2View -> CMainFrame [label ="GetParentFrame()"];
+	CMainFrame -> NCEditor2Doc [label="GetActiveDocument()"];
+	CNCUnitTreePane -> CMainFrame [label = "GetParent()"];
+	CMainFrame -> NCEditor2View [label = "GetActiveView"];
+	NCEditor2View -> NCEditor2Doc [label = "GetDocument()"];
+	CMainFrame -> CNCUnitTreePane [label = "m_wndClassView"];
+	CMainFrame -> Properties [label = "m_wndProperties"];
+	Properties -> CMainFrame [label = "GetParent()"];
+	NCEditor2Doc-> CNCUnitTreePane [label = "GetTreeView()" color = "green"];
+	NCEditor2Doc-> Properties [label = "GetPropertiesWnd()" color = "green"];
+	CNCUnitTreePane-> NCEditor2Doc [label = "GetDocument()" color = "green"];
+	Properties -> NCEditor2Doc [label = "GetDocument()" color = "green"];
+}

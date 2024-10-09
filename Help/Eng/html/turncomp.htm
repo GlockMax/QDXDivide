@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Edge compensation</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><font face="Arial"><A NAME="IDC_ADD_TOOL_INSERT" id="IDC_ADD_TOOL_INSERT"></A>Edge compensation</FONT></H1>
+<body>
+<p>This command calls the dialog to set offset values, insert radius and insert offset direction number.</p>
+<p><img src="../images/TurnComp.gif" width="401" height="256"></p>
+<p><strong>Number</strong> - compensator number</p>
+<p><strong>X-offset </strong>- X offset relative to base point of insert.</p>
+<p><strong>Z-offset</strong> - Z offset relative to base point of insert.</p>
+</p>
+<p><strong>Radius</strong> - rounding radius of insert edge.</p>
+<p><strong>Direction</strong> - cutting edge direction code.</p>
+<p><strong>Number + </strong> - add compensator to table. List of compensators used in current project is taken from CNC programs automatically.You may add additional compensator numbers by pressing &quot;+&quot;.</p>
+<p><strong>Tool nose PT (Direction)</strong> - descriptive picture for correct direction code setting. Axes directions: blue for +Z axis, red for +X axis.</p>
+<h1>Multi edge tool setting</h1>
+<p>Let's consider the setting of multi edge tool.</p>
+<p>There may be several points on a single insert, which take part in machining. The CNC program switch between these points using different compensators. 
+  For example, grooving tool. Right edge is set by direction 4 compensator 25 (T425), left edge - position 4 compensator 36 (T436).</p>
+<p>Let's set the grooving tool 3 mm width for cutting outer groove. To do this, proceed to insert creation dialog, set the width T=3mm and select the left edge as a base point (Nose number 1). As an insert has R1=0.2, and the default point is in the center of this radius, you should shift the base point along X and Z axes in negative direction by 0,2 mm. Push "-Z"and"-X".</p>
+<p><img src="../images/Edge1.gif" width="365" height="388"></p>
+<p>Let's set the right edge. To do this, let's make an offset along Z axis relatively to previously created base point (left edge). This offset is made by calling &quot;Edge compensation&quot; in compensator number 25. Set Z-shift size equal to insert width, 3mm. For the left edge we use compensator number 36. This compensator should be blank, as this edge is defined as base point.</p>
+<p><img src="../images/2536.gif" width="401" height="256"></p>
+<p>Example of CNC-program using this tool.</p>
+<p><strong>CNC program:</strong></p>
+<table width="75%" border="1">
+  <tr> 
+    <td><font color="#000066">T436</font></td>
+    <td>Tool change, right cutting edge</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">G0 Z-8. X22.</font></td>
+    <td>approaching the right edge of a groove</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">G1 F.1 X15.</font></td>
+    <td>cutting</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">G0 X22.</font></td>
+    <td>exiting the groove</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">T425</font></td>
+    <td>changing to left cutting edge</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">G0 Z-12.</font></td>
+    <td>approaching the left edge of a groove</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">G1 F.1 X15.</font></td>
+    <td>cutting</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">T436</font></td>
+    <td>changing to right cutting edge</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">G1 F.2 Z-8.</font></td>
+    <td>finishing groove bottom</td>
+  </tr>
+  <tr> 
+    <td><font color="#000066">X22.</font></td>
+    <td>exiting the groove</td>
+  </tr>
+</table>
+
+</p>
+<p><strong>Cutting draft</strong></p>
+
+<p><img src="../images/Slot.gif" width="419" height="445"></p>
+<h1>Setting edge compensation for G41/G42</h1>
+<p>If the CNC-program uses a contour compensation, for proper simulation you should set:</p>
+<p>1. set up the adjustment point (X and Z offset).</p>
+<p>2. Fill in the radius and insert direction in corresponding compensator.</p>
+</body>
+</html>

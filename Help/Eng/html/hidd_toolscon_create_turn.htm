@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Creating lathe tool</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><font face="Arial"><A NAME="HIDD_TOOLSCON_CREATE_TURN" id="HIDD_TOOLSCON_CREATE_TURN"></A>Creating lathe tool</FONT></H1>
+<body>
+<p>This command is used to set tool type, form and dimensions. There are two types of tools - lathe tool and milling tools. Lathe tool can be created only in lathe or mill turn projects.</p>
+<p>As well as milling tools, lathe tool can be  <a href="hid_ch_cr_tool.htm">complex</a>.</p>
+<p>Lets take a look at lathe tool creation. When you click on  <strong>Create…</strong>, 
+  following dialog appears: </p>
+<p><img src="../images/ToolCreateTurn.gif"></p>
+<h6>Tool parameters</h6>
+<p><strong>Name</strong></p>
+<p>Tool name. It is formed automatically and is shown in tool tree after its number. You may set the name manually. </p>
+<h6>Cutter ID</h6>
+<p> Tool number. Tool is loaded by program according to this number.</p>
+<h6>Axis</h6>
+<p> Tool axis number. This is a special concept, used to set the tool at any angle to the spindle axis. Tool orientation and axis number are set in machine description file. </p>
+<p><strong>Turret</strong></p>
+<p>Tool bank number. </p>
+<p><strong>Marker</strong></p>
+<p> Defines the size of a tool marker. Then the tool is hidden or not defined, it is displayed by its marker. Default marker size is set in <strong>Settings&gt;Parameters...&gt;Graphics Tool Marker</strong>. </p>
+<p><strong>X Shift </strong></p>
+<p>Tool shift along X axis.</p>
+<p><strong>Z Shift </strong></p>
+<p>Tool shift along Z axis.</p>
+<h6>Rotation</h6>
+<p>Tool angle in XZ plane. This parameter specifies complex tool orientation, in simple case - insert and holder.</p>
+<p>Example of tool with Rotation=0:</p>
+<p><img src="../images/ToolTurnRot0.gif"></p>
+<p>Example of tool with Rotation=90:</p>
+<p><img src="../images/ToolTurnRot90.gif"></p>
+<h6>Tool elements </h6>
+<p> Any lathe tool can consist of a set of inserts of any type and any number of tool holders. We will call this tool complex. This list displays the names of tools, which form a component tool. 
+  Double-click on an element name to call its edit dialog.</p>
+<p>An insert with tool holder will look like this:</p>
+<p><img src="../images/Turn.gif"></p>
+<h6><a href="HIDC_ADD_TOOL_INSERT.htm">Add insert</a></h6>
+<p> Set the type, dimensions and position of an insert. </p>
+<h6><a href="HIDC_ADD_TOOL.htm">Add drill tool</a></h6>
+<p> Set the drill tool for lathing. An end-cutting tool dialog will appear.</p>
+<h6><a href="HIDC_ADD_TURNHOLDER.htm">Add holder...</a></h6>
+<p>Set a tool holder for lathe tool. </p>
+</body>
+</html>

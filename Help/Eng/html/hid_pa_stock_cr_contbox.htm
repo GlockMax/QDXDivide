@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Contour</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1>Contour</h1>
+<p>Create a stock by extruding the contour along Z axis for specified height. Contour is set in file with &quot;StC&quot; extension.</p>
+<p>Stock context menu: Create &gt; Extrude contour </p>
+<p><img src="../images/StockExtrude.gif" width="498" height="446"></p>
+<p><strong>Find</strong> - allows to load a file with contour geometry.</p>
+<p><strong>Length</strong> - displays X dimension of stock.</p>
+<p><strong>Width</strong> - displays the Y dimension of stock.</p>
+<p><strong>Height</strong> - displays the Z dimension of stock, 1 millimeter by default.</p>
+<p><strong>Delta X</strong> - stock shift along X axis. This parameter controls stock position relatively to the origin of coordinates of CNC-program along X axis.</p>
+<p><strong>Delta Y </strong> - stock shift along Y axis. This parameter controls stock position relatively to the origin of coordinates of CNC-program along Y axis.</p>
+<p><strong>Delta Z </strong> - stock shift along Z axis. This parameter controls stock position relatively to the origin of coordinates of CNC-program along Y axis.</p>
+<p><strong>Rotate Around X</strong> - rotate the stock around X axis on angle multiple of 90 degrees. Select value from dropdown menu.</p>
+<p><strong>Rotate Around Y </strong> - rotate the stock around Y axis on angle multiple of 90 degrees. Select value from dropdown menu.</p>
+<p><strong>Rotate Around Z </strong> - rotate the stock around Z axis on angle multiple of 90 degrees. Select value from dropdown menu.</p>
+<h1>Creating "<strong>StC</strong>" file </h1>
+<p>Create new CNC-program and load it in NCManager. Program the desired contour in usual G-code, following two rules: </p>
+<p>1. program the contour in XY plane. Y sizes are linear, X sizes are diametral.</p>
+<p>2. contour pass must be counterclockwise if you look on the contour from top.</p>
+  
+
+<p>Create stock file by calling <strong>Export &gt; Stock contour </strong>from you CNC-program context menu.</p>
+<p><strong>Example 1</strong> - Set the cylinder with radius 100 and length of 40.</p>
+<p><img src="../images/StoskG1.gif" width="570" height="200"></p>
+<p><strong>Example 2</strong> - Set the arbitrary contour with rounding.</p>
+<table width="70%" border="1">
+  <tr>
+    <td align="center"><img src="../images/StockG3.gif" width="400" height="241"></td>
+    <td align="center"><img src="../images/StockExtrude2.gif" width="365" height="344"></td>
+  </tr>
+</table>
+<p>In text editor stock file for the first example will look like this:</p>
+<p><img src="../images/StockTXT.gif" width="201" height="110"></p>
+<p>I.e. quick positioning in the point of contour start, then contour bypass in counterclockwise direction with cutting pass.</p>
+<p>You can set the contour in simple text editor.</p>
+</body>
+</html>

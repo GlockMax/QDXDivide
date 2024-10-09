@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+	<HEAD>
+		<TITLE>Work Simulation</TITLE>
+		<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+		<link rel="StyleSheet" href="../tutorial.css">
+	</HEAD>
+	<BODY BGCOLOR="#ffffff" TEXT="#000000">
+		<h1>Work Simulation</h1>
+		<P>There are four modes of simulation. You can switch them&nbsp;from <STRONG>Work</STRONG>
+			menu item or from the toolbox:</P>
+		
+        <P><IMG height="58" src="../images/ModeCim.gif" width="132" border="0"></P>
+		<P>1. <STRONG><FONT color="#000099">Result</FONT></STRONG> <IMG height="26" src="../images/ResaltMode.gif" width="26" align="absMiddle" border="0">. 
+			In this mode you get machined stock without any simulation process.</P>
+		<P>2. <STRONG><FONT color="#000099">Smoothly</FONT> <IMG height="26" src="../images/SlowMode.gif" width="26" align="absMiddle" border="0"></STRONG>. 
+			In this mode you can see&nbsp;simulation process of 
+			cutting&nbsp;showing&nbsp;intermediate&nbsp;positions&nbsp;of&nbsp;each G-code 
+			line. You can modify simulation speed using a slider that appears when you 
+			choose this mode <IMG height="24" src="../images/MoveBar1.gif" width="221" align="absMiddle" border="0">.&nbsp;You 
+			have an additional opportunity of moving simulation process forward and 
+			backward up to given number of lines while <STRONG>Pause</STRONG> button is 
+			pressed <IMG height="26" src="../images/Pause.gif" width="26" align="absMiddle" border="0">.
+		</P>
+		<P>3. <STRONG><FONT color="#000099">Quickly</FONT> <IMG height="26" src="../images/QuickMode.gif" width="26" align="absMiddle" border="0"></STRONG>. 
+			In this mode you can see the simulation process of stock cutting with no 
+			intermediate&nbsp;positions&nbsp;of&nbsp;each G-code line. You can modify 
+			simulation speed using a slider that appears when you choose this mode.</P>
+		<P>4. <STRONG><FONT color="#000099">Wireframe </FONT><IMG height="26" src="../images/WireMode.gif" width="26" align="absMiddle" border="0"></STRONG>. 
+			In this mode there is no simulation process at all. Current stock will become 
+			hidden&nbsp;when you change simulation mode to <STRONG>Wireframe</STRONG>. You 
+			will see initial stock on your screen.</P>
+		<P>Choose one of a standard isometric views. Turn on the Machine window by 
+			selecting <STRONG>Both vertically</STRONG> in <STRONG>Window</STRONG> menu 
+			item. Hide the toolpath by disabling <STRONG>CNC-Program</STRONG> checkbox.</P>
+		
+<P><IMG height="801" src="../images/simul1.gif" width="985" border="0"></P>
+		<P>If, for example, we simply want to see Program running in Smoothly mode we have 
+			to select <STRONG>Smoothly</STRONG> mode <IMG height="26" src="../images/SlowMode.gif" width="26" align="absMiddle" border="0">&nbsp;and&nbsp;press
+			<STRONG>Reset <IMG height="26" src="../images/Reset.gif" width="26" align="absMiddle" border="0"></STRONG>&nbsp;button 
+			in order to proceed to the beginning of the program. Now press <STRONG>To 
+				breakpoint</STRONG> icon <IMG height="26" src="../images/RunTO.gif" width="26" align="absBottom" border="0">. 
+			NCmanager will now start simulation process of deleting stock material. To stop 
+			the simulation push <STRONG>Stop</STRONG> button. After the end of simulation 
+			you will see the following:</P>
+		
+<P><IMG height="801" src="../images/simul2.gif" width="985" border="0"></P>
+		<P>Examine the finally machined stock by changing the view and enlarging parts that 
+			you are interested in. Also you can make sections <IMG height="26" src="../images/Section.gif" width="26" align="absMiddle" border="0">&nbsp;or 
+			measure distance and hole diameters in the <STRONG>Stock</STRONG> window by 
+			using <STRONG>Measure</STRONG> item <IMG height="26" src="../images/Size.gif" width="26" align="absMiddle" border="0">. 
+			Pay attention to the fact that when you are in <STRONG>Measure</STRONG> command 
+			&nbsp;and you are simply moving mouse cursor on the machined stock - you will 
+			see the surface type and its parameters.</P>
+		
+        <P><IMG height="734" src="../images/SizeHole.gif" width="801" border="0"></P>
+		<P>Now save your results in <a href="../html/SaveProject.htm">NCmanager project</a>.</P>
+	</BODY>
+</HTML>

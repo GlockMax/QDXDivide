@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<NCMUnit>
+<section name="General">
+	<Definition type="string">
+		<Name>Name</Name>
+		<briefDescription>Имя стойки ЧПУ</briefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Имя стойки ЧПУ. Справочный параметр.
+			</Description>
+		</FullDescription>
+	</Definition>
+	<Definition>
+		<Name>Type</Name>
+		<briefDescription>Введите тип стойки ЧПУ</briefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Введите тип стойки ЧПУ.
+			</Description>
+		</FullDescription>
+	</Definition>
+	<Definition>
+		<Name>Model</Name>
+		<briefDescription>Модель стойки ЧПУ</briefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Модель стойки ЧПУ
+			</Description>
+		</FullDescription>
+	</Definition>
+	<Definition>
+		<Name>Manufacturer</Name>
+		<briefDescription>Введите производителя стойки ЧПУ</briefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Введите производителя стойки ЧПУ
+			</Description>
+		</FullDescription>
+	</Definition>
+	<Definition>
+		<Name>Operation</Name>
+		<briefDescription>Введите вид обработки</briefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Введите вид обработки. Фрезерная, токарная, лазерная и т.п.
+			</Description>
+		</FullDescription>
+	</Definition>
+	<Definition>
+		<Name>NumAxes</Name>
+		<briefDescription>Введите число координат стойки ЧПУ</briefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Введите число координат стойки ЧПУ.
+			</Description>
+		</FullDescription>
+	</Definition>
+	<Description>
+		<BriefDescription>Справочные сведения о стойке ЧПУ</BriefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Справочные сведения о стойке ЧПУ
+      </Description>
+		</FullDescription>
+	</Description>
+</section>
+<section name="Word Replacement">
+	<Description>
+		<BriefDescription>контекстные замены в УП</BriefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Этот раздел используется для контекстной замены одного выражения другим в файле управляющей программы. 
+        Например, выражение1 необходимо заменить на выражение2, тогда необходимо написать такую строку:
+        Replace "выражение1" "выражение2"
+        Если такая строка будет в файле определения стойки, то все вхождения подстроки выражение1 
+        в любой исходной управляющей программе будут заменены на подстроку выражение2 еще до того, 
+        как соответствующие кадры будут "выполнены" NCManager.
+        Любое выражение не должно содержать пробелов и символов табуляции. 
+        Символ “ (кавычки) внутри выражения  допускается.
+      </Description>
+		</FullDescription>
+	</Description>
+</section>
+<section name="Word Definition">
+	<Description>
+		<BriefDescription>Определение символов в УП</BriefDescription>
+		<FullDescription>
+			<Picture></Picture>
+			<Description>
+        Для правильного чтения управляющей программы 
+        NCManager должен "понимать" значение каждого 
+        символа программы. В этом разделе определяется
+        интерпретация символов, встречающихся в 
+        управляющей программе. То есть каждому 
+        символу, который может встретиться в 
+        управляющей программе, приписывается 
+        определенный смысл.
+        Данные должны записываться в следующем виде:
+        ключевое слово="" символ
+        Ключевое слово и определяет смысл символа.
+        Например, если подготовительная функция для 
+        данной стойки обозначается символом G, то в 
+        разделе "Word Definition" должна быть такая 
+        строка:FunctionCode G
+        Символы ключевых слов не являются уникальными,
+        так как их интерпретация может зависеть от 
+        контекста. Например, если символ P из 
+        предыдущего примера встречается в программе 
+        после G4 (Dwell), то он интерпретируется 
+        как DwellTime, если же этот символ 
+        встречается в кадре определения цикла, 
+        например G81, то он интерпретируется как 
+        InitialDepth.
+      </Description>
+		</FullDescription>
+	</Description>
+	<Definition defaultvalue="N">
+                  <Name>LineNumber</Name>
+		  <briefDescription>Номер кадра</briefDescription>
+		  <group>Основные</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Номер кадра программы
+      </Description>
+		  </FullDescription>
+    </Definition>
+  <Definition defaultvalue="G">
+    <Name>FunctionCode</Name>
+    <briefDescription>Код команды</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Подготовительная функция (G код)</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="M">
+    <Name>MiscFunctionCode</Name>
+    <briefDescription>Код дополнительной команды</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Вспомогательная функция (M код)</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="F">
+    <Name>FeedCode</Name>
+    <briefDescription>Код подачи</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Код для задания величина подачи</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="S">
+    <Name>SpeedCode</Name>
+    <briefDescription>Код шпинделя</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Код для задания скорости вращения шпинделя</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="T">
+    <Name>ToolCode</Name>
+    <briefDescription>Код инструмента</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Код для задания номера инструмента</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="D">
+    <Name>DiaCompOffset</Name>
+    <briefDescription>Корректор на диаметр</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Номер корректора на диаметр</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="H">
+    <Name>LengthCompOffset</Name>
+    <briefDescription>Корректор на длину</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Номер корректора на длину</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="P">
+    <Name>ProgramNumber</Name>
+    <briefDescription>Номер программы</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Номер управляющей программы</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue=":">
+    <Name>ProgramStartEnd</Name>
+    <briefDescription>Начало подпрограммы</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Начало подпрограммы</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="%">
+    <Name>ProgramBeginEnd</Name>
+    <briefDescription>Начало файла программы</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Начало файла программы</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="X">
+    <Name>DwellTime</Name>
+    <briefDescription>Время выдержки</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Время выдержки</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="#">
+    <Name>Register</Name>
+    <briefDescription>Регистр</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Регистр</Description>
+    </FullDescription>
+  </Definition>
+
+  <Definition defaultvalue="X">
+    <Name>HorizontalAxis</Name>
+    <briefDescription>Координата X</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Перемещение параллельно оси X</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="Y">
+    <Name>VerticalAxis</Name>
+    <briefDescription>Координата Y</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Перемещение параллельно оси Y</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="Z">
+    <Name>SpindleAxis</Name>
+    <briefDescription>Координата Z</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Перемещение параллельно оси Z</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="A">
+    <Name>HorizontalRotationAxis</Name>
+    <briefDescription>Вращение вокруг оси X</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Угловое перемещение вокруг оси X</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="B">
+    <Name>VerticalRotationAxis</Name>
+    <briefDescription>Вращение вокруг оси Y</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Угловое перемещение вокруг оси Y</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="C">
+    <Name>SpindleRotationAxis</Name>
+    <briefDescription>Вращение вокруг оси Z</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Угловое перемещение вокруг оси Z</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="I">
+    <Name>CircleHorzCenter</Name>
+    <briefDescription>Координата центра дуги по оси X</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Координата центра дуги по оси X</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="J">
+    <Name>CircleVerticalCenter</Name>
+    <briefDescription>Координата центра дуги по оси Y</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Координата центра дуги по оси Y</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="K">
+    <Name>CircleDepthCenter</Name>
+    <briefDescription>Координата центра дуги по оси Z</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Координата центра дуги по оси Z</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="R">
+    <Name>CircleRadius</Name>
+    <briefDescription>Радиус дуги</briefDescription>
+    <group>Перемещение</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Радиус дуги</Description>
+    </FullDescription>
+  </Definition>
+
+  <Definition defaultvalue="(">
+    <Name>CommentStart</Name>
+    <briefDescription>Начало комментария</briefDescription>
+    <group>Комментарии</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Начало комментария</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue=")">
+    <Name>CommentEnd</Name>
+    <briefDescription>Окончание комментария</briefDescription>
+    <group>Комментарии</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Окончание комментария</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="{">
+    <Name>ModalCommentOn</Name>
+    <briefDescription>Начало модального комментария</briefDescription>
+    <group>Комментарии</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Начало модального комментария. Все строки программы
+        после этого символа и до символа конца модального комментария (ModalCommentOff)
+        являются комментарием
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="}">
+    <Name>ModalCommentOff</Name>
+    <briefDescription>Конец модального комментария</briefDescription>
+    <group>Комментарии</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Конец модального комментария</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue=";">
+    <Name>BlockSkip</Name>
+    <briefDescription>однострочный комментарий</briefDescription>
+    <group>Комментарии</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Пропуск участка программы начиная с этого
+        символа до конца строки.
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="/">
+    <Name>BlockDebug</Name>
+    <briefDescription>Пропуск кадра</briefDescription>
+    <group>Комментарии</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Пропуск участка программы. 
+        Зависит от флага внутри панели Объекты NCManager 
+        Стойка - Параметры стойки - Отладка.
+      </Description>
+    </FullDescription>
+  </Definition>
+
+  <Group>
+    <Name>Перемещение</Name>
+    <briefDescription>Определение символов для задания величин перемещений в УП</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Определение символов для задания величин перемещений в УП
+      </Description>
+    </FullDescription>
+  </Group>
+  <Group>
+    <Name>Основные</Name>
+    <briefDescription>Определение основных символов в УП</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Определение основных символов в УП
+      </Description>
+    </FullDescription>
+  </Group>
+  <Group>
+    <Name>Комментарии</Name>
+    <briefDescription>Определение символов для комментариев в УП</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Определение символов для комментариев в УП
+      </Description>
+    </FullDescription>
+  </Group>
+
+  <Group>
+    <Name>Игнорировать</Name>
+    <briefDescription>Игнорируемые в УП символы</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        символ, которой
+        описан в этом разделе, не будет
+        обрабатываться в NCManager.
+      </Description>
+    </FullDescription>
+  </Group>
+  <Definition defaultvalue="">
+    <Name>Dummy0</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy1</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy2</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy3</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy4</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy5</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy6</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy7</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy8</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy9</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy10</Name>
+    <briefDescription>Игнорировать заданный символ</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный символ</Description>
+    </FullDescription>
+  </Definition>
+
+
+</section>
+<section name="Function Definition">
+  <Description>
+    <BriefDescription>Определение G-кодов в УП</BriefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        В этом разделе происходит сопоставление 
+        номеров подготовительных функций стойки ЧПУ 
+        конкретным действиям.
+      </Description>
+    </FullDescription>
+  </Description>
+
+  <Group>
+    <Name>Тип интерполяции</Name>
+    <briefDescription>Номер G-кода для задания типа перемещения</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Номер G-кода для задания типа перемещения
+      </Description>
+    </FullDescription>
+  </Group>
+  <Definition defaultvalue="0">
+		  <Name>Rapid</Name>
+		  <briefDescription>Холостой ход</briefDescription>
+		  <group>Тип интерполяции</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Холостой ход</Description>
+		  </FullDescription>
+	  </Definition>
+	<Definition defaultvalue="1">
+		  <Name>Linear</Name>
+		  <briefDescription>Линейная интерполяция</briefDescription>
+		  <group>Тип интерполяции</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Линейная интерполяция</Description>
+		  </FullDescription>
+	  </Definition>
+	<Definition defaultvalue="2">
+		  <Name>CircularCW</Name>
+		  <briefDescription>Круговая интерполяция. Движение по часовой стрелке</briefDescription>
+		  <group>Тип интерполяции</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Круговая интерполяция. Движение по часовой стрелке</Description>
+		  </FullDescription>
+	  </Definition>
+	<Definition defaultvalue="3">
+		  <Name>CircularCCW</Name>
+		  <briefDescription>Круговая интерполяция. Движение против часовой стрелки</briefDescription>
+		  <group>Тип интерполяции</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Круговая интерполяция. Движение против часовой стрелки</Description>
+		  </FullDescription>
+	  </Definition>
+
+  <Group>
+    <Name>Плоскость обработки</Name>
+    <briefDescription>Номер G-кода для задания плоскости интерполяции</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Номер G-кода для задания плоскости интерполяции
+      </Description>
+    </FullDescription>
+  </Group>
+  <Definition defaultvalue="17">
+		  <Name>XYPlane</Name>
+		  <briefDescription>Выбор плоскости XY</briefDescription>
+		  <group>Плоскость обработки</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Выбор плоскости XY</Description>
+		  </FullDescription>
+	  </Definition>
+  <Definition defaultvalue="18">
+		  <Name>ZXPlane</Name>
+		  <briefDescription>Выбор плоскости ZX</briefDescription>
+		  <group>Плоскость обработки</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Выбор плоскости ZX</Description>
+		  </FullDescription>
+	  </Definition>
+  <Definition defaultvalue="19">
+		  <Name>YZPlane</Name>
+		  <briefDescription>Выбор плоскости YZ</briefDescription>
+		  <group>Плоскость обработки</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Выбор плоскости YZ</Description>
+		  </FullDescription>
+	  </Definition>
+
+  <Group>
+    <Name>Основные</Name>
+    <briefDescription>Часто встречающиеся G-коды</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Часто встречающиеся G-коды
+      </Description>
+    </FullDescription>
+  </Group>
+  <Definition defaultvalue="20">
+		  <Name>InchUnit</Name>
+		  <briefDescription>Программирование в дюймах</briefDescription>
+		  <group>Основные</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Программирование в дюймах</Description>
+		  </FullDescription>
+	  </Definition>
+  <Definition defaultvalue="21">
+		  <Name>MetricUnit</Name>
+		  <briefDescription>Программирование в миллиметрах</briefDescription>
+		  <group>Основные</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Программирование в миллиметрах</Description>
+		  </FullDescription>
+	  </Definition>
+  <Definition defaultvalue="28">
+		  <Name>ReturnToRef	</Name>
+		  <briefDescription>Выход в фиксированную позицию 1</briefDescription>
+		  <group>Основные</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Выход в фиксированную позицию 1
+        X берется из регистра № 037, 
+        Y - из регистра № 038, 
+        Z - из регистра № 039
+      </Description>
+		  </FullDescription>
+	  </Definition>
+  <Definition defaultvalue="4">
+    <Name>Dwell</Name>
+    <briefDescription>Выстой</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Выстой</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="9">
+    <Name>ExactStop</Name>
+    <briefDescription>Торможение в конце кадра</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Торможение в конце кадра</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="40">
+    <Name>ToolCompCancel</Name>
+    <briefDescription>Отмена коррекции на диаметр инструмента</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Отмена коррекции на диаметр инструмента</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="41">
+    <Name>ToolCompLeft</Name>
+    <briefDescription>Включение коррекции на диаметр. Инструмент слева.</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Плоскостная коррекция. 
+        Инструмент находится слева от обрабатываемой 
+        поверхности, если смотреть от режущего 
+        инструмента в направлении его движения 
+        относительно изделия
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="42">
+    <Name>ToolCompRight</Name>
+    <briefDescription>Включение коррекции на диаметр. Инструмент справа.</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Плоскостная коррекция. 
+        Инструмент находится справа от обрабатываемой 
+        поверхности, если смотреть от режущего 
+        инструмента в направлении его движения 
+        относительно изделия
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="43">
+    <Name>LengthCompOn</Name>
+    <briefDescription>Включение коррекции на длину инструмента</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Включение коррекции на длину инструмента       
+        (ввод коррекции со своим знаком)
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="49">
+    <Name>LengthOffsetCancel</Name>
+    <briefDescription>Выключение коррекции на длину инструмента</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Выключение коррекции на длину инструмента       
+      </Description>
+    </FullDescription>
+  </Definition>
+  
+  <Definition defaultvalue="50">
+    <Name>ScalingCancel</Name>
+    <briefDescription>Масштабирование выкл.</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Масштабирование выкл.</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="51">
+    <Name>ScalingOn</Name>
+    <briefDescription>Масштабирование вкл.</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Масштабирование вкл.
+        Масштабные коэффициенты по осям указываются
+        после X,Y,Z
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="53">
+    <Name>MachCoordSys</Name>
+    <briefDescription>Машинная система координат</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Машинная система координат</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="54">
+    <Name>WorkCoordSys1</Name>
+    <briefDescription>Рабочая система координат - 1</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Рабочая система координат - 1</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="55">
+    <Name>WorkCoordSys2</Name>
+    <briefDescription>Рабочая система координат - 2</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Рабочая система координат - 2</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="56">
+    <Name>WorkCoordSys3</Name>
+    <briefDescription>Рабочая система координат - 3</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Рабочая система координат - 3</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="57">
+    <Name>WorkCoordSys4</Name>
+    <briefDescription>Рабочая система координат - 4</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Рабочая система координат - 4</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="58">
+    <Name>WorkCoordSys5</Name>
+    <briefDescription>Рабочая система координат - 5</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Рабочая система координат - 5</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="59">
+    <Name>WorkCoordSys6</Name>
+    <briefDescription>Рабочая система координат - 6</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Рабочая система координат - 6</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="80">
+    <Name>CancelCycle</Name>
+    <briefDescription>Отмена действующего постоянного цикла</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Отмена действующего постоянного цикла</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="81">
+    <Name>DrillCyclePlane</Name>
+    <briefDescription>Цикл сверления, зацентровки.</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Цикл сверления, зацентровки зависит от плоскости интерполяции.</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="90">
+    <Name>AbsoluteUnit</Name>
+    <briefDescription>Программирование в абсолютных координатах</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Программирование в абсолютных координатах</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="91">
+    <Name>IncrementalUnit</Name>
+    <briefDescription>Программирование в относительных координатах</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Программирование в относительных координатах</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="92">
+    <Name>ZeroPreset</Name>
+    <briefDescription>Абсолютное смещение системы координат</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Заданные значения координат становятся 
+        началом новой системы координат. 
+        Возможен поворот на заданный угол
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>ZeroPresetRel</Name>
+    <briefDescription>Относительное смещение системы координат</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Новая система координат устанавливается так, 
+        чтобы текущая точка имела в ней заданные 
+        в этом кадре координаты. 
+        Возможен поворот на заданный угол
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="94">
+    <Name>FeedPerMin</Name>
+    <briefDescription>Подача в минуту</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Программирование подачи инструмента в мм/мин 
+        или в град/мин (для круговых координат)
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="95">
+    <Name>FeedPerRev</Name>
+    <briefDescription>Подача на оборот</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Программирование подачи инструмента в мм/об 
+        или в град/об (для круговых координат)
+    </Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="96">
+    <Name>SpeedInSFM</Name>
+    <briefDescription>Программирование скорости вращения шпинделя в метрах в минуту</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Программирование скорости вращения шпинделя в метрах в минуту</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="97">
+    <Name>SpeedInRpm</Name>
+    <briefDescription>Программирование скорости вращения шпинделя в оборотах в минуту</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Программирование скорости вращения шпинделя в оборотах в минуту</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="98">
+    <Name>ReturnToStartPlane</Name>
+    <briefDescription>Возврат к начальной плоскости в цикле сверления</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Возврат к начальной плоскости в цикле сверления</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="99">
+    <Name>ReturnToRefPlane</Name>
+    <briefDescription>Возврат к указанной плоскости в цикле сверления</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Возврат к указанной плоскости в цикле сверления</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="65">
+    <Name>CallMacro</Name>
+    <briefDescription>Вызов подпрограммы с параметрами</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Вызов подпрограммы с параметрами
+        Значения всех адресов, кроме GLNOP, 
+        заданных в этом кадре интерпретируются 
+        как значения соответствующих регистров, 
+        а не по общим правилам
+      </Description>
+    </FullDescription>
+  </Definition>
+
+  <Group>
+    <Name>Игнорировать</Name>
+    <briefDescription>Игнорируемые в УП G-коды</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Подготовительная функция, номер которой 
+        описан в этом разделе, не будет 
+        обрабатываться в NCManager.
+      </Description>
+    </FullDescription>
+  </Group>
+  <Definition defaultvalue="">
+    <Name>Dummy0</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy1</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy2</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy3</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy4</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy5</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy6</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy7</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy8</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy9</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name>Dummy10</Name>
+    <briefDescription>Игнорировать заданный код</briefDescription>
+    <group>Игнорировать</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорировать заданный код</Description>
+    </FullDescription>
+  </Definition>
+
+  <Definition defaultvalue="">
+    <Name></Name>
+    <briefDescription></briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description></Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name></Name>
+    <briefDescription></briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description></Description>
+    </FullDescription>
+  </Definition>
+  <Definition defaultvalue="">
+    <Name></Name>
+    <briefDescription></briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description></Description>
+    </FullDescription>
+  </Definition>
+
+
+</section>
+<section name="Misc Function Definition">
+  <Description>
+    <BriefDescription>Определение М-кодов в УП</BriefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Определение М-кодов в УП
+        В этом разделе происходит сопоставление
+        номеров вспомагательных функций стойки ЧПУ
+        конкретным действиям.
+      </Description>
+    </FullDescription>
+  </Description>
+
+  <Group>
+    <Name>Основные коды</Name>
+    <briefDescription>Номера наиболее распространенных M-кодов</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Номера наиболее распространенных M-кодов
+      </Description>
+    </FullDescription>
+  </Group>
+  <Definition defaultvalue="0">
+		  <Name>Stop</Name>
+		  <briefDescription>Программируемый останов</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Останов программы по окончании обработки кадра без потери информации.
+        Работа возобновляется нажатием пусковой кнопки
+        (NCManager использует эту команду в точках останова и при задании номера инструмента)
+      </Description>
+		  </FullDescription>
+	  </Definition>
+	<Definition defaultvalue="1">
+		  <Name>OptionalStop</Name>
+		  <briefDescription>Останов</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Останов</Description>
+		  </FullDescription>
+	  </Definition>
+	<Definition defaultvalue="3">
+		  <Name>SpindleCW</Name>
+		  <briefDescription>Включение вращения шпинделя по часовой стрелке</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Включение вращения шпинделя по часовой стрелке</Description>
+		  </FullDescription>
+	  </Definition>
+	<Definition defaultvalue="4">
+		  <Name>SpindleCCW</Name>
+		  <briefDescription>Включение вращения шпинделя против часовой стрелки</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Включение вращения шпинделя против часовой стрелки</Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition defaultvalue="5">
+		  <Name>SpindleStop</Name>
+		  <briefDescription>Останов шпинделя</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Останов шпинделя</Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition defaultvalue="6">
+		  <Name>ToolChange</Name>
+		  <briefDescription>Смена инструмента</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Смена инструмента
+        Если в разделе "Others" ключевое слово ToolChangeWithM06 имеет значение Yes,
+        то по команде ToolChange происходит смена инструмента,
+        иначе ToolChange не используется
+      </Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition defaultvalue="7">
+		  <Name>CoolantMist</Name>
+		  <briefDescription>Включение охлаждения воздухом</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Включение охлаждения воздухом</Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition defaultvalue="8">
+		  <Name>CoolantFlood</Name>
+		  <briefDescription>Включение охлаждения жидкостью</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Включение охлаждения жидкостью</Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition defaultvalue="9">
+		  <Name>CoolantOff</Name>
+		  <briefDescription>Отключение охлаждения</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Отключение охлаждения</Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition defaultvalue="30">
+		  <Name>EndProgram</Name>
+		  <briefDescription>Конец основной программы</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Конец основной программы
+        Должен присутствовать в файле, 
+        иначе не работает MainInitStr
+      </Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition defaultvalue="98">
+		  <Name>SubroutineCall</Name>
+		  <briefDescription>Вызов подпрограммы</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Вызов подпрограммы</Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition defaultvalue="99">
+		  <Name>SubroutineEnd</Name>
+		  <briefDescription>Конец подпрограммы.</briefDescription>
+		  <group>Основные коды</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Конец подпрограммы. Если встречается в самой внешней программе,
+        то выполнение всей программы заканчивается.
+      </Description>
+		  </FullDescription>
+	  </Definition>
+</section>
+<section name="Others">
+  <Description>
+    <BriefDescription>Настройка параметров стойки ЧПУ</BriefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Настройка параметров стойки ЧПУ</Description>
+    </FullDescription>
+  </Description>
+  <Group>
+    <Name>Основные</Name>
+    <briefDescription>Определение основных параметров стойки ЧПУ</briefDescription>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Определение основных параметров стойки ЧПУ
+      </Description>
+    </FullDescription>
+  </Group>
+  <Definition type="senum" defaultvalue="Default">
+    <Name>CompType</Name>
+    <Enum>
+      <element val="Default" />
+      <element val="Int" />
+      <element val="Arc" />
+      <element val="InternalInt" />
+    </Enum>
+    <briefDescription>Переключает тип контурной коррекции</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture>test1.jpg</Picture>
+      <Description>
+        Default - смещение без учета следующего кадра
+        Arc – дополнительные дуги на внешних углах
+        Int - до пересечения со следующим кадром
+        InternalInt – только внутренние углы до пересечения со следующим кадром
+      </Description>
+    </FullDescription>
+  </Definition>
+  <Definition type="bool" defaultvalue="No">
+		  <Name>IgnoreUnknownM</Name>
+		  <briefDescription>Игнорироать неизвестные M-коды</briefDescription>
+		  <group>Основные</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Игнорироать неизвестные M-коды</Description>
+		  </FullDescription>
+	  </Definition>
+	<Definition type="bool" defaultvalue="No">
+    <Name>IgnoreUnknownCh</Name>
+    <briefDescription>Игнорироать неизвестные символы</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>Игнорироать неизвестные символы</Description>
+    </FullDescription>
+  </Definition>
+	<Definition type="bool" defaultvalue="No">
+		  <Name>IgnoreUnknownG</Name>
+		  <briefDescription>Игнорироать неизвестные G-коды</briefDescription>
+		  <group>Основные</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>Игнорироать неизвестные G-коды</Description>
+		  </FullDescription>
+	  </Definition>
+  
+	<Definition type="bool" defaultvalue="Yes">
+    <Name>ToolChangeWithM06</Name>
+    <briefDescription>Смена инструмента с M06</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Значение Yes определяет, что смена инструмента будет производиться по команде
+        ToolChange раздела "MiscFunctionDefinition",
+        иначе смена инструмента происходит по команде ToolCode раздела "WordDefinition"
+        [br]
+        Значение должно обязательно присутствовать.
+      </Description>
+    </FullDescription>
+  </Definition>
+	<Definition type="bool" defaultvalue="No">
+    <Name>ToolPreSelect</Name>
+    <briefDescription>Предварительный выбор инструмента</briefDescription>
+    <group>Основные</group>
+    <FullDescription>
+      <Picture></Picture>
+      <Description>
+        Если значение этого параметра - Yes, то по команде, 
+        осуществляющей смену инструмента, инструмент "ставится на подготовку", 
+        а работать начинает инструмент, который до этого был "поставлен на подготовку"
+        [br]
+        Значение должно обязательно присутствовать.
+      </Description>
+    </FullDescription>
+  </Definition>
+  
+	<Definition type="senum" defaultvalue="IJR">
+		  <Name>CircleCenterType</Name>
+		  <briefDescription>Тип центра дуги</briefDescription>
+		  <Enum>
+        <element val="IJR" />
+        <element val="IJ" />
+        <element val="R" />
+        <element val="ABSIJ" />
+      </Enum>
+		  <group>Основные</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Тип центра дуги
+        Как программируется центр дуги - координатами
+        или радиусом
+      </Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition type="senum" defaultvalue="Incremental">
+		  <Name>CircleCenterMode</Name>
+		  <briefDescription>Режим центра дуги</briefDescription>
+      <Enum>
+        <element val="Incremental" />
+        <element val="Absolute" />
+        <element val="AsCoord " />
+      </Enum>
+      <group>Основные</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Режим центра дуги
+        В каких координатах программируется центр дуги - 
+        в абсолютных или относительных
+      </Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition type="eenum">
+		  <Name>FileExtension</Name>
+		  <briefDescription>Расширение файлов управляющих программ.</briefDescription>
+		  <Enum>
+                      <element val="*.nc" />
+                      <element val="*.txt" />
+                      <element val="*.doc" />
+                  </Enum>
+		  <group>Группа 3</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Расширение файлов управляющих программ.
+        Значение должно иметь вид:
+        *.?
+        где вместо вопросительного знака должны быть символы 
+        расширения (например *.tap). 
+        По умолчанию в диалоговом окне открытия файла 
+        программы в NCManager в поле "ТИП ФАЙЛОВ" будет стоять 
+        это расширение
+      </Description>
+		  </FullDescription>
+	  </Definition>
+	  <Definition type="eenum">
+		  <Name>SubrCallFormat</Name>
+		  <briefDescription>Формат вызова подпрограммы с повторами.</briefDescription>
+		  <Enum>
+                      <element val="N3L2" />
+                      <element val="L2N3" />
+                  </Enum>
+		  <group>Группа 3</group>
+		  <FullDescription>
+			<Picture></Picture>
+			<Description>
+        Значение должно быть ввиде: [br] N[X1]L[X2][br] или [br]LX1N[X2][br]
+        N[X1] – количество цифр в номере программы [br]
+        L[X2] – количество цифр повтора подпрограммы
+        [br]Например:[br]
+        G98P1020340 – при формате: N4L2 - подпрограмма 1020, вызывается 340 раз;
+        L2N4 - подпрограмма 0340, вызывается 102 раза.
+      </Description>
+		  </FullDescription>
+	  </Definition>
+  
+</section>
+</NCMUnit>

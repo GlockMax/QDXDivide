@@ -1,0 +1,292 @@
+//
+//
+
+// Section General
+Name		NCM_FANUC_MillTurn.sm3
+Type		ISO/EIA
+Model		
+Manufacturer	
+Operation		TurnMill
+Âåðñèÿ		1.10
+Create		05.07.2023
+Update		27.06.2024
+CheckSyntax	Yes
+Format	2
+Forbidden	scravtqefijklm
+Allowed	bdghnopuwxyz
+NumAxes		4
+// end section
+
+// Section Word Replacement
+Replace		"EQ"		"="
+Replace		"#5002"		"#8202IF[#8212=1]THEN#22=#8202-#5243"
+Replace		"#5001"		"#8200*2IF[#8212=1]THEN#22=[#8200-#5241]*2"
+Replace		"GOTO"		"M97P"
+Replace		"WHILE"		"M1000"
+Replace		"END1"		"N111M2000"
+Replace		"DO1"		"M66P111"
+Replace		"END2"		"N222M2000"
+Replace		"DO2"		"M66P222"
+Replace		"END3"		"N333M2000"
+Replace		"DO3"		"M66P333"
+Replace		",A"	"b"
+Replace 		",C"	"G5d"
+Replace 		",R"	"G6d"
+Replace		"G41"		"G41G3500"
+Replace		"G42"		"G42G3500"
+Replace		"G40"		"G40G3600"
+Replace		"G13.1"		"G113#8322=0"
+Replace		"G12.1"		"G112#8322=1"
+Replace		"G4X"		"G4p1000*"
+Replace		"G04X"		"G4p1000*"
+Replace		"G34"		"G32"
+Replace		"G72W"		"G72U"
+Replace		"G80"		"G80G18#201=0"
+Replace		"THEN"		"G4000"
+Replace		"M35"		"M90"
+Replace		"G88"		"G87"
+Replace		"ASIN"		"j"
+Replace		"ACOS"		"k"
+Replace		"SQRT"		"q"
+RegExp		"\<.*\>"	"()"
+RegExp		"Q"		"Q0.001*"
+RegExp		"(G65(\S\w+)*)Q"	"\1Q1000*"
+RegExp		"(G74(\S\w+)*)P"	"\1P0.001*"
+RegExp		"G75(.*)(P)(.*)(Q)"	"G75\1Q0.001*\3P"
+RegExp		"(G76(\S\w+)*)Q"	"\1Q1000*"
+RegExp		"G70P([0-9]+)Q0.001\*([0-9]+)"	"G70P\1Q\2"
+RegExp		"G71P([0-9]+)Q0.001\*([0-9]+)"	"G71P\1Q\2"
+RegExp		"G72P([0-9]+)Q0.001\*([0-9]+)"	"G72P\1Q\2"
+RegExp		"G73P([0-9]+)Q0.001\*([0-9]+)"	"G73P\1Q\2"
+RegExp		"G74P([0-9]+)Q0.001\*([0-9]+)"	"G74P\1Q\2"
+RegExp	"G[0]?[2](\D)"	"G[#8322+2]\1"
+RegExp	"G[0]?[3](\D)"	"G[3-#8322]\1"
+RegExp	"G50(S.+)"	"G52\1"
+RegExp	"G30|G28"	"G65P30"
+RegExp	"^O"			":"
+// end section
+
+// Section Coord Definition
+// end section
+
+// Section Word Definition
+CycleDwellTime	P
+TurnRoughDepthR2	R
+TurnConeZ	R
+DrillRef	R
+DrillRefRad	R
+TurnThreadR		R
+ChamferSize	d
+RoundSize	d
+DraftAngle	b
+LineNumber		N
+TurnRoughDepthU1		U
+TurnRoughDepthW1		W
+TurnRoughDepthR		R
+TurnGroovDepthP		P
+TurnGroovDepthQ		Q
+TurnThreadP		P
+TurnThreadQ		Q
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalAxisInc		U
+VerticalAxisInc		V
+SpindleAxisInc		W
+SpindleRotationAxis		C 
+SpindleRotationAxisInc		H
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B	 
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode			F
+SpeedCode		S
+ToolCode			T
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+DiaCompOffset		D
+Register			#
+DwellTime			p
+PeckIncrementDepth		Q
+DrillRepeatCycles		K
+ProgramNumber		P
+ProgramStartEnd		:
+CommentStart		(
+CommentEnd		)
+EndOfBlock		$
+BlockDebug		/
+BlockSkip		;
+ProgramBeginEnd		%
+RepeatNumber	L
+CircleRadius		R
+ProgramCopyStart		P
+ProgramCopyEnd		Q
+// end section
+
+// Section Function Definition
+Rapid			0	1	Y
+Linear			1	1	N
+CircularCW		2	1	N	N CircleDepthCenter
+CircularCCW		3	1	N	N	CircleDepthCenter
+Dwell			4	0	N
+PolarInterp		112	21	N
+PolarInterpCancel	113	21	Y
+XYPlane			17	16	N
+ZXPlane			18	16	Y
+YZPlane			19	16	N
+InchUnit		20	6	N
+MetricUnit		21	6	N
+ReturnToRef		28	0	N
+ReturnToRef2		30	0	N
+SimThreadCycleT		32	1	Y
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+SetMaxSpeed		52	0	N
+ZeroPreset		10	0	N
+ZeroPresetRel		50	0	N
+MachineCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+CallMacro		65	0	N
+ModalCallMacro		66	0	N
+ModalCallCancel	67	0	N
+ProgramCopy		70	0	N
+TurnRoughCycle	71	0	N
+TurnFacingCycle	72	0	N
+TurnLoopCycle	73	0	N
+TurnGroovZCycle	74	0	N
+TurnGroovXCycle	75	0	N
+TurnThreadACycle	76	0	N
+CancelCycle		80	10	Y
+DrillPeckCycleZ	83	10	N
+RHTappingCycleZ	84	10	N
+DrillPeckCycleX	87	10	N
+RHTappingCycleX	88	10	N
+TurnCutCycle	90	1	N
+TurnThreadCCycle	92	1	N
+TurnFaceCycle	94	1	N
+FixCutSpeed		96	2	N
+UnFixCutSpeed	97	2	Y
+FeedPerMin		98	5	N
+FeedPerRev		99	5	Y
+NCMGCode*******		1000	100	Y
+ParToNext		3500	100	N
+RetractComp		3600	100	N
+LengthCompOn		43	8	N
+DraftChamfer	5	1	N
+DraftRound		6	1	N
+ReturnToStartPlane	980	10	N
+ReturnToRefPlane	990	10	N
+ScalingCancel		950	11	N
+ScalingOn		951	11	N
+DummyG**********		2000	200	N
+Dummy0			4000	0	N
+// end section
+
+// Section Misc Function Definition
+//General Codes
+Stop		0
+OptionalStop	1
+SpindleCWTurn	3
+SpindleCCWTurn	4
+SpindleStopTurn	5
+SpindleCW		93
+SpindleCCW		94
+SpindleStopMill	95
+CoolantMist		8
+CoolantOff		9
+EndProgram		30
+SubroutineCall		98
+SubroutineEnd		99
+//Special NCM Codes
+ThreadCut		7
+GoTo			97
+GoToNext		66
+WhileStart		1000
+WhileEnd		2000
+GrooveOn		100
+GrooveOff		110
+//Ignore Codes
+Dummy0		12
+Dummy1		13
+Dummy2		90
+Dummy3		91
+Dummy4		37
+Dummy5		38
+Dummy6		57
+Dummy7		58
+// end section
+
+// Section Others
+OpenBracketChar		[
+CloseBracketChar	]
+StockTransformTime	0
+UseRegStack	Yes
+DraftAngleTol	0
+IgnoreUnknownM	Yes
+IgnoreUnknownCh	Yes
+IgnoreUnknownG	Yes
+LinearXConversion		0.5
+LinearIConversion		0
+LinearYConversion		-1.
+CircleCenterType		IJR
+CircleCenterMode		Incremental
+AlwaysIncremental		No
+MaxArcRadius		999
+ToolIndex		Absolute
+ToolChangeWithM06		No
+ToolPreSelect		No
+ToolOffsetInToolNumber	For
+ToolNumFormat		N2L2
+CycleNeedsGeom		No
+CycleNeedsParam		Yes
+ModalSubNeedsParam	Yes
+ModalSubNeedsGeom	Yes
+MachineCS		200,0,200
+MainInitStr		G53G0X0Z0
+MainInitStr1	G0G18G40G54G80G97G99G52S3000
+CheckGeom		Yes
+MinArcDist		2
+StartProgram	Ignore
+InterChangeCancelCycle	Yes
+TurnCutCycleMod		Yes
+FileExtension *.*
+PartialCompCancel No
+CompType		Arc
+FileProtection	Yes
+LoadSubPrograms	SubProgrFanucMT.nc
+UseStdFuncNames		Yes
+ExprGCode	Yes
+RoughCycleSearch	Forward
+LoopCycleSearch		Forward
+//ÏÀÐÀÌÅÒÐÛ ÄËß ÐÀÑ×ÅÒÀ ÂÐÅÌÅÍÈ
+DwellTimeDiscr		1
+ToolChangeTime		5
+SpindleReverseTime	3300
+SyncroTime		1.1
+TurnGroovDwell	30
+DrillPeckDwell	1200
+MaxFeedRate		5000
+FastFeedRateX	5000
+FastFeedRateY	5000
+FastFeedRateZ	5000
+FastFeedRateA	2000
+FastFeedRateB	2000
+FastFeedRateC	2000
+AutoFixRotAxes	Yes
+AutoFixTime		1
+AutoUnfixTime	1
+// end section
+
+// Section Cycle Definition
+// end section
+
+// Section Registers Map
+VisibleRegisters	1	1000
+// end section

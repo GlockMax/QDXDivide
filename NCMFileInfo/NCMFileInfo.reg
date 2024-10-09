@@ -1,0 +1,13 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\NCMFileInfo.Application = NCMFileInfo Application
+HKEY_CLASSES_ROOT\NCMFileInfo.Application\CLSID = {679A9CC7-C2D0-11D5-B0AC-0050BF4A8273}
+
+HKEY_CLASSES_ROOT\CLSID\{679A9CC7-C2D0-11D5-B0AC-0050BF4A8273} = NCMFileInfo Application
+HKEY_CLASSES_ROOT\CLSID\{679A9CC7-C2D0-11D5-B0AC-0050BF4A8273}\ProgId = NCMFileInfo.Application
+HKEY_CLASSES_ROOT\CLSID\{679A9CC7-C2D0-11D5-B0AC-0050BF4A8273}\LocalServer32 = NCMFILEINFO.EXE

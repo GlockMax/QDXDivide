@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Collision detection</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<h1><a name="HID_COLLSETTINGS" id="HID_COLLSETTINGS"></a>Collision detection </h1>
+
+<p>Menu item : <strong>Inspect&gt;Collision...</strong></p>
+<p>Collision dialog allows to turn on and off collision detection and set parameters.</p>
+<p><img src="../images/CollisionDlg.gif"></p>
+<h6>Components and tolerance</h6>
+<p>Define models which collisions to check. Set tolerance in numeric fields. If the distance between models is less than tolerance value, it is stated that collision has occurred.</p>
+<p><strong>Machine</strong> - toggle machine parts collision detection.</p>
+<p><strong>Tool</strong> - toggle collision detection with tool.</p>
+<p><strong>Part</strong> - toggle collision detection with part.</p>
+<p><strong>Fixture</strong> - toggle collision detection with fixture.</p>
+<h6>Collision options</h6>
+<p>Toggle collision detection and set additional parameters.</p>
+<p><strong>In background mode</strong> - detect collisions in background mode. In this mode  collisions are detected even without simulation running. At the bottom of a main window an animated picture appears, indicating the process of collision detection.</p>
+<p><strong>While execution only </strong>- detect collisions during CNC-program execution. In this mode collisions are detected only when simulation is running.</p>
+<p><strong>Disable</strong> - disable collision detection.</p>
+<p><strong>Stop on collision</strong> - if checked, simulation would stop when collision occurs.</p>
+<p><strong>Collision detection step </strong>- accuracy in steps for collision detection in background mode. Minimal value is 1.</p>
+<p>&nbsp;</p>
+<p>Collision detection is carried out only in Machine window.</p>
+<p>There's an indicator at the  bottom of main window, showing collision detection status. If it's gray - collision detection is off.</p>
+<p><img src="../images/CollOff.gif"></p>
+<p>If the indicator is green - collision detection is on and no collisions occurred. If the indicator is red - collision detection is on and some collisions have occurred. Collision occurrences are listed in Problems pane.</p>
+<p>&nbsp;</p>
+</body>
+
+</html>

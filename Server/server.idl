@@ -1,0 +1,76 @@
+// server.idl : IDL source for server.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (server.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(8820E927-C1F1-11D5-B0AB-0050BF4A8273),
+		helpstring("IServerData Interface"),
+		pointer_default(unique)
+	]
+	interface IServerData : IUnknown
+	{
+
+		HRESULT GetProgramsNum([out, retval] long* pNum);
+		HRESULT GetUnitName([out, retval] BSTR* ppbstrMessage);
+		HRESULT LoadFile([out, retval] BSTR* ppbstrMessage);
+		HRESULT GetProgWLength(long ProgNum,double *Length);
+		HRESULT Clear();
+		HRESULT GetProgName(long ProgNum,BSTR *Name);
+		HRESULT GetProgComment(long ProgNum, BSTR* Text);
+		HRESULT GetProgFLength(long ProgNum, double *Length);
+		HRESULT GetProgTime(long ProgNum, double *Time);
+		HRESULT GetProgLines(long ProgNum, long *Count);
+		HRESULT GetProgSteps(long ProgNum, long *Count);
+		HRESULT GetToolsNum(long *pNum);
+		HRESULT GetUnitFile(BSTR *pText);
+		HRESULT GetUnitType(BSTR *pText);
+		HRESULT GetUnitMan(BSTR *pText);
+		HRESULT GetUnitOper(BSTR *pText);
+		HRESULT GetUnitAxes(BSTR *pText);
+		HRESULT GetStockStlName(BSTR *pText);
+		HRESULT GetStockType(BSTR * pText);
+		HRESULT GetStockWidth(double *pSize);
+		HRESULT GetStockHeight(double *pSize);
+		HRESULT GetStockLength(double *pSize);
+		HRESULT GetStockX(double *pCoord);
+		HRESULT GetStockY(double *pCoord);
+		HRESULT GetStockZ(double *pCoord);
+		HRESULT GetStockRotX(double *pCoord);
+		HRESULT GetStockRotY(double *pCoord);
+		HRESULT GetStockRotZ(double *pCoord);
+		HRESULT GetStockBase(long *pNum);
+		HRESULT GetToolWLength(long ToolNum, double *pVal);
+		HRESULT GetToolFLength(long ToolNum, double *pVal);
+		HRESULT GetToolTime(long ToolNum, double *pVal);
+		HRESULT GetToolName(long ToolNum, BSTR *pText);
+		HRESULT GetToolType(long ToolNum, BSTR *pText);
+		HRESULT GetToolVolume(long ToolName, double *pVal);
+		HRESULT GetToolPos(long ToolNum, long *pNum);
+	};
+
+[
+	uuid(8820E918-C1F1-11D5-B0AB-0050BF4A8273),
+	version(2.0),
+	helpstring("NCMInfo Type Library")
+]
+library SERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(8820E928-C1F1-11D5-B0AB-0050BF4A8273),
+		helpstring("ServerData Class")
+	]
+	coclass ServerData
+	{
+		[default] interface IServerData;
+	};
+};

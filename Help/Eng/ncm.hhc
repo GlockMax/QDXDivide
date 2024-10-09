@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NCManager">
+		<param name="Local" value="html/main_index.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Purpose">
+			<param name="Local" value="html/main_text.htm">
+			<param name="URL" value="html/main_text.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Quick start">
+			<param name="Local" value="html/quick_start.htm">
+			<param name="URL" value="html/quick_start.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Program Setting">
+			<param name="Local" value="html/installation.htm">
+			<param name="URL" value="html/installation.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="First step">
+			<param name="Local" value="html/FirstStep.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Starting NCManager">
+				<param name="Local" value="html/RunNCM.htm">
+				<param name="URL" value="html/RunNCM.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CNC-Program loading">
+				<param name="Local" value="html/LoadProgr.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Operating with Views">
+				<param name="Local" value="html/DefView.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="View CNC-Program Text">
+				<param name="Local" value="html/ViewText.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Toolpath">
+				<param name="Local" value="html/ToolPath.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tools Loading">
+				<param name="Local" value="html/LoadTool.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Create a Stock">
+				<param name="Local" value="html/CreateStock.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Work Simulation">
+				<param name="Local" value="html/Simulate.htm">
+				<param name="URL" value="html\Simulate.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Save a Project">
+				<param name="Local" value="html/SaveProject.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Main Menu Commands">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The File Menu">
+				<param name="Local" value="html\menu_file.htm">
+				<param name="URL" value="html/menu_file.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Edit Menu">
+				<param name="Local" value="html\menu_edit.htm">
+				<param name="URL" value="html\menu_edit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The View Menu">
+				<param name="Local" value="html/menu_view.htm">
+				<param name="URL" value="html/menu_work.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Work Menu">
+				<param name="Local" value="html/menu_work.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Inspect Menu">
+				<param name="Local" value="html/menu_analiz.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Settings Menu">
+				<param name="Local" value="html/menu_settings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Window Menu">
+				<param name="Local" value="html/menu_window.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Help Menu">
+				<param name="Local" value="html/menu_help.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Object panel">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Purpose">
+				<param name="Local" value="html\def_objectpanel.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CNC Control">
+				<param name="Local" value="html/def_unit.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Programs">
+				<param name="Local" value="html/def_progr.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Machine">
+				<param name="Local" value="html\def_machine.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tools">
+				<param name="Local" value="html/def_tools.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Stock">
+				<param name="Local" value="html/def_stock.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Part">
+				<param name="Local" value="html/def_part.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

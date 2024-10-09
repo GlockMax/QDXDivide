@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetupPrereq>
+	<properties/>
+	<conditions>
+		<condition Type="2" Comparison="2" Path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\X86" FileName="Version" ReturnValue="v14.34.31938.00"/>
+	</conditions>
+	<operatingsystemconditions>
+		<operatingsystemcondition MajorVersion="10" MinorVersion="0" BuildNumber="22000" PlatformId="2" CSDVersion=""/>
+		<operatingsystemcondition MajorVersion="10" MinorVersion="0" BuildNumber="20348" PlatformId="2" CSDVersion="" ProductType="2|3"/>
+		<operatingsystemcondition MajorVersion="10" MinorVersion="0" PlatformId="2" CSDVersion=""/>
+	</operatingsystemconditions>
+	<files>
+		<file LocalFile="&lt;ISProductFolder&gt;\SetupPrerequisites\VC 2022 Redist\VC_redist.x86.exe" URL="https://download.visualstudio.microsoft.com/download/pr/b2519016-4a13-4120-936c-cae003d567c4/8AE59D82845159DB3A70763F5CB1571E45EBF6A1ADFECC47574BA17B019483A0/VC_redist.x86.exe" FileSize="0,0"/>
+	</files>
+	<execute file="VC_redist.x86.exe" cmdline="/q /norestart" cmdlinesilent="/q /norestart" returncodetoreboot="1641,3010"/>
+	<properties Id="{64D92CB5-0FE9-4ACE-AC15-7A7B812EA821}" Description="This prerequisite installs the Microsoft Visual C++ 2022 Runtime Libraries_v_v14.34.31938.00 (x86)"/>
+	<behavior IgnoreTmpRename="1" Reboot="2"/>
+</SetupPrereq>

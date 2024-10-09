@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Назначение текстового окна</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><A NAME="HID_TEXTPANE"></A>Назначение текстового окна</H1>
+<P>Текстовое окно, предназначено для просмотра и редактирования текста управляющих 
+  программ обработки для станков с ЧПУ.</P>
+<P><IMG SRC="../images/textview.gif" ALT="" width="417" height="324" BORDER=0></P>
+<P>Данное окно представляет собой упрощенный текстовый редактор с реализацией 
+  некоторых основных команд работы с текстом, некоторых специализированных команд, 
+  позволяющие более быстро и удобно оперировать программой и специальных команд 
+  для работы с управляющей программой. Команды текстового редактора, находятся 
+  в меню <a href="menu_edit.htm">Правка</a>.</P>
+<P>Изменение свойств текстового окна - это в первую очередь изменение параметров, 
+  задающих оформление текстового окна, среди этих параметров: </P>
+<h6>шрифт; </h6>
+<P>Шрифт NCM поддерживает основные шрифты символьного набора Windows, такие как 
+  Arial, Courier, Times New Roman, и многие другие. Изменение параметров шрифта, 
+  выводимого в текстовом окне, производиться выбором команды Настройки, Параметры..., 
+  закладка Оформление. В появившемся окне в выпадающем списке Элемент выбрать 
+  Текст Программы, затем из списка Шрифтов выбрать необходимый тип шрифта.</P>
+<h6>цвет фона текстового окна; </h6>
+<P>Данный параметр устанавливает цвет фона, на котором будет размещён текст управляющей 
+  программы. Изменение цвета фона текстового окна производиться выбором команды 
+  Настройки, Параметры..., закладка Оформление. В появившемся окне в выпадающем 
+  списке Элемент выбрать ФонТекстовогоОкна затем, нажав на кнопку Цвет, выбрать 
+  из появившейся цветовой палитры необходимый цвет фона.</P>
+<h6>цвет текста программы. </h6>
+<P>Все символы управляющей программы, отнесены к нескольким заранее определенным 
+  группам и могут иметь свой цвет в тексте программы. Какой символ относится к 
+  конкретной группе, определен в файле настройки стойки ЧПУ. </P>
+<P>Управление цветом символа, производится командой <strong>Настройки</strong>, 
+  <strong>Параметры</strong>..., закладка <strong>Оформление</strong>. В появившемся 
+  окне, в выпадающем списке <strong>Элемент</strong> нужно выбрать требуемый элемент 
+  затем, нажав на кнопку Цвет, выбрать из появившейся цветовой палитры необходимый 
+  цвет.</P>
+<P><IMG SRC="../images/TextColor.gif" ALT="" width="673" height="469" BORDER=0></P>
+<P>Ниже приведена таблица, имя элемента в списке, пример символа, описание.</P>
+<TABLE width=738 cols=2>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD width=25% class="normal1"><h6>Имя элемента</h6></TD>
+    <TD width=8%><p align="center">Символ</p></TD>
+    <TD width=67%><div align="center">Описание</div></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD width=25% class="normal1"><p><font color="#000066"><em>НомерЛинии</em></font></p></TD>
+    <TD width=8%><div align="center"> 
+        <p><font color="#0000FF"><strong>N</strong></font></p>
+      </div></TD>
+    <TD width=67%><p>Цвет символа для номера кадра </p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">GКоды</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>G</strong></font></p></TD>
+    <TD><p>Цвет символа для G-кода.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><font color="#000066"><em>MКоды</em></font></p></TD>
+    <TD><p align="center"><strong><font color="#0000FF">M</font></strong></p></TD>
+    <TD> <p>M-кода.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><font color="#000066"><em>НомерКоманды</em></font></p></TD>
+    <TD><p align="center"><strong><font color="#0000FF">01 41 ...</font></strong></p></TD>
+    <TD> <p>Цвет цифр для номера команды G-кода и M-кода.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">ЛинейныеКоординаты</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>X Y Z</strong></font></p></TD>
+    <TD><p>Цвет символа для линейной интерполяции.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">ЛинейныеКоординаты2</font></em></p></TD>
+    <TD><div align="center"> 
+        <p><font color="#0000FF"><strong>U V W</strong></font></p>
+      </div></TD>
+    <TD><p>Цвет символа для линейной интерполяции.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">КруговаяИнтерполяция</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>I J K</strong></font></p></TD>
+    <TD><p>Цвет символа для круговой интерполяции.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">УгловыеКоординаты</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>A B C</strong></font></p></TD>
+    <TD><p>Цвет символа для поворотов.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">Инструмент</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong>T</strong></font></p></TD>
+    <TD><p>Цвет символа для номера инструмента.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">ПростыеЧисла</font></em></p></TD>
+    <TD><p align="center"><strong><font color="#0000FF">3.445</font></strong></p></TD>
+    <TD><p>Цвет цифр для числовых значений.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD rowspan="2" class="normal1"><p><em><font color="#000066">Скорость</font></em></p></TD>
+    <TD height="21"> <p align="center"><strong><font color="#0000FF">F S</font></strong></p></TD>
+    <TD rowspan="2"><p>Цвет символа для задания величин подачи и оборотов шпинделя.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">Коментарии</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"><strong><font color="#0000FF">(text)</font></strong></font></p></TD>
+    <TD><p>Цвет коментарий в программе.</p></TD>
+  </TR>
+  <TR VALIGN="top" bgcolor="#CCCCCC"> 
+    <TD class="normal1"><p><em><font color="#000066">Обозначения</font></em></p></TD>
+    <TD><p align="center"><font color="#0000FF"></font></p></TD>
+    <TD><p>Цвет неопределенных символов и цифр.</p></TD>
+  </TR>
+</TABLE>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</BODY>
+</HTML>

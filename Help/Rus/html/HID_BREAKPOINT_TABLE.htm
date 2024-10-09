@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>Точки останова</TITLE>
+<link rel=StyleSheet href=../tutorial.css>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<h1><a name="HID_BREAKPOINT_TABLE" id="HID_BREAKPOINT_TABLE"></a>Точки останова</h1>
+
+<p>Вызов из меню: <strong>Работа</strong> <strong>– Точки останова</strong></p>
+
+<p>Быстрый вызов: иконка <img width=26 height=26
+src="HID_BREAKPOINT_TABLE.files/image001.gif" v:shapes="_x0000_i1025"></p>
+
+<p>Команда вызывает диалог настроек Основных и Дополнительных Точек останова
+(ТО).</p>
+
+<p> <img width=375 height=496
+src="HID_BREAKPOINT_TABLE.files/image007.gif" v:shapes="_x0000_i1031"> </p>
+
+<p>В этом диалоге можно настроить <strong>ТО</strong>, включая или выключая соответствующие 
+  галочки у названия <strong>TO</strong>. Включая или выключая опцию, <strong>Использовать 
+  дополнительные точки</strong>, можно управлять возможностью остановить имитацию 
+  в определенных <strong>Дополнительными ТО</strong> местах. Для скорости включения 
+  и выключения использования, дополнительных <strong>ТО</strong>, в панель <strong>ТО</strong> 
+  помещена соответствующая иконка - <img
+src="HID_BREAKPOINT_TABLE.files/image006.gif" width=26 height=26 align="absmiddle" v:shapes="_x0000_i1032"> 
+  .</p>
+
+<p>Например, на картинке диалога <strong>ТО</strong> показанной выше, имитация 
+  будет останавливаться в местах где:</p>
+
+<ul>
+  <li>
+    <p>изменяется величина подачи инструмента;</p>
+  </li>
+  <li>
+    <p>есть перемещение только по координате Z (как правило, это кадры врезания 
+      или подъема инструмента);</p>
+  </li>
+  <li>
+    <p><span style='mso-spacerun:yes'> </span>кадры, где включилась коррекция 
+      на диаметр;</p>
+  </li>
+</ul>
+<h1>Что такое Точки останова (ТО)</h1>
+
+<p>Имитация обработки заготовки всегда начинается с текущего места положения инструмента 
+  в программе проекта. Для того чтобы была возможность управлять местом, где закончить 
+  имитацию или для поиска характерных мест определенной программы, с которой ведется 
+  работа, служит механизм <strong>Точек останова</strong> <strong>(ТО</strong>). 
+  Таким образом, если включены какие-либо <span class=GramE><strong>ТО</strong>, 
+  то</span> при выполнении команды <span style='mso-spacerun:yes'> </span> <img
+src="HID_BREAKPOINT_TABLE.files/image002.gif" width=26 height=26 align="absmiddle" v:shapes="_x0000_i1026"> 
+  <span
+style='mso-spacerun:yes'> </span>(<strong>До точки останова</strong>), начинается 
+  имитация обработки заготовки, с текущего места программы. Имитация автоматически 
+  остановится при достижении в программе места определяемого одной из включенных 
+  <strong>ТО</strong>. Это место становится новым текущим положением инструмента. 
+  Тоже самое произойдет при выполнении команд <img
+src="HID_BREAKPOINT_TABLE.files/image003.gif" width=26 height=26 align="absmiddle" v:shapes="_x0000_i1028"> 
+  (<strong>Вперед</strong>) и <img
+src="HID_BREAKPOINT_TABLE.files/image004.gif" width=26 height=26 align="absmiddle" v:shapes="_x0000_i1027"> 
+  (<strong>Назад</strong>). Инструмент перейдет (без имитации) в новое положение. 
+  Это место тоже будет новым текущим положением инструмента в программе проекта.</p>
+
+<p>Точки делятся на две группы. Основные и дополнительные. Отличие их только в 
+  том, что включениеили выключение <strong>Основных ТО</strong>, вынесено в панель 
+  <strong>ТО</strong>, для быстрого управления этим процессом: </p>
+
+<p> <img width=199 height=58
+src="HID_BREAKPOINT_TABLE.files/image005.gif" v:shapes="_x0000_i1029"> </p>
+
+<p>Это четыре <strong>ТО</strong>, которые остановят имитацию в начале или конце 
+  каждой программы проекта, после кадра с технологическим остановом, после кадра 
+  смены инструмента и в кадре отмеченном закладкой.</p>
+
+<p>Управление включением или выключением дополнительными <strong>ТО</strong> осуществляется 
+  нажатием команды - <img width=26 height=26
+src="HID_BREAKPOINT_TABLE.files/image006.gif" v:shapes="_x0000_i1030">(<strong>Дополнительные 
+  точки</strong>), настройка же списка тех дополнительных точек, которые можно 
+  включить или выключить, производится в диалоговом окне команды <img
+src="HID_BREAKPOINT_TABLE.files/image001.gif" width=26 height=26 align="absmiddle" v:shapes="_x0000_i1025"><strong>Точки 
+  останова</strong>, описанной выше.</p>
+
+
+</body>
+
+</html>

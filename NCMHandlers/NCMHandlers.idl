@@ -1,0 +1,84 @@
+// NCMHandlers.idl : IDL source for NCMHandlers
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (NCMHandlers.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(a5f0293f-474b-4e0a-ac0f-4bdccdf0e519),
+	pointer_default(unique)
+]
+interface IPreview : IUnknown
+{
+};
+
+[
+	object,
+	uuid(bafe7e5d-e31a-47fc-ab42-bd5e8aaa8298),
+	pointer_default(unique)
+]
+interface IThumbnail : IUnknown
+{
+};
+
+[
+	object,
+	uuid(a0fabdd9-d41c-4590-b489-918e0269c016),
+	pointer_default(unique)
+]
+interface ISearch : IUnknown
+{
+};
+
+[
+	object,
+	uuid(a028dfe6-1a43-4c59-9357-4330cca11603),
+	pointer_default(unique)
+]
+interface IIconHandler : IUnknown
+{
+};
+[
+	uuid(bfe9f6ac-4c41-4533-96b2-8c25c994bebe),
+	version(1.0),
+]
+library NCMHandlersLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(f5615057-69da-44d3-a826-234a3c464567)
+	]
+	coclass Preview
+	{
+		[default] interface IPreviewHandler;
+	};
+	[
+		uuid(d3a5d1c5-c0cd-4aa6-be3d-80f4f17fe98b)
+	]
+	coclass Thumbnail
+	{
+		[default] interface IThumbnailProvider;
+	};
+	[
+		uuid(ef06979e-136f-4259-b202-8ffba55e5aa8)
+	]
+	coclass Search
+	{
+		[default] interface IFilter;
+	};
+	[
+		uuid(40f3183a-7102-4c59-a713-950939662d93)
+	]
+	coclass IconHandler
+	{
+		[default] interface IIconHandler;
+	};
+};
+
+import "shobjidl.idl";
+import "thumbcache.idl";
+import "filter.idl";

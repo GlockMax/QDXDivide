@@ -1,0 +1,467 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<title>Создать Плоскость</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Заголовок 1 Знак";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:1.0pt;
+	font-weight:normal;}
+h2
+	{mso-style-link:"Заголовок 2 Знак";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;}
+h3
+	{mso-style-link:"Заголовок 3 Знак";
+	margin-top:1.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:.7pt;
+	font-weight:normal;}
+h4
+	{mso-style-link:"Заголовок 4 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:113%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	font-style:italic;}
+h5
+	{mso-style-link:"Заголовок 5 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:113%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:black;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Заголовок 6 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:113%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Заголовок 7 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:113%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:black;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Заголовок 8 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:113%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:black;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Заголовок 9 Знак";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:113%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:black;
+	font-style:italic;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	font-variant:small-caps;
+	color:#1F497D;
+	letter-spacing:.3pt;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Название Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:48.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Название Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:48.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Название Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:48.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Название Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:48.0pt;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Подзаголовок Знак";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	line-height:113%;
+	font-size:20.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+strong
+	{color:#1F497D;
+	font-weight:normal;
+	font-style:italic;}
+em
+	{font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Текст выноски Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-link:"Без интервала Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:36.0pt;
+	text-indent:-14.4pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-14.4pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-14.4pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:36.0pt;
+	text-indent:-14.4pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"Цитата 2 Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:150%;
+	font-size:13.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"Выделенная цитата Знак";
+	margin-top:10.0pt;
+	margin-right:12.95pt;
+	margin-bottom:10.0pt;
+	margin-left:12.95pt;
+	text-align:center;
+	line-height:150%;
+	background:#4F81BD;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:white;}
+span.MsoSubtleEmphasis
+	{color:black;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleReference
+	{font-variant:small-caps;
+	color:black;
+	text-decoration:underline;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	color:#4F81BD;
+	letter-spacing:.25pt;
+	font-weight:normal;
+	text-decoration:underline;}
+span.MsoBookTitle
+	{font-variant:normal !important;
+	color:#1F497D;
+	text-transform:uppercase;
+	letter-spacing:.5pt;
+	font-weight:bold;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:110%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:1.0pt;
+	font-weight:bold;}
+span.1
+	{mso-style-name:"Заголовок 1 Знак";
+	mso-style-link:"Заголовок 1";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:1.0pt;}
+span.2
+	{mso-style-name:"Заголовок 2 Знак";
+	mso-style-link:"Заголовок 2";
+	font-family:"Times New Roman","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.3
+	{mso-style-name:"Заголовок 3 Знак";
+	mso-style-link:"Заголовок 3";
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:.7pt;}
+span.4
+	{mso-style-name:"Заголовок 4 Знак";
+	mso-style-link:"Заголовок 4";
+	font-family:"Times New Roman","serif";
+	color:black;
+	font-weight:bold;
+	font-style:italic;}
+span.5
+	{mso-style-name:"Заголовок 5 Знак";
+	mso-style-link:"Заголовок 5";
+	font-family:"Cambria","serif";
+	color:black;}
+span.6
+	{mso-style-name:"Заголовок 6 Знак";
+	mso-style-link:"Заголовок 6";
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+span.7
+	{mso-style-name:"Заголовок 7 Знак";
+	mso-style-link:"Заголовок 7";
+	font-family:"Cambria","serif";
+	color:black;
+	font-style:italic;}
+span.8
+	{mso-style-name:"Заголовок 8 Знак";
+	mso-style-link:"Заголовок 8";
+	font-family:"Cambria","serif";
+	color:black;}
+span.9
+	{mso-style-name:"Заголовок 9 Знак";
+	mso-style-link:"Заголовок 9";
+	font-family:"Cambria","serif";
+	color:black;
+	font-style:italic;}
+span.a
+	{mso-style-name:"Название Знак";
+	mso-style-link:Название;
+	font-family:"Cambria","serif";
+	color:#1F497D;
+	letter-spacing:1.5pt;}
+span.a0
+	{mso-style-name:"Подзаголовок Знак";
+	mso-style-link:Подзаголовок;
+	font-family:"Times New Roman","serif";
+	color:#1F497D;}
+span.a1
+	{mso-style-name:"Текст выноски Знак";
+	mso-style-link:"Текст выноски";
+	font-family:"Tahoma","sans-serif";}
+span.a2
+	{mso-style-name:"Без интервала Знак";
+	mso-style-link:"Без интервала";}
+span.20
+	{mso-style-name:"Цитата 2 Знак";
+	mso-style-link:"Цитата 2";
+	font-family:"Times New Roman","serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.a3
+	{mso-style-name:"Выделенная цитата Знак";
+	mso-style-link:"Выделенная цитата";
+	font-family:"Cambria","serif";
+	color:white;
+	background:#4F81BD;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri","sans-serif";}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=RU link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<h3>Закладка Плоскость</h3>
+
+<p class=MsoNormal><a href="#_Плоскость_на_модели"><span style='color:windowtext;
+text-decoration:none'><img border=0 width=34 height=33 id="Рисунок 1"
+src="HIDD_MEASURE_PLANE_image001.png"></span></a><a href="#_Плоскость_по_трем"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=33 height=32
+id="Рисунок 2" src="HIDD_MEASURE_PLANE_image002.png"></span></a></p>
+
+<p class=MsoNormal>Когда нажата закладка «Плоскость», становится активной
+возможность создавать геометрические примитивы «Плоскость». Также на этой
+закладке задаются атрибуты для плоскостей, находятся команды управления
+видимостью и удаления всех плоскостей. </p>
+
+<p class=MsoNormal><b>Атрибуты плоскости:</b></p>
+
+<p class=MsoNormal><img border=0 width=132 height=85 id="Рисунок 78"
+src="HIDD_MEASURE_PLANE_image003.png"></p>
+
+<p class=MsoNormal><b>Дополнительные команды для плоскостей:</b></p>
+
+<p class=MsoNormal><img border=0 width=215 height=23 id="Рисунок 79"
+src="HIDD_MEASURE_PLANE_image004.png"></p>
+
+<p class=MsoNormal>Команда «Видимость» покажет скрытые или скроет все видимые
+плоскости. </p>
+
+<p class=MsoNormal>Команда «Удалить» удалит все видимые плоскости. Скрытые
+плоскости не удаляются. </p>
+
+<p class=MsoNormal>Команда «Сначала» позволит начать задавать плоскость с
+первой точки.</p>
+
+<h4><a name="_Плоскость_на_модели"></a>Плоскость на модели</h4>
+
+<p class=MsoNormal><img border=0 width=34 height=33 id="Рисунок 76"
+src="HIDD_MEASURE_PLANE_image001.png"> Команда «На модели» служит для создания
+плоскости на модели. Плоскость отображается условно в виде квадрата. Длина
+стороны такого квадрата задается в атрибутах в мм. Укажите точку на модели.
+Будет построена плоскость. Указанная точка будет центром значка плоскости.</p>
+
+<h4><a name="_Плоскость_по_трем"></a>Плоскость по трем точкам</h4>
+
+<p class=MsoNormal><img border=0 width=33 height=32 id="Рисунок 77"
+src="HIDD_MEASURE_PLANE_image002.png"> Команда «По трем точкам» служит для
+создания плоскости по трем указанным точкам. Используя фильтры и привязки,
+укажите три точки. По ним будет построена плоскость. Отображение плоскости
+будет в виде прямоугольника. Вершинами прямоугольника будут указанные точки. </p>
+
+</div>
+
+</body>
+
+</html>

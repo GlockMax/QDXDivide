@@ -1,0 +1,259 @@
+//
+//
+
+// Section General
+Name		ISO
+Type		ISO/EIA
+Model		
+Manufacturer		
+Operation		TurnMill
+NumAxes		4
+// end section
+
+// Section Word Replacement
+Replace		"GOTO"		"M1000P"
+Replace		"NE"	":"
+Replace		"SIN"	"ñ"
+Replace		"COS"	"ê"
+Replace		"ABS"	"ì"
+Replace		"TAN"	"ò"
+Replace		"SQRT"	"ä"
+Replace		"FUP"	"è"
+Replace		"#["	"ð["
+Replace		"AND"	"&"
+Replase		"FIX"	"í"
+Replase		"ROUND"	"ö"
+Replace		"G41"		"G41G3500M8100ä=#8101/2Ä=#8102"
+Replace		"G42"		"G42G3500M8100ä=#8101/2Ä=#8102"
+Replace		"G40"		"G40G3600"
+Replace		"G13.1"		"G113"
+Replace		"G12.1"		"G112"
+Replace		"G4X"		"G4P"
+Replace		"G4U"		"G4P"
+Replace		"G28"		"G00X250.Z150."
+Replace		"F"		"#5133=0.1F"
+// end section
+
+// Section Word Definition
+LineNumber		N
+TurnRoughDepthU1		U
+TurnRoughDepthW1		W
+TurnRoughDepthD		D
+TurnRoughDepthR		R
+TurnGroovDepthP		I
+TurnGroovDepthQ		K
+TurnThreadP		P
+TurnThreadR		R
+TurnThreadQ		Q
+TurnConeX		I
+TurnConeZ			K
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalAxisInc		U
+VerticalAxisInc		V
+SpindleAxisInc		W
+HorizontalRotationAxis		B	 
+VerticalRotationAxis			 
+SpindleRotationAxis		C 
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode			F
+SpeedCode		S
+ToolCode			T
+DwellTime			P
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleRadius		R
+DiaCompOffset		D
+DiaCompOffsetVal		ä
+DiaCompCodeVal			Ä
+LengthCompOffset		H
+ProgramCopyStart		P	
+ProgramCopyEnd		Q
+Register			#
+RapidClearanceLevel		
+FixtureOffsetCode		E
+InitialDepth		P
+PeckIncrementDepth		
+DrillRepeatCycles		L
+DiaCompHorizVec		Æ
+DiaCompVerticalVec		Ç
+ThreadParm		
+ProgramNumber		P
+ProgramStartEnd		O
+CommentStart		(
+CommentEnd		)
+EndOfBlock		$
+EndOfLine		\
+BlockSkip		/
+ProgramBeginEnd		%
+Delimiter		 
+CircleCuttingRadius1		
+CircleCuttingRadius2			
+SecondaryWCS		
+RepeatNumber	L
+ChamferAngle	A
+// end section
+
+// Section Function Definition
+Rapid			0	1	Y
+Linear			1	1	N
+CircularCW		2	1	N
+CircularCCW		3	1	N
+Dwell			4	0	N
+PolarInterp			112	21	N
+PolarInterpCancel		113	21	Y
+XYPlane			17	16	N
+ZXPlane			18	16	Y
+YZPlane			19	16	N
+InchUnit			20	6	N
+MetricUnit			21	6	N
+ReturnToRef		28	0	N
+ReturnToRef2		30	0	N
+SimThreadCycleT		32	1	Y
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+SetMaxSpeed		50	0	N
+ZeroPreset			52	0	N
+MachCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+CallMacro			65	0	N
+TurnClearCycle		70	0	N
+TurnRoughCycle		71	0	N
+TurnFacingCycle		72	0	N
+TurnLoopCycle		73	0	N
+TurnGroovZCycle		74	0	N
+TurnGroovXCycle		75	0	N
+TurnThreadACycle		76	0	N
+CancelCycle		80	10	Y
+DrillCycle			83	10	N
+RHTappingCycle		84	10	N
+BoreCycle			86	10	N
+TurnCutCycle		90	1	N
+TurnFaceCycle		94	1	N
+FixCutSpeed		96	2	N
+UnFixCutSpeed		97	2	Y
+FeedPerMin		98	5	N
+FeedPerRev		99	5	Y
+NCMGCode*******		1000	100	Y
+ParToNext			3500	100	N
+RetractComp		3600	100	N
+TurnChamferCycle		500	0	N
+TurnRoundCycle		501	0	N
+DummyG**********		2000	200	N
+Dummy			7.1	0	N
+Dummy1			107	0	N
+Dummy2			10	1	N
+Dummy3			11	1	N
+Dummy4			22	9	Y
+Dummy5			23	9	N
+Dummy6			25	8	Y
+Dummy7			26	8	N
+Dummy8			27	0	N
+Dummy9			31	0	N
+Dummy10			34	1	N
+Dummy11			36	0	N
+Dummy12			37	0	N
+Dummy13			50.3	0	N
+Dummy14			50.2	20	Y
+Dummy15			250	20	Y
+Dummy16			51.2	20	N
+Dummy17			251	20	N
+Dummy18			66	12	N
+Dummy19			67	12	Y
+Dummy20			87	10	N
+Dummy21			88	10	N
+Dummy22			89	10	N
+TurnThreadCCycle			92	1	N
+// end section
+
+// Section Misc Function Definition
+Stop			0
+OptionalStop		1
+EndProgram		30
+ProgramEnd		2
+SpindleCW			3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff			9
+SubroutineCallN		97
+SubroutineCall		98
+SubroutineEnd		99
+ThreadCut			12
+GoTo			1000
+StoreToolParams		8100
+// end section
+
+// Section Others
+IgnoreUnknownM	Yes
+IgnoreUnknownCh	Yes
+IgnoreUnknownG	No
+LinearXConversion		0.5
+LinearIConversion		0
+DecimalConversion		0
+LinearDecimalConversion		0
+RotaryDecimalConversion		0
+FeedDecimalConversion		0
+SpeedDecimalConversion		0
+ReverseSign		
+ReverseTurret	No
+ContinuedCircleStatement	No
+XInDiameter		No
+CircleInQuadrants	No
+3DDiaCompensation	Yes
+CircularDirection		D0 D1
+CircleCenterType		IJR
+CircleCenterMode		Incremental
+UVCenterType		IJ
+UVCenterMode		Incremental
+AlwaysIncremental		No
+MaxArcRadius		999
+RotaryAxisUnwind		No
+ModalData		X Y Z F R S M Q 
+ToolIndex		Absolute
+ExtraCharForRapid		
+ToolChangeWithM06		No
+AddToolSetLength		No
+ToolPreSelect		No
+ToolOffsetInToolNumber	For
+ToolNumFormat		N2L2
+AdditionalCommentChars		
+DataSetChar		L
+TableRotationType	ShortestRoute
+StartwToolNum1	No
+SetSecondaryWCSIndicator		20
+SetPrimaryWCSIndicator		2
+DrillAxisMode	Programmable
+MultiAxisSequence	AllSimultaneous
+CycleNeedsGeom		No
+CycleNeedsParam		Yes
+StartwToolNum1		No
+MainInitStr		G0G18G40G54G80G97G99X250Z150
+CheckGeom		Yes
+MinArcDist		3
+StartProgram	Ignore
+MaxFeedRate	450
+CompToIntersect         No
+CompWithArcs            Yes
+PartialCompCancel	No
+FileExtension *.OKU
+EnableOrtChamfer	Yes
+InterChangeCancelCycle	Yes
+DHCompEQ		Yes
+MiCheckDiamCompOff	Yes
+PutFirst		G99
+// end section
+
+// Section Cycle Definition
+// end section

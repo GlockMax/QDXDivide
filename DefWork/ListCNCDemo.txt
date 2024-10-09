@@ -1,0 +1,19 @@
+*****************************FOR EXAMPLES
+ISO.SM3
+TRAUB.SM3
+Sinumeric840D.SM3
+HaasMT.SM3
+Fanuc0-TB-TT.SM3
+FanucDemo.SM3
+Haas.SM3
+Lathe_CNC_3.SM2
+NC-110_Lathe.SM3
+FANUC6M_V1.SM3
+L3030.SM3
+HEIDENHAIN.SM3
+2C42Demo.SM3
+TNC-310.SM3
+******************************ADDITION
+Okuma.SM3
+MillPlus.SM3
+Mazak.SM3

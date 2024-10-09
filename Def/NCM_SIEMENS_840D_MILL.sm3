@@ -1,0 +1,330 @@
+// 
+// 
+
+// Section General
+Name		NCM_SIEMENS_840D_MILL.sm3
+Type		Sinumerik
+Model		840D
+MachineTool	
+Manufacturer	
+Operation	Milling
+NumAxes		5
+Create	29.08.2023
+Update	19.09.2024
+Version	0.35
+Forbidden	scravtqefijklm
+Allowed	bdghnopuwxyz
+CheckSyntax	Yes
+// end section
+
+// Section Word Replacement
+//убрать комментарии
+RegExp	";.*"	""
+// переменная $AA_SOFTENDP[X]=$AA_SOFTENDP[Y]=$AA_SOFTENDP[Z]=0
+RegExp	"\$AA_SOFTENDP\[[XYZ]\]"	"0"
+//Для DMU
+Replace		"M53"	"M98L53"
+Replace		"M54"	"G17G0X-400Y400Z400B0R20=54"
+//RegExp	"CYCLE800$"	"G80"
+RegExp	"CYCLE800\(([1-2])\,"TC([2-3])\"\,([0-1])\,\d*\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,"	"R99=1R1=\1R2=\2R3=\3R4=\4R5=\5R6=\6R7=\7M98L100;"
+//R99=1 признак что это станок DMU
+RegExp	"(CYCLE800.+)(\"TC([2-3])\")"	"R99=\3\1\2"
+//конец вставки для DMU
+Replace	"TOOLNO=$P_TOOLNO"	";"
+//direction of rotation (DC, ACP, ACN)
+RegExp	"([ABC]=)ACN\((.+)\)"	"M1128\1\2"
+RegExp	"([ABC]=)ACP\((.+)\)"	"M1127\1\2"
+RegExp	"([ABC]=)DC\((.+)\)"	"M1126\1\2"
+Replace		"I=AC"			"U="
+Replace		"J=AC"			"V="
+Replace		"K=AC"			"W="
+//incremental coordinates
+RegExp	"X=IC"	"x=\1"
+RegExp	"Y=IC"	"o=\1"
+RegExp	"Z=IC"	"w=\1"
+//Def macro
+Replace	"ENDWHILE"	"ENDIFM1096L__NCM002"
+Replace	"WHILE"	"__NCM002:IF"
+RegExp	"REPEAT(\D\D+\d*)(\D\D+\d*)(.*)"	"G25\3u\2p\1"
+Replace	"GOTOB"	"M1096L"
+Replace	"GOTOF"	"M1097L"
+Replace	"ENDIF"	"ENDIF:"
+Replace	"ELSE"	"ENDIF:M1097LENDIF"
+Replace	"ENDLOOP"	"M1096L__NCM001"
+Replace	"LOOP"	"__NCM001:"
+Replace	"TRUNC"	"FIX"
+Replace	"=="	"="
+Replace	"<>"	":"
+Replace	"<="	"?"
+Replace	">="	"!"
+Replace	"MOD"	"$"
+Replace	"NOT"	"~"
+RegExp	"(IF.*)OR(.*)"	"\1|\2"
+Replace	"AND"	"&"
+RegExp	"\bIF(.*)(M109[67])"	"IF(\1)\2"
+//End def macro
+RegExp	"WORKPLANE|PICKUP|CYCLE90"	";"
+RegExp	"FP=2|SPOS=\d+|CFTCP|C_ANGLE_DELTA=\d+|SDELANO=.*|KOL_POVT=.*|CUT2DF"	""
+RegExp	"CDON|CDOF2|CDOF"	""	//Collision Detect On/Off ignore
+RegExp	"ORIRESET\((\-*\d*\.*\d*),(\-*\d*\.*\d*)\)"	"G0C\1A\2"
+RegExp		"DIAMOF"	"G50"
+RegExp		"DIAMON"	"G51X0.5I2"
+RegExp	"MSG|WORKPIECE|ORI\D+|SOFT|FFW\D+|FNORM|TRA\D+|FGR\D+|PDDP|FNAME|EXTERN|GROUP_|REPEAT|ROT|STOPRE|COMP"	";"
+RegExp	"G(70)0|G(71)0"	"G\1\2"
+RegExp	"DEF\W?REAL|DEFINT|DEF"	"M910"
+RegExp	"SUPA"	"G53"
+RegExp	"CYCLE832\(.*\)"	";"
+RegExp	"MOVE_V=.*|MOVE_W=/*|MOVE_Z=/*"	";"
+RegExp	"CYCLE800\(\)|CYCLE800$"	"M98L800;"
+RegExp	"CYCLE800\(([0-2])\,".*"\,([0-2]+)\,(\d+)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,(\-*\d*\.*\d*)\,"	"R1=\1R2=\2R3=\3R4=\4R5=\5R6=\6R7=\7R8=\8R9=\9M98L801;"
+RegExp	"CYCLE71\(([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),.*\)"	"G666L71A\1B\2C\3D\4E\5F\6H\7I\8J\9"
+RegExp	"POCKET3\(([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),.*\)"	"G666L3A\1B\2C\3D\4E\5F\6H\7I\8J\9"
+RegExp	"POCKET4\(([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),.*\)"	"G666L4A\1B\2C\3D\4E\5F\6H\7I\8J\9"
+RegExp	"CYCLE840|CYCLE84|CYCLE82|CYCLE86|CYCLE87|CYCLE88|CYCLE89"	"CYCLE81"
+RegExp	"MCALLCYCLE81\((.*),(.*),(.*),(.*),?(.*)\)"	"R500=0G666L81I\1J\2K\3D\4E\5"
+RegExp	"MCALLCYCLE83\(([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),[-+0-9.A-Z]*,([-+0-9.A-Z]*),.*\)"	"R500=0G666L83I\1J\2K\3D\4E\5F\6"
+RegExp	"CYCLE81\((.*),(.*),(.*),(.*),?(.*)\)"	"R500=1G666L81I\1J\2K\3D\4E\5"
+RegExp	"MCALLCYCLE85\(([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z]*),([-+0-9.A-Z])*,([-+0-9.A-Z]*),([-+0-9.A-Z]*),.*\)"	"R500=0G666L81I\1J\2K\3D\4E\5"
+RegExp	"MCALL"	"G667"
+//игнорировать
+RegExp	"(ROUND_AXES|\$P_WPFRAME.*|RECALC_.*)"	";\1"
+//ввод числа витков
+RegExp	"TURN="	"n="
+//ввод радиуса окружности
+RegExp	"CR="	"z="
+//Припуск на контур как коррекция + радиус активного инструмента
+RegExp	"OFFN=(.*)"	"M8100d=\1+(0.5*R8101)"
+//Номер инструмента сделать строкой строка
+RegExp	"(\d|^|\W)T=?(\d+)"	"\1T"\2""
+//Убрать знак равно после имени инструмента
+RegExp	"(\d|^|\W)T="	"\1T"
+//Включение коррекции 
+RegExp	"(G41|G42)"	"G35\1"
+RegExp	"T="	"T"
+//Delete SPACE after line numbers if next symbol is label 
+RegExp1	"(N\d+)( +)([_A-Z]{2}.*\:)"
+RegExp2	"\1\3"
+//Tool number zero
+RegExp	"T00"	";T00"
+//
+RegExp	"C1="	"C="
+// end section
+
+// Section Word Definition
+MoveRotateCSAngle	z
+CircleFullTurns	n
+TiltA		A
+TiltB		B
+TiltC		C
+TiltType	w
+TiltAReg	X
+TiltBReg	Y
+TiltCReg	Z
+TiltDecision	d
+TiltSecCode	b
+DrillRelZ			Z
+DrillRelR			R
+DrillRelW			W
+ModalCommentOn	#
+ModalCommentOff	&
+LineNumber		N
+HorizontalAxis		X
+VerticalAxis		Y
+SpindleAxis		Z
+HorizontalAxisInc		x
+VerticalAxisInc		o
+SpindleAxisInc		w
+HorizontalRotationAxis	A	 
+VerticalRotationAxis	B	 
+SpindleRotationAxis	C	 
+CircleHorzCenterAbs		U
+CircleVerticalCenterAbs		V
+CircleDepthCenterAbs		W
+FunctionCode		G
+MiscFunctionCode		M
+FeedCode		F
+SpeedCode		S
+ToolCode		T
+DwellTime		Q
+CircleHorzCenter		I
+CircleVerticalCenter		J
+CircleDepthCenter		K
+CircleRadius		z
+DiaCompOffset		D
+DiaCompOffsetVal		d
+LengthCompOffset		H
+PeckIncrementDepth		Q
+DiaCompVerticalVec		Q
+ProgramNumber		L
+ProgramStartEnd		O
+BlockSkip		;
+ProgramBeginEnd		%		
+ArcIncrement		Q
+ProgramCopyStart	p	
+ProgramCopyEnd		u
+RepeatNumber	P
+Register	R
+LabelFirst		"""
+LabelLast		"""
+VariablePrefix	y
+VariableEnd	g
+DrillRef	W
+NoMove			&
+Dummy0		E
+// end section
+
+// Section Function Definition
+Rapid		0	1	Y
+Linear		1	1	Y
+CircularCW		2	1	Y	Y	CircleDepthCenterAbs
+CircularCCW		3	1	Y	Y	CircleDepthCenterAbs
+SpiralCW		12	1	Y	Y	CircleDepthCenterAbs
+SpiralCCW		13	1	Y	Y	CircleDepthCenterAbs
+Dwell		4	0	N
+ExactStop		9	0	N
+DataSetting		10	0	N
+XYPlane		17	2	N
+ZXPlane		18	2	N
+YZPlane		19	2	N
+ProgramCopy		25	0	N
+InchUnit		70	6	N
+MetricUnit		71	6	N
+ReturnToRef		75	0	N
+ReturnToRef2		32	0	N
+ReturnToRef3		28	0	N
+ReturnToRef4		27	0	N
+ToolCompCancel		40	7	N
+ToolCompLeft		41	7	N
+ToolCompRight		42	7	N
+LengthOffsetIncr		43	0	N
+LengthOffsetDecr		44	0	N
+EnableExtraArc		45	7	N
+LengthOffsetDecr2X		46	8	N
+LengthOffsetIncr2XITN		47	8	N
+LengthOffsetDecr2XITN		48	8	N
+LengthOffsetCancel		49	8	N
+ScalingCancel		50	11	N
+ScalingOn		51	11	N
+MachineCoordSys		53	0	N
+WorkCoordSys1		54	14	N
+WorkCoordSys2		55	14	N
+WorkCoordSys3		56	14	N
+WorkCoordSys4		57	14	N
+WorkCoordSys5		58	14	N
+WorkCoordSys6		59	14	N
+SingleDirectionPosition		60	0	N
+ExactStop2		61	15	N
+TappingCycle		33	15	N
+HighSpeedPeck		73	9	Y
+LeftHandTapping		74	9	Y
+CancelCycle		80	9	Y
+DrillCycleRel		81	9	Y
+DrillDwellCycle		82	9	Y
+DrillPeckCycle		83	9	Y
+RHTappingCycle		84	9	Y
+RightRHTappingCycle		84.2	9	N
+ReamCycle		85	9	Y
+BoreCycle		86	9	N
+BackBoreCycle		87	9	N
+BoreDwellCycle		88	9	N
+ReamDwellCycle		89	9	N
+AbsoluteUnit		90	3	N
+IncrementalUnit		91	3	N
+ZeroPreset		92	3	N
+FeedPerMin		94	5	N
+FeedPerRev		95	5	N
+SpeedInSFM		96	13	N
+SpeedInRpm		97	13	N
+ReturnToStartPlane		98	10	N
+ReturnToRefPlane		99	10	N
+ReturnToZero		29	99	N
+Dummy0			64	55	Y
+ParToNext		35	15	Y
+RetractComp		36	0	N
+TiltPlane		7	0	N
+MoveRotateCS	68	0	N
+MoveRotateCSCancel	69	0	N
+CallMacro		1065	9	Y
+ModalCallMacro	1066	9	Y
+ModalCallMacro2		666	0	N
+ModalCallCancel		667	0	N
+CircularPoketCycle	668	0	N
+RectPoketCycle		669	0	N
+// end section
+
+// Section Misc Function Definition
+Stop		0
+OptionalStop		1
+ProgramEnd		2
+SpindleCW		3
+SpindleCCW		4
+SpindleStop		5
+ToolChange		6
+CoolantMist		7
+CoolantFlood		8
+CoolantOff		9
+Orient		19
+EndProgram		30
+SubroutineCall		98
+SubroutineEnd		17
+GoToBackward	1096
+GoToForward		1097
+GoToNext		1098
+VariablesDecl	910
+StoreToolParams		8100
+TRTShortestDistance	1126
+TRTAlwaysCCW	1127 
+TRTAlwaysCW		1128
+// end section
+
+// Section Others
+EmptyZero	Yes
+OpenBracketChar		(
+CloseBracketChar	)
+IgnoreUnknownM	Yes
+IgnoreUnknownCh	Yes
+IgnoreUnknownG	Yes
+CircleCenterType		IJR
+CircleCenterMode		Incremental
+CircleInQuadrants	No
+LabelType	Sinumerik
+SinumerikStyle	Yes
+MakeUpper		No
+StartProgram	Ignore
+MachineCS		-225,-250,400.0
+MainInitStr		G90Z400.
+ToolChangeWithM06		Yes
+ToolIndex		String
+//ToolIndex		Absolute
+VarRegExp	(\W|^)(%s);;\1y\2g
+ToolPreSelect		No
+ToolOffsetInToolNumber	Yes
+DataSetChar		L
+TableRotationType	ShortestRoute
+StartwToolNum1	Yes
+MaxFeedRate		0
+SetSecondaryWCSIndicator		-1
+SetPrimaryWCSIndicator		-1
+DrillAxisMode	Programmable
+MultiAxisSequence	AllSimultaneous
+FileExtension	*.ARC;*.DMU;*.MPF;*.SPF
+DwellTimeDiscr	100
+CycleNeedsGeom	No
+CompToIntersect		No
+CompWithArcs		No
+PartialCompCancel	No
+CheckGeom		Yes
+MinArcDist		2
+DrillCycleRel		(W,R,,Z)
+UseStdFuncNames	Yes
+TableRotationType	ShortestDistance
+CyclicA		Yes
+CyclicB		Yes
+CyclicC		Yes
+FileProtection	No
+LoadSubPrograms	Sin840Mill.SPF
+// end section
+
+// Section Cycle Definition
+// end section
+

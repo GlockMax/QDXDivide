@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+<TITLE>APT 7 standard tool creation dialog</TITLE>
+<link rel=StyleSheet href=../tutorial.css></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1><A NAME="hidd_tools_create_apt7"></A>  APT 7 standard tool creation dialog </H1>
+<p>A milling tool can be set by APT 7 standard parameters.</p>
+<h6>APT7 standard parameters:</h6>
+<p><IMG SRC="../images/dlgdapt.gif" ALT="" BORDER=0></p>
+<p>1. Tool diameter <strong>D</strong>. </p>
+<p>2. Tool rounding radius <strong>R</strong>. </p>
+<p>3. Length<strong> E</strong>. Distance from tool axis to the center of rounding along X axis.</p>
+<p>4: Length <strong>F</strong>. Distance from top plane of tool to the center of rounding along tool axis.</p>
+<p>5: Angle <strong>b</strong> at the bottom of a tool. </p>
+<p>6: Angle <strong>a</strong> at the side of a tool.</p>
+<p>7: Tool height <strong>H</strong>.</p>
+<p>Majority of tools can be set through APT7 standard. This type of tool is mainly used to set end-cutting tools and drilling tools from external file in special <strong>JOB</strong> format. You can use JOB file to pass all project parameters from any external application.</p>
+<p><strong>End-milling cutter without roundings</strong></p>
+<p><img src="../images/APT7-1.gif" alt="" border=0></p>
+<p> Diameter <strong>D</strong>&gt; 0 </p>
+<p>Height <strong>H</strong>&gt; 0 </p>
+<p>Radius <strong>R</strong> = Angle <strong>a</strong> = Angle <strong>b</strong> 
+  = 0</p>
+<p><strong>End-milling cutter with roundings</strong></p>
+<p><img src="../images/APT7-2.gif" alt="" width="209" height="45" border=0></p>
+<p>Diameter <strong>D</strong>&gt; 0 </p>
+<p>Height <strong>H</strong>&gt; 0 </p>
+<p>Radius <strong>R </strong>&gt; 0 &lt; <strong>D</strong>/2 </p>
+<p>The rest of the parameters = 0 </p>
+<p><strong>End-milling cutter with ball-end</strong></p>
+<p><img src="../images/APT7-3.gif" alt="" width="178" height="48" border=0></p>
+<p> Diameter<strong> D</strong>&gt; 0 </p>
+<p>Radius <strong>R </strong>&gt; 0 = <strong>D</strong>/2 </p>
+<p> Height <strong>H</strong>&gt; 0 </p>
+<p>The rest of the parameters = 0 </p>
+<p><strong>Drilling tool  </strong></p>
+<p><img src="../images/APT7-4.gif" alt="" width="265" height="45" border=0></p>
+<p>Diameter<strong> D</strong>&gt; 0 </p>
+<p>Height <strong>H</strong>&gt; 0 </p>
+<p>Tool angle<strong> b</strong>.&gt; 0 </p>
+<p>Radius <strong>R</strong>, Tool angle<strong> a</strong> = 0</p>
+<p>The rest of the parameters = 0 </p>
+<p> <strong>End-milling conical cutter with ball-end</strong></p>
+<p> <img src="../images/APT7-5.gif" alt="" width="262" height="33" border=0> </p>
+<p>Diameter <strong>D</strong>&gt; 0 </p>
+<p>Radius <strong>R</strong> = <strong>D</strong>/2</p>
+<p>Tool angle <strong>a</strong> &gt; 0 </p>
+<p>Height<strong> H</strong>&gt; 0 </p>
+<p>Tool angle<strong> b</strong>= 0</p>
+<p>The rest of the parameters = 0 </p>
+</BODY>
+</HTML>

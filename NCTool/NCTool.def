@@ -1,0 +1,6 @@
+; NCTool.def : Declares the module parameters for the DLL.
+
+LIBRARY      "NCTool"
+
+EXPORTS
+    ; Explicit exports can go here

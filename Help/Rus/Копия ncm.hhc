@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NCManager">
+		<param name="Local" value="html\main_index.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iacute;&agrave;&ccedil;&iacute;&agrave;&divide;&aring;&iacute;&egrave;&aring;">
+			<param name="Local" value="html\main_text.htm">
+			<param name="URL" value="html\main_text.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Aacute;&ucirc;&ntilde;&ograve;&eth;&ucirc;&eacute; &ntilde;&ograve;&agrave;&eth;&ograve;">
+			<param name="Local" value="html\quick_start.htm">
+			<param name="URL" value="html\quick_start.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Oacute;&ntilde;&ograve;&agrave;&iacute;&icirc;&acirc;&ecirc;&agrave; &egrave; &oacute;&auml;&agrave;&euml;&aring;&iacute;&egrave;&aring; &iuml;&eth;&icirc;&atilde;&eth;&agrave;&igrave;&igrave;&ucirc;">
+			<param name="Local" value="html\installation.htm">
+			<param name="URL" value="html\installation.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&aring;&eth;&acirc;&ucirc;&aring; &oslash;&agrave;&atilde;&egrave;">
+			<param name="Local" value="html\FirstStep.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ccedil;&agrave;&iuml;&oacute;&ntilde;&ecirc; NCManager">
+				<param name="Local" value="html\RunNCM.htm">
+				<param name="URL" value="html\RunNCM.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ccedil;&agrave;&atilde;&eth;&oacute;&ccedil;&ecirc;&agrave; &iuml;&eth;&icirc;&atilde;&eth;&agrave;&igrave;&igrave;&ucirc;">
+				<param name="Local" value="html\LoadProgr.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Oacute;&iuml;&eth;&agrave;&acirc;&euml;&aring;&iacute;&egrave;&aring; &acirc;&egrave;&auml;&agrave;&igrave;&egrave;">
+				<param name="Local" value="html\DefView.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&eth;&icirc;&ntilde;&igrave;&icirc;&ograve;&eth; &ograve;&aring;&ecirc;&ntilde;&ograve;&agrave; &iuml;&eth;&icirc;&atilde;&eth;&agrave;&igrave;&igrave;&ucirc;">
+				<param name="Local" value="html\ViewText.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Egrave;&ccedil;&oacute;&divide;&aring;&iacute;&egrave;&aring; &ograve;&eth;&agrave;&aring;&ecirc;&ograve;&icirc;&eth;&egrave;&egrave;">
+				<param name="Local" value="html\ToolPath.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ccedil;&agrave;&atilde;&eth;&oacute;&ccedil;&ecirc;&agrave; &egrave;&iacute;&ntilde;&ograve;&eth;&oacute;&igrave;&aring;&iacute;&ograve;&icirc;&acirc;">
+				<param name="Local" value="html\LoadTool.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ccedil;&agrave;&auml;&agrave;&iacute;&egrave;&aring; &ccedil;&agrave;&atilde;&icirc;&ograve;&icirc;&acirc;&ecirc;&egrave;">
+				<param name="Local" value="html\CreateStock.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Egrave;&igrave;&egrave;&ograve;&agrave;&ouml;&egrave;&yuml; &eth;&agrave;&aacute;&icirc;&ograve;&ucirc;">
+				<param name="Local" value="html\Simulate.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&icirc;&otilde;&eth;&agrave;&iacute;&aring;&iacute;&egrave;&aring; &iuml;&eth;&icirc;&aring;&ecirc;&ograve;&agrave;">
+				<param name="Local" value="html\SaveProject.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ecirc;&icirc;&igrave;&agrave;&iacute;&auml;&ucirc; &atilde;&euml;&agrave;&acirc;&iacute;&icirc;&atilde;&icirc; &igrave;&aring;&iacute;&thorn;">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &quot;&Ocirc;&agrave;&eacute;&euml;&quot;">
+				<param name="Local" value="html\menu_file.htm">
+				<param name="URL" value="html\menu_file.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &quot;&Acirc;&egrave;&auml;&quot;">
+				<param name="Local" value="html\menu_view.htm">
+				<param name="URL" value="html\menu_work.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &quot;&Dstrok;&agrave;&aacute;&icirc;&ograve;&agrave;&quot;">
+				<param name="Local" value="html\menu_work.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &quot;&Agrave;&iacute;&agrave;&euml;&egrave;&ccedil;&quot;">
+				<param name="Local" value="html\menu_analiz.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &quot;&Icirc;&ograve;&divide;&aring;&ograve;&ucirc;&quot;">
+				<param name="Local" value="html\menu_reports.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &quot;&Iacute;&agrave;&ntilde;&ograve;&eth;&icirc;&eacute;&ecirc;&egrave;&quot;">
+				<param name="Local" value="html\menu_settings.htm">
+				<param name="URL" value="html\menu_settings.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &quot;&Icirc;&ecirc;&iacute;&icirc;&quot;">
+				<param name="Local" value="html\menu_window.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &quot;&Iuml;&icirc;&igrave;&icirc;&oslash;&uuml;&quot;">
+				<param name="Local" value="html\menu_help.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Oacute;&iuml;&eth;&agrave;&acirc;&euml;&aring;&iacute;&egrave;&aring; &iuml;&eth;&icirc;&aring;&ecirc;&ograve;&icirc;&igrave;">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&agrave;&iacute;&aring;&euml;&uuml; &icirc;&aacute;&uacute;&aring;&ecirc;&ograve;&icirc;&acirc;">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Iacute;&agrave;&ccedil;&iacute;&agrave;&divide;&aring;&iacute;&egrave;&aring;">
+					<param name="Local" value="html\def_objectpanel.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ntilde;&ograve;&icirc;&eacute;&ecirc;&agrave; &times;&Iuml;&Oacute;">
+					<param name="Local" value="html\def_unit.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ntilde;&ograve;&agrave;&iacute;&icirc;&ecirc;">
+					<param name="Local" value="html\def_machine.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Iuml;&eth;&icirc;&atilde;&eth;&agrave;&igrave;&igrave;&ucirc;">
+					<param name="Local" value="html\def_progr.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Egrave;&iacute;&ntilde;&ograve;&eth;&oacute;&igrave;&aring;&iacute;&ograve;&ucirc;">
+					<param name="Local" value="html\def_tools.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ccedil;&agrave;&atilde;&icirc;&ograve;&icirc;&acirc;&ecirc;&agrave;">
+					<param name="Local" value="html\def_stock.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Auml;&aring;&ograve;&agrave;&euml;&egrave;">
+					<param name="Local" value="html\def_part.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Icirc;&ntilde;&iacute;&agrave;&ntilde;&ograve;&ecirc;&agrave;">
+					<param name="Local" value="html\def_fixture.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&agrave;&iacute;&aring;&euml;&uuml; &Iuml;&agrave;&eth;&agrave;&igrave;&aring;&ograve;&eth;&ucirc;">
+				<param name="Local" value="html\PaneParameters.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&agrave;&iacute;&aring;&euml;&uuml; &Atilde;&aring;&icirc;&igrave;&aring;&ograve;&eth;&egrave;&yuml;">
+				<param name="Local" value="html\PaneGeom.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&agrave;&iacute;&aring;&euml;&uuml; &Egrave;&ccedil;&igrave;&aring;&eth;&aring;&iacute;&egrave;&yuml;">
+				<param name="Local" value="html\PaneMeasure.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&agrave;&iacute;&aring;&euml;&uuml; &Dstrok;&aring;&atilde;&egrave;&ntilde;&ograve;&eth;&ucirc;">
+				<param name="Local" value="html\PanelRegisters.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&ecirc;&iacute;&icirc; &quot;&Ccedil;&agrave;&atilde;&icirc;&ograve;&icirc;&acirc;&ecirc;&agrave;&quot;, &quot;&Ntilde;&ograve;&agrave;&iacute;&icirc;&ecirc;&quot;">
+				<param name="Local" value="html\def_graphview.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&ecirc;&iacute;&icirc; &quot;&Ograve;&aring;&ecirc;&ntilde;&ograve;&icirc;&acirc;&ucirc;&eacute; &eth;&aring;&auml;&agrave;&ecirc;&ograve;&icirc;&eth;&quot;">
+				<param name="Local" value="html\def_textview.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&ograve;&eth;&icirc;&ecirc;&agrave; &ntilde;&icirc;&ntilde;&ograve;&icirc;&yuml;&iacute;&egrave;&yuml;">
+				<param name="Local" value="html\hid_view_status_bar.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&agrave;&iacute;&aring;&euml;&egrave; &egrave;&iacute;&ntilde;&ograve;&eth;&oacute;&igrave;&aring;&iacute;&ograve;&icirc;&acirc;">
+			<param name="Local" value="html\toolbar.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>
