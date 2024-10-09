@@ -3,3 +3,10 @@
 ################################################################################
 
 /Source/.vs/NCM
+/Debug
+/Editor/temp/Debug/re2
+/lib/Debug
+/NCMb/Метки.txt
+/NCMb/Отмеченные Z-дексели.txt
+/temp/Debug
+/zlib-1.2.11/contrib/masmx64
