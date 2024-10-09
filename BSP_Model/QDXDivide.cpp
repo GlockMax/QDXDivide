@@ -60,8 +60,8 @@ void QDXDivide::MarkBodies() {
                 BYTE id_b1 = act_mem_z.GetAtTag(b);
 
                 // Если отрезок не отмечен
-                if ((id_s.Cadr.Cadr == 0) || (id_b.Cadr.Cadr == 0)) {
-                //if ((id_s1 == 0) || (id_b1 == 0)) {
+                //if ((id_s.Cadr.Cadr == 0) || (id_b.Cadr.Cadr == 0)) {
+                if ((id_s1 == 0) || (id_b1 == 0)) {
 
                     id_s.Cadr.Cadr = count;
                     id_b.Cadr.Cadr = count;
@@ -133,8 +133,8 @@ void QDXDivide::MarkBodies() {
                                 // Если отрезок рассматриваемого направления содержит координату отрезка декселя U
                                 if ((u.i_n1 * steps[(c + 1) % 3] >= p_next_n1) && (u.i_n1 * steps[(c + 1) % 3] <= p_b_n1)) {
                                     // Если отрезок не отмечен
-                                    //if ((id_next_n11 == 0) || (id_b_n11 == 0)) {
-                                    if ((id_next_n1.Cadr.Cadr == 0) || (id_b_n1.Cadr.Cadr == 0)) {
+                                    if ((id_next_n11 == 0) || (id_b_n11 == 0)) {
+                                    //if ((id_next_n1.Cadr.Cadr == 0) || (id_b_n1.Cadr.Cadr == 0)) {
 
                                         id_next_n1.Cadr.Cadr = count;
                                         id_b_n1.Cadr.Cadr = count;
@@ -183,8 +183,8 @@ void QDXDivide::MarkBodies() {
                                 // Если отрезок рассматриваемого направления содержит координату отрезка декселя
                                 if ((u.i_n0 * steps[(c + 2) % 3] >= p_next_n0) && (u.i_n0 * steps[(c + 2) % 3] <= p_b_n0)) {
                                     // Если отрезок не отмечен
-                                    //if ((id_next_n01 == 0) || (id_b_n01 == 0)) {
-                                    if ((id_next_n0.Cadr.Cadr == 0) || (id_b_n0.Cadr.Cadr == 0)) {
+                                    if ((id_next_n01 == 0) || (id_b_n01 == 0)) {
+                                    //if ((id_next_n0.Cadr.Cadr == 0) || (id_b_n0.Cadr.Cadr == 0)) {
 
                                         id_next_n0.Cadr.Cadr = count;
                                         id_b_n0.Cadr.Cadr = count;
