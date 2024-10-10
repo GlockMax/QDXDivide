@@ -16,6 +16,29 @@ QDXDivide::~QDXDivide()
 
 // Пометить отдельные тела в модели
 void QDXDivide::MarkBodies() {
+
+    /*for (int i = 0; i < 3; ++i) {
+        const DXDirection5X& dir_d = pb->GetDirection(i);
+        DXMemoryPtOnePart& act_mem_d = pb->GetMemory(i);
+        
+        for (int i_n0 = 0; i_n0 < dir_d.GetN0(); ++i_n0) {
+            for (int i_n1 = 0; i_n1 < dir_d.GetN1(); ++i_n1) {
+
+                DXMemID start = dir_d.GetDexelStartPoint(i_n0, i_n1); // Начальная точка в ячейке декселя
+
+                if (start == DXP_END)
+                    continue;
+
+                for (DXMemID next = start; next != DXP_END; )
+                {
+                    act_mem_d.SetAtTag(next, 0);
+                    next = act_mem_d.GetAtNext(next);
+                }
+            }
+        }
+
+    }*/ // Попытка проинициализировать метки
+
     // Очередь из отрезков декселей
     std::list<QueueMember> q;
 
@@ -24,6 +47,8 @@ void QDXDivide::MarkBodies() {
 
     // Доступ к точкам отрезков z-декселей
     DXMemoryPtOnePart& act_mem_z = pb->GetMemory(0);
+    // NEW
+    act_mem_z.InitTags();
 
     // Шаг z-декселей по оси x
     double step_x = dir_z.GetStep0();
@@ -35,6 +60,7 @@ void QDXDivide::MarkBodies() {
     double step_z = (pb->GetDirection(1)).GetStep0();
 
     double steps[3] = { step_z, step_y, step_x };
+    bool inits[3] = { true, false, false };
 
     // Счётчик тел, он же - их метка
     BYTE count = 1;
@@ -74,7 +100,6 @@ void QDXDivide::MarkBodies() {
 
                     act_mem_z.SetAtTag(next, id_s1);
                     act_mem_z.SetAtTag(b, id_b1);
-                    int hui = 1;
 
 
                     // Заталкиваем в очередь только начало отрезка (конец мы всегда можем получить)
@@ -83,13 +108,40 @@ void QDXDivide::MarkBodies() {
                     // ------------------------------------------------------------------------
                     // Запускаем цикл обработки очереди отрезков
                     while (!q.empty()) {
+
                         QueueMember u = q.front();
                         q.pop_front(); // Удаляем из очереди обрабатываемый отрезок декселя
 
                         // Определяем эту переменную для компактного кода
                         int c = u.t;
 
+                        if (c == 4) {
+                            std::ofstream out_file("Метки.txt", std::ios_base::out);
+                            for (int x0 = 0; x0 < dir_z.GetN0(); ++x0) {
+                                for (int y0 = 0; y0 < dir_z.GetN1(); ++y0) {
+
+                                    DXMemID start = dir_z.GetDexelStartPoint(x0, y0); // Начальная точка в ячейке декселя
+
+                                    if (start == DXP_END) {
+                                        out_file << ' ';
+                                        continue; // Пустой дексель, переходим к следующему
+                                    }
+
+                                    out_file << ((int)act_mem_z.GetAtTag(start));
+                                    //out_file << act_mem_z.GetAtID(start).Cadr.Cadr;
+                                }
+                                out_file << std::endl;
+                            }
+                            out_file.close();
+                        }
+
                         DXMemoryPtOnePart& act_mem_p = pb->GetMemory(c);
+                        // NEW
+                        if (!inits[c]) {
+                            act_mem_p.InitTags();
+                            inits[c] = !inits[c];
+                        }
+                        // end of NEW
 
                         DX_DEPTH p1 = act_mem_p.GetAtZ((u.p)); // Первая точка отрезка
                         DXMemID u1 = act_mem_p.GetAtNext((u.p)); // Вторая точка отрезка, её тоже нужно отметить

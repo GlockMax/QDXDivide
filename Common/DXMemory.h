@@ -91,6 +91,9 @@ public:
 	// NEW: Получить метку тела
 	BYTE GetAtTag(DXMemID Ind) const { return TAGS[Ind.Up][Ind.Low]; }
 
+	// NEW: Инициализировать метки
+	void InitTags();
+
 	int GetGlobSize(void);
 	int GetUsedSize(void);
 	void GetTransfData(MBSPForest::NTransfData &TransfData) const;

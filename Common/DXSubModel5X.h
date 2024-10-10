@@ -44,6 +44,7 @@ public:
 	MBody * InvertCh(bool ToAux) override;
 	NGlobalState::ModelModes GetModelMode(void) const { return NGlobalState::DX;}
 	const DXDirection5X &GetDirection(int k) const  { return Directions[k];}
+	DXDirection5X &GetDirection(int k) { return Directions[k]; }
 	DXDirection5X &GetDirectionA(int k) { return DirectionsA[k]; }
 	DXDirection5X *GetDirectionsA() { return DirectionsA; }
 	DXDirection3X &GetAuxDir(int k) { return AuxDirs[k]; }

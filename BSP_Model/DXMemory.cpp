@@ -73,6 +73,8 @@ bool DXMemoryPtOnePart::Extend(void)
 
 		// NEW
 		TAGS[PartsNum] = new BYTE[CurSize];
+		memset(TAGS[PartsNum], 0, CurSize);
+
 		// End of NEW
 
 		Next[PartsNum] = new DXMemID[CurSize];
@@ -387,7 +389,19 @@ void DXMemoryPtOnePart::Load(CFile* f)
 	for (unsigned int i = 0; i < PartsNum; ++i) {
 		TAGS[i] = new BYTE[Sizes[i]];
 		//std::fill(TAGS[i], TAGS[i] + Sizes[i], 0);
-		memset(TAGS[i], 0, sizeof(TAGS[0][0]) * Sizes[i]);
+		//memset(TAGS[i], 0, Sizes[i]);
+		for (unsigned int j = 0; j < Sizes[i]; ++j) {
+			TAGS[i][j] = 0;
+		}
+	}
+}
+
+void DXMemoryPtOnePart::InitTags() {
+	for (unsigned int i = 0; i < PartsNum; ++i) {
+		TAGS[i] = new BYTE[Sizes[i]];
+		//std::fill(TAGS[i], TAGS[i] + Sizes[i], 0);
+		//memset(TAGS[i], 0, Sizes[i]);
+		memset(TAGS[i], 0, Sizes[i]);
 	}
 }
 
