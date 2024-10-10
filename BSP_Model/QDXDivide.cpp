@@ -229,8 +229,8 @@ void QDXDivide::MarkBodies() {
                                 DX_ID id_next_n0 = act_mem_n0.GetAtID(next_n0);
                                 DX_ID id_b_n0 = act_mem_n0.GetAtID(b_n0);
                                 // NEW
-                                BYTE id_next_n01 = act_mem_n1.GetAtTag(next_n0);
-                                BYTE id_b_n01 = act_mem_n1.GetAtTag(b_n0);
+                                BYTE id_next_n01 = act_mem_n0.GetAtTag(next_n0);
+                                BYTE id_b_n01 = act_mem_n0.GetAtTag(b_n0);
 
                                 // Если отрезок рассматриваемого направления содержит координату отрезка декселя
                                 if ((u.i_n0 * steps[(c + 2) % 3] >= p_next_n0) && (u.i_n0 * steps[(c + 2) % 3] <= p_b_n0)) {
