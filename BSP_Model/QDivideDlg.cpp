@@ -38,7 +38,7 @@ void QDivideDlg::OnCancel()
 void QDivideDlg::PostNcDestroy()
 {
 	CDialog::PostNcDestroy();
-	delete pQDivide;
+	//delete pQDivide;
 	pQDivide = nullptr;
 	delete this;
 }

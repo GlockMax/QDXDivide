@@ -390,17 +390,12 @@ void DXMemoryPtOnePart::Load(CFile* f)
 		TAGS[i] = new BYTE[Sizes[i]];
 		//std::fill(TAGS[i], TAGS[i] + Sizes[i], 0);
 		//memset(TAGS[i], 0, Sizes[i]);
-		for (unsigned int j = 0; j < Sizes[i]; ++j) {
-			TAGS[i][j] = 0;
-		}
 	}
 }
 
 void DXMemoryPtOnePart::InitTags() {
 	for (unsigned int i = 0; i < PartsNum; ++i) {
-		TAGS[i] = new BYTE[Sizes[i]];
-		//std::fill(TAGS[i], TAGS[i] + Sizes[i], 0);
-		//memset(TAGS[i], 0, Sizes[i]);
+		//TAGS[i] = new BYTE[Sizes[i]];
 		memset(TAGS[i], 0, Sizes[i]);
 	}
 }

@@ -19,6 +19,7 @@
 #include "MCubeMask.h"
 #include "MForestSave.h"
 #include "DXSubModel5X.h"
+#include "MBody.h"
 
 #ifdef _DEBUG
 #undef THIS_FILE
