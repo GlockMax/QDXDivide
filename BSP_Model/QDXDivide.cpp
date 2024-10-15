@@ -231,7 +231,7 @@ void QDXDivide::DelByPoint(BYTE tag, bool delExceptThis) {
 
     for (int c = 0; c < 3; c++) {
 
-        DXDirection5X& dir_d = const_cast<DXDirection5X&>(pb->GetDirection(c));
+        DXDirection5X& dir_d = pb->GetDirection(c);
         DXMemoryPtOnePart& act_mem_d = pb->GetMemory(c);
 
         for (int i_n0 = 0; i_n0 < dir_d.GetN0(); ++i_n0) {
@@ -261,8 +261,8 @@ void QDXDivide::DelByPoint(BYTE tag, bool delExceptThis) {
                     BYTE tag_next = act_mem_d.GetAtTag(next);
                     BYTE tag_b = act_mem_d.GetAtTag(b);
 
-                    // Если обе точки отрезка не отмечены единицей
-                    if ((tag_next != tag) || (tag_b != tag)) {
+                    // Если обе точки отрезка не отмечены этим тегом
+                    if ((tag_next == tag) || (tag_b == tag)) {
                         // Если начало отрезка - начало самого декселя:
                         if (next == start) {
                             // Устанавливаем начало декселя в начальную точку следующего отрезка (даже если он - DXP_END)
@@ -382,9 +382,12 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
 	BPoint p(ipoint * CorrMatr.invr()); // точка в пространстве, куда приложен вектр взгляда
 	BPoint s(iview * CorrMatr.invr()); // вектор взгляда на модель
 
+    BYTE res = 0;
+
     // Если копии тела нет, то создаём её
     if (copy == nullptr) {
         MarkBodies();
+        copy = new DXSubModel5X(pb->GetParent(), pb->GetStockPos());
         pb->CreateFullCopy(copy);
     }
     // Если же копия есть, то и пометки в ней тоже есть
@@ -414,16 +417,20 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
         int an_c = (3 - c - 1) % 3; // Индексы декселей не совпадают с индексами точек, нужно их вот так преобразовать
 
         double t = (local_coords[an_c] - p[an_c]) / s[an_c];
-        BYTE res = 0;
+        
 
         for (; (0 <= (s[an_c]*t+p[an_c])) && ((s[an_c] * t + p[an_c]) <= ns[c] * steps[c]); t += face * steps[c] / s[an_c]) {
-            double c_n0 = (t*s[(an_c - 2) % 3] + p[(an_c - 2) % 3]) / steps[(c + 2) % 3];
-            double c_n1 = (t * s[(an_c - 1) % 3] + p[(an_c - 1) % 3])/steps[(c+1)%3];
+            // Координаты следующей точки, а точнее, её "индексы"
+            double c_n0 = (t*s[(an_c + 1) % 3] + p[(an_c + 1) % 3]) / steps[(c + 2) % 3];
+            double c_n1 = (t * s[(an_c + 2) % 3] + p[(an_c + 2) % 3])/steps[(c+1)%3];
 
-            // Координаты ещё нужно округлить и вычислить их индексы
+            if ((c_n0 < 0) || (c_n1 < 0)) break;
+            if ((c_n0 > ns[(c + 2) % 3]) || (c_n1 > ns[(c+1)%3])) break;
 
-            int i_n0_cl = ceil(c_n0);
-            int i_n1_cl = ceil(c_n1);
+            // Координаты ещё нужно округлить
+
+            int i_n0_cl = (ceil(c_n0) > ns[(c + 2) % 3]) ? ceil(c_n0) : floor(c_n0);
+            int i_n1_cl = (ceil(c_n1) > ns[(c + 1) % 3]) ? ceil(c_n1) : floor(c_n1);
             int i_n0_fl = floor(c_n0);
             int i_n1_fl = floor(c_n1);
 
@@ -435,11 +442,15 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
                 DX_DEPTH next_d = act_mem_d.GetAtZ(next);
                 DX_DEPTH b_d = act_mem_d.GetAtZ(b);
 
-                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d))
+                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d)) {
                     res = act_mem_d.GetAtTag(next);
+                    break;
+                }
 
                 next = act_mem_d.GetAtNext(b);
             }
+
+            if (res != 0) break;
 
             start = dir_d.GetDexelStartPoint(i_n0_cl, i_n1_fl);
 
@@ -450,11 +461,15 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
                 DX_DEPTH next_d = act_mem_d.GetAtZ(next);
                 DX_DEPTH b_d = act_mem_d.GetAtZ(b);
 
-                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d))
+                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d)) {
                     res = act_mem_d.GetAtTag(next);
+                    break;
+                }
 
                 next = act_mem_d.GetAtNext(b);
             }
+
+            if (res != 0) break;
 
             start = dir_d.GetDexelStartPoint(i_n0_fl, i_n1_cl);
 
@@ -465,11 +480,15 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
                 DX_DEPTH next_d = act_mem_d.GetAtZ(next);
                 DX_DEPTH b_d = act_mem_d.GetAtZ(b);
 
-                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d))
+                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d)) {
                     res = act_mem_d.GetAtTag(next);
+                    break;
+                }
 
                 next = act_mem_d.GetAtNext(b);
             }
+
+            if (res != 0) break;
 
             start = dir_d.GetDexelStartPoint(i_n0_fl, i_n1_fl);
 
@@ -480,44 +499,27 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
                 DX_DEPTH next_d = act_mem_d.GetAtZ(next);
                 DX_DEPTH b_d = act_mem_d.GetAtZ(b);
 
-                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d))
+                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d)) {
                     res = act_mem_d.GetAtTag(next);
+                    break;
+                }
 
                 next = act_mem_d.GetAtNext(b);
             }
+
+            if (res != 0) break;
         
         }
 
-        /*for (int i_n0 = 0; i_n0 < dir_d.GetN0(); ++i_n0) {
-            for (int i_n1 = 0; i_n1 < dir_d.GetN1(); ++i_n1) {
-
-                DXMemID start = dir_d.GetDexelStartPoint(i_n0, i_n1); // Начальная точка в ячейке декселя
-
-                if (start == DXP_END)
-                    continue;
-
-                for (DXMemID next = start; next != DXP_END; )
-                {
-                    DXMemID b = act_mem_d.GetAtNext(next);
-
-                    
-
-                    next = act_mem_d.GetAtNext(b);
-                }
-
-            }
-        }*/
-
-        res;
     }
 
+    BYTE detsl = res;
 
-
-	// DXSubModel5X::GetMin
 	// find and delete object which was clicked
 	switch (mode)
 	{
 	case REMOVE_CURRENT:
+        if (res != 0) DelByPoint(res, false);
 		break;
 	case REMOVE_OTHERS:
 		break;

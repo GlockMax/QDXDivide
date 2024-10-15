@@ -26,6 +26,7 @@ public:
 	int GetWStartY(void) const { return (Parent.nBig[1]) * Win.iyStart; }
 	const BBox &GetGabar(void) const { return Parent.GGabar; }
 	const DXModel &GetParent(void) const { return Parent;}
+	DXModel& GetParent(void) { return Parent; }
 	void GetCellIndexes(double x, double y, double z, int & ix, int & iy, int &iz);
 	void SetWindow(const BBox& Bounds) override; // List Method
 	void SetMaxWin(void);
