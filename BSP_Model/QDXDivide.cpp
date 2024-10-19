@@ -262,7 +262,7 @@ void QDXDivide::DelByPoint(BYTE tag, bool delExceptThis) {
                     BYTE tag_b = act_mem_d.GetAtTag(b);
 
                     // Если обе точки отрезка не отмечены этим тегом
-                    if ((tag_next == tag) || (tag_b == tag)) {
+                    if (((tag_next == tag) != delExceptThis) || ((tag_b == tag) != delExceptThis)) {
                         // Если начало отрезка - начало самого декселя:
                         if (next == start) {
                             // Устанавливаем начало декселя в начальную точку следующего отрезка (даже если он - DXP_END)
@@ -411,18 +411,18 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
     if (GetNearestPoint(p, s, &pn, &c, &face)) {
         BPoint local_coords = pn - pb->GetMin(); // Координаты точки в системе координат ограничивающего параллелепипеда
 
-        DXDirection5X& dir_d = const_cast<DXDirection5X&>(pb->GetDirection(c));
+        DXDirection5X& dir_d = pb->GetDirection(c);
         DXMemoryPtOnePart& act_mem_d = pb->GetMemory(c);
 
         int an_c = (3 - c - 1) % 3; // Индексы декселей не совпадают с индексами точек, нужно их вот так преобразовать
 
-        double t = (local_coords[an_c] - p[an_c]) / s[an_c];
+        double t = 0;//(local_coords[an_c] - p[an_c]) / s[an_c];
         
 
-        for (; (0 <= (s[an_c]*t+p[an_c])) && ((s[an_c] * t + p[an_c]) <= ns[c] * steps[c]); t += face * steps[c] / s[an_c]) {
+        for (; (0 <= (s[an_c]*t+local_coords[an_c])) && ((s[an_c] * t + local_coords[an_c]) <= ns[c] * steps[c]); t += face * steps[c] / s[an_c]) {
             // Координаты следующей точки, а точнее, её "индексы"
-            double c_n0 = (t*s[(an_c + 1) % 3] + p[(an_c + 1) % 3]) / steps[(c + 2) % 3];
-            double c_n1 = (t * s[(an_c + 2) % 3] + p[(an_c + 2) % 3])/steps[(c+1)%3];
+            double c_n0 = (t*s[(an_c + 1) % 3] + local_coords[(an_c + 1) % 3]) / steps[(c + 2) % 3];
+            double c_n1 = (t * s[(an_c + 2) % 3] + local_coords[(an_c + 2) % 3])/steps[(c+1)%3];
 
             if ((c_n0 < 0) || (c_n1 < 0)) break;
             if ((c_n0 > ns[(c + 2) % 3]) || (c_n1 > ns[(c+1)%3])) break;
@@ -442,7 +442,7 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
                 DX_DEPTH next_d = act_mem_d.GetAtZ(next);
                 DX_DEPTH b_d = act_mem_d.GetAtZ(b);
 
-                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d)) {
+                if ((next_d < (s[an_c] * t + local_coords[an_c])) && ((s[an_c] * t + local_coords[an_c]) < b_d)) {
                     res = act_mem_d.GetAtTag(next);
                     break;
                 }
@@ -461,7 +461,7 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
                 DX_DEPTH next_d = act_mem_d.GetAtZ(next);
                 DX_DEPTH b_d = act_mem_d.GetAtZ(b);
 
-                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d)) {
+                if ((next_d < (s[an_c] * t + local_coords[an_c])) && ((s[an_c] * t + local_coords[an_c]) < b_d)) {
                     res = act_mem_d.GetAtTag(next);
                     break;
                 }
@@ -480,7 +480,7 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
                 DX_DEPTH next_d = act_mem_d.GetAtZ(next);
                 DX_DEPTH b_d = act_mem_d.GetAtZ(b);
 
-                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d)) {
+                if ((next_d < (s[an_c] * t + local_coords[an_c])) && ((s[an_c] * t + local_coords[an_c]) < b_d)) {
                     res = act_mem_d.GetAtTag(next);
                     break;
                 }
@@ -499,7 +499,7 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
                 DX_DEPTH next_d = act_mem_d.GetAtZ(next);
                 DX_DEPTH b_d = act_mem_d.GetAtZ(b);
 
-                if ((next_d < (s[an_c] * t + p[an_c])) && ((s[an_c] * t + p[an_c]) < b_d)) {
+                if ((next_d < (s[an_c] * t + local_coords[an_c])) && ((s[an_c] * t + local_coords[an_c]) < b_d)) {
                     res = act_mem_d.GetAtTag(next);
                     break;
                 }
@@ -522,6 +522,7 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
         if (res != 0) DelByPoint(res, false);
 		break;
 	case REMOVE_OTHERS:
+        if (res != 0) DelByPoint(res, true);
 		break;
 	default:
 		break;
@@ -530,5 +531,47 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
 
 void QDXDivide::Revert()
 {
+    for (int c = 0; c < 3; c++) {
+
+        DXDirection5X& dir_d = pb->GetDirection(c);
+        DXMemoryPtOnePart& act_mem_d = pb->GetMemory(c);
+
+        for (int i_n0 = 0; i_n0 < dir_d.GetN0(); ++i_n0) {
+            for (int i_n1 = 0; i_n1 < dir_d.GetN1(); ++i_n1) {
+
+                DXMemID start = dir_d.GetDexelStartPoint(i_n0, i_n1); // Начальная точка в ячейке декселя
+
+                if (start == DXP_END)
+                    continue; // Пустой дексель, переходим к следующему
+
+                DXMemID prev_end = DXP_END;
+                /*
+                                              Текущий отрезок
+                  ... *------------*        *-----------------*   *-------------* ...
+                                   ^        ^                 ^   ^
+                            prev_end     next                 b   t
+                */
+                for (DXMemID next = start; next != DXP_END; )
+                {
+                    DXMemID b = act_mem_d.GetAtNext(next);
+                    // Точки отрезка - next и b
+
+                    // Начальная точка следующего отрезка
+                    DXMemID t = act_mem_d.GetAtNext(b);
+
+                    // Получаем ID точек
+                    BYTE tag_next = act_mem_d.GetAtTag(next);
+                    BYTE tag_b = act_mem_d.GetAtTag(b);
+
+                    // Если обе точки отрезка не отмечены этим тегом
+                    
+
+                    next = t;
+                    prev_end = b; // ?
+                }
+            }
+        }
+
+    }
 }
 
