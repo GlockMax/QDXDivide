@@ -13,7 +13,7 @@ public:
 
 private:
 	DXSubModel5X* pb;
-    MBody* copy = nullptr;
+    DXSubModel5X* copy = nullptr;
 	void MarkBodies();
     void DelByPoint(BYTE tag, bool delExceptThis);
     bool GetNearestPoint(BPoint p, BPoint s, BPoint* result, int* c, int* face);
