@@ -40,7 +40,7 @@ public:
 protected:
 	static const unsigned int MaxPartsNum = (0x1 << DXMemID::UpSize); // This value must corresponds to DXMemID.Up size
 	unsigned int BaseSize;
-	DXMemID *Next[MaxPartsNum];
+	DXMemID* Next[MaxPartsNum] = { nullptr };
 	BDynBitArray *Flags[MaxPartsNum];// if Flags[i][j] == true - element is not used
 	unsigned int Sizes[MaxPartsNum];
 	unsigned int HolesNum[MaxPartsNum];
@@ -103,10 +103,10 @@ public:
 	void ReplOInd(ElemID* In2Out);
 protected:
 	bool Extend(void);
-	DX_DEPTH* Z[MaxPartsNum];
-	DX_ID* ID[MaxPartsNum];
+	DX_DEPTH* Z[MaxPartsNum] = { nullptr };
+	DX_ID* ID[MaxPartsNum] = {nullptr};
 	// NEW: массив меток
-	BYTE* TAGS[MaxPartsNum];
+	BYTE* TAGS[MaxPartsNum] = {nullptr};
 	static constexpr int START_SIZE = 100000;
 };
 

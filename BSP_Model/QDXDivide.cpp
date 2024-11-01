@@ -531,8 +531,8 @@ void QDXDivide::SetPoint(BPoint ipoint, BPoint iview)
 
 void QDXDivide::Revert()
 {
-    delete pb;
-    pb = new DXSubModel5X(copy->GetParent(), copy->GetStockPos());
+    //delete pb;
+    //pb = new DXSubModel5X(copy->GetParent(), copy->GetStockPos());
     copy->CreateFullCopy(pb);
 }
 

@@ -49,6 +49,14 @@ DXMemoryPtOnePart::~DXMemoryPtOnePart(void)
 
 DXMemoryPtOnePart::DXMemoryPtOnePart() : DXMemoryOnePart(START_SIZE)
 {
+	// NEW.2
+	/*for (unsigned int i = 0; i < PartsNum; ++i)
+	{
+		Z[i] = nullptr;
+		ID[i] = nullptr;
+		// NEW
+		TAGS[i] = nullptr;
+	}*/
 }
 
 DXMemoryCell5X::~DXMemoryCell5X(void)
@@ -324,8 +332,10 @@ void DXMemoryOnePart::CreateFullCopy(DXMemoryOnePart* pIn) const
 	{
 		pIn->Sizes[i] = Sizes[i];
 		pIn->HolesNum[i] = HolesNum[i];
+		delete[] pIn->Next[i];
 		pIn->Next[i] = new DXMemID[Sizes[i]];
 		memcpy_s(pIn->Next[i], sizeof(Next[0][0]) * Sizes[i], Next[i], sizeof(Next[0][0]) * Sizes[i]);
+		//delete pIn->Flags[i]; // NEW
 		pIn->Flags[i] = Flags[i]->CreateFullCopy();
 	}
 }
@@ -408,18 +418,20 @@ void DXMemoryPtOnePart::CreateFullCopy(DXMemoryOnePart* pInt) const
 		return;
 	for (unsigned int i = 0; i < PartsNum; ++i)
 	{
+		delete[] pIn->Z[i];
 		pIn->Z[i] = new DX_DEPTH[Sizes[i]];
 		memcpy_s(pIn->Z[i], sizeof(Z[0][0]) * Sizes[i], Z[i], sizeof(Z[0][0]) * Sizes[i]);
 	}
 	for (unsigned int i = 0; i < PartsNum; ++i)
 	{
+		delete[] pIn->ID[i];
 		pIn->ID[i] = new DX_ID[Sizes[i]];
 		memcpy_s(pIn->ID[i], sizeof(ID[0][0])* Sizes[i], ID[i], sizeof(ID[0][0])* Sizes[i]);
 	}
 
-	// NEW
 	for (unsigned int i = 0; i < PartsNum; ++i)
 	{
+		delete[] pIn->TAGS[i];
 		pIn->TAGS[i] = new BYTE[Sizes[i]];
 		memcpy_s(pIn->TAGS[i], sizeof(TAGS[0][0]) * Sizes[i], TAGS[i], sizeof(TAGS[0][0]) * Sizes[i]);
 	}
