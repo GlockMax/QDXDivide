@@ -335,7 +335,7 @@ void DXMemoryOnePart::CreateFullCopy(DXMemoryOnePart* pIn) const
 		delete[] pIn->Next[i];
 		pIn->Next[i] = new DXMemID[Sizes[i]];
 		memcpy_s(pIn->Next[i], sizeof(Next[0][0]) * Sizes[i], Next[i], sizeof(Next[0][0]) * Sizes[i]);
-		//delete pIn->Flags[i]; // NEW
+		delete pIn->Flags[i];
 		pIn->Flags[i] = Flags[i]->CreateFullCopy();
 	}
 }

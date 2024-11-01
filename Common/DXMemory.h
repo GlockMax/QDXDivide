@@ -41,7 +41,7 @@ protected:
 	static const unsigned int MaxPartsNum = (0x1 << DXMemID::UpSize); // This value must corresponds to DXMemID.Up size
 	unsigned int BaseSize;
 	DXMemID* Next[MaxPartsNum] = { nullptr };
-	BDynBitArray *Flags[MaxPartsNum];// if Flags[i][j] == true - element is not used
+	BDynBitArray* Flags[MaxPartsNum] = { nullptr };// if Flags[i][j] == true - element is not used
 	unsigned int Sizes[MaxPartsNum];
 	unsigned int HolesNum[MaxPartsNum];
 	unsigned int PartsNum;
