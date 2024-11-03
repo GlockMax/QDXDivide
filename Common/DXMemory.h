@@ -44,7 +44,7 @@ protected:
 	BDynBitArray* Flags[MaxPartsNum] = { nullptr };// if Flags[i][j] == true - element is not used
 	unsigned int Sizes[MaxPartsNum];
 	unsigned int HolesNum[MaxPartsNum];
-	unsigned int PartsNum;
+	unsigned int PartsNum = 0;
 	unsigned int PartsNumAllocated;
 	unsigned int GlobPart;
 	DXMemID LastPos;
